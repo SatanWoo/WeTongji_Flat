@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../OHAttributedLabel/OHAttributedLabel/OHAttributedLabel.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../WeTongjiSDK/WeTongjiSDK.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WeTongji.xcodeproj">
+   </FileRef>
+</Workspace>

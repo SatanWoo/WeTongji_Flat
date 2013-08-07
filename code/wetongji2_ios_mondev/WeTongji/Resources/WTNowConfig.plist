@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>WeekCount</key>
+		<integer>19</integer>
+		<key>SectionType</key>
+		<string>School</string>
+		<key>SchoolYear</key>
+		<string>11-12</string>
+		<key>SchoolSemester</key>
+		<string>2</string>
+		<key>SectionStartAt</key>
+		<string>2012-02-20T00:00:00+08:00</string>
+	</dict>
+	<dict>
+		<key>SectionType</key>
+		<string>Vacation</string>
+		<key>VacationType</key>
+		<string>Summer Vac</string>
+		<key>SectionStartAt</key>
+		<string>2012-07-30T00:00:00+08:00</string>
+	</dict>
+	<dict>
+		<key>WeekCount</key>
+		<integer>19</integer>
+		<key>SectionType</key>
+		<string>School</string>
+		<key>SchoolYear</key>
+		<string>12-13</string>
+		<key>SchoolSemester</key>
+		<string>1</string>
+		<key>SectionStartAt</key>
+		<string>2012-09-10T00:00:00+08:00</string>
+	</dict>
+	<dict>
+		<key>SectionType</key>
+		<string>Vacation</string>
+		<key>VacationType</key>
+		<string>Winter Vac</string>
+		<key>SectionStartAt</key>
+		<string>2013-01-21T00:00:00+08:00</string>
+	</dict>
+	<dict>
+		<key>WeekCount</key>
+		<integer>19</integer>
+		<key>SectionType</key>
+		<string>School</string>
+		<key>SchoolYear</key>
+		<string>12-13</string>
+		<key>SchoolSemester</key>
+		<string>2</string>
+		<key>SectionStartAt</key>
+		<string>2013-02-25T00:00:00+08:00</string>
+	</dict>
+	<dict>
+		<key>SectionType</key>
+		<string>Vacation</string>
+		<key>VacationType</key>
+		<string>Summer Vac</string>
+		<key>SectionStartAt</key>
+		<string>2013-07-08T00:00:00+08:00</string>
+	</dict>
+	<dict>
+		<key>WeekCount</key>
+		<integer>19</integer>
+		<key>SectionType</key>
+		<string>School</string>
+		<key>SchoolYear</key>
+		<string>13-14</string>
+		<key>SchoolSemester</key>
+		<string>1</string>
+		<key>SectionStartAt</key>
+		<string>2013-09-09T00:00:00+08:00</string>
+	</dict>
+</array>
+</plist>

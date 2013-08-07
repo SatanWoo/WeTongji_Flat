@@ -1,0 +1,259 @@
+/* 
+  Localizable.strings
+  WeTongji
+
+  Created by 王 紫川 on 12-12-18.
+  Copyright (c) 2012年 Tongji Apple Club. All rights reserved.
+*/
+
+"Student No." = "学号";
+"Password" = "密码";
+"Repeat Password" = "重复密码";
+"Not now" = "暂不登录";
+"Forgot?" = "忘记密码";
+"Name" = "姓名";
+"Log In / Sign Up" = "登录 / 注册";
+"Sign Up" = "注册新用户";
+"Reset Password" = "重置密码";
+
+"See All Featured" = "全部推荐";
+"Featured" = "推荐";
+
+"Show Category" = "查看分类";
+"Now" = "当前";
+"Later" = "稍后";
+"ON" = "开";
+"OFF" = "关";
+"Stars" = "济人";
+"About" = "相关信息";
+"Title" = "简介";
+"Invite" = "邀请好友";
+"Participate" = "参加";
+"Participated" = "已参加";
+"Audit" = "旁听";
+"Audited" = "已旁听";
+"Registered" = "已选课";
+"Outdated" = "已过期";
+"wants to be your friend." = "想要加你为好友。";
+"Warning" = "警告";
+"Cancel" = "取消";
+"OK" = "好";
+"Yes" = "是的";
+"Call " = "打电话给";
+"Send email to " = "发邮件给 ";
+"Send message to " = "发短信给 ";
+"Call" = "拨打电话";
+"Send Message" = "发送短信";
+"Today" = "今天";
+"Copy to Clipboard" = "复制到剪切板";
+
+"Pull to refresh" = "下拉以刷新";
+"Release to refresh" = "松开以刷新";
+"Loading" = "加载中";
+"Last update" = "上次更新";
+"Unknown" = "未知";
+
+"Published at" = "发表于";
+"Show" = "显示";
+"Order by" = "排序";
+"Start time" = "开始时间";
+"Smart Order" = "智能排序";
+"Hide Past Activities" = "隐藏过期活动";
+"Publish Date" = "发布日期";
+"Popularity" = "受欢迎度";
+"Activity Start Date" = "开始日期";
+
+"Sun" = "周日";
+"Mon" = "周一";
+"Tue" = "周二";
+"Wed" = "周三";
+"Thu" = "周四";
+"Fri" = "周五";
+"Sat" = "周六";
+
+"Photo" = "图片";
+"Text" = "文字";
+"WeTongji Q&A" = "向同济官方发问";
+"Post" = "发表";
+
+"Campus in your pocket" = "校园尽在你手";
+"Next" = "下一步";
+"Camera" = "拍照";
+"Photo Album" = "选取照片";
+
+"week" = "周";
+"Schedule" = "日程";
+"Ongoing" = "正在进行";
+
+"Comment" = "条评论";
+"Comments" = "条评论";
+
+"Book a ticket" = "立即订票";
+
+"Search all" = "搜索全部";
+"Search Results" = "搜索结果";
+"Search" = "搜索";
+"Search History" = "搜索历史";
+"Clear search history" = "清理搜索历史";
+"all" = "全部";
+
+" Stars" = " 个济人";
+" Star" = " 个济人";
+"Star" = "济人";
+"stars" = "济人";
+
+"My Favorite" = "我喜欢的";
+" Billboard Posts" = " 篇 Billboad 发表";
+" Questions" = " 个问题";
+
+" Friends" = " 个朋友";
+" Friend" = " 个朋友";
+"Friend" = "个朋友";
+"Friends" = "个朋友";
+
+"See All Activities" = "全部活动";
+" Activities" = " 个活动";
+" Activity" = " 个活动";
+" Scheduled Activities" = " 个参加的活动";
+" Scheduled Activity" = " 个参加的活动";
+"Activity" = "活动";
+"Activities" = "活动";
+"activities" = "活动";
+
+"Academics" = "学术讲座";
+"Competition" = "校园赛事";
+"Entertainment" = "文娱活动";
+"Enterprise" = "企业招聘";
+
+"See All News" = "全部资讯";
+" News" = " 条资讯";
+"news" = "资讯";
+"News" = "资讯";
+
+"Campus Update" = "校园新闻";
+"Club News" = "组织动态";
+"Local Recommendation" = "周边推荐";
+"Administrative Affairs" = "校务信息";
+
+" Organizations" = " 个组织";
+" Organization" = " 个组织";
+"Organization" = "组织机构";
+"organizations" = "组织机构";
+"Organizer" = "组织机构";
+
+" Scheduled Courses" = " 个参加的课程";
+" Scheduled Course" = " 个参加的课程";
+"Courses" = "课程";
+
+" Users" = " 个用户";
+" User" = " 个用户";
+"User" = "用户";
+"users" = "用户";
+
+"Use test server" = "使用测试服务器";
+"Schedule notification" = "使用日程提醒";
+"Logout" = "登出";
+"Are you sure you want to logout?" = "确定要登出？";
+
+"Official Website" = "官方网站";
+"official website" = "官方网站";
+
+"New Avatar" = "更换头像";
+"Add Friend" = "添加好友";
+"Unfriend" = "删除好友";
+"Detail Information" = "详细资料";
+
+"Birthday" = "生日";
+"Student NO." = "学号";
+"Major" = "专业";
+"Phone" = "手机";
+"Phone Number" = "电话号码";
+"Email" = "邮箱";
+"Sina Weibo" = "新浪微博";
+"QQ" = "QQ";
+"Motto" = "签名";
+"Dorm" = "宿舍";
+
+"Friend List" = "好友列表";
+
+"Accept" = "接受";
+"Ignore" = "忽略";
+
+"Current Star" = "本期人物";
+
+"Teacher" = "教师";
+"Course No." = "课号";
+"Credit" = "学分";
+"Hours" = "学时";
+"Type" = "类型";
+"Class time" = "上课时间";
+"Week type" = "单双周";
+"Location" = "地点";
+"Course Information" = "课程信息";
+"Course Timetable" = "课程时间表";
+
+"Invite Friends" = "邀请好友";
+"invites you to participate in." = "邀请你参加。";
+"invites you to audit." = "邀请你旁听。";
+
+"Term of Use" = "使用条款";
+"By tapping Activate you are indicating that you have read and agree to Term of Use" = "点击激活按钮则表明您已阅读并同意\n微同济 使用条款";
+"Activation" = "激活";
+"Activate" = "激活";
+
+"Error" = "错误";
+"Please enter your Student No." = "请输入您的学号";
+"Please enter your Password" = "请输入您的密码";
+"Please enter your Name" = "请输入您的姓名";
+"A reset-password email has been sent to" = "一封重置密码的邮件已经发送到";
+"Provide your Student No. and Name to reset your WeTongji password" = "提供您的学号与姓名来重置您的微同济密码";
+"I see" = "好";
+"Success" = "成功";
+"Failure" = "失败";
+"WeTongji currently support undergraduate and postgraduate users. To activate your WeTongji account, you need to register your @tongji.edu.cn email account first. By providing your Student No. and Name, a verification email will be sent to your Tongji email account upon activation." = " 微同济当前支持本科生和研究生用户使用。要激活您的微同济帐号，您需要首先注册@tongji.edu.cn邮箱。在校验过您的学号与姓名一致后，一封微同济帐号激活确认信会被发送到您的同济邮箱中。";
+"A verification email has been sent to" = "一封激活确认邮件已经发送到";
+"The passwords you entered do not match. Please re-enter your passwords." = "输入的密码不一致。请重新输入密码。";
+
+"Notification" = "通知";
+"Setting" = "设置";
+
+"Visit Official Website" = "访问官方网站";
+"Share" = "分享";
+"Rate WeTongji" = "给微同济评分";
+"Feedback" = "问题反馈";
+"Tutorial" = "使用导览";
+"Switch Account" = "切换用户";
+
+"Your feedback has been delieved successfully" = "您的反馈已经成功发送";
+"Your feedback has not been delieved" = "您的反馈未发送成功";
+"You have not bound a email account to your device" = "您的设备未设置邮件帐号";
+
+"Change Password" = "修改密码";
+"Team Member" = "团队成员";
+
+"Please enter your new password" = "请输入新的密码";
+"Please enter your current password" = "请输入当前的密码";
+"Current Password" = "当前密码";
+"New Password" = "新的密码";
+"You have successfully changed your password" = "您已经成功修改了密码";
+
+"Select Dorm" = "选择寝室";
+
+"Enter Room No." = "输入房间号";
+
+"WeTongji" = "微同济";
+"Copyright © 2013 Tongji University" = "版权所有 © 2013 同济大学";
+
+"Create Contact" = "创建联系人";
+
+"View Details" = "查看详情";
+
+"Summer Vac" = "暑假";
+"Winter Vac" = "寒假";
+
+"accepted your friend invitation." = "接受了您的好友申请。";
+
+"Admin Name" = "管理员姓名";
+"Admin Title" = "管理员职位";
+"Public Email" = "公共邮箱";
+"Intro" = "简介";

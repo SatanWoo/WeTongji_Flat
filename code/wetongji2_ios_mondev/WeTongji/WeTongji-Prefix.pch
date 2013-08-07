@@ -1,0 +1,21 @@
+//
+// Prefix header for all source files of the 'WeTongji' target in the 'WeTongji' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <WeTongjiSDK/WeTongjiSDK.h>
+    #import "UIView+Resize.h"
+    #import "UIView+Animation.h"
+    #import "WTDebugTool.h"
+    #import "Flurry.h"
+    #import "WTErrorHandler.h"
+    #import "WTCommonConstant.h"
+#endif
