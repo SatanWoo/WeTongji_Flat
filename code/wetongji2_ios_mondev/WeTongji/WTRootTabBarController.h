@@ -10,10 +10,11 @@
 
 typedef enum {
     WTRootTabBarViewControllerHome = 0,
-    WTRootTabBarViewControllerNow = 1,
-    WTRootTabBarViewControllerSearch = 2,
+    WTRootTabBarViewControllerMessage = 1,
+    WTRootTabBarViewControllerNow = 2,
+    WTRootTabBarViewControllerSearch = 3,
     WTRootTabBarViewControllerBillboard = 10000,
-    WTRootTabBarViewControllerMe = 3,
+    WTRootTabBarViewControllerMe = 4,
 } WTRootTabBarViewControllerName;
 
 @interface WTRootTabBarController : UITabBarController

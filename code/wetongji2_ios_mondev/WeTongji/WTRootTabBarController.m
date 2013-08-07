@@ -56,22 +56,6 @@
     self.tabBarBgImageView = bgImageView;
     self.tabBarBgImageView.userInteractionEnabled = YES;
     
-    UIImageView *bottomLeftCornerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WTCornerBottomLeft"]];
-    UIImageView *bottomRightCornerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WTCornerBottomRight"]];
-    
-    UIImageView *tabBarBottomLeftCornerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WTCornerBottomLeft"]];
-    UIImageView *tabBarBottomRightCornerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WTCornerBottomRight"]];
-    
-    [bottomLeftCornerImageView resetOrigin:CGPointMake(0, 1 - bottomLeftCornerImageView.frame.size.height)];
-    [bottomRightCornerImageView resetOrigin:CGPointMake(screenSize.width - bottomRightCornerImageView.frame.size.width, 1 - bottomLeftCornerImageView.frame.size.height)];
-    
-    [tabBarBottomLeftCornerImageView resetOrigin:CGPointMake(0, bgImageView.frame.size.height - tabBarBottomLeftCornerImageView.frame.size.height)];
-    [tabBarBottomRightCornerImageView resetOrigin:CGPointMake(screenSize.width - tabBarBottomRightCornerImageView.frame.size.width, bgImageView.frame.size.height - bottomLeftCornerImageView.frame.size.height)];
-    
-    [bgImageView addSubview:bottomLeftCornerImageView];
-    [bgImageView addSubview:bottomRightCornerImageView];
-    [bgImageView addSubview:tabBarBottomLeftCornerImageView];
-    [bgImageView addSubview:tabBarBottomRightCornerImageView];
     [self.view addSubview:bgImageView];
 }
 
@@ -82,13 +66,23 @@
 		UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 		btn.tag = i;
 		[btn addTarget:self action:@selector(didClickTabBarButton:) forControlEvents:UIControlEventTouchUpInside];
-        btn.frame = CGRectMake(80 * i, 0, 80, self.tabBarBgImageView.frame.size.height + 4);
+        btn.frame = CGRectMake(64 * i, 0, 64, self.tabBarBgImageView.frame.size.height + 4);
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 64, 24)];
+        label.text = @"test";
+        label.textAlignment = NSTextAlignmentCenter;
+        [btn addSubview:label];
+        
         UIImage *normalStateImage = nil;
         UIImage *selectStateImage = nil;
 		switch (i) {
             case WTRootTabBarViewControllerHome: {
                 normalStateImage = [UIImage imageNamed:@"WTTabBarButtonHome"];
                 selectStateImage = [UIImage imageNamed:@"WTTabBarButtonHomeHl"];
+                break;
+            }
+            case WTRootTabBarViewControllerMessage: {
+                normalStateImage = [UIImage imageNamed:@"WTTabBarButtonNow"];
+                selectStateImage = [UIImage imageNamed:@"WTTabBarButtonNowHl"];
                 break;
             }
             case WTRootTabBarViewControllerNow: {
@@ -101,11 +95,6 @@
                 selectStateImage = [UIImage imageNamed:@"WTTabBarButtonPowerSearchHl"];
                 break;
             }
-//            case 3: {
-//                normalStateImage = [UIImage imageNamed:@"WTTabBarButtonBillBoard"];
-//                selectStateImage = [UIImage imageNamed:@"WTTabBarButtonBillBoardHl"];
-//                break;
-//            }
             case WTRootTabBarViewControllerMe: {
                 normalStateImage = [UIImage imageNamed:@"WTTabBarButtonMe"];
                 selectStateImage = [UIImage imageNamed:@"WTTabBarButtonMeHl"];
