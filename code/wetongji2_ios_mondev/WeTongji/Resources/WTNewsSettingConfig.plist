@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>TableViewType</key>
+		<string>TableViewTypePlain</string>
+		<key>TableViewContent</key>
+		<array>
+			<dict>
+				<key>CellTitle</key>
+				<string>Smart Order</string>
+				<key>CellAccessoryType</key>
+				<string>CellAccessoryTypeSwitch</string>
+				<key>UserDefaultKey</key>
+				<string>NewsSmartOrder</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>TableViewType</key>
+		<string>TableViewTypeSeparator</string>
+	</dict>
+	<dict>
+		<key>TableViewSupportsMultiSelection</key>
+		<true/>
+		<key>UserDefaultKey</key>
+		<string>NewsShowTypes</string>
+		<key>TableViewType</key>
+		<string>TableViewTypeGroup</string>
+		<key>TableViewSectionHeader</key>
+		<string>Show</string>
+		<key>TableViewContent</key>
+		<array>
+			<dict>
+				<key>CellTitle</key>
+				<string>Campus Update</string>
+				<key>CellAccessoryType</key>
+				<string>CellAccessoryTypeCheckmark</string>
+			</dict>
+			<dict>
+				<key>CellTitle</key>
+				<string>Club News</string>
+				<key>CellAccessoryType</key>
+				<string>CellAccessoryTypeCheckmark</string>
+			</dict>
+			<dict>
+				<key>CellTitle</key>
+				<string>Local Recommendation</string>
+				<key>CellAccessoryType</key>
+				<string>CellAccessoryTypeCheckmark</string>
+			</dict>
+			<dict>
+				<key>CellTitle</key>
+				<string>Administrative Affairs</string>
+				<key>CellAccessoryType</key>
+				<string>CellAccessoryTypeCheckmark</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>TableViewSupportsMultiSelection</key>
+		<false/>
+		<key>UserDefaultKey</key>
+		<string>NewsOrderMethod</string>
+		<key>TableViewType</key>
+		<string>TableViewTypeGroup</string>
+		<key>TableViewSectionHeader</key>
+		<string>Order by</string>
+		<key>TableViewContent</key>
+		<array>
+			<dict>
+				<key>CellTitle</key>
+				<string>Publish Date</string>
+				<key>CellAccessoryType</key>
+				<string>CellAccessoryTypeCheckmark</string>
+				<key>CellThumbnail</key>
+				<string>WTPublishDateIcon</string>
+			</dict>
+			<dict>
+				<key>CellTitle</key>
+				<string>Popularity</string>
+				<key>CellAccessoryType</key>
+				<string>CellAccessoryTypeCheckmark</string>
+				<key>CellThumbnail</key>
+				<string>WTPopularityIcon</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

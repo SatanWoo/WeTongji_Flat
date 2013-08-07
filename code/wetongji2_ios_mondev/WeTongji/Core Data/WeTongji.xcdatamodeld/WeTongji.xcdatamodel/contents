@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="13A510d" minimumToolsVersion="Xcode 4.5" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Activity" representedClassName="Activity" parentEntity="Event" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="publishedActivities" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="relatedActivityInvitations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ActivityInvitationNotification" inverseName="activity" inverseEntity="ActivityInvitationNotification" syncable="YES"/>
+    </entity>
+    <entity name="ActivityInvitationNotification" representedClassName="ActivityInvitationNotification" parentEntity="InvitationNotification" syncable="YES">
+        <relationship name="activity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="relatedActivityInvitations" inverseEntity="Activity" syncable="YES"/>
+    </entity>
+    <entity name="Advertisement" representedClassName="Advertisement" parentEntity="Object" syncable="YES">
+        <attribute name="bgColorHex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publisher" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BillboardPost" representedClassName="BillboardPost" parentEntity="CommentableObject" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" defaultValueString="未创建内容" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" defaultValueString="未创建标题" syncable="YES"/>
+        <relationship name="author" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="publishedBillboardPosts" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Comment" representedClassName="Comment" parentEntity="Object" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="author" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="publishedComments" inverseEntity="User" syncable="YES"/>
+        <relationship name="owner" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CommentableObject" inverseName="comments" inverseEntity="CommentableObject" syncable="YES"/>
+    </entity>
+    <entity name="CommentableObject" representedClassName="CommentableObject" isAbstract="YES" parentEntity="LikeableObject" syncable="YES">
+        <attribute name="commentCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Comment" inverseName="owner" inverseEntity="Comment" syncable="YES"/>
+    </entity>
+    <entity name="Controller" representedClassName="Controller" syncable="YES">
+        <attribute name="identifier" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="hasObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Object" inverseName="belongToControllers" inverseEntity="Object" syncable="YES"/>
+    </entity>
+    <entity name="Course" representedClassName="Course" parentEntity="LikeableObject" syncable="YES">
+        <attribute name="courseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="credit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="friendsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="hours" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isAudit" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="required" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="semester" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="teacher" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="yearSemesterString" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <relationship name="instances" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CourseInstance" inverseName="course" inverseEntity="CourseInstance" syncable="YES"/>
+        <relationship name="registeredBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="registeredCourses" inverseEntity="User" syncable="YES"/>
+        <relationship name="relatedCourseInvitations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CourseInvitationNotification" inverseName="course" inverseEntity="CourseInvitationNotification" syncable="YES"/>
+        <relationship name="timetables" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CourseTimetable" inverseName="belongTo" inverseEntity="CourseTimetable" syncable="YES"/>
+    </entity>
+    <entity name="CourseInstance" representedClassName="CourseInstance" parentEntity="Event" syncable="YES">
+        <relationship name="course" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="instances" inverseEntity="Course" syncable="YES"/>
+    </entity>
+    <entity name="CourseInvitationNotification" representedClassName="CourseInvitationNotification" parentEntity="InvitationNotification" syncable="YES">
+        <relationship name="course" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="relatedCourseInvitations" inverseEntity="Course" syncable="YES"/>
+    </entity>
+    <entity name="CourseTimetable" representedClassName="CourseTimetable" parentEntity="Object" syncable="YES">
+        <attribute name="endSection" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startSection" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="weekDay" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="weekType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="belongTo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="timetables" inverseEntity="Course" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" isAbstract="YES" parentEntity="CommentableObject" syncable="YES">
+        <attribute name="beginDay" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="beginTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="friendsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="what" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="where" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="scheduledBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="scheduledEvents" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Exam" representedClassName="Exam" parentEntity="CourseInstance" syncable="YES"/>
+    <entity name="FriendInvitationNotification" representedClassName="FriendInvitationNotification" parentEntity="InvitationNotification" syncable="YES"/>
+    <entity name="InvitationNotification" representedClassName="InvitationNotification" parentEntity="Notification" syncable="YES">
+        <attribute name="accepted" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="LikeableObject" representedClassName="LikeableObject" isAbstract="YES" parentEntity="Object" syncable="YES">
+        <attribute name="likeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="likedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="likedObjects" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="News" representedClassName="News" parentEntity="CommentableObject" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasTicket" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="imageArray" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publishDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="publishDay" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="readCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ticketInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="publishedNews" inverseEntity="Organization" syncable="YES"/>
+    </entity>
+    <entity name="Notification" representedClassName="Notification" parentEntity="Object" syncable="YES">
+        <attribute name="sendTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sourceID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="ownedNotifications" inverseEntity="User" syncable="YES"/>
+        <relationship name="receiver" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="receivedNotifications" inverseEntity="User" syncable="YES"/>
+        <relationship name="sender" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="sentNotifications" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Object" representedClassName="Object" isAbstract="YES" syncable="YES">
+        <attribute name="identifier" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="objectClass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="belongToControllers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Controller" inverseName="hasObjects" inverseEntity="Controller" syncable="YES"/>
+    </entity>
+    <entity name="Organization" representedClassName="Organization" parentEntity="LikeableObject" syncable="YES">
+        <attribute name="about" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activityCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="administrator" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="adminTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bgImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="publishedActivities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="author" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="publishedNews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="News" inverseName="author" inverseEntity="News" syncable="YES"/>
+    </entity>
+    <entity name="Star" representedClassName="Star" parentEntity="LikeableObject" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="imageInfoDict" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="motto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="studentNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="volume" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" parentEntity="LikeableObject" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="birthPlace" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="department" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dormBuilding" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dormDistribute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dormRoom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enrollYear" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="friendCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="likedActivityCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="likedBillboardCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="likedNewsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="likedOrganizationCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="likedStarCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="likedUserCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="loginTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="major" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="motto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qqAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scheduledActivityCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="scheduledCourseCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sinaWeiboName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studyPlan" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="wechatAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="friends" inverseEntity="User" syncable="YES"/>
+        <relationship name="likedObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LikeableObject" inverseName="likedBy" inverseEntity="LikeableObject" syncable="YES"/>
+        <relationship name="ownedNotifications" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Notification" inverseName="owner" inverseEntity="Notification" syncable="YES"/>
+        <relationship name="publishedBillboardPosts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BillboardPost" inverseName="author" inverseEntity="BillboardPost" syncable="YES"/>
+        <relationship name="publishedComments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Comment" inverseName="author" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="receivedNotifications" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Notification" inverseName="receiver" inverseEntity="Notification" syncable="YES"/>
+        <relationship name="registeredCourses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="registeredBy" inverseEntity="Course" syncable="YES"/>
+        <relationship name="scheduledEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="scheduledBy" inverseEntity="Event" syncable="YES"/>
+        <relationship name="sentNotifications" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Notification" inverseName="sender" inverseEntity="Notification" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Activity" positionX="205" positionY="216" width="128" height="135"/>
+        <element name="ActivityInvitationNotification" positionX="-126" positionY="-9" width="128" height="60"/>
+        <element name="Advertisement" positionX="358" positionY="189" width="128" height="120"/>
+        <element name="BillboardPost" positionX="360" positionY="-117" width="128" height="120"/>
+        <element name="Comment" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="CommentableObject" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Controller" positionX="43" positionY="96" width="128" height="75"/>
+        <element name="Course" positionX="160" positionY="192" width="128" height="270"/>
+        <element name="CourseInstance" positionX="43" positionY="225" width="128" height="60"/>
+        <element name="CourseInvitationNotification" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="CourseTimetable" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Event" positionX="-135" positionY="261" width="128" height="150"/>
+        <element name="Exam" positionX="369" positionY="351" width="128" height="45"/>
+        <element name="FriendInvitationNotification" positionX="43" positionY="-9" width="128" height="45"/>
+        <element name="InvitationNotification" positionX="43" positionY="-123" width="128" height="60"/>
+        <element name="LikeableObject" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="News" positionX="205" positionY="-120" width="128" height="255"/>
+        <element name="Notification" positionX="-119" positionY="-126" width="128" height="120"/>
+        <element name="Object" positionX="-135" positionY="84" width="128" height="105"/>
+        <element name="Organization" positionX="-423" positionY="-126" width="128" height="210"/>
+        <element name="Star" positionX="-270" positionY="-126" width="128" height="180"/>
+        <element name="User" positionX="-423" positionY="-9" width="128" height="615"/>
+    </elements>
+</model>
