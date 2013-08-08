@@ -4121,7 +4121,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "58580D79-9AB5-4D46-AE62-F6FB85A9F27F";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "../OHAttributedLabel/OHAttributedLabel/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4153,7 +4153,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "58580D79-9AB5-4D46-AE62-F6FB85A9F27F";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "../OHAttributedLabel/OHAttributedLabel/**";
 				WRAPPER_EXTENSION = app;
 			};
