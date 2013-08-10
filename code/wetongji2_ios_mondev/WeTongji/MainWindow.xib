@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">13A524d</string>
-		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1244.12</string>
-		<string key="IBDocument.HIToolboxVersion">686.00</string>
+		<string key="IBDocument.SystemVersion">11G63</string>
+		<string key="IBDocument.InterfaceBuilderVersion">3080</string>
+		<string key="IBDocument.AppKitVersion">1138.51</string>
+		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">2083</string>
+			<string key="NS.object.0">2078</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -67,8 +67,8 @@
 				<bool key="IBUIDefinesPresentationContext">YES</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<bool key="IBUIHorizontal">NO</bool>
-				<object class="IBUIViewController" key="IBUISelectedViewController" id="322138159">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="391916966">
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="944061867">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="676975763">
 						<string key="IBUITitle">Item</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -81,8 +81,9 @@
 					<bool key="IBUIHorizontal">NO</bool>
 				</object>
 				<array class="NSMutableArray" key="IBUIViewControllers">
-					<object class="IBUIViewController" id="944061867">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="676975763">
+					<reference ref="944061867"/>
+					<object class="IBUIViewController" id="322138159">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="391916966">
 							<string key="IBUITitle">Item</string>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -94,7 +95,6 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
 					</object>
-					<reference ref="322138159"/>
 					<object class="IBUIViewController" id="125106515">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="863878195">
 							<string key="IBUITitle">Item</string>
@@ -341,6 +341,6 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<string key="IBCocoaTouchPluginVersion">2083</string>
+		<string key="IBCocoaTouchPluginVersion">2078</string>
 	</data>
 </archive>
