@@ -52,7 +52,7 @@
         self.imageURLString = ad.image;
         self.title.text = ad.title;
         self.org.text = ad.publisher;
-        //self.containerView.backgroundColor = [ad.bgColorHex converHexStringToColorWithAlpha:0.6f];
+        self.containerView.backgroundColor = [ad.bgColorHex converHexStringToColorWithAlpha:0.6f];
     }
     
     CGPoint titleLabelCenter = self.title.center;
