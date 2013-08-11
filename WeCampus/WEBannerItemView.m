@@ -46,7 +46,6 @@
             self.imageURLString = imageArray[0];
         }
         self.title.text = news.title;
-        // TODO: 根据新闻类别配置orgName
         self.org.text = news.author.name;
     } else if ([object isKindOfClass:[Advertisement class]]) {
         Advertisement *ad = (Advertisement *)object;

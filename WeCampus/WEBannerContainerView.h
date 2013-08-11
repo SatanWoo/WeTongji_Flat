@@ -10,7 +10,6 @@
 
 @interface WEBannerContainerView : UIView
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIView *maskView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 + (WEBannerContainerView *)createBannerContainerView;
