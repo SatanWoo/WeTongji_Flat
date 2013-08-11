@@ -59,11 +59,36 @@
 - (void)addCustomTabBarButtons {
     int viewCount = self.viewControllers.count;
 	self.buttonArray = [NSMutableArray arrayWithCapacity:viewCount];
+    
+    static NSArray *buttonNames;
+    if(!buttonNames)
+    {
+        buttonNames = @[
+                        NSLocalizedString(@"主页", nil),
+                        NSLocalizedString(@"消息", nil),
+                        NSLocalizedString(@"日程", nil),
+                        NSLocalizedString(@"搜索", nil),
+                        NSLocalizedString(@"我", nil)
+                        ];
+    }
+    
 	for (int i = 0; i < viewCount; i++) {
 		UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 		btn.tag = i;
 		[btn addTarget:self action:@selector(didClickTabBarButton:) forControlEvents:UIControlEventTouchUpInside];
-        btn.frame = CGRectMake(64 * i, 0, 64, self.tabBarBgImageView.frame.size.height + 4);
+        btn.frame = CGRectMake(64 * i, 0, 64, self.tabBarBgImageView.frame.size.height - 10);
+        
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 64, 30)];
+        label.backgroundColor = [UIColor clearColor];
+        label.textColor = [UIColor colorWithRed:146 / 255.0 green:146 / 255.0  blue:146 / 255.0  alpha:1];
+        label.text = buttonNames[i];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = [UIFont systemFontOfSize:12];
+        label.highlightedTextColor = [UIColor colorWithRed:19 / 255.0 green:199 / 255.0 blue:175/255.0 alpha:1];
+        label.tag = 100;
+        [btn addSubview:label];
+        
         UIImage *normalStateImage = nil;
         UIImage *selectStateImage = nil;
 		switch (i) {
@@ -159,9 +184,13 @@
 
 - (void)setTabBarButtonSelected:(WTRootTabBarViewControllerName)controllerName {
     for (UIButton* btn in self.buttonArray) {
+        UILabel *label = (UILabel *)[btn viewWithTag:100];
+        [label setHighlighted:NO];
         btn.selected = NO;
     }
     UIButton *button = self.buttonArray[controllerName];
+    UILabel *label = (UILabel *)[button viewWithTag:100];
+    [label setHighlighted:YES];
     button.selected = YES;
 }
 

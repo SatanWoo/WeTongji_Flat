@@ -1,0 +1,10 @@
+PODS:
+  - OHAttributedLabel (3.4.1)
+
+DEPENDENCIES:
+  - OHAttributedLabel
+
+SPEC CHECKSUMS:
+  OHAttributedLabel: 770332ef810ca15c9bd4a79f300ce620bc443e9d
+
+COCOAPODS: 0.23.0
