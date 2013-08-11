@@ -34,7 +34,7 @@
 			</object>
 			<object class="IBUIView" id="151379116">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">292</int>
+				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIImageView" id="771426069">
 						<reference key="NSNextResponder" ref="151379116"/>
@@ -48,11 +48,11 @@
 					</object>
 					<object class="IBUIView" id="815818582">
 						<reference key="NSNextResponder" ref="151379116"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">274</int>
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUILabel" id="799484833">
 								<reference key="NSNextResponder" ref="815818582"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">301</int>
 								<string key="NSFrame">{{5, 65}, {310, 24}}</string>
 								<reference key="NSSuperview" ref="815818582"/>
 								<reference key="NSWindow"/>
@@ -87,7 +87,7 @@
 							</object>
 							<object class="IBUILabel" id="985416720">
 								<reference key="NSNextResponder" ref="815818582"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">301</int>
 								<string key="NSFrame">{{10, 89}, {300, 18}}</string>
 								<reference key="NSSuperview" ref="815818582"/>
 								<reference key="NSWindow"/>
