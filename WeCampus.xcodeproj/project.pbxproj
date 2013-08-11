@@ -16,13 +16,11 @@
 		033729D117B67D7600D2EC9F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D017B67D7600D2EC9F /* Default.png */; };
 		033729D317B67D7600D2EC9F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D217B67D7600D2EC9F /* Default@2x.png */; };
 		033729D517B67D7600D2EC9F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D417B67D7600D2EC9F /* Default-568h@2x.png */; };
-		033729D817B67D7600D2EC9F /* WEFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033729D717B67D7600D2EC9F /* WEFirstViewController.m */; };
 		033729DA17B67D7600D2EC9F /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D917B67D7600D2EC9F /* first.png */; };
 		033729DC17B67D7600D2EC9F /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729DB17B67D7600D2EC9F /* first@2x.png */; };
 		033729DF17B67D7600D2EC9F /* WESecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033729DE17B67D7600D2EC9F /* WESecondViewController.m */; };
 		033729E117B67D7600D2EC9F /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729E017B67D7600D2EC9F /* second.png */; };
 		033729E317B67D7600D2EC9F /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729E217B67D7600D2EC9F /* second@2x.png */; };
-		033729E617B67D7600D2EC9F /* WEFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033729E417B67D7600D2EC9F /* WEFirstViewController.xib */; };
 		033729E917B67D7600D2EC9F /* WESecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033729E717B67D7600D2EC9F /* WESecondViewController.xib */; };
 		033E1FC417B69EAA00009FDE /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FB917B69EAA00009FDE /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		033E1FC517B69EAA00009FDE /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FBB17B69EAA00009FDE /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -52,6 +50,8 @@
 		03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */; };
 		03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */; };
 		03E8B61117B78BED00AC12C8 /* WEContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B61017B78BEC00AC12C8 /* WEContentViewController.m */; };
+		03E8B61517B7918000AC12C8 /* WEHomeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B61317B7918000AC12C8 /* WEHomeRootViewController.m */; };
+		03E8B61617B7918000AC12C8 /* WEHomeRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E8B61417B7918000AC12C8 /* WEHomeRootViewController.xib */; };
 		2D0549075E2B46C4AC299AF2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C5F1033434B719E6325EF /* libPods.a */; };
 		E40A64D017B733A500082B4F /* WTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64CF17B733A500082B4F /* WTRootTabBarController.m */; };
 		E40A64EC17B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
@@ -277,15 +277,12 @@
 		033729D017B67D7600D2EC9F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		033729D217B67D7600D2EC9F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		033729D417B67D7600D2EC9F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		033729D617B67D7600D2EC9F /* WEFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WEFirstViewController.h; sourceTree = "<group>"; };
-		033729D717B67D7600D2EC9F /* WEFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WEFirstViewController.m; sourceTree = "<group>"; };
 		033729D917B67D7600D2EC9F /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		033729DB17B67D7600D2EC9F /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		033729DD17B67D7600D2EC9F /* WESecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WESecondViewController.h; sourceTree = "<group>"; };
 		033729DE17B67D7600D2EC9F /* WESecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WESecondViewController.m; sourceTree = "<group>"; };
 		033729E017B67D7600D2EC9F /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		033729E217B67D7600D2EC9F /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		033729E517B67D7600D2EC9F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WEFirstViewController.xib; sourceTree = "<group>"; };
 		033729E817B67D7600D2EC9F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WESecondViewController.xib; sourceTree = "<group>"; };
 		033E1FB717B69EAA00009FDE /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		033E1FB817B69EAA00009FDE /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
@@ -345,6 +342,9 @@
 		03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WERootViewController.m; sourceTree = "<group>"; };
 		03E8B60F17B78BEC00AC12C8 /* WEContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEContentViewController.h; sourceTree = "<group>"; };
 		03E8B61017B78BEC00AC12C8 /* WEContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEContentViewController.m; sourceTree = "<group>"; };
+		03E8B61217B7918000AC12C8 /* WEHomeRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHomeRootViewController.h; sourceTree = "<group>"; };
+		03E8B61317B7918000AC12C8 /* WEHomeRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEHomeRootViewController.m; sourceTree = "<group>"; };
+		03E8B61417B7918000AC12C8 /* WEHomeRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEHomeRootViewController.xib; sourceTree = "<group>"; };
 		852FA862DE854B8F88F43748 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		875C5F1033434B719E6325EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40A64CE17B733A500082B4F /* WTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRootTabBarController.h; sourceTree = "<group>"; };
@@ -778,9 +778,9 @@
 			children = (
 				03E8B60917B789AA00AC12C8 /* WEHomeNavigationViewController.h */,
 				03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */,
-				033729D617B67D7600D2EC9F /* WEFirstViewController.h */,
-				033729D717B67D7600D2EC9F /* WEFirstViewController.m */,
-				033729E417B67D7600D2EC9F /* WEFirstViewController.xib */,
+				03E8B61217B7918000AC12C8 /* WEHomeRootViewController.h */,
+				03E8B61317B7918000AC12C8 /* WEHomeRootViewController.m */,
+				03E8B61417B7918000AC12C8 /* WEHomeRootViewController.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1156,7 +1156,6 @@
 				033729DC17B67D7600D2EC9F /* first@2x.png in Resources */,
 				033729E117B67D7600D2EC9F /* second.png in Resources */,
 				033729E317B67D7600D2EC9F /* second@2x.png in Resources */,
-				033729E617B67D7600D2EC9F /* WEFirstViewController.xib in Resources */,
 				033729E917B67D7600D2EC9F /* WESecondViewController.xib in Resources */,
 				035148A017B6A1F9006E67B2 /* MainWindow.xib in Resources */,
 				E458B13717B754C100D0DFBD /* back_btn.png in Resources */,
@@ -1341,6 +1340,7 @@
 				E458B1EA17B754C100D0DFBD /* course_teacher_icn@2x.png in Resources */,
 				E458B1EB17B754C100D0DFBD /* course_time_icn.png in Resources */,
 				E458B1EC17B754C100D0DFBD /* course_time_icn@2x.png in Resources */,
+				03E8B61617B7918000AC12C8 /* WEHomeRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1386,7 +1386,6 @@
 			files = (
 				033729CB17B67D7600D2EC9F /* main.m in Sources */,
 				033729CF17B67D7600D2EC9F /* WEAppDelegate.m in Sources */,
-				033729D817B67D7600D2EC9F /* WEFirstViewController.m in Sources */,
 				033729DF17B67D7600D2EC9F /* WESecondViewController.m in Sources */,
 				033E1FC417B69EAA00009FDE /* NSObject+SBJSON.m in Sources */,
 				033E1FC517B69EAA00009FDE /* NSString+SBJSON.m in Sources */,
@@ -1428,6 +1427,7 @@
 				03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */,
 				03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */,
 				03E8B61117B78BED00AC12C8 /* WEContentViewController.m in Sources */,
+				03E8B61517B7918000AC12C8 /* WEHomeRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1440,14 +1440,6 @@
 				033729C817B67D7600D2EC9F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		033729E417B67D7600D2EC9F /* WEFirstViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				033729E517B67D7600D2EC9F /* en */,
-			);
-			name = WEFirstViewController.xib;
 			sourceTree = "<group>";
 		};
 		033729E717B67D7600D2EC9F /* WESecondViewController.xib */ = {

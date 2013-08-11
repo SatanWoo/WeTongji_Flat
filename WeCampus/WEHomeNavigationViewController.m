@@ -7,7 +7,7 @@
 //
 
 #import "WEHomeNavigationViewController.h"
-#import "WEFirstViewController.h"
+#import "WEHomeRootViewController.h"
 
 @interface WEHomeNavigationViewController ()
 
@@ -30,7 +30,7 @@
 
 - (void)initRootViewController
 {
-    self.rootViewController = [[WEFirstViewController alloc] init];
+    self.rootViewController = [[WEHomeRootViewController alloc] init];
     [self pushViewController:self.rootViewController animated:NO];
 }
 
