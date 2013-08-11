@@ -57,6 +57,7 @@
 		0351489A17B69F34006E67B2 /* WTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351489317B69F34006E67B2 /* WTRequest.m */; };
 		0351489D17B6A084006E67B2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0351489C17B6A084006E67B2 /* Security.framework */; };
 		035148A017B6A1F9006E67B2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0351489F17B6A1F9006E67B2 /* MainWindow.xib */; };
+		0368DAA717B80064000F83A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0368DAA517B80064000F83A1 /* Localizable.strings */; };
 		03E8B60817B7890D00AC12C8 /* WENavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */; };
 		03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */; };
 		03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */; };
@@ -399,6 +400,10 @@
 		0351489317B69F34006E67B2 /* WTRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTRequest.m; sourceTree = "<group>"; };
 		0351489C17B6A084006E67B2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0351489F17B6A1F9006E67B2 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		0368DAA617B80064000F83A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0368DAA817B80067000F83A1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		03AB77E017B7FF2C00B41FD5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/WESecondViewController.xib"; sourceTree = "<group>"; };
+		03AB77E117B7FF2C00B41FD5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENavigationViewController.h; sourceTree = "<group>"; };
 		03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENavigationViewController.m; sourceTree = "<group>"; };
 		03E8B60917B789AA00AC12C8 /* WEHomeNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHomeNavigationViewController.h; sourceTree = "<group>"; };
@@ -798,6 +803,7 @@
 		033729C517B67D7600D2EC9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0368DAA517B80064000F83A1 /* Localizable.strings */,
 				03E8B69517B79C4300AC12C8 /* WTCommonConstant.h */,
 				033729CD17B67D7600D2EC9F /* WEAppDelegate.h */,
 				033729CE17B67D7600D2EC9F /* WEAppDelegate.m */,
@@ -1659,6 +1665,7 @@
 				034164F117B7DF18005CFD98 /* event_category_cell.png in Resources */,
 				034164F217B7DF18005CFD98 /* event_category_cell@2x.png in Resources */,
 				034164F717B7E26F005CFD98 /* WESchoolEventHeadLineView.xib in Resources */,
+				0368DAA717B80064000F83A1 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1799,6 +1806,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				033729C817B67D7600D2EC9F /* en */,
+				03AB77E117B7FF2C00B41FD5 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1807,8 +1815,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				033729E817B67D7600D2EC9F /* en */,
+				03AB77E017B7FF2C00B41FD5 /* zh-Hans */,
 			);
 			name = WESecondViewController.xib;
+			sourceTree = "<group>";
+		};
+		0368DAA517B80064000F83A1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0368DAA617B80064000F83A1 /* en */,
+				0368DAA817B80067000F83A1 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
