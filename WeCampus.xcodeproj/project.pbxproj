@@ -28,6 +28,8 @@
 		033E1FC917B69EAA00009FDE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FC317B69EAA00009FDE /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0341648117B7B425005CFD98 /* WEBannerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0341648017B7B425005CFD98 /* WEBannerContainerView.m */; };
 		0341648317B7B48A005CFD98 /* WEBannerContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341648217B7B48A005CFD98 /* WEBannerContainerView.xib */; };
+		0341648717B7B8E0005CFD98 /* WEBannerItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0341648617B7B8E0005CFD98 /* WEBannerItemView.m */; };
+		0341648917B7B92E005CFD98 /* WEBannerItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341648817B7B92E005CFD98 /* WEBannerItemView.xib */; };
 		0351487B17B69F1D006E67B2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486917B69F1D006E67B2 /* AFHTTPClient.m */; };
 		0351487C17B69F1D006E67B2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486B17B69F1D006E67B2 /* AFHTTPRequestOperation.m */; };
 		0351487D17B69F1D006E67B2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486D17B69F1D006E67B2 /* AFImageRequestOperation.m */; };
@@ -337,6 +339,9 @@
 		0341647F17B7B425005CFD98 /* WEBannerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEBannerContainerView.h; sourceTree = "<group>"; };
 		0341648017B7B425005CFD98 /* WEBannerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEBannerContainerView.m; sourceTree = "<group>"; };
 		0341648217B7B48A005CFD98 /* WEBannerContainerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEBannerContainerView.xib; sourceTree = "<group>"; };
+		0341648517B7B8E0005CFD98 /* WEBannerItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEBannerItemView.h; sourceTree = "<group>"; };
+		0341648617B7B8E0005CFD98 /* WEBannerItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEBannerItemView.m; sourceTree = "<group>"; };
+		0341648817B7B92E005CFD98 /* WEBannerItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEBannerItemView.xib; sourceTree = "<group>"; };
 		0351486817B69F1D006E67B2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0351486917B69F1D006E67B2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		0351486A17B69F1D006E67B2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -845,11 +850,22 @@
 		0341647E17B7B3F6005CFD98 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				0341648417B7B641005CFD98 /* Banner */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		0341648417B7B641005CFD98 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
 				0341647F17B7B425005CFD98 /* WEBannerContainerView.h */,
 				0341648017B7B425005CFD98 /* WEBannerContainerView.m */,
 				0341648217B7B48A005CFD98 /* WEBannerContainerView.xib */,
+				0341648517B7B8E0005CFD98 /* WEBannerItemView.h */,
+				0341648617B7B8E0005CFD98 /* WEBannerItemView.m */,
+				0341648817B7B92E005CFD98 /* WEBannerItemView.xib */,
 			);
-			name = CustomView;
+			name = Banner;
 			sourceTree = "<group>";
 		};
 		0351486717B69F1D006E67B2 /* AFNetworking */ = {
@@ -1579,6 +1595,7 @@
 				E458B1EC17B754C100D0DFBD /* course_time_icn@2x.png in Resources */,
 				03E8B61617B7918000AC12C8 /* WEHomeRootViewController.xib in Resources */,
 				0341648317B7B48A005CFD98 /* WEBannerContainerView.xib in Resources */,
+				0341648917B7B92E005CFD98 /* WEBannerItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1706,6 +1723,7 @@
 				03E8B68F17B795C400AC12C8 /* User+Addition.m in Sources */,
 				03E8B69417B79B3600AC12C8 /* WTCoreDataManager.m in Sources */,
 				0341648117B7B425005CFD98 /* WEBannerContainerView.m in Sources */,
+				0341648717B7B8E0005CFD98 /* WEBannerItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
