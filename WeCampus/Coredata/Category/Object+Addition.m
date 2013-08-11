@@ -15,7 +15,7 @@
 #import "Star.h"
 #import "Organization.h"
 #import "Course.h"
-#import <WeTongjiSDK/WeTongjiSDK.h>
+#import "WTRequest.h"
 
 @implementation Object (Addition)
 
@@ -48,7 +48,6 @@
         if ([self isKindOfClass:[User class]] || [self isKindOfClass:[Organization class]]) {
             return;
         }
-        WTLOG(@"Delete object:%@", NSStringFromClass([self class]));
         NSManagedObjectContext *context = [WTCoreDataManager sharedManager].managedObjectContext;
         [context deleteObject:self];
     }

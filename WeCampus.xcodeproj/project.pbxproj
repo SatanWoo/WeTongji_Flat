@@ -16,8 +16,6 @@
 		033729D117B67D7600D2EC9F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D017B67D7600D2EC9F /* Default.png */; };
 		033729D317B67D7600D2EC9F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D217B67D7600D2EC9F /* Default@2x.png */; };
 		033729D517B67D7600D2EC9F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D417B67D7600D2EC9F /* Default-568h@2x.png */; };
-		033729DA17B67D7600D2EC9F /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D917B67D7600D2EC9F /* first.png */; };
-		033729DC17B67D7600D2EC9F /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729DB17B67D7600D2EC9F /* first@2x.png */; };
 		033729DF17B67D7600D2EC9F /* WESecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033729DE17B67D7600D2EC9F /* WESecondViewController.m */; };
 		033729E117B67D7600D2EC9F /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729E017B67D7600D2EC9F /* second.png */; };
 		033729E317B67D7600D2EC9F /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729E217B67D7600D2EC9F /* second@2x.png */; };
@@ -90,6 +88,7 @@
 		03E8B68D17B795C400AC12C8 /* Organization+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67C17B795C400AC12C8 /* Organization+Addition.m */; };
 		03E8B68E17B795C400AC12C8 /* Star+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67E17B795C400AC12C8 /* Star+Addition.m */; };
 		03E8B68F17B795C400AC12C8 /* User+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B68017B795C400AC12C8 /* User+Addition.m */; };
+		03E8B69417B79B3600AC12C8 /* WTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B69317B79B3600AC12C8 /* WTCoreDataManager.m */; };
 		2D0549075E2B46C4AC299AF2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C5F1033434B719E6325EF /* libPods.a */; };
 		E40A64D017B733A500082B4F /* WTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64CF17B733A500082B4F /* WTRootTabBarController.m */; };
 		E40A64EC17B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
@@ -315,8 +314,6 @@
 		033729D017B67D7600D2EC9F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		033729D217B67D7600D2EC9F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		033729D417B67D7600D2EC9F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		033729D917B67D7600D2EC9F /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		033729DB17B67D7600D2EC9F /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		033729DD17B67D7600D2EC9F /* WESecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WESecondViewController.h; sourceTree = "<group>"; };
 		033729DE17B67D7600D2EC9F /* WESecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WESecondViewController.m; sourceTree = "<group>"; };
 		033729E017B67D7600D2EC9F /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
@@ -459,6 +456,9 @@
 		03E8B67E17B795C400AC12C8 /* Star+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Star+Addition.m"; sourceTree = "<group>"; };
 		03E8B67F17B795C400AC12C8 /* User+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Addition.h"; sourceTree = "<group>"; };
 		03E8B68017B795C400AC12C8 /* User+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Addition.m"; sourceTree = "<group>"; };
+		03E8B69217B79B3600AC12C8 /* WTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCoreDataManager.h; sourceTree = "<group>"; };
+		03E8B69317B79B3600AC12C8 /* WTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCoreDataManager.m; sourceTree = "<group>"; };
+		03E8B69517B79C4300AC12C8 /* WTCommonConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCommonConstant.h; sourceTree = "<group>"; };
 		852FA862DE854B8F88F43748 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		875C5F1033434B719E6325EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40A64CE17B733A500082B4F /* WTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRootTabBarController.h; sourceTree = "<group>"; };
@@ -691,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E49A325B17B753E300AF8C77 /* SystemConfiguration.framework in Frameworks */,
+				E49A324917B7539300AF8C77 /* MobileCoreServices.framework in Frameworks */,
 				E49A325917B753D900AF8C77 /* CoreText.framework in Frameworks */,
 				E49A325717B753D500AF8C77 /* CoreData.framework in Frameworks */,
 				0351489D17B6A084006E67B2 /* Security.framework in Frameworks */,
@@ -700,7 +701,6 @@
 				E49A324F17B753AF00AF8C77 /* CoreLocation.framework in Frameworks */,
 				E49A324D17B753A400AF8C77 /* Social.framework in Frameworks */,
 				E49A324B17B7539A00AF8C77 /* MessageUI.framework in Frameworks */,
-				E49A324917B7539300AF8C77 /* MobileCoreServices.framework in Frameworks */,
 				E49A324717B7538C00AF8C77 /* AddressBookUI.framework in Frameworks */,
 				E49A324517B7538800AF8C77 /* AddressBook.framework in Frameworks */,
 				033729BF17B67D7600D2EC9F /* UIKit.framework in Frameworks */,
@@ -768,6 +768,7 @@
 		033729C517B67D7600D2EC9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				03E8B69517B79C4300AC12C8 /* WTCommonConstant.h */,
 				033729CD17B67D7600D2EC9F /* WEAppDelegate.h */,
 				033729CE17B67D7600D2EC9F /* WEAppDelegate.m */,
 				033729C617B67D7600D2EC9F /* WeCampus-Info.plist */,
@@ -785,12 +786,11 @@
 		033729EF17B67DF700D2EC9F /* WeCampus */ = {
 			isa = PBXGroup;
 			children = (
+				03E8B69117B79B2600AC12C8 /* Utility */,
 				03E8B61717B793B500AC12C8 /* Coredata */,
 				E458B07717B754C100D0DFBD /* Resource */,
 				E40A64D117B7349A00082B4F /* Category */,
 				0351489E17B6A1A1006E67B2 /* ViewController */,
-				033729D917B67D7600D2EC9F /* first.png */,
-				033729DB17B67D7600D2EC9F /* first@2x.png */,
 				033729DD17B67D7600D2EC9F /* WESecondViewController.h */,
 				033729DE17B67D7600D2EC9F /* WESecondViewController.m */,
 				033729E017B67D7600D2EC9F /* second.png */,
@@ -997,6 +997,15 @@
 				03E8B68017B795C400AC12C8 /* User+Addition.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		03E8B69117B79B2600AC12C8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				03E8B69217B79B3600AC12C8 /* WTCoreDataManager.h */,
+				03E8B69317B79B3600AC12C8 /* WTCoreDataManager.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		E40A64D117B7349A00082B4F /* Category */ = {
@@ -1366,8 +1375,6 @@
 				033729D117B67D7600D2EC9F /* Default.png in Resources */,
 				033729D317B67D7600D2EC9F /* Default@2x.png in Resources */,
 				033729D517B67D7600D2EC9F /* Default-568h@2x.png in Resources */,
-				033729DA17B67D7600D2EC9F /* first.png in Resources */,
-				033729DC17B67D7600D2EC9F /* first@2x.png in Resources */,
 				033729E117B67D7600D2EC9F /* second.png in Resources */,
 				033729E317B67D7600D2EC9F /* second@2x.png in Resources */,
 				033729E917B67D7600D2EC9F /* WESecondViewController.xib in Resources */,
@@ -1680,6 +1687,7 @@
 				03E8B68D17B795C400AC12C8 /* Organization+Addition.m in Sources */,
 				03E8B68E17B795C400AC12C8 /* Star+Addition.m in Sources */,
 				03E8B68F17B795C400AC12C8 /* User+Addition.m in Sources */,
+				03E8B69417B79B3600AC12C8 /* WTCoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

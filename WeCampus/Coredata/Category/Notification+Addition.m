@@ -12,7 +12,6 @@
 #import "ActivityInvitationNotification.h"
 #import "CourseInvitationNotification.h"
 #import "User+Addition.h"
-#import "WTNotificationFriendInvitationCell.h"
 #import "NSString+WTAddition.h"
 #import "Activity+Addition.h"
 #import "Course+Addition.h"
@@ -54,7 +53,6 @@
             notification = [Notification insertCourseInvitationNotification:courseInviteInfo];
             [result addObject:notification];
         }
-        WTLOG(@"Insert notification:%@", notification.sendTime);
     }
     return result;
 }
@@ -202,7 +200,7 @@
 - (CGFloat)cellHeight {
     if ([self isKindOfClass:[InvitationNotification class]]) {
         InvitationNotification *invitation = (InvitationNotification *)self;
-        return [WTNotificationInvitationCell cellHeightWithNotificationObject:invitation];
+        return 0; //[WTNotificationInvitationCell cellHeightWithNotificationObject:invitation];
     } else {
         return 0;
     }
@@ -216,7 +214,6 @@
     NSArray *allNotifications = [context executeFetchRequest:request error:NULL];
     
     for(Notification *item in allNotifications) {
-        WTLOG(@"Clear notification:%@", item.sendTime);
         if ([item isKindOfClass:[ActivityInvitationNotification class]]) {
             ActivityInvitationNotification *activityInvitation = (ActivityInvitationNotification *)item;
             [activityInvitation.activity removeRelatedActivityInvitationsObject:activityInvitation];

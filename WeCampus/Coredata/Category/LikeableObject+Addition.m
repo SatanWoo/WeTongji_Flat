@@ -36,12 +36,12 @@
     if (likedByCurrentUser) {
         if ([currentUser.likedObjects containsObject:self])
             return;
-        WTLOG(@"add like object:%@, model:%@", self.identifier, self.objectClass);
+       
         [currentUser addLikedObjectsObject:self];
     } else {
         if (![currentUser.likedObjects containsObject:self])
             return;
-        WTLOG(@"remove like object:%@, model:%@", self.identifier, self.objectClass);
+       
         [currentUser removeLikedObjectsObject:self];
     }
 }

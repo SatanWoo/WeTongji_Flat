@@ -87,7 +87,7 @@
         User *currentUser = [WTCoreDataManager sharedManager].currentUser;
         if (scheduledByCurrentUser) {
             [currentUser addScheduledEventsObject:self];
-            [[UIApplication sharedApplication] addEventAlertNotificationWithEvent:self];
+            //[[UIApplication sharedApplication] addEventAlertNotificationWithEvent:self];
             
             if ([self isKindOfClass:[CourseInstance class]]) {
                 CourseInstance *courseInstance = (CourseInstance *)self;
@@ -95,7 +95,7 @@
             }
         } else {
             [currentUser removeScheduledEventsObject:self];
-            [[UIApplication sharedApplication] removeEventAlertNotificationWithEvent:self];
+            //[[UIApplication sharedApplication] removeEventAlertNotificationWithEvent:self];
             
             if ([self isKindOfClass:[CourseInstance class]]) {
                 CourseInstance *courseInstance = (CourseInstance *)self;

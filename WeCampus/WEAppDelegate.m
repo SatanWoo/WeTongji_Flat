@@ -8,10 +8,6 @@
 
 #import "WEAppDelegate.h"
 
-#import "WEFirstViewController.h"
-
-#import "WESecondViewController.h"
-
 @implementation WEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
