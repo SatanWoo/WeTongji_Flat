@@ -33,6 +33,8 @@
 - (void)configureViewWithActivity:(Activity *)act
 {
     self.categoryLabel.text = act.categoryString;
+    [self configureCategoryColor];
+    
     self.titleLabel.text = act.what;
     self.timeLabel.text = [act yearMonthDayBeginToEndTimeString];
     
@@ -47,6 +49,22 @@
     
     [self.titleLabel sizeToFit];
     [self.titleLabel resetWidth:maxLabelRightBorder - self.titleLabel.frame.origin.x];
+}
+
+- (void)configureCategoryColor
+{
+    NSString *text = self.categoryLabel.text;
+  
+    if ([text isEqualToString:NSLocalizedString(@"Academics", nil)]) {
+        [self.categoryLabel setTextColor:[UIColor colorWithHue:0.169 saturation:0.86 brightness:0.63 alpha:1]];
+    } else if ([text isEqualToString:NSLocalizedString(@"Competition", nil)]){
+        [self.categoryLabel setTextColor:[UIColor colorWithHue:0.28 saturation:0.85 brightness:0.91 alpha:1]];
+    } else if ([text isEqualToString:NSLocalizedString(@"Entertainment", nil)]) {
+        [self.categoryLabel setTextColor:[UIColor colorWithHue:0 saturation:0.65 brightness:0.92 alpha:1]];
+    } else {
+        NSLog(@"caoniamde");
+        [self.categoryLabel setTextColor:[UIColor colorWithHue:0.213 saturation:0.92 brightness:0.98 alpha:1]];
+    }
 }
 
 #define originXWithImage 76
