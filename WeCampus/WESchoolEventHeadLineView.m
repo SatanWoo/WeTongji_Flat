@@ -28,6 +28,8 @@
     return headerLineView;
 }
 
+#define maxLabelRightBorder 306
+
 - (void)configureViewWithActivity:(Activity *)act
 {
     self.categoryLabel.text = act.categoryString;
@@ -35,8 +37,31 @@
     self.timeLabel.text = [act yearMonthDayBeginToEndTimeString];
     
     [self.timeLabel sizeToFit];
-    [self.timeLabel sizeToFit];
-    [self.avatar loadImageWithImageURLString:act.image];
+    
+    if (act.image == nil) {
+        [self configureNoImageLayout];
+    } else {
+        [self.avatar loadImageWithImageURLString:act.image];
+        [self configureImageLayout];
+    }
+    
+    [self.titleLabel sizeToFit];
+    [self.titleLabel resetWidth:maxLabelRightBorder - self.titleLabel.frame.origin.x];
+}
+
+#define originXWithImage 76
+#define originXWithoutImage 26
+
+- (void)configureImageLayout
+{
+    [self.titleLabel resetOriginX:originXWithImage];
+    [self.timeLabel resetOriginX:originXWithImage];
+}
+
+- (void)configureNoImageLayout
+{
+    [self.titleLabel resetOriginX:originXWithoutImage];
+    [self.timeLabel resetOriginX:originXWithoutImage];
 }
 
 @end
