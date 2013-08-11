@@ -36,6 +36,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+         self.shouldLoadHomeItems = YES;
     }
     return self;
 }
@@ -118,7 +119,6 @@
 //    [self fillHomeSelectViews];
     
     // Refill banner view
-    NSLog(@"")
     [Object setAllObjectsFreeFromHolder:[WEBannerContainerView class]];
     
     NSDictionary *bannerActivityInfo = resultDict[@"BannerActivity"];
