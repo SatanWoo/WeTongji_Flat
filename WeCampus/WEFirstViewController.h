@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WERootViewController.h"
 
-@interface WEFirstViewController : UIViewController
+@interface WEFirstViewController : WERootViewController
 
 @end

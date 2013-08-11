@@ -1,18 +1,18 @@
 //
-//  WEFirstViewController.m
+//  WERootViewController.m
 //  WeCampus
 //
-//  Created by 吴 wuziqi on 13-8-10.
+//  Created by 吴 wuziqi on 13-8-11.
 //  Copyright (c) 2013年 Ziqi Wu. All rights reserved.
 //
 
-#import "WEFirstViewController.h"
+#import "WERootViewController.h"
 
-@interface WEFirstViewController ()
+@interface WERootViewController ()
 
 @end
 
-@implementation WEFirstViewController
+@implementation WERootViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,15 +21,20 @@
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   }
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (BOOL)shouldHideNavigationBar
+{
+    return YES;
 }
 
 @end

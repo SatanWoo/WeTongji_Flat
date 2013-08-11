@@ -1,18 +1,19 @@
 //
-//  WEFirstViewController.m
+//  WEHomeNavigationViewController.m
 //  WeCampus
 //
-//  Created by 吴 wuziqi on 13-8-10.
+//  Created by 吴 wuziqi on 13-8-11.
 //  Copyright (c) 2013年 Ziqi Wu. All rights reserved.
 //
 
+#import "WEHomeNavigationViewController.h"
 #import "WEFirstViewController.h"
 
-@interface WEFirstViewController ()
+@interface WEHomeNavigationViewController ()
 
 @end
 
-@implementation WEFirstViewController
+@implementation WEHomeNavigationViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,11 +22,17 @@
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   }
+}
+
+- (void)initRootViewController
+{
+    self.rootViewController = [[WEFirstViewController alloc] init];
+    [self pushViewController:self.rootViewController animated:NO];
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -48,6 +48,10 @@
 		0351489A17B69F34006E67B2 /* WTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351489317B69F34006E67B2 /* WTRequest.m */; };
 		0351489D17B6A084006E67B2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0351489C17B6A084006E67B2 /* Security.framework */; };
 		035148A017B6A1F9006E67B2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0351489F17B6A1F9006E67B2 /* MainWindow.xib */; };
+		03E8B60817B7890D00AC12C8 /* WENavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */; };
+		03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */; };
+		03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */; };
+		03E8B61117B78BED00AC12C8 /* WEContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B61017B78BEC00AC12C8 /* WEContentViewController.m */; };
 		2D0549075E2B46C4AC299AF2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C5F1033434B719E6325EF /* libPods.a */; };
 		E40A64D017B733A500082B4F /* WTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64CF17B733A500082B4F /* WTRootTabBarController.m */; };
 		E40A64EC17B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
@@ -333,6 +337,14 @@
 		0351489317B69F34006E67B2 /* WTRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTRequest.m; sourceTree = "<group>"; };
 		0351489C17B6A084006E67B2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0351489F17B6A1F9006E67B2 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENavigationViewController.h; sourceTree = "<group>"; };
+		03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENavigationViewController.m; sourceTree = "<group>"; };
+		03E8B60917B789AA00AC12C8 /* WEHomeNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHomeNavigationViewController.h; sourceTree = "<group>"; };
+		03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEHomeNavigationViewController.m; sourceTree = "<group>"; };
+		03E8B60C17B78B3F00AC12C8 /* WERootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WERootViewController.h; sourceTree = "<group>"; };
+		03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WERootViewController.m; sourceTree = "<group>"; };
+		03E8B60F17B78BEC00AC12C8 /* WEContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEContentViewController.h; sourceTree = "<group>"; };
+		03E8B61017B78BEC00AC12C8 /* WEContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEContentViewController.m; sourceTree = "<group>"; };
 		852FA862DE854B8F88F43748 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		875C5F1033434B719E6325EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40A64CE17B733A500082B4F /* WTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRootTabBarController.h; sourceTree = "<group>"; };
@@ -662,15 +674,12 @@
 				E458B07717B754C100D0DFBD /* Resource */,
 				E40A64D117B7349A00082B4F /* Category */,
 				0351489E17B6A1A1006E67B2 /* ViewController */,
-				033729D617B67D7600D2EC9F /* WEFirstViewController.h */,
-				033729D717B67D7600D2EC9F /* WEFirstViewController.m */,
 				033729D917B67D7600D2EC9F /* first.png */,
 				033729DB17B67D7600D2EC9F /* first@2x.png */,
 				033729DD17B67D7600D2EC9F /* WESecondViewController.h */,
 				033729DE17B67D7600D2EC9F /* WESecondViewController.m */,
 				033729E017B67D7600D2EC9F /* second.png */,
 				033729E217B67D7600D2EC9F /* second@2x.png */,
-				033729E417B67D7600D2EC9F /* WEFirstViewController.xib */,
 				033729E717B67D7600D2EC9F /* WESecondViewController.xib */,
 			);
 			name = WeCampus;
@@ -758,9 +767,22 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				03E8B60517B785EF00AC12C8 /* Home */,
 				E47D58D617B731EA00D55EC7 /* Root */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		03E8B60517B785EF00AC12C8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				03E8B60917B789AA00AC12C8 /* WEHomeNavigationViewController.h */,
+				03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */,
+				033729D617B67D7600D2EC9F /* WEFirstViewController.h */,
+				033729D717B67D7600D2EC9F /* WEFirstViewController.m */,
+				033729E417B67D7600D2EC9F /* WEFirstViewController.xib */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		E40A64D117B7349A00082B4F /* Category */ = {
@@ -1062,6 +1084,12 @@
 			children = (
 				E40A64CE17B733A500082B4F /* WTRootTabBarController.h */,
 				E40A64CF17B733A500082B4F /* WTRootTabBarController.m */,
+				03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */,
+				03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */,
+				03E8B60C17B78B3F00AC12C8 /* WERootViewController.h */,
+				03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */,
+				03E8B60F17B78BEC00AC12C8 /* WEContentViewController.h */,
+				03E8B61017B78BEC00AC12C8 /* WEContentViewController.m */,
 			);
 			name = Root;
 			sourceTree = "<group>";
@@ -1396,6 +1424,10 @@
 				E40A64F617B734A400082B4F /* UIImageView+ContentScale.m in Sources */,
 				E40A64F717B734A400082B4F /* UIView+Animation.m in Sources */,
 				E40A64F817B734A400082B4F /* UIView+Resize.m in Sources */,
+				03E8B60817B7890D00AC12C8 /* WENavigationViewController.m in Sources */,
+				03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */,
+				03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */,
+				03E8B61117B78BED00AC12C8 /* WEContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

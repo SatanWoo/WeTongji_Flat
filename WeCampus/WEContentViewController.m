@@ -1,18 +1,18 @@
 //
-//  WEFirstViewController.m
+//  WEContentViewController.m
 //  WeCampus
 //
-//  Created by 吴 wuziqi on 13-8-10.
+//  Created by 吴 wuziqi on 13-8-11.
 //  Copyright (c) 2013年 Ziqi Wu. All rights reserved.
 //
 
-#import "WEFirstViewController.h"
+#import "WEContentViewController.h"
 
-@interface WEFirstViewController ()
+@interface WEContentViewController ()
 
 @end
 
-@implementation WEFirstViewController
+@implementation WEContentViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,15 +21,26 @@
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   }
+    [self configureNavigationBar];
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (BOOL)shouldHideNavigationBar
+{
+    return NO;
+}
+
+- (void)configureNavigationBar
+{
+    
 }
 
 @end
