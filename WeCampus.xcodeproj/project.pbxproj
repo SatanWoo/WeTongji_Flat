@@ -52,6 +52,44 @@
 		03E8B61117B78BED00AC12C8 /* WEContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B61017B78BEC00AC12C8 /* WEContentViewController.m */; };
 		03E8B61517B7918000AC12C8 /* WEHomeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B61317B7918000AC12C8 /* WEHomeRootViewController.m */; };
 		03E8B61617B7918000AC12C8 /* WEHomeRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E8B61417B7918000AC12C8 /* WEHomeRootViewController.xib */; };
+		03E8B61A17B793B500AC12C8 /* WeTongji.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B61817B793B500AC12C8 /* WeTongji.xcdatamodeld */; };
+		03E8B64B17B795BE00AC12C8 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B62017B795BE00AC12C8 /* Activity.m */; };
+		03E8B64C17B795BE00AC12C8 /* ActivityInvitationNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B62217B795BE00AC12C8 /* ActivityInvitationNotification.m */; };
+		03E8B64D17B795BE00AC12C8 /* Advertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B62417B795BE00AC12C8 /* Advertisement.m */; };
+		03E8B64E17B795BE00AC12C8 /* BillboardPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B62617B795BE00AC12C8 /* BillboardPost.m */; };
+		03E8B64F17B795BE00AC12C8 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B62817B795BE00AC12C8 /* Comment.m */; };
+		03E8B65017B795BE00AC12C8 /* CommentableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B62A17B795BE00AC12C8 /* CommentableObject.m */; };
+		03E8B65117B795BE00AC12C8 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B62C17B795BE00AC12C8 /* Controller.m */; };
+		03E8B65217B795BE00AC12C8 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B62E17B795BE00AC12C8 /* Course.m */; };
+		03E8B65317B795BE00AC12C8 /* CourseInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B63017B795BE00AC12C8 /* CourseInstance.m */; };
+		03E8B65417B795BE00AC12C8 /* CourseInvitationNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B63217B795BE00AC12C8 /* CourseInvitationNotification.m */; };
+		03E8B65517B795BE00AC12C8 /* CourseTimetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B63417B795BE00AC12C8 /* CourseTimetable.m */; };
+		03E8B65617B795BE00AC12C8 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B63617B795BE00AC12C8 /* Event.m */; };
+		03E8B65717B795BE00AC12C8 /* Exam.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B63817B795BE00AC12C8 /* Exam.m */; };
+		03E8B65817B795BE00AC12C8 /* FriendInvitationNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B63A17B795BE00AC12C8 /* FriendInvitationNotification.m */; };
+		03E8B65917B795BE00AC12C8 /* InvitationNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B63C17B795BE00AC12C8 /* InvitationNotification.m */; };
+		03E8B65A17B795BE00AC12C8 /* LikeableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B63E17B795BE00AC12C8 /* LikeableObject.m */; };
+		03E8B65B17B795BE00AC12C8 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B64017B795BE00AC12C8 /* News.m */; };
+		03E8B65C17B795BE00AC12C8 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B64217B795BE00AC12C8 /* Notification.m */; };
+		03E8B65D17B795BE00AC12C8 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B64417B795BE00AC12C8 /* Object.m */; };
+		03E8B65E17B795BE00AC12C8 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B64617B795BE00AC12C8 /* Organization.m */; };
+		03E8B65F17B795BE00AC12C8 /* Star.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B64817B795BE00AC12C8 /* Star.m */; };
+		03E8B66017B795BE00AC12C8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B64A17B795BE00AC12C8 /* User.m */; };
+		03E8B68117B795C400AC12C8 /* Activity+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B66317B795C400AC12C8 /* Activity+Addition.m */; };
+		03E8B68217B795C400AC12C8 /* Advertisement+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B66517B795C400AC12C8 /* Advertisement+Addition.m */; };
+		03E8B68317B795C400AC12C8 /* BillboardPost+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B66717B795C400AC12C8 /* BillboardPost+Addition.m */; };
+		03E8B68417B795C400AC12C8 /* Comment+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B66917B795C400AC12C8 /* Comment+Addition.m */; };
+		03E8B68517B795C400AC12C8 /* Controller+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B66B17B795C400AC12C8 /* Controller+Addition.m */; };
+		03E8B68617B795C400AC12C8 /* Course+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B66D17B795C400AC12C8 /* Course+Addition.m */; };
+		03E8B68717B795C400AC12C8 /* Event+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67017B795C400AC12C8 /* Event+Addition.m */; };
+		03E8B68817B795C400AC12C8 /* Exam+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67217B795C400AC12C8 /* Exam+Addition.m */; };
+		03E8B68917B795C400AC12C8 /* LikeableObject+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67417B795C400AC12C8 /* LikeableObject+Addition.m */; };
+		03E8B68A17B795C400AC12C8 /* News+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67617B795C400AC12C8 /* News+Addition.m */; };
+		03E8B68B17B795C400AC12C8 /* Notification+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67817B795C400AC12C8 /* Notification+Addition.m */; };
+		03E8B68C17B795C400AC12C8 /* Object+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67A17B795C400AC12C8 /* Object+Addition.m */; };
+		03E8B68D17B795C400AC12C8 /* Organization+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67C17B795C400AC12C8 /* Organization+Addition.m */; };
+		03E8B68E17B795C400AC12C8 /* Star+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67E17B795C400AC12C8 /* Star+Addition.m */; };
+		03E8B68F17B795C400AC12C8 /* User+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B68017B795C400AC12C8 /* User+Addition.m */; };
 		2D0549075E2B46C4AC299AF2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C5F1033434B719E6325EF /* libPods.a */; };
 		E40A64D017B733A500082B4F /* WTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64CF17B733A500082B4F /* WTRootTabBarController.m */; };
 		E40A64EC17B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
@@ -345,6 +383,82 @@
 		03E8B61217B7918000AC12C8 /* WEHomeRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHomeRootViewController.h; sourceTree = "<group>"; };
 		03E8B61317B7918000AC12C8 /* WEHomeRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEHomeRootViewController.m; sourceTree = "<group>"; };
 		03E8B61417B7918000AC12C8 /* WEHomeRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEHomeRootViewController.xib; sourceTree = "<group>"; };
+		03E8B61917B793B500AC12C8 /* WeTongji.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeTongji.xcdatamodel; sourceTree = "<group>"; };
+		03E8B61F17B795BE00AC12C8 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		03E8B62017B795BE00AC12C8 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		03E8B62117B795BE00AC12C8 /* ActivityInvitationNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityInvitationNotification.h; sourceTree = "<group>"; };
+		03E8B62217B795BE00AC12C8 /* ActivityInvitationNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInvitationNotification.m; sourceTree = "<group>"; };
+		03E8B62317B795BE00AC12C8 /* Advertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Advertisement.h; sourceTree = "<group>"; };
+		03E8B62417B795BE00AC12C8 /* Advertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Advertisement.m; sourceTree = "<group>"; };
+		03E8B62517B795BE00AC12C8 /* BillboardPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillboardPost.h; sourceTree = "<group>"; };
+		03E8B62617B795BE00AC12C8 /* BillboardPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillboardPost.m; sourceTree = "<group>"; };
+		03E8B62717B795BE00AC12C8 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		03E8B62817B795BE00AC12C8 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		03E8B62917B795BE00AC12C8 /* CommentableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentableObject.h; sourceTree = "<group>"; };
+		03E8B62A17B795BE00AC12C8 /* CommentableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentableObject.m; sourceTree = "<group>"; };
+		03E8B62B17B795BE00AC12C8 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		03E8B62C17B795BE00AC12C8 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		03E8B62D17B795BE00AC12C8 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		03E8B62E17B795BE00AC12C8 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		03E8B62F17B795BE00AC12C8 /* CourseInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInstance.h; sourceTree = "<group>"; };
+		03E8B63017B795BE00AC12C8 /* CourseInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInstance.m; sourceTree = "<group>"; };
+		03E8B63117B795BE00AC12C8 /* CourseInvitationNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInvitationNotification.h; sourceTree = "<group>"; };
+		03E8B63217B795BE00AC12C8 /* CourseInvitationNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInvitationNotification.m; sourceTree = "<group>"; };
+		03E8B63317B795BE00AC12C8 /* CourseTimetable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTimetable.h; sourceTree = "<group>"; };
+		03E8B63417B795BE00AC12C8 /* CourseTimetable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTimetable.m; sourceTree = "<group>"; };
+		03E8B63517B795BE00AC12C8 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		03E8B63617B795BE00AC12C8 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		03E8B63717B795BE00AC12C8 /* Exam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exam.h; sourceTree = "<group>"; };
+		03E8B63817B795BE00AC12C8 /* Exam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exam.m; sourceTree = "<group>"; };
+		03E8B63917B795BE00AC12C8 /* FriendInvitationNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendInvitationNotification.h; sourceTree = "<group>"; };
+		03E8B63A17B795BE00AC12C8 /* FriendInvitationNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendInvitationNotification.m; sourceTree = "<group>"; };
+		03E8B63B17B795BE00AC12C8 /* InvitationNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitationNotification.h; sourceTree = "<group>"; };
+		03E8B63C17B795BE00AC12C8 /* InvitationNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitationNotification.m; sourceTree = "<group>"; };
+		03E8B63D17B795BE00AC12C8 /* LikeableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeableObject.h; sourceTree = "<group>"; };
+		03E8B63E17B795BE00AC12C8 /* LikeableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeableObject.m; sourceTree = "<group>"; };
+		03E8B63F17B795BE00AC12C8 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		03E8B64017B795BE00AC12C8 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		03E8B64117B795BE00AC12C8 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
+		03E8B64217B795BE00AC12C8 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
+		03E8B64317B795BE00AC12C8 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		03E8B64417B795BE00AC12C8 /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
+		03E8B64517B795BE00AC12C8 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organization.h; sourceTree = "<group>"; };
+		03E8B64617B795BE00AC12C8 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
+		03E8B64717B795BE00AC12C8 /* Star.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Star.h; sourceTree = "<group>"; };
+		03E8B64817B795BE00AC12C8 /* Star.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Star.m; sourceTree = "<group>"; };
+		03E8B64917B795BE00AC12C8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		03E8B64A17B795BE00AC12C8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		03E8B66217B795C400AC12C8 /* Activity+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Activity+Addition.h"; sourceTree = "<group>"; };
+		03E8B66317B795C400AC12C8 /* Activity+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Activity+Addition.m"; sourceTree = "<group>"; };
+		03E8B66417B795C400AC12C8 /* Advertisement+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Advertisement+Addition.h"; sourceTree = "<group>"; };
+		03E8B66517B795C400AC12C8 /* Advertisement+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Advertisement+Addition.m"; sourceTree = "<group>"; };
+		03E8B66617B795C400AC12C8 /* BillboardPost+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BillboardPost+Addition.h"; sourceTree = "<group>"; };
+		03E8B66717B795C400AC12C8 /* BillboardPost+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BillboardPost+Addition.m"; sourceTree = "<group>"; };
+		03E8B66817B795C400AC12C8 /* Comment+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Comment+Addition.h"; sourceTree = "<group>"; };
+		03E8B66917B795C400AC12C8 /* Comment+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Comment+Addition.m"; sourceTree = "<group>"; };
+		03E8B66A17B795C400AC12C8 /* Controller+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Controller+Addition.h"; sourceTree = "<group>"; };
+		03E8B66B17B795C400AC12C8 /* Controller+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Controller+Addition.m"; sourceTree = "<group>"; };
+		03E8B66C17B795C400AC12C8 /* Course+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Course+Addition.h"; sourceTree = "<group>"; };
+		03E8B66D17B795C400AC12C8 /* Course+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Course+Addition.m"; sourceTree = "<group>"; };
+		03E8B66E17B795C400AC12C8 /* Course+Addtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Course+Addtion.h"; sourceTree = "<group>"; };
+		03E8B66F17B795C400AC12C8 /* Event+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+Addition.h"; sourceTree = "<group>"; };
+		03E8B67017B795C400AC12C8 /* Event+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+Addition.m"; sourceTree = "<group>"; };
+		03E8B67117B795C400AC12C8 /* Exam+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Exam+Addition.h"; sourceTree = "<group>"; };
+		03E8B67217B795C400AC12C8 /* Exam+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Exam+Addition.m"; sourceTree = "<group>"; };
+		03E8B67317B795C400AC12C8 /* LikeableObject+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LikeableObject+Addition.h"; sourceTree = "<group>"; };
+		03E8B67417B795C400AC12C8 /* LikeableObject+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LikeableObject+Addition.m"; sourceTree = "<group>"; };
+		03E8B67517B795C400AC12C8 /* News+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "News+Addition.h"; sourceTree = "<group>"; };
+		03E8B67617B795C400AC12C8 /* News+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "News+Addition.m"; sourceTree = "<group>"; };
+		03E8B67717B795C400AC12C8 /* Notification+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Notification+Addition.h"; sourceTree = "<group>"; };
+		03E8B67817B795C400AC12C8 /* Notification+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Notification+Addition.m"; sourceTree = "<group>"; };
+		03E8B67917B795C400AC12C8 /* Object+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Object+Addition.h"; sourceTree = "<group>"; };
+		03E8B67A17B795C400AC12C8 /* Object+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Object+Addition.m"; sourceTree = "<group>"; };
+		03E8B67B17B795C400AC12C8 /* Organization+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+Addition.h"; sourceTree = "<group>"; };
+		03E8B67C17B795C400AC12C8 /* Organization+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+Addition.m"; sourceTree = "<group>"; };
+		03E8B67D17B795C400AC12C8 /* Star+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Star+Addition.h"; sourceTree = "<group>"; };
+		03E8B67E17B795C400AC12C8 /* Star+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Star+Addition.m"; sourceTree = "<group>"; };
+		03E8B67F17B795C400AC12C8 /* User+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Addition.h"; sourceTree = "<group>"; };
+		03E8B68017B795C400AC12C8 /* User+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Addition.m"; sourceTree = "<group>"; };
 		852FA862DE854B8F88F43748 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		875C5F1033434B719E6325EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40A64CE17B733A500082B4F /* WTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRootTabBarController.h; sourceTree = "<group>"; };
@@ -671,6 +785,7 @@
 		033729EF17B67DF700D2EC9F /* WeCampus */ = {
 			isa = PBXGroup;
 			children = (
+				03E8B61717B793B500AC12C8 /* Coredata */,
 				E458B07717B754C100D0DFBD /* Resource */,
 				E40A64D117B7349A00082B4F /* Category */,
 				0351489E17B6A1A1006E67B2 /* ViewController */,
@@ -783,6 +898,105 @@
 				03E8B61417B7918000AC12C8 /* WEHomeRootViewController.xib */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		03E8B61717B793B500AC12C8 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				03E8B66117B795C400AC12C8 /* Category */,
+				03E8B61E17B795BE00AC12C8 /* Model */,
+				03E8B61817B793B500AC12C8 /* WeTongji.xcdatamodeld */,
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
+		03E8B61E17B795BE00AC12C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03E8B61F17B795BE00AC12C8 /* Activity.h */,
+				03E8B62017B795BE00AC12C8 /* Activity.m */,
+				03E8B62117B795BE00AC12C8 /* ActivityInvitationNotification.h */,
+				03E8B62217B795BE00AC12C8 /* ActivityInvitationNotification.m */,
+				03E8B62317B795BE00AC12C8 /* Advertisement.h */,
+				03E8B62417B795BE00AC12C8 /* Advertisement.m */,
+				03E8B62517B795BE00AC12C8 /* BillboardPost.h */,
+				03E8B62617B795BE00AC12C8 /* BillboardPost.m */,
+				03E8B62717B795BE00AC12C8 /* Comment.h */,
+				03E8B62817B795BE00AC12C8 /* Comment.m */,
+				03E8B62917B795BE00AC12C8 /* CommentableObject.h */,
+				03E8B62A17B795BE00AC12C8 /* CommentableObject.m */,
+				03E8B62B17B795BE00AC12C8 /* Controller.h */,
+				03E8B62C17B795BE00AC12C8 /* Controller.m */,
+				03E8B62D17B795BE00AC12C8 /* Course.h */,
+				03E8B62E17B795BE00AC12C8 /* Course.m */,
+				03E8B62F17B795BE00AC12C8 /* CourseInstance.h */,
+				03E8B63017B795BE00AC12C8 /* CourseInstance.m */,
+				03E8B63117B795BE00AC12C8 /* CourseInvitationNotification.h */,
+				03E8B63217B795BE00AC12C8 /* CourseInvitationNotification.m */,
+				03E8B63317B795BE00AC12C8 /* CourseTimetable.h */,
+				03E8B63417B795BE00AC12C8 /* CourseTimetable.m */,
+				03E8B63517B795BE00AC12C8 /* Event.h */,
+				03E8B63617B795BE00AC12C8 /* Event.m */,
+				03E8B63717B795BE00AC12C8 /* Exam.h */,
+				03E8B63817B795BE00AC12C8 /* Exam.m */,
+				03E8B63917B795BE00AC12C8 /* FriendInvitationNotification.h */,
+				03E8B63A17B795BE00AC12C8 /* FriendInvitationNotification.m */,
+				03E8B63B17B795BE00AC12C8 /* InvitationNotification.h */,
+				03E8B63C17B795BE00AC12C8 /* InvitationNotification.m */,
+				03E8B63D17B795BE00AC12C8 /* LikeableObject.h */,
+				03E8B63E17B795BE00AC12C8 /* LikeableObject.m */,
+				03E8B63F17B795BE00AC12C8 /* News.h */,
+				03E8B64017B795BE00AC12C8 /* News.m */,
+				03E8B64117B795BE00AC12C8 /* Notification.h */,
+				03E8B64217B795BE00AC12C8 /* Notification.m */,
+				03E8B64317B795BE00AC12C8 /* Object.h */,
+				03E8B64417B795BE00AC12C8 /* Object.m */,
+				03E8B64517B795BE00AC12C8 /* Organization.h */,
+				03E8B64617B795BE00AC12C8 /* Organization.m */,
+				03E8B64717B795BE00AC12C8 /* Star.h */,
+				03E8B64817B795BE00AC12C8 /* Star.m */,
+				03E8B64917B795BE00AC12C8 /* User.h */,
+				03E8B64A17B795BE00AC12C8 /* User.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03E8B66117B795C400AC12C8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				03E8B66217B795C400AC12C8 /* Activity+Addition.h */,
+				03E8B66317B795C400AC12C8 /* Activity+Addition.m */,
+				03E8B66417B795C400AC12C8 /* Advertisement+Addition.h */,
+				03E8B66517B795C400AC12C8 /* Advertisement+Addition.m */,
+				03E8B66617B795C400AC12C8 /* BillboardPost+Addition.h */,
+				03E8B66717B795C400AC12C8 /* BillboardPost+Addition.m */,
+				03E8B66817B795C400AC12C8 /* Comment+Addition.h */,
+				03E8B66917B795C400AC12C8 /* Comment+Addition.m */,
+				03E8B66A17B795C400AC12C8 /* Controller+Addition.h */,
+				03E8B66B17B795C400AC12C8 /* Controller+Addition.m */,
+				03E8B66C17B795C400AC12C8 /* Course+Addition.h */,
+				03E8B66D17B795C400AC12C8 /* Course+Addition.m */,
+				03E8B66E17B795C400AC12C8 /* Course+Addtion.h */,
+				03E8B66F17B795C400AC12C8 /* Event+Addition.h */,
+				03E8B67017B795C400AC12C8 /* Event+Addition.m */,
+				03E8B67117B795C400AC12C8 /* Exam+Addition.h */,
+				03E8B67217B795C400AC12C8 /* Exam+Addition.m */,
+				03E8B67317B795C400AC12C8 /* LikeableObject+Addition.h */,
+				03E8B67417B795C400AC12C8 /* LikeableObject+Addition.m */,
+				03E8B67517B795C400AC12C8 /* News+Addition.h */,
+				03E8B67617B795C400AC12C8 /* News+Addition.m */,
+				03E8B67717B795C400AC12C8 /* Notification+Addition.h */,
+				03E8B67817B795C400AC12C8 /* Notification+Addition.m */,
+				03E8B67917B795C400AC12C8 /* Object+Addition.h */,
+				03E8B67A17B795C400AC12C8 /* Object+Addition.m */,
+				03E8B67B17B795C400AC12C8 /* Organization+Addition.h */,
+				03E8B67C17B795C400AC12C8 /* Organization+Addition.m */,
+				03E8B67D17B795C400AC12C8 /* Star+Addition.h */,
+				03E8B67E17B795C400AC12C8 /* Star+Addition.m */,
+				03E8B67F17B795C400AC12C8 /* User+Addition.h */,
+				03E8B68017B795C400AC12C8 /* User+Addition.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		E40A64D117B7349A00082B4F /* Category */ = {
@@ -1428,6 +1642,44 @@
 				03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */,
 				03E8B61117B78BED00AC12C8 /* WEContentViewController.m in Sources */,
 				03E8B61517B7918000AC12C8 /* WEHomeRootViewController.m in Sources */,
+				03E8B61A17B793B500AC12C8 /* WeTongji.xcdatamodeld in Sources */,
+				03E8B64B17B795BE00AC12C8 /* Activity.m in Sources */,
+				03E8B64C17B795BE00AC12C8 /* ActivityInvitationNotification.m in Sources */,
+				03E8B64D17B795BE00AC12C8 /* Advertisement.m in Sources */,
+				03E8B64E17B795BE00AC12C8 /* BillboardPost.m in Sources */,
+				03E8B64F17B795BE00AC12C8 /* Comment.m in Sources */,
+				03E8B65017B795BE00AC12C8 /* CommentableObject.m in Sources */,
+				03E8B65117B795BE00AC12C8 /* Controller.m in Sources */,
+				03E8B65217B795BE00AC12C8 /* Course.m in Sources */,
+				03E8B65317B795BE00AC12C8 /* CourseInstance.m in Sources */,
+				03E8B65417B795BE00AC12C8 /* CourseInvitationNotification.m in Sources */,
+				03E8B65517B795BE00AC12C8 /* CourseTimetable.m in Sources */,
+				03E8B65617B795BE00AC12C8 /* Event.m in Sources */,
+				03E8B65717B795BE00AC12C8 /* Exam.m in Sources */,
+				03E8B65817B795BE00AC12C8 /* FriendInvitationNotification.m in Sources */,
+				03E8B65917B795BE00AC12C8 /* InvitationNotification.m in Sources */,
+				03E8B65A17B795BE00AC12C8 /* LikeableObject.m in Sources */,
+				03E8B65B17B795BE00AC12C8 /* News.m in Sources */,
+				03E8B65C17B795BE00AC12C8 /* Notification.m in Sources */,
+				03E8B65D17B795BE00AC12C8 /* Object.m in Sources */,
+				03E8B65E17B795BE00AC12C8 /* Organization.m in Sources */,
+				03E8B65F17B795BE00AC12C8 /* Star.m in Sources */,
+				03E8B66017B795BE00AC12C8 /* User.m in Sources */,
+				03E8B68117B795C400AC12C8 /* Activity+Addition.m in Sources */,
+				03E8B68217B795C400AC12C8 /* Advertisement+Addition.m in Sources */,
+				03E8B68317B795C400AC12C8 /* BillboardPost+Addition.m in Sources */,
+				03E8B68417B795C400AC12C8 /* Comment+Addition.m in Sources */,
+				03E8B68517B795C400AC12C8 /* Controller+Addition.m in Sources */,
+				03E8B68617B795C400AC12C8 /* Course+Addition.m in Sources */,
+				03E8B68717B795C400AC12C8 /* Event+Addition.m in Sources */,
+				03E8B68817B795C400AC12C8 /* Exam+Addition.m in Sources */,
+				03E8B68917B795C400AC12C8 /* LikeableObject+Addition.m in Sources */,
+				03E8B68A17B795C400AC12C8 /* News+Addition.m in Sources */,
+				03E8B68B17B795C400AC12C8 /* Notification+Addition.m in Sources */,
+				03E8B68C17B795C400AC12C8 /* Object+Addition.m in Sources */,
+				03E8B68D17B795C400AC12C8 /* Organization+Addition.m in Sources */,
+				03E8B68E17B795C400AC12C8 /* Star+Addition.m in Sources */,
+				03E8B68F17B795C400AC12C8 /* User+Addition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1563,6 +1815,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		03E8B61817B793B500AC12C8 /* WeTongji.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03E8B61917B793B500AC12C8 /* WeTongji.xcdatamodel */,
+			);
+			currentVersion = 03E8B61917B793B500AC12C8 /* WeTongji.xcdatamodel */;
+			path = WeTongji.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 033729B317B67D7600D2EC9F /* Project object */;
 }

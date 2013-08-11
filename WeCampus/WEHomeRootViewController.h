@@ -9,5 +9,6 @@
 #import "WERootViewController.h"
 
 @interface WEHomeRootViewController : WERootViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
