@@ -30,6 +30,49 @@
 		0341648317B7B48A005CFD98 /* WEBannerContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341648217B7B48A005CFD98 /* WEBannerContainerView.xib */; };
 		0341648717B7B8E0005CFD98 /* WEBannerItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0341648617B7B8E0005CFD98 /* WEBannerItemView.m */; };
 		0341648917B7B92E005CFD98 /* WEBannerItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341648817B7B92E005CFD98 /* WEBannerItemView.xib */; };
+		034164B717B7D782005CFD98 /* Login&Signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341648C17B7D782005CFD98 /* Login&Signup.png */; };
+		034164B817B7D782005CFD98 /* 个人(别人访问).png in Resources */ = {isa = PBXBuildFile; fileRef = 0341648D17B7D782005CFD98 /* 个人(别人访问).png */; };
+		034164B917B7D782005CFD98 /* 个人(别人访问)_好友.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341648E17B7D782005CFD98 /* 个人(别人访问)_好友.png */; };
+		034164BA17B7D782005CFD98 /* 个人(别人访问)_非好友.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341648F17B7D782005CFD98 /* 个人(别人访问)_非好友.png */; };
+		034164BB17B7D782005CFD98 /* 个人.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649017B7D782005CFD98 /* 个人.png */; };
+		034164BC17B7D782005CFD98 /* 个人资料(别人).png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649117B7D782005CFD98 /* 个人资料(别人).png */; };
+		034164BD17B7D782005CFD98 /* 个人资料(自己).png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649217B7D782005CFD98 /* 个人资料(自己).png */; };
+		034164BE17B7D782005CFD98 /* 个人资料_编辑.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649317B7D782005CFD98 /* 个人资料_编辑.png */; };
+		034164BF17B7D782005CFD98 /* 公共账号1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649417B7D782005CFD98 /* 公共账号1.png */; };
+		034164C017B7D782005CFD98 /* 公共账号2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649517B7D782005CFD98 /* 公共账号2.png */; };
+		034164C117B7D782005CFD98 /* 好友.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649617B7D782005CFD98 /* 好友.png */; };
+		034164C217B7D782005CFD98 /* 我的喜欢_公共组织.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649717B7D782005CFD98 /* 我的喜欢_公共组织.png */; };
+		034164C317B7D782005CFD98 /* 我的喜欢_活动.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649817B7D782005CFD98 /* 我的喜欢_活动.png */; };
+		034164C417B7D782005CFD98 /* 我的喜欢_用户.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649917B7D782005CFD98 /* 我的喜欢_用户.png */; };
+		034164C517B7D782005CFD98 /* 我的喜欢_选择分类.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649A17B7D782005CFD98 /* 我的喜欢_选择分类.png */; };
+		034164C617B7D782005CFD98 /* 搜索.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649B17B7D782005CFD98 /* 搜索.png */; };
+		034164C717B7D782005CFD98 /* 搜索_提示.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649C17B7D782005CFD98 /* 搜索_提示.png */; };
+		034164C817B7D782005CFD98 /* 搜索_无结果.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649D17B7D782005CFD98 /* 搜索_无结果.png */; };
+		034164C917B7D782005CFD98 /* 搜索结果.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649E17B7D782005CFD98 /* 搜索结果.png */; };
+		034164CA17B7D782005CFD98 /* 旁听的课程列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 0341649F17B7D782005CFD98 /* 旁听的课程列表.png */; };
+		034164CB17B7D782005CFD98 /* 日程表.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A017B7D782005CFD98 /* 日程表.png */; };
+		034164CC17B7D782005CFD98 /* 日程表_横.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A117B7D782005CFD98 /* 日程表_横.png */; };
+		034164CD17B7D782005CFD98 /* 注册1.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A217B7D782005CFD98 /* 注册1.png */; };
+		034164CE17B7D782005CFD98 /* 注册2.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A317B7D782005CFD98 /* 注册2.png */; };
+		034164CF17B7D782005CFD98 /* 注册3.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A417B7D782005CFD98 /* 注册3.png */; };
+		034164D017B7D782005CFD98 /* 注册_输入信息.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A517B7D782005CFD98 /* 注册_输入信息.png */; };
+		034164D117B7D782005CFD98 /* 活动列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A617B7D782005CFD98 /* 活动列表.png */; };
+		034164D217B7D782005CFD98 /* 活动列表_分类.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A717B7D782005CFD98 /* 活动列表_分类.png */; };
+		034164D317B7D782005CFD98 /* 活动详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A817B7D782005CFD98 /* 活动详情1.png */; };
+		034164D417B7D782005CFD98 /* 活动详情2.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164A917B7D782005CFD98 /* 活动详情2.png */; };
+		034164D517B7D782005CFD98 /* 活动详情3.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164AA17B7D782005CFD98 /* 活动详情3.png */; };
+		034164D617B7D782005CFD98 /* 活动详情_有图.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164AB17B7D782005CFD98 /* 活动详情_有图.png */; };
+		034164D717B7D782005CFD98 /* 活动详情_邀请好友.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164AC17B7D782005CFD98 /* 活动详情_邀请好友.png */; };
+		034164D817B7D782005CFD98 /* 消息1.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164AD17B7D782005CFD98 /* 消息1.png */; };
+		034164D917B7D782005CFD98 /* 消息2.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164AE17B7D782005CFD98 /* 消息2.png */; };
+		034164DA17B7D782005CFD98 /* 消息_已读.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164AF17B7D782005CFD98 /* 消息_已读.png */; };
+		034164DB17B7D782005CFD98 /* 登录.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164B017B7D782005CFD98 /* 登录.png */; };
+		034164DC17B7D782005CFD98 /* 登录_输入.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164B117B7D782005CFD98 /* 登录_输入.png */; };
+		034164DD17B7D782005CFD98 /* 课程列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164B217B7D782005CFD98 /* 课程列表.png */; };
+		034164DE17B7D782005CFD98 /* 课程详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164B317B7D782005CFD98 /* 课程详情1.png */; };
+		034164DF17B7D782005CFD98 /* 课程详情2.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164B417B7D782005CFD98 /* 课程详情2.png */; };
+		034164E017B7D782005CFD98 /* 课程详情_已旁听.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164B517B7D782005CFD98 /* 课程详情_已旁听.png */; };
+		034164E117B7D782005CFD98 /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164B617B7D782005CFD98 /* 首页.png */; };
 		0351487B17B69F1D006E67B2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486917B69F1D006E67B2 /* AFHTTPClient.m */; };
 		0351487C17B69F1D006E67B2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486B17B69F1D006E67B2 /* AFHTTPRequestOperation.m */; };
 		0351487D17B69F1D006E67B2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486D17B69F1D006E67B2 /* AFImageRequestOperation.m */; };
@@ -342,6 +385,49 @@
 		0341648517B7B8E0005CFD98 /* WEBannerItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEBannerItemView.h; sourceTree = "<group>"; };
 		0341648617B7B8E0005CFD98 /* WEBannerItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEBannerItemView.m; sourceTree = "<group>"; };
 		0341648817B7B92E005CFD98 /* WEBannerItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEBannerItemView.xib; sourceTree = "<group>"; };
+		0341648C17B7D782005CFD98 /* Login&Signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login&Signup.png"; sourceTree = "<group>"; };
+		0341648D17B7D782005CFD98 /* 个人(别人访问).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人(别人访问).png"; sourceTree = "<group>"; };
+		0341648E17B7D782005CFD98 /* 个人(别人访问)_好友.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人(别人访问)_好友.png"; sourceTree = "<group>"; };
+		0341648F17B7D782005CFD98 /* 个人(别人访问)_非好友.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人(别人访问)_非好友.png"; sourceTree = "<group>"; };
+		0341649017B7D782005CFD98 /* 个人.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人.png"; sourceTree = "<group>"; };
+		0341649117B7D782005CFD98 /* 个人资料(别人).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人资料(别人).png"; sourceTree = "<group>"; };
+		0341649217B7D782005CFD98 /* 个人资料(自己).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人资料(自己).png"; sourceTree = "<group>"; };
+		0341649317B7D782005CFD98 /* 个人资料_编辑.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人资料_编辑.png"; sourceTree = "<group>"; };
+		0341649417B7D782005CFD98 /* 公共账号1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "公共账号1.png"; sourceTree = "<group>"; };
+		0341649517B7D782005CFD98 /* 公共账号2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "公共账号2.png"; sourceTree = "<group>"; };
+		0341649617B7D782005CFD98 /* 好友.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "好友.png"; sourceTree = "<group>"; };
+		0341649717B7D782005CFD98 /* 我的喜欢_公共组织.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的喜欢_公共组织.png"; sourceTree = "<group>"; };
+		0341649817B7D782005CFD98 /* 我的喜欢_活动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的喜欢_活动.png"; sourceTree = "<group>"; };
+		0341649917B7D782005CFD98 /* 我的喜欢_用户.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的喜欢_用户.png"; sourceTree = "<group>"; };
+		0341649A17B7D782005CFD98 /* 我的喜欢_选择分类.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的喜欢_选择分类.png"; sourceTree = "<group>"; };
+		0341649B17B7D782005CFD98 /* 搜索.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索.png"; sourceTree = "<group>"; };
+		0341649C17B7D782005CFD98 /* 搜索_提示.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索_提示.png"; sourceTree = "<group>"; };
+		0341649D17B7D782005CFD98 /* 搜索_无结果.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索_无结果.png"; sourceTree = "<group>"; };
+		0341649E17B7D782005CFD98 /* 搜索结果.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索结果.png"; sourceTree = "<group>"; };
+		0341649F17B7D782005CFD98 /* 旁听的课程列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "旁听的课程列表.png"; sourceTree = "<group>"; };
+		034164A017B7D782005CFD98 /* 日程表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日程表.png"; sourceTree = "<group>"; };
+		034164A117B7D782005CFD98 /* 日程表_横.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日程表_横.png"; sourceTree = "<group>"; };
+		034164A217B7D782005CFD98 /* 注册1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册1.png"; sourceTree = "<group>"; };
+		034164A317B7D782005CFD98 /* 注册2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册2.png"; sourceTree = "<group>"; };
+		034164A417B7D782005CFD98 /* 注册3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册3.png"; sourceTree = "<group>"; };
+		034164A517B7D782005CFD98 /* 注册_输入信息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册_输入信息.png"; sourceTree = "<group>"; };
+		034164A617B7D782005CFD98 /* 活动列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动列表.png"; sourceTree = "<group>"; };
+		034164A717B7D782005CFD98 /* 活动列表_分类.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动列表_分类.png"; sourceTree = "<group>"; };
+		034164A817B7D782005CFD98 /* 活动详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情1.png"; sourceTree = "<group>"; };
+		034164A917B7D782005CFD98 /* 活动详情2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情2.png"; sourceTree = "<group>"; };
+		034164AA17B7D782005CFD98 /* 活动详情3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情3.png"; sourceTree = "<group>"; };
+		034164AB17B7D782005CFD98 /* 活动详情_有图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情_有图.png"; sourceTree = "<group>"; };
+		034164AC17B7D782005CFD98 /* 活动详情_邀请好友.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情_邀请好友.png"; sourceTree = "<group>"; };
+		034164AD17B7D782005CFD98 /* 消息1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息1.png"; sourceTree = "<group>"; };
+		034164AE17B7D782005CFD98 /* 消息2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息2.png"; sourceTree = "<group>"; };
+		034164AF17B7D782005CFD98 /* 消息_已读.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息_已读.png"; sourceTree = "<group>"; };
+		034164B017B7D782005CFD98 /* 登录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录.png"; sourceTree = "<group>"; };
+		034164B117B7D782005CFD98 /* 登录_输入.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录_输入.png"; sourceTree = "<group>"; };
+		034164B217B7D782005CFD98 /* 课程列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "课程列表.png"; sourceTree = "<group>"; };
+		034164B317B7D782005CFD98 /* 课程详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "课程详情1.png"; sourceTree = "<group>"; };
+		034164B417B7D782005CFD98 /* 课程详情2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "课程详情2.png"; sourceTree = "<group>"; };
+		034164B517B7D782005CFD98 /* 课程详情_已旁听.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "课程详情_已旁听.png"; sourceTree = "<group>"; };
+		034164B617B7D782005CFD98 /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
 		0351486817B69F1D006E67B2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0351486917B69F1D006E67B2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		0351486A17B69F1D006E67B2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -850,6 +936,7 @@
 		0341647E17B7B3F6005CFD98 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				0341648A17B7D710005CFD98 /* Home */,
 				0341648417B7B641005CFD98 /* Banner */,
 			);
 			name = CustomView;
@@ -866,6 +953,63 @@
 				0341648817B7B92E005CFD98 /* WEBannerItemView.xib */,
 			);
 			name = Banner;
+			sourceTree = "<group>";
+		};
+		0341648A17B7D710005CFD98 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		0341648B17B7D782005CFD98 /* 效果图i5 */ = {
+			isa = PBXGroup;
+			children = (
+				0341648C17B7D782005CFD98 /* Login&Signup.png */,
+				0341648D17B7D782005CFD98 /* 个人(别人访问).png */,
+				0341648E17B7D782005CFD98 /* 个人(别人访问)_好友.png */,
+				0341648F17B7D782005CFD98 /* 个人(别人访问)_非好友.png */,
+				0341649017B7D782005CFD98 /* 个人.png */,
+				0341649117B7D782005CFD98 /* 个人资料(别人).png */,
+				0341649217B7D782005CFD98 /* 个人资料(自己).png */,
+				0341649317B7D782005CFD98 /* 个人资料_编辑.png */,
+				0341649417B7D782005CFD98 /* 公共账号1.png */,
+				0341649517B7D782005CFD98 /* 公共账号2.png */,
+				0341649617B7D782005CFD98 /* 好友.png */,
+				0341649717B7D782005CFD98 /* 我的喜欢_公共组织.png */,
+				0341649817B7D782005CFD98 /* 我的喜欢_活动.png */,
+				0341649917B7D782005CFD98 /* 我的喜欢_用户.png */,
+				0341649A17B7D782005CFD98 /* 我的喜欢_选择分类.png */,
+				0341649B17B7D782005CFD98 /* 搜索.png */,
+				0341649C17B7D782005CFD98 /* 搜索_提示.png */,
+				0341649D17B7D782005CFD98 /* 搜索_无结果.png */,
+				0341649E17B7D782005CFD98 /* 搜索结果.png */,
+				0341649F17B7D782005CFD98 /* 旁听的课程列表.png */,
+				034164A017B7D782005CFD98 /* 日程表.png */,
+				034164A117B7D782005CFD98 /* 日程表_横.png */,
+				034164A217B7D782005CFD98 /* 注册1.png */,
+				034164A317B7D782005CFD98 /* 注册2.png */,
+				034164A417B7D782005CFD98 /* 注册3.png */,
+				034164A517B7D782005CFD98 /* 注册_输入信息.png */,
+				034164A617B7D782005CFD98 /* 活动列表.png */,
+				034164A717B7D782005CFD98 /* 活动列表_分类.png */,
+				034164A817B7D782005CFD98 /* 活动详情1.png */,
+				034164A917B7D782005CFD98 /* 活动详情2.png */,
+				034164AA17B7D782005CFD98 /* 活动详情3.png */,
+				034164AB17B7D782005CFD98 /* 活动详情_有图.png */,
+				034164AC17B7D782005CFD98 /* 活动详情_邀请好友.png */,
+				034164AD17B7D782005CFD98 /* 消息1.png */,
+				034164AE17B7D782005CFD98 /* 消息2.png */,
+				034164AF17B7D782005CFD98 /* 消息_已读.png */,
+				034164B017B7D782005CFD98 /* 登录.png */,
+				034164B117B7D782005CFD98 /* 登录_输入.png */,
+				034164B217B7D782005CFD98 /* 课程列表.png */,
+				034164B317B7D782005CFD98 /* 课程详情1.png */,
+				034164B417B7D782005CFD98 /* 课程详情2.png */,
+				034164B517B7D782005CFD98 /* 课程详情_已旁听.png */,
+				034164B617B7D782005CFD98 /* 首页.png */,
+			);
+			path = "效果图i5";
 			sourceTree = "<group>";
 		};
 		0351486717B69F1D006E67B2 /* AFNetworking */ = {
@@ -1076,6 +1220,7 @@
 		E458B07717B754C100D0DFBD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				0341648B17B7D782005CFD98 /* 效果图i5 */,
 				E458B07817B754C100D0DFBD /* back_btn.png */,
 				E458B07917B754C100D0DFBD /* back_btn@2x.png */,
 				E458B07A17B754C100D0DFBD /* switch_bg_off.png */,
@@ -1596,6 +1741,49 @@
 				03E8B61617B7918000AC12C8 /* WEHomeRootViewController.xib in Resources */,
 				0341648317B7B48A005CFD98 /* WEBannerContainerView.xib in Resources */,
 				0341648917B7B92E005CFD98 /* WEBannerItemView.xib in Resources */,
+				034164B717B7D782005CFD98 /* Login&Signup.png in Resources */,
+				034164B817B7D782005CFD98 /* 个人(别人访问).png in Resources */,
+				034164B917B7D782005CFD98 /* 个人(别人访问)_好友.png in Resources */,
+				034164BA17B7D782005CFD98 /* 个人(别人访问)_非好友.png in Resources */,
+				034164BB17B7D782005CFD98 /* 个人.png in Resources */,
+				034164BC17B7D782005CFD98 /* 个人资料(别人).png in Resources */,
+				034164BD17B7D782005CFD98 /* 个人资料(自己).png in Resources */,
+				034164BE17B7D782005CFD98 /* 个人资料_编辑.png in Resources */,
+				034164BF17B7D782005CFD98 /* 公共账号1.png in Resources */,
+				034164C017B7D782005CFD98 /* 公共账号2.png in Resources */,
+				034164C117B7D782005CFD98 /* 好友.png in Resources */,
+				034164C217B7D782005CFD98 /* 我的喜欢_公共组织.png in Resources */,
+				034164C317B7D782005CFD98 /* 我的喜欢_活动.png in Resources */,
+				034164C417B7D782005CFD98 /* 我的喜欢_用户.png in Resources */,
+				034164C517B7D782005CFD98 /* 我的喜欢_选择分类.png in Resources */,
+				034164C617B7D782005CFD98 /* 搜索.png in Resources */,
+				034164C717B7D782005CFD98 /* 搜索_提示.png in Resources */,
+				034164C817B7D782005CFD98 /* 搜索_无结果.png in Resources */,
+				034164C917B7D782005CFD98 /* 搜索结果.png in Resources */,
+				034164CA17B7D782005CFD98 /* 旁听的课程列表.png in Resources */,
+				034164CB17B7D782005CFD98 /* 日程表.png in Resources */,
+				034164CC17B7D782005CFD98 /* 日程表_横.png in Resources */,
+				034164CD17B7D782005CFD98 /* 注册1.png in Resources */,
+				034164CE17B7D782005CFD98 /* 注册2.png in Resources */,
+				034164CF17B7D782005CFD98 /* 注册3.png in Resources */,
+				034164D017B7D782005CFD98 /* 注册_输入信息.png in Resources */,
+				034164D117B7D782005CFD98 /* 活动列表.png in Resources */,
+				034164D217B7D782005CFD98 /* 活动列表_分类.png in Resources */,
+				034164D317B7D782005CFD98 /* 活动详情1.png in Resources */,
+				034164D417B7D782005CFD98 /* 活动详情2.png in Resources */,
+				034164D517B7D782005CFD98 /* 活动详情3.png in Resources */,
+				034164D617B7D782005CFD98 /* 活动详情_有图.png in Resources */,
+				034164D717B7D782005CFD98 /* 活动详情_邀请好友.png in Resources */,
+				034164D817B7D782005CFD98 /* 消息1.png in Resources */,
+				034164D917B7D782005CFD98 /* 消息2.png in Resources */,
+				034164DA17B7D782005CFD98 /* 消息_已读.png in Resources */,
+				034164DB17B7D782005CFD98 /* 登录.png in Resources */,
+				034164DC17B7D782005CFD98 /* 登录_输入.png in Resources */,
+				034164DD17B7D782005CFD98 /* 课程列表.png in Resources */,
+				034164DE17B7D782005CFD98 /* 课程详情1.png in Resources */,
+				034164DF17B7D782005CFD98 /* 课程详情2.png in Resources */,
+				034164E017B7D782005CFD98 /* 课程详情_已旁听.png in Resources */,
+				034164E117B7D782005CFD98 /* 首页.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
