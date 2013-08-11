@@ -8,6 +8,7 @@
 
 #import "WEHomeRootViewController.h"
 #import "WEBannerContainerView.h"
+#import "WESeeAllSchoolEventsHeaderView.h"
 #import "Event+Addition.h"
 #import "Activity+Addition.h"
 #import "News+Addition.h"
@@ -23,6 +24,7 @@
 
 @interface WEHomeRootViewController ()
 @property (nonatomic, strong) WEBannerContainerView *bannerContainerView;
+@property (nonatomic, strong) WESeeAllSchoolEventsHeaderView *seeAllHeaderView;
 
 @property (nonatomic, strong) NSMutableArray *headlineViewArray;
 @property (nonatomic, assign) BOOL shouldLoadHomeItems;
@@ -84,6 +86,13 @@
     return _headlineViewArray;
 }
 
+- (WESeeAllSchoolEventsHeaderView *)seeAllHeaderView
+{
+    if (!_seeAllHeaderView) {
+        _seeAllHeaderView = [WESeeAllSchoolEventsHeaderView createWESeeAllSchoolEventsHeaderView];
+    }
+    return _seeAllHeaderView;
+}
 
 #pragma mark - Load data methods
 - (void)refillViews {
@@ -181,11 +190,14 @@
     NSArray *activityArray = [Object getAllObjectsHeldByHolder:[WESchoolEventHeadLineView class] objectEntityName:@"Activity"];
     activityArray = [activityArray sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"likeCount" ascending:NO]]];
     
+    [self.seeAllHeaderView resetOriginY:self.bannerContainerView.frame.size.height];
+    [self.scrollView addSubview:self.seeAllHeaderView];
+    
     int i = 0;
     for (Activity *act in activityArray) {
         WESchoolEventHeadLineView *activityHeadlineView = [WESchoolEventHeadLineView createWESchoolEventHeadLineViewWithModel:act];
         [self.headlineViewArray addObject:activityHeadlineView];
-        [activityHeadlineView resetOrigin:CGPointMake(0, self.bannerContainerView.frame.size.height + i * activityHeadlineView.frame.size.height)];
+        [activityHeadlineView resetOriginY:self.seeAllHeaderView.frame.origin.y + self.seeAllHeaderView.frame.size.height + i * activityHeadlineView.frame.size.height];
         [self.scrollView addSubview:activityHeadlineView];
         i++;
     }

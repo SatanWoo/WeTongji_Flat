@@ -88,15 +88,15 @@
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<double key="preferredMaxLayoutWidth">67</double>
 					</object>
-					<object class="IBUIView" id="528982938">
+					<object class="IBUIView" id="997372325">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUIImageView" id="1033709380">
-								<reference key="NSNextResponder" ref="528982938"/>
+								<reference key="NSNextResponder" ref="997372325"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{-1, 0}, {42, 57}}</string>
-								<reference key="NSSuperview" ref="528982938"/>
+								<string key="NSFrameSize">{41, 57}</string>
+								<reference key="NSSuperview" ref="997372325"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1027071154"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -109,7 +109,7 @@
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="741213995">
+						<object class="NSColor" key="IBUIBackgroundColor" id="407707785">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
@@ -214,7 +214,7 @@
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="920246707"/>
-				<reference key="IBUIBackgroundColor" ref="741213995"/>
+				<reference key="IBUIBackgroundColor" ref="407707785"/>
 				<object class="IBUISimulatedSizeMetrics" key="IBUISimulatedDestinationMetrics">
 					<string key="IBUISimulatedSizeMetricsClass">IBUISimulatedFreeformSizeMetricsSentinel</string>
 					<string key="IBUIDisplayName">Freeform</string>
@@ -274,7 +274,7 @@
 							<reference ref="658250456"/>
 							<reference ref="1027071154"/>
 							<reference ref="932448512"/>
-							<reference ref="528982938"/>
+							<reference ref="997372325"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -316,7 +316,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">15</int>
-						<reference key="object" ref="528982938"/>
+						<reference key="object" ref="997372325"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="1033709380"/>
 						</array>
@@ -325,7 +325,7 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
 						<reference key="object" ref="1033709380"/>
-						<reference key="parent" ref="528982938"/>
+						<reference key="parent" ref="997372325"/>
 					</object>
 				</array>
 			</object>
