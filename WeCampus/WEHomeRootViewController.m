@@ -80,7 +80,7 @@
     if (!self.homeResponseDict)
         return;
     
-    //[self adjustScrollView];
+    [self adjustScrollView];
     
     NSDictionary *resultDict = self.homeResponseDict;
     

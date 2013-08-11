@@ -31,7 +31,7 @@
 
 + (WEBannerContainerView *)createBannerContainerView
 {
-    NSArray *array = [[NSBundle mainBundle] loadNibNamed:kWEBannerContainerViewNibName owner:self options:nil];
+    NSArray *array = [[NSBundle mainBundle] loadNibNamed:kWEBannerContainerViewNibName owner:nil options:nil];
     return [array lastObject];
 }
 

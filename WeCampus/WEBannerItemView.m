@@ -29,7 +29,7 @@
 
 + (WEBannerItemView *)createBannerItemView
 {
-    NSArray *result = [[NSBundle mainBundle] loadNibNamed:kWEBannerItemViewNibName owner:self options:nil];
+    NSArray *result = [[NSBundle mainBundle] loadNibNamed:kWEBannerItemViewNibName owner:nil options:nil];
     return [result lastObject];
 }
 
