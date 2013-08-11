@@ -19,11 +19,12 @@
 #import "Advertisement+Addition.h"
 #import "WTRequest.h"
 #import "WTClient.h"
+#import "WESchoolEventHeadLineView.h"
 
 @interface WEHomeRootViewController ()
 @property (nonatomic, strong) WEBannerContainerView *bannerContainerView;
 
-@property (nonatomic, strong) NSMutableArray *homeSelectViewArray;
+@property (nonatomic, strong) NSMutableArray *headlineViewArray;
 @property (nonatomic, assign) BOOL shouldLoadHomeItems;
 @property (nonatomic, assign) BOOL isLoadingHomeItems;
 @property (nonatomic, assign) BOOL isVisible;
@@ -74,8 +75,17 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Load data methods
+#pragma mark - Property
+- (NSMutableArray *)headlineViewArray
+{
+    if (!_headlineViewArray) {
+        _headlineViewArray = [[NSMutableArray alloc] init];
+    }
+    return _headlineViewArray;
+}
 
+
+#pragma mark - Load data methods
 - (void)refillViews {
     if (!self.homeResponseDict)
         return;
@@ -84,39 +94,16 @@
     
     NSDictionary *resultDict = self.homeResponseDict;
     
-    // Refill home select views
-//    [Object setAllObjectsFreeFromHolder:[WTHomeSelectContainerView class]];
-//    
-//    NSArray *activityInfoArray = resultDict[@"Activities"];
-//    for (NSDictionary *infoDict in activityInfoArray) {
-//        Activity *activity = [Activity insertActivity:infoDict];
-//        [activity setObjectHeldByHolder:[WTHomeSelectContainerView class]];
-//    }
-//    
-//    NSArray *newsInfoArray = resultDict[@"Information"];
-//    for (NSDictionary *infoDict in newsInfoArray) {
-//        News *news = [News insertNews:infoDict];
-//        [news setObjectHeldByHolder:[WTHomeSelectContainerView class]];
-//    }
-//    
-//    NSObject *starInfoObject = resultDict[@"Person"];
-//    if ([starInfoObject isKindOfClass:[NSArray class]]) {
-//        NSArray *starInfoArray = (NSArray *)starInfoObject;
-//        for (NSDictionary *infoDict in starInfoArray) {
-//            Star *star = [Star insertStar:infoDict];
-//            [star setObjectHeldByHolder:[WTHomeSelectContainerView class]];
-//        }
-//    } else if ([starInfoObject isKindOfClass:[NSDictionary class]]) {
-//        NSDictionary *starInfoDict = (NSDictionary *)starInfoObject;
-//        Star *star = [Star insertStar:starInfoDict];
-//        [star setObjectHeldByHolder:[WTHomeSelectContainerView class]];
-//    }
-//    
-//    NSDictionary *popularOrgDict = resultDict[@"AccountPopular"];
-//    Organization *org = [Organization insertOrganization:popularOrgDict];
-//    [org setObjectHeldByHolder:[WTHomeSelectContainerView class]];
-//    
-//    [self fillHomeSelectViews];
+    // Refill headline views
+    [Object setAllObjectsFreeFromHolder:[WESchoolEventHeadLineView class]];
+    
+    NSArray *activityInfoArray = resultDict[@"Activities"];
+    for (NSDictionary *infoDict in activityInfoArray) {
+        Activity *activity = [Activity insertActivity:infoDict];
+        [activity setObjectHeldByHolder:[WESchoolEventHeadLineView class]];
+    }
+
+    [self fillHeadLineViews];
     
     // Refill banner view
     [Object setAllObjectsFreeFromHolder:[WEBannerContainerView class]];
@@ -156,7 +143,6 @@
             [self refillViews];
         else if (self.isVisible &&
                  [Object getAllObjectsHeldByHolder:[WEBannerContainerView class] objectEntityName:@"Object"].count == 0) {
-            //[self reloadHomeSelectItemAnimation];
             [self refillViews];
         }
         
@@ -177,24 +163,8 @@
 #pragma mark - UI methods
 
 - (void)adjustScrollView {
-    [self.scrollView setScrollEnabled:NO];
-    [self.scrollView setScrollEnabled:YES];
     self.scrollView.contentOffset = CGPointZero;
-    //[self scrollViewDidScroll:self.scrollView];
 }
-
-//- (void)reloadHomeSelectItemAnimation {
-//    self.view.userInteractionEnabled = NO;
-//    UIImageView *screenShootImageView = [[UIImageView alloc] initWithImage:[UIImage screenShoot]];
-//    [screenShootImageView resetSize:[UIScreen mainScreen].bounds.size];
-//    [[UIApplication sharedApplication].keyWindow addSubview:screenShootImageView];
-//    [UIView animateWithDuration:0.5f animations:^{
-//        screenShootImageView.alpha = 0;
-//    } completion:^(BOOL finished) {
-//        [screenShootImageView removeFromSuperview];
-//        self.view.userInteractionEnabled = YES;
-//    }];
-//}
 
 - (void)configureScrollView {
     self.scrollView.alwaysBounceVertical = YES;
@@ -203,69 +173,29 @@
 }
 
 - (void)updateScrollView {
-    UIView *bottomView = self.homeSelectViewArray.lastObject;
+    UIView *bottomView = self.headlineViewArray.lastObject;
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, bottomView.frame.origin.y + bottomView.frame.size.height);
 }
 
-//- (void)configureHomeSelectViews {
-//    [self configureActivitySelect];
-//    [self configureNewsSelect];
-//    [self configureFeaturedSelect];
-//    [self fillHomeSelectViews];
-//}
-//
-//- (void)updateHomeSelectViews {
-//    NSInteger index = 0;
-//    for (WTHomeSelectContainerView *homeSelectContainerView in self.homeSelectViewArray) {
-//        [homeSelectContainerView resetOrigin:CGPointMake(0, self.nowContainerView.frame.size
-//                                                         .height + self.nowContainerView.frame.origin.y + homeSelectContainerView.frame.size.height * index)];
-//        [homeSelectContainerView updateItemViews];
-//        index++;
-//    }
-//}
-
-//- (void)fillHomeSelectViews {
-//    WTHomeSelectContainerView *activitySelectContainerView = self.homeSelectViewArray[0];
-//    NSArray *activityArray = [Object getAllObjectsHeldByHolder:[WTHomeSelectContainerView class] objectEntityName:@"Activity"];
-//    activityArray = [activityArray sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"likeCount" ascending:NO]]];
-//    [activitySelectContainerView configureItemInfoArray:activityArray];
-//    
-//    WTHomeSelectContainerView *newsSelectContainerView = self.homeSelectViewArray[1];
-//    NSArray *newsArray = [Object getAllObjectsHeldByHolder:[WTHomeSelectContainerView class] objectEntityName:@"News"];
-//    newsArray = [newsArray sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"likeCount" ascending:NO]]];
-//    [newsSelectContainerView configureItemInfoArray:newsArray];
-//    
-//    WTHomeSelectContainerView *featuredSelectContainerView = self.homeSelectViewArray[2];
-//    NSMutableArray *featurerSelectInfoArray = [NSMutableArray arrayWithArray:[Object getAllObjectsHeldByHolder:[WTHomeSelectContainerView class] objectEntityName:@"Star"]];
-//    [featurerSelectInfoArray addObjectsFromArray:[Object getAllObjectsHeldByHolder:[WTHomeSelectContainerView class] objectEntityName:@"Organization"]];
-//    [featuredSelectContainerView configureItemInfoArray:featurerSelectInfoArray];
-//}
-//
-//- (void)configureNewsSelect {
-//    WTHomeSelectContainerView *containerView = [WTHomeSelectContainerView createHomeSelectContainerViewWithCategory:WTHomeSelectContainerViewCategoryNews];
-//    containerView.delegate = self;
-//    [self.homeSelectViewArray addObject:containerView];
-//    [self.scrollView addSubview:containerView];
-//}
-//
-//- (void)configureFeaturedSelect {
-//    WTHomeSelectContainerView *containerView = [WTHomeSelectContainerView createHomeSelectContainerViewWithCategory:WTHomeSelectContainerViewCategoryFeatured];
-//    containerView.delegate = self;
-//    [self.homeSelectViewArray addObject:containerView];
-//    [self.scrollView addSubview:containerView];
-//}
-//
-//- (void)configureActivitySelect {
-//    WTHomeSelectContainerView *containerView = [WTHomeSelectContainerView createHomeSelectContainerViewWithCategory:WTHomeSelectContainerViewCategoryActivity];
-//    containerView.delegate = self;
-//    [self.homeSelectViewArray addObject:containerView];
-//    [self.scrollView addSubview:containerView];
-//}
+- (void)fillHeadLineViews {
+    NSArray *activityArray = [Object getAllObjectsHeldByHolder:[WESchoolEventHeadLineView class] objectEntityName:@"Activity"];
+    activityArray = [activityArray sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"likeCount" ascending:NO]]];
+    
+    int i = 0;
+    for (Activity *act in activityArray) {
+        WESchoolEventHeadLineView *activityHeadlineView = [WESchoolEventHeadLineView createWESchoolEventHeadLineViewWithModel:act];
+        [self.headlineViewArray addObject:activityHeadlineView];
+        [activityHeadlineView resetOrigin:CGPointMake(0, self.bannerContainerView.frame.size.height + i * activityHeadlineView.frame.size.height)];
+        [self.scrollView addSubview:activityHeadlineView];
+        i++;
+    }
+    
+    [self updateScrollView];
+}
 
 - (void)configureBannerView {
     self.bannerContainerView = [WEBannerContainerView createBannerContainerView];
     [self.bannerContainerView resetOrigin:CGPointZero];
-    //self.bannerContainerView.delegate = self;
     [self.scrollView addSubview:self.bannerContainerView];
     [self fillBannerView];
 }
@@ -278,28 +208,6 @@
     [self.bannerContainerView reloadItemImages];
 }
 
-//- (void)configureNavigationBar {
-//    UIImageView *logoImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WTNavigationBarLogo"]];
-//    self.navigationItem.titleView = logoImageView;
-//}
-//
-//- (void)configureNowView {
-//    WTHomeNowContainerView *nowContainerView = [WTHomeNowContainerView createHomeNowContainerViewWithDelegate:self];
-//    [self.scrollView insertSubview:nowContainerView belowSubview:self.bannerContainerView];
-//    [nowContainerView resetOriginY:self.bannerContainerView.frame.size.height];
-//    self.nowContainerView = nowContainerView;
-//    [self updateNowView];
-//}
-//
-//- (void)updateNowView {
-//    NSArray *events = [Event getTodayEvents];
-//    [self.nowContainerView configureNowContainerViewWithEvents:events];
-//    if (!events) {
-//        [self.nowContainerView resetOriginY:self.bannerContainerView.frame.origin.y + self.bannerContainerView.frame.size.height - self.nowContainerView.frame.size.height];
-//    } else {
-//        [self.nowContainerView resetOriginY:self.bannerContainerView.frame.origin.y + self.bannerContainerView.frame.size.height];
-//    }
-//}
 //
 //- (void)pushDetailViewControllerWithModelObject:(Object *)modelObject {
 //    if ([modelObject isKindOfClass:[Activity class]]) {

@@ -37,6 +37,8 @@
 		034164F017B7DF18005CFD98 /* event_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164EC17B7DF18005CFD98 /* event_arrow@2x.png */; };
 		034164F117B7DF18005CFD98 /* event_category_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164ED17B7DF18005CFD98 /* event_category_cell.png */; };
 		034164F217B7DF18005CFD98 /* event_category_cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164EE17B7DF18005CFD98 /* event_category_cell@2x.png */; };
+		034164F517B7E226005CFD98 /* WESchoolEventHeadLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 034164F417B7E226005CFD98 /* WESchoolEventHeadLineView.m */; };
+		034164F717B7E26F005CFD98 /* WESchoolEventHeadLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034164F617B7E26E005CFD98 /* WESchoolEventHeadLineView.xib */; };
 		0351487B17B69F1D006E67B2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486917B69F1D006E67B2 /* AFHTTPClient.m */; };
 		0351487C17B69F1D006E67B2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486B17B69F1D006E67B2 /* AFHTTPRequestOperation.m */; };
 		0351487D17B69F1D006E67B2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486D17B69F1D006E67B2 /* AFImageRequestOperation.m */; };
@@ -357,6 +359,9 @@
 		034164EC17B7DF18005CFD98 /* event_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "event_arrow@2x.png"; sourceTree = "<group>"; };
 		034164ED17B7DF18005CFD98 /* event_category_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event_category_cell.png; sourceTree = "<group>"; };
 		034164EE17B7DF18005CFD98 /* event_category_cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "event_category_cell@2x.png"; sourceTree = "<group>"; };
+		034164F317B7E226005CFD98 /* WESchoolEventHeadLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESchoolEventHeadLineView.h; sourceTree = "<group>"; };
+		034164F417B7E226005CFD98 /* WESchoolEventHeadLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESchoolEventHeadLineView.m; sourceTree = "<group>"; };
+		034164F617B7E26E005CFD98 /* WESchoolEventHeadLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESchoolEventHeadLineView.xib; sourceTree = "<group>"; };
 		0351486817B69F1D006E67B2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0351486917B69F1D006E67B2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		0351486A17B69F1D006E67B2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -890,6 +895,9 @@
 				034164E517B7DB6F005CFD98 /* WESeeAllSchoolEventsHeaderView.h */,
 				034164E617B7DB6F005CFD98 /* WESeeAllSchoolEventsHeaderView.m */,
 				034164E817B7DC27005CFD98 /* WESeeAllSchoolEventsHeaderView.xib */,
+				034164F317B7E226005CFD98 /* WESchoolEventHeadLineView.h */,
+				034164F417B7E226005CFD98 /* WESchoolEventHeadLineView.m */,
+				034164F617B7E26E005CFD98 /* WESchoolEventHeadLineView.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1434,6 +1442,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = 033729B217B67D7600D2EC9F;
 			productRefGroup = 033729BC17B67D7600D2EC9F /* Products */;
@@ -1649,6 +1658,7 @@
 				034164F017B7DF18005CFD98 /* event_arrow@2x.png in Resources */,
 				034164F117B7DF18005CFD98 /* event_category_cell.png in Resources */,
 				034164F217B7DF18005CFD98 /* event_category_cell@2x.png in Resources */,
+				034164F717B7E26F005CFD98 /* WESchoolEventHeadLineView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1778,6 +1788,7 @@
 				0341648117B7B425005CFD98 /* WEBannerContainerView.m in Sources */,
 				0341648717B7B8E0005CFD98 /* WEBannerItemView.m in Sources */,
 				034164E717B7DB6F005CFD98 /* WESeeAllSchoolEventsHeaderView.m in Sources */,
+				034164F517B7E226005CFD98 /* WESchoolEventHeadLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

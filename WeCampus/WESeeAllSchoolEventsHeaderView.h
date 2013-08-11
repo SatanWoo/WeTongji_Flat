@@ -16,5 +16,6 @@
 @property (weak, nonatomic) id<WESeeAllSchoolEventsHeaderViewDelegate> delegate;
 
 + (WESeeAllSchoolEventsHeaderView *)createWESeeAllSchoolEventsHeaderView;
+- (IBAction)clickSeeAllEvent:(id)sender;
 
 @end

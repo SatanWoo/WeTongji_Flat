@@ -7,6 +7,7 @@
 //
 
 #import "WESeeAllSchoolEventsHeaderView.h"
+#define kWESeeAllSchoolEventsHeaderViewNibName @"WESeeAllSchoolEventsHeaderView"
 
 @implementation WESeeAllSchoolEventsHeaderView
 
@@ -14,9 +15,20 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
     }
     return self;
+}
+
++ (WESeeAllSchoolEventsHeaderView *)createWESeeAllSchoolEventsHeaderView
+{
+    NSArray *array = [[NSBundle mainBundle]loadNibNamed:kWESeeAllSchoolEventsHeaderViewNibName
+                                                  owner:nil options:nil];
+    return [array lastObject];
+}
+
+- (IBAction)clickSeeAllEvent:(id)sender
+{
+    
 }
 
 @end
