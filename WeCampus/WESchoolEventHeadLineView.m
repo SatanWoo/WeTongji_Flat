@@ -62,7 +62,6 @@
     } else if ([text isEqualToString:NSLocalizedString(@"Entertainment", nil)]) {
         [self.categoryLabel setTextColor:[UIColor colorWithHue:0 saturation:0.65 brightness:0.92 alpha:1]];
     } else {
-        NSLog(@"caoniamde");
         [self.categoryLabel setTextColor:[UIColor colorWithHue:0.213 saturation:0.92 brightness:0.98 alpha:1]];
     }
 }

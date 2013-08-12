@@ -39,6 +39,9 @@
 		034164F217B7DF18005CFD98 /* event_category_cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 034164EE17B7DF18005CFD98 /* event_category_cell@2x.png */; };
 		034164F517B7E226005CFD98 /* WESchoolEventHeadLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 034164F417B7E226005CFD98 /* WESchoolEventHeadLineView.m */; };
 		034164F717B7E26F005CFD98 /* WESchoolEventHeadLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034164F617B7E26E005CFD98 /* WESchoolEventHeadLineView.xib */; };
+		034267E817B8D926000248C2 /* WTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034267E717B8D926000248C2 /* WTCoreDataTableViewController.m */; };
+		034267ED17B8DAF7000248C2 /* WEActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034267EB17B8DAF7000248C2 /* WEActivitiesViewController.m */; };
+		034267EE17B8DAF7000248C2 /* WEActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034267EC17B8DAF7000248C2 /* WEActivitiesViewController.xib */; };
 		0351487B17B69F1D006E67B2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486917B69F1D006E67B2 /* AFHTTPClient.m */; };
 		0351487C17B69F1D006E67B2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486B17B69F1D006E67B2 /* AFHTTPRequestOperation.m */; };
 		0351487D17B69F1D006E67B2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486D17B69F1D006E67B2 /* AFImageRequestOperation.m */; };
@@ -363,6 +366,11 @@
 		034164F317B7E226005CFD98 /* WESchoolEventHeadLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESchoolEventHeadLineView.h; sourceTree = "<group>"; };
 		034164F417B7E226005CFD98 /* WESchoolEventHeadLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESchoolEventHeadLineView.m; sourceTree = "<group>"; };
 		034164F617B7E26E005CFD98 /* WESchoolEventHeadLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESchoolEventHeadLineView.xib; sourceTree = "<group>"; };
+		034267E617B8D926000248C2 /* WTCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCoreDataTableViewController.h; sourceTree = "<group>"; };
+		034267E717B8D926000248C2 /* WTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCoreDataTableViewController.m; sourceTree = "<group>"; };
+		034267EA17B8DAF7000248C2 /* WEActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivitiesViewController.h; sourceTree = "<group>"; };
+		034267EB17B8DAF7000248C2 /* WEActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivitiesViewController.m; sourceTree = "<group>"; };
+		034267EC17B8DAF7000248C2 /* WEActivitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivitiesViewController.xib; sourceTree = "<group>"; };
 		0351486817B69F1D006E67B2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0351486917B69F1D006E67B2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		0351486A17B69F1D006E67B2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -927,6 +935,16 @@
 			path = "首页";
 			sourceTree = "<group>";
 		};
+		034267E917B8D935000248C2 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				034267EA17B8DAF7000248C2 /* WEActivitiesViewController.h */,
+				034267EB17B8DAF7000248C2 /* WEActivitiesViewController.m */,
+				034267EC17B8DAF7000248C2 /* WEActivitiesViewController.xib */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
 		0351486717B69F1D006E67B2 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -973,6 +991,7 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				034267E917B8D935000248C2 /* Activity */,
 				03E8B60517B785EF00AC12C8 /* Home */,
 				E47D58D617B731EA00D55EC7 /* Root */,
 			);
@@ -1398,6 +1417,8 @@
 		E47D58D617B731EA00D55EC7 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				034267E617B8D926000248C2 /* WTCoreDataTableViewController.h */,
+				034267E717B8D926000248C2 /* WTCoreDataTableViewController.m */,
 				E40A64CE17B733A500082B4F /* WTRootTabBarController.h */,
 				E40A64CF17B733A500082B4F /* WTRootTabBarController.m */,
 				03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */,
@@ -1666,6 +1687,7 @@
 				034164F217B7DF18005CFD98 /* event_category_cell@2x.png in Resources */,
 				034164F717B7E26F005CFD98 /* WESchoolEventHeadLineView.xib in Resources */,
 				0368DAA717B80064000F83A1 /* Localizable.strings in Resources */,
+				034267EE17B8DAF7000248C2 /* WEActivitiesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1796,6 +1818,8 @@
 				0341648717B7B8E0005CFD98 /* WEBannerItemView.m in Sources */,
 				034164E717B7DB6F005CFD98 /* WESeeAllSchoolEventsHeaderView.m in Sources */,
 				034164F517B7E226005CFD98 /* WESchoolEventHeadLineView.m in Sources */,
+				034267E817B8D926000248C2 /* WTCoreDataTableViewController.m in Sources */,
+				034267ED17B8DAF7000248C2 /* WEActivitiesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

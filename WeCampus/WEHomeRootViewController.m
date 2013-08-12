@@ -21,8 +21,9 @@
 #import "WTRequest.h"
 #import "WTClient.h"
 #import "WESchoolEventHeadLineView.h"
+#import "WEActivitiesViewController.h"
 
-@interface WEHomeRootViewController ()
+@interface WEHomeRootViewController () <WESeeAllSchoolEventsHeaderViewDelegate>
 @property (nonatomic, strong) WEBannerContainerView *bannerContainerView;
 @property (nonatomic, strong) WESeeAllSchoolEventsHeaderView *seeAllHeaderView;
 
@@ -90,6 +91,7 @@
 {
     if (!_seeAllHeaderView) {
         _seeAllHeaderView = [WESeeAllSchoolEventsHeaderView createWESeeAllSchoolEventsHeaderView];
+        _seeAllHeaderView.delegate = self;
     }
     return _seeAllHeaderView;
 }
@@ -239,6 +241,12 @@
 //        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:ad.website]];
 //    }
 //}
+#pragma mark - WESeeAllSchoolEventsHeaderViewDelegate
+- (void)didClickSeeAllEvent
+{
+    WEActivitiesViewController *vc = [[WEActivitiesViewController alloc] initWithTitle:ActivityShowTypesAll];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end

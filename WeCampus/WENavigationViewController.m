@@ -32,7 +32,8 @@
 
 - (void)configureNavigationBar
 {
-    if ([self.rootViewController shouldHideNavigationBar]) {
+    WERootViewController *visibleController = (WERootViewController *)self.visibleViewController;
+    if ([visibleController shouldHideNavigationBar]) {
         self.navigationBar.hidden = YES;
     } else {
         self.navigationBar.hidden = NO;

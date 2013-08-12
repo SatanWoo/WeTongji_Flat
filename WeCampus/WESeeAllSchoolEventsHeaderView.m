@@ -28,7 +28,9 @@
 
 - (IBAction)clickSeeAllEvent:(id)sender
 {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickSeeAllEvent)]) {
+        [self.delegate didClickSeeAllEvent];
+    }
 }
 
 @end
