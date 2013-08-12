@@ -72,8 +72,8 @@
 - (void)updateButtonColors
 {
     [buttonDateDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        UIButton *button = key;
-        NSDate *theDay = obj;
+        UIButton *button = obj;
+        NSDate *theDay = key;
         if([_selectedDate isEqualToDateIgnoringTime:today])
         {
             [button setTitleColor:[theDay isToday] ? [UIColor darkGrayColor] : [UIColor lightGrayColor] forState:UIControlStateNormal];
@@ -111,7 +111,7 @@
         
         [button.titleLabel setFont:sampleDateLabel.font];
         [view addSubview:button];
-        buttonDateDict[button] = theDay;
+        buttonDateDict[theDay] = button;
     }
     [self updateButtonColors];
     return view;
