@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:nil normalImage:@"back_btn"];
+     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:@selector(didClickBackButton) normalImage:@"back_btn"];
     [self configureNavigationBar];
 }
 
@@ -36,6 +36,7 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Template Method
 - (BOOL)shouldHideNavigationBar
 {
     return NO;
@@ -45,4 +46,12 @@
 {
     
 }
+
+#pragma mark - Private 
+- (void)didClickBackButton
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 @end
