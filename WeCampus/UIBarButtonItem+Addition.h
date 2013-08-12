@@ -11,6 +11,5 @@
 @interface UIBarButtonItem (Addition)
 
 - (id)initBarButtonWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normal;
-- (id)initWithImage:(NSString *)imageName selector:(SEL)selector target:(id)target;
 
 @end
