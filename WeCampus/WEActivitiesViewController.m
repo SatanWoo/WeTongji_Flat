@@ -64,9 +64,7 @@
 
 - (void)configureNavigationBarButton
 {
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:nil normalImage:@"back_btn"];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:nil normalImage:@"back_btn"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:nil normalImage:@"event_filter_btn"];
 }
 
 @end

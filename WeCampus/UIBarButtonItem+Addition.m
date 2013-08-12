@@ -10,7 +10,7 @@
 
 @implementation UIBarButtonItem (Addition)
 
-- (UIBarButtonItem *)initBarButtonWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normal
+- (id)initBarButtonWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normal
 {
     self = [super init];
     if (self) {
@@ -21,15 +21,36 @@
         [button setImage:filterNormalIconImage forState:UIControlStateNormal];
         [button setImage:filterNormalIconImage forState:UIControlStateHighlighted];
         [button setImage:filterNormalIconImage forState:UIControlStateSelected];
-        [button resetWidth:filterNormalIconImage.size.width];
+        [button resetSize:filterNormalIconImage.size];
         
-        UIView *containerView = [[UIView alloc] initWithFrame:button.frame];
-        [button resetOrigin:CGPointMake(0, 1)];
-        [containerView addSubview:button];
+        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 2, 0, 2)];
         
-        self = [self initWithCustomView:containerView];
+        self = [self initWithCustomView:button];
     }
     
+    return self;
+}
+
+- (id)initWithImage:(NSString *)imageName selector:(SEL)selector target:(id)target
+{
+    self = [super init];
+    if (self) {
+        NSString *highlightedName = [imageName stringByAppendingString:@"_hl"];
+        UIImage *image = [UIImage imageNamed:imageName];
+        UIImage *high = [UIImage imageNamed:highlightedName];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        if (high) {
+            [button setBounds:[[UIImageView alloc] initWithImage:high].bounds];
+            [button setImage:high forState:UIControlStateHighlighted];
+        } else {
+            [button setBounds:[[UIImageView alloc] initWithImage:image].bounds];
+        }
+        button.frame = CGRectMake(0, 0, button.bounds.size.width + 6, button.bounds.size.height + 6);
+        [button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+        [button setImage:image forState:UIControlStateNormal];
+        [button setImage:image forState:UIControlStateSelected];
+        self = [self initWithCustomView:button];
+    }
     return self;
 }
 

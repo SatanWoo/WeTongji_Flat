@@ -10,7 +10,7 @@
 
 @interface UIBarButtonItem (Addition)
 
-- (UIBarButtonItem *)initBarButtonWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normal;
-                                        
+- (id)initBarButtonWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normal;
+- (id)initWithImage:(NSString *)imageName selector:(SEL)selector target:(id)target;
 
 @end

@@ -41,6 +41,8 @@
 		034267F217B8E825000248C2 /* UIBarButtonItem+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 034267F117B8E825000248C2 /* UIBarButtonItem+Addition.m */; };
 		034267F517B8EDB8000248C2 /* nav_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 034267F317B8EDB7000248C2 /* nav_bg.png */; };
 		034267F617B8EDB8000248C2 /* nav_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 034267F417B8EDB8000248C2 /* nav_bg@2x.png */; };
+		034267FB17B9276C000248C2 /* WEActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 034267FA17B9276C000248C2 /* WEActivityCell.m */; };
+		034267FD17B9277D000248C2 /* WEActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034267FC17B9277D000248C2 /* WEActivityCell.xib */; };
 		0351487B17B69F1D006E67B2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486917B69F1D006E67B2 /* AFHTTPClient.m */; };
 		0351487C17B69F1D006E67B2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486B17B69F1D006E67B2 /* AFHTTPRequestOperation.m */; };
 		0351487D17B69F1D006E67B2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486D17B69F1D006E67B2 /* AFImageRequestOperation.m */; };
@@ -377,6 +379,9 @@
 		034267F117B8E825000248C2 /* UIBarButtonItem+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Addition.m"; sourceTree = "<group>"; };
 		034267F317B8EDB7000248C2 /* nav_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bg.png; sourceTree = "<group>"; };
 		034267F417B8EDB8000248C2 /* nav_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bg@2x.png"; sourceTree = "<group>"; };
+		034267F917B9276C000248C2 /* WEActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivityCell.h; sourceTree = "<group>"; };
+		034267FA17B9276C000248C2 /* WEActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivityCell.m; sourceTree = "<group>"; };
+		034267FC17B9277D000248C2 /* WEActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivityCell.xib; sourceTree = "<group>"; };
 		0351486817B69F1D006E67B2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0351486917B69F1D006E67B2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		0351486A17B69F1D006E67B2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -967,6 +972,16 @@
 			name = Activity;
 			sourceTree = "<group>";
 		};
+		034267F817B92754000248C2 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				034267F917B9276C000248C2 /* WEActivityCell.h */,
+				034267FA17B9276C000248C2 /* WEActivityCell.m */,
+				034267FC17B9277D000248C2 /* WEActivityCell.xib */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
 		0351486717B69F1D006E67B2 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1456,6 +1471,7 @@
 		E458B21217B90ED700D0DFBD /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				034267F817B92754000248C2 /* Activity */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -1736,6 +1752,7 @@
 				034267F517B8EDB8000248C2 /* nav_bg.png in Resources */,
 				034267F617B8EDB8000248C2 /* nav_bg@2x.png in Resources */,
 				E458B21717B9121100D0DFBD /* WENowPortraitViewController.xib in Resources */,
+				034267FD17B9277D000248C2 /* WEActivityCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1873,6 +1890,7 @@
 				034267ED17B8DAF7000248C2 /* WEActivitiesViewController.m in Sources */,
 				034267F217B8E825000248C2 /* UIBarButtonItem+Addition.m in Sources */,
 				E458B21617B9121100D0DFBD /* WENowPortraitViewController.m in Sources */,
+				034267FB17B9276C000248C2 /* WEActivityCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
