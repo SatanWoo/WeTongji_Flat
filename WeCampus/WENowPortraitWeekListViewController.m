@@ -1,21 +1,18 @@
 //
-//  WENowPortraitViewController.m
+//  WENowPortraitWeekListViewController.m
 //  WeCampus
 //
 //  Created by Song on 13-8-12.
 //  Copyright (c) 2013年 Ziqi Wu. All rights reserved.
 //
 
-#import "WENowPortraitViewController.h"
 #import "WENowPortraitWeekListViewController.h"
 
-@interface WENowPortraitViewController ()
-{
-    WENowPortraitWeekListViewController *weekTitleVC;
-}
+@interface WENowPortraitWeekListViewController ()
+
 @end
 
-@implementation WENowPortraitViewController
+@implementation WENowPortraitWeekListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,9 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    weekTitleVC = [[WENowPortraitWeekListViewController alloc] init];
-    weekTitleVC.view.frame = self.weekTitleContainerView.bounds;
-    [self.weekTitleContainerView addSubview:weekTitleVC.view];
     // Do any additional setup after loading the view from its nib.
 }
 
