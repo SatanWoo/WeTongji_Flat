@@ -157,6 +157,7 @@
 
 - (void)hideTabBar {
     [self setBuildInTabBarHeight:0];
+    self.tabBar.hidden = YES;
     self.tabBarBgImageView.hidden = YES;
 }
 

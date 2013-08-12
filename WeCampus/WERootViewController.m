@@ -8,6 +8,8 @@
 
 #import "WERootViewController.h"
 #import "WENavigationViewController.h"
+#import "WEContentViewController.h"
+#import "WEAppDelegate.h"
 
 @interface WERootViewController () <UINavigationControllerDelegate>
 
@@ -44,7 +46,7 @@
     if ([navigationController isKindOfClass:[WENavigationViewController class]]) {
         WENavigationViewController *vc = (WENavigationViewController *)navigationController;
         [vc configureNavigationBar];
-    }
+    }    
 }
 
 @end
