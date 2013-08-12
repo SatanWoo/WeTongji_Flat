@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WENowPortraitViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *weekTitleContainerView;
 
 @end

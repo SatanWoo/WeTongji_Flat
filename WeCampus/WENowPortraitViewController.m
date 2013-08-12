@@ -7,9 +7,12 @@
 //
 
 #import "WENowPortraitViewController.h"
+#import "WENowPortraitWeekListViewController.h"
 
 @interface WENowPortraitViewController ()
-
+{
+    WENowPortraitWeekListViewController *weekTitleVC;
+}
 @end
 
 @implementation WENowPortraitViewController
@@ -26,6 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    weekTitleVC = [[WENowPortraitWeekListViewController alloc] init];
+    weekTitleVC.view.frame = self.weekTitleContainerView.bounds;
+    [self.weekTitleContainerView addSubview:weekTitleVC.view];
     // Do any additional setup after loading the view from its nib.
 }
 
