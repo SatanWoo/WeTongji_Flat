@@ -1,33 +1,32 @@
 //
-//  WESecondViewController.m
+//  WENowPortraitViewController.m
 //  WeCampus
 //
-//  Created by 吴 wuziqi on 13-8-10.
+//  Created by Song on 13-8-12.
 //  Copyright (c) 2013年 Ziqi Wu. All rights reserved.
 //
 
-#import "WESecondViewController.h"
+#import "WENowPortraitViewController.h"
 
-@interface WESecondViewController ()
+@interface WENowPortraitViewController ()
 
 @end
 
-@implementation WESecondViewController
+@implementation WENowPortraitViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        // Custom initialization
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
