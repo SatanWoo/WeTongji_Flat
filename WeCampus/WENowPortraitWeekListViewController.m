@@ -13,6 +13,9 @@
 {
     NSArray *weekTitleLabels;//from sunday to sat
     NSArray *sampleDateLables;
+    NSDate *today;
+    
+    NSMutableDictionary *buttonDateDict;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -65,6 +68,36 @@
     return [date dateBySubtractingDays:date.weekday - 1];
 }
 
+
+- (void)updateButtonColors
+{
+    [buttonDateDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        UIButton *button = key;
+        NSDate *theDay = obj;
+        if([_selectedDate isEqualToDateIgnoringTime:today])
+        {
+            [button setTitleColor:[theDay isToday] ? [UIColor darkGrayColor] : [UIColor lightGrayColor] forState:UIControlStateNormal];
+        }
+        else
+        {
+            if([theDay isToday])
+            {
+                [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+            }
+            else if([theDay isEqualToDateIgnoringTime:_selectedDate])
+            {
+                [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+            }
+            else
+            {
+                [button setTitleColor: [UIColor lightGrayColor] forState:UIControlStateNormal];
+            }
+        }
+        
+        [button setTitleColor:[button titleColorForState:UIControlStateNormal] forState:UIControlStateHighlighted];
+    }];
+}
+
 - (UIView*)dateViewWithDay:(NSDate*)day
 {
     NSDate *startDay = [self lastSundayForDate:day];
@@ -75,11 +108,12 @@
         UILabel *sampleDateLabel = sampleDateLables[i];
         UIButton *button = [[UIButton alloc] initWithFrame:sampleDateLabel.frame];
         [button setTitle:[NSString stringWithFormat:@"%d",theDay.day] forState:UIControlStateNormal];
-        [button setTitleColor:[theDay isToday] ? [UIColor darkGrayColor] : [UIColor lightGrayColor] forState:UIControlStateNormal];
-        [button setTitleColor:[button titleColorForState:UIControlStateNormal] forState:UIControlStateHighlighted];
+        
         [button.titleLabel setFont:sampleDateLabel.font];
         [view addSubview:button];
+        buttonDateDict[button] = theDay;
     }
+    [self updateButtonColors];
     return view;
 }
 
@@ -88,8 +122,10 @@
     [super viewDidLoad];
     [self grabWeekTitleLabels];
     [self grabSampleDateLables];
+    buttonDateDict = [@{} mutableCopy];
+    _selectedDate = today = [NSDate new];
     
-    [self.scrollView addSubview:[self dateViewWithDay:[NSDate new]]];
+    [self.scrollView addSubview:[self dateViewWithDay:_selectedDate]];
     
     // Do any additional setup after loading the view from its nib.
 }

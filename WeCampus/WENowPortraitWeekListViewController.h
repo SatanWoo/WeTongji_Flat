@@ -10,4 +10,6 @@
 
 @interface WENowPortraitWeekListViewController : UIViewController
 
+@property (nonatomic,retain,readonly) NSDate *selectedDate;
+
 @end
