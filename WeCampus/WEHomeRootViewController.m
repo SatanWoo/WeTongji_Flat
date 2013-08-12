@@ -48,6 +48,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Home", nil);
     [self configureBannerView];
     [self configureScrollView];
 }

@@ -15,5 +15,6 @@
 @property (strong, nonatomic) WERootViewController *rootViewController;
 
 - (void)initRootViewController;
+- (void)configureNavigationBar;
 
 @end

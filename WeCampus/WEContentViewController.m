@@ -7,8 +7,9 @@
 //
 
 #import "WEContentViewController.h"
+#import "WENavigationViewController.h"
 
-@interface WEContentViewController ()
+@interface WEContentViewController () 
 
 @end
 
@@ -42,5 +43,4 @@
 {
     
 }
-
 @end

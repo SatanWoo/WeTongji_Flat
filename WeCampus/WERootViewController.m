@@ -7,8 +7,9 @@
 //
 
 #import "WERootViewController.h"
+#import "WENavigationViewController.h"
 
-@interface WERootViewController ()
+@interface WERootViewController () <UINavigationControllerDelegate>
 
 @end
 
@@ -25,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,6 +37,14 @@
 - (BOOL)shouldHideNavigationBar
 {
     return YES;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if ([navigationController isKindOfClass:[WENavigationViewController class]]) {
+        WENavigationViewController *vc = (WENavigationViewController *)navigationController;
+        [vc configureNavigationBar];
+    }
 }
 
 @end
