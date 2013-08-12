@@ -12,7 +12,7 @@
 
 @interface WEActivitiesViewController : WTCoreDataTableViewController
 
-@property (nonatomic, readonly) NSInteger nextPage;
+
 
 - (void)configureLoadDataRequest:(WTRequest *)request;
 

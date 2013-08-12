@@ -55,7 +55,7 @@
 						<int key="IBUISeparatorStyle">1</int>
 						<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
 						<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
-						<float key="IBUIRowHeight">92</float>
+						<float key="IBUIRowHeight">87</float>
 						<float key="IBUISectionHeaderHeight">22</float>
 						<float key="IBUISectionFooterHeight">22</float>
 					</object>
@@ -147,8 +147,24 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">WTCoreDataTableViewController</string>
+					<string key="className">WEContentViewController</string>
+					<string key="superclassName">WERootViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/WEContentViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">WERootViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/WERootViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">WTCoreDataTableViewController</string>
+					<string key="superclassName">WEContentViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">tableView</string>
 						<string key="NS.object.0">UITableView</string>
