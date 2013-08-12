@@ -41,6 +41,8 @@
 		034267F217B8E825000248C2 /* UIBarButtonItem+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 034267F117B8E825000248C2 /* UIBarButtonItem+Addition.m */; };
 		034267F517B8EDB8000248C2 /* nav_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 034267F317B8EDB7000248C2 /* nav_bg.png */; };
 		034267F617B8EDB8000248C2 /* nav_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 034267F417B8EDB8000248C2 /* nav_bg@2x.png */; };
+		034267FB17B9276C000248C2 /* WEActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 034267FA17B9276C000248C2 /* WEActivityCell.m */; };
+		034267FD17B9277D000248C2 /* WEActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034267FC17B9277D000248C2 /* WEActivityCell.xib */; };
 		0351487B17B69F1D006E67B2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486917B69F1D006E67B2 /* AFHTTPClient.m */; };
 		0351487C17B69F1D006E67B2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486B17B69F1D006E67B2 /* AFHTTPRequestOperation.m */; };
 		0351487D17B69F1D006E67B2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486D17B69F1D006E67B2 /* AFImageRequestOperation.m */; };
@@ -126,7 +128,6 @@
 		E44E547417B90F80000426E1 /* WTNowCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E546F17B90F80000426E1 /* WTNowCourseCell.m */; };
 		E44E547517B90F80000426E1 /* WTNowCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44E547017B90F80000426E1 /* WTNowCourseCell.xib */; };
 		E44E547917B9102B000426E1 /* WENowNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E547817B9102B000426E1 /* WENowNavigationController.m */; };
-		E44E547E17B920EE000426E1 /* NSDate-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E547D17B920EE000426E1 /* NSDate-Utilities.m */; };
 		E458B13717B754C100D0DFBD /* back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E458B07817B754C100D0DFBD /* back_btn.png */; };
 		E458B13817B754C100D0DFBD /* back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E458B07917B754C100D0DFBD /* back_btn@2x.png */; };
 		E458B13917B754C100D0DFBD /* switch_bg_off.png in Resources */ = {isa = PBXBuildFile; fileRef = E458B07A17B754C100D0DFBD /* switch_bg_off.png */; };
@@ -311,8 +312,6 @@
 		E458B1EC17B754C100D0DFBD /* course_time_icn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E458B13617B754C100D0DFBD /* course_time_icn@2x.png */; };
 		E458B21617B9121100D0DFBD /* WENowPortraitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E458B21417B9121100D0DFBD /* WENowPortraitViewController.m */; };
 		E458B21717B9121100D0DFBD /* WENowPortraitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E458B21517B9121100D0DFBD /* WENowPortraitViewController.xib */; };
-		E458B21D17B916D900D0DFBD /* WENowPortraitWeekListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E458B21B17B916D800D0DFBD /* WENowPortraitWeekListViewController.m */; };
-		E458B21E17B916D900D0DFBD /* WENowPortraitWeekListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E458B21C17B916D800D0DFBD /* WENowPortraitWeekListViewController.xib */; };
 		E49A324517B7538800AF8C77 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324417B7538800AF8C77 /* AddressBook.framework */; };
 		E49A324717B7538C00AF8C77 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324617B7538C00AF8C77 /* AddressBookUI.framework */; };
 		E49A324917B7539300AF8C77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324817B7539200AF8C77 /* MobileCoreServices.framework */; };
@@ -380,6 +379,9 @@
 		034267F117B8E825000248C2 /* UIBarButtonItem+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Addition.m"; sourceTree = "<group>"; };
 		034267F317B8EDB7000248C2 /* nav_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bg.png; sourceTree = "<group>"; };
 		034267F417B8EDB8000248C2 /* nav_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bg@2x.png"; sourceTree = "<group>"; };
+		034267F917B9276C000248C2 /* WEActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivityCell.h; sourceTree = "<group>"; };
+		034267FA17B9276C000248C2 /* WEActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivityCell.m; sourceTree = "<group>"; };
+		034267FC17B9277D000248C2 /* WEActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivityCell.xib; sourceTree = "<group>"; };
 		0351486817B69F1D006E67B2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0351486917B69F1D006E67B2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		0351486A17B69F1D006E67B2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -550,8 +552,6 @@
 		E44E547017B90F80000426E1 /* WTNowCourseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTNowCourseCell.xib; sourceTree = "<group>"; };
 		E44E547717B9102B000426E1 /* WENowNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENowNavigationController.h; sourceTree = "<group>"; };
 		E44E547817B9102B000426E1 /* WENowNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENowNavigationController.m; sourceTree = "<group>"; };
-		E44E547C17B920EE000426E1 /* NSDate-Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-Utilities.h"; sourceTree = "<group>"; };
-		E44E547D17B920EE000426E1 /* NSDate-Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate-Utilities.m"; sourceTree = "<group>"; };
 		E458B07817B754C100D0DFBD /* back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_btn.png; sourceTree = "<group>"; };
 		E458B07917B754C100D0DFBD /* back_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_btn@2x.png"; sourceTree = "<group>"; };
 		E458B07A17B754C100D0DFBD /* switch_bg_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch_bg_off.png; sourceTree = "<group>"; };
@@ -737,9 +737,6 @@
 		E458B21317B9121100D0DFBD /* WENowPortraitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENowPortraitViewController.h; sourceTree = "<group>"; };
 		E458B21417B9121100D0DFBD /* WENowPortraitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENowPortraitViewController.m; sourceTree = "<group>"; };
 		E458B21517B9121100D0DFBD /* WENowPortraitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WENowPortraitViewController.xib; sourceTree = "<group>"; };
-		E458B21A17B916D800D0DFBD /* WENowPortraitWeekListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENowPortraitWeekListViewController.h; sourceTree = "<group>"; };
-		E458B21B17B916D800D0DFBD /* WENowPortraitWeekListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENowPortraitWeekListViewController.m; sourceTree = "<group>"; };
-		E458B21C17B916D800D0DFBD /* WENowPortraitWeekListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WENowPortraitWeekListViewController.xib; sourceTree = "<group>"; };
 		E49A324417B7538800AF8C77 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		E49A324617B7538C00AF8C77 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		E49A324817B7539200AF8C77 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -975,6 +972,16 @@
 			name = Activity;
 			sourceTree = "<group>";
 		};
+		034267F817B92754000248C2 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				034267F917B9276C000248C2 /* WEActivityCell.h */,
+				034267FA17B9276C000248C2 /* WEActivityCell.m */,
+				034267FC17B9277D000248C2 /* WEActivityCell.xib */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
 		0351486717B69F1D006E67B2 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1152,7 +1159,6 @@
 		E40A64D117B7349A00082B4F /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				E44E547B17B920EE000426E1 /* NSDate-Utilities */,
 				E40A64D217B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.h */,
 				E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */,
 				E40A64D417B734A400082B4F /* NSAttributedString+WTAddition.h */,
@@ -1193,20 +1199,8 @@
 				E458B21317B9121100D0DFBD /* WENowPortraitViewController.h */,
 				E458B21417B9121100D0DFBD /* WENowPortraitViewController.m */,
 				E458B21517B9121100D0DFBD /* WENowPortraitViewController.xib */,
-				E458B21A17B916D800D0DFBD /* WENowPortraitWeekListViewController.h */,
-				E458B21B17B916D800D0DFBD /* WENowPortraitWeekListViewController.m */,
-				E458B21C17B916D800D0DFBD /* WENowPortraitWeekListViewController.xib */,
 			);
 			name = Now;
-			sourceTree = "<group>";
-		};
-		E44E547B17B920EE000426E1 /* NSDate-Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				E44E547C17B920EE000426E1 /* NSDate-Utilities.h */,
-				E44E547D17B920EE000426E1 /* NSDate-Utilities.m */,
-			);
-			path = "NSDate-Utilities";
 			sourceTree = "<group>";
 		};
 		E458B07717B754C100D0DFBD /* Resource */ = {
@@ -1477,6 +1471,7 @@
 		E458B21217B90ED700D0DFBD /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				034267F817B92754000248C2 /* Activity */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -1757,7 +1752,7 @@
 				034267F517B8EDB8000248C2 /* nav_bg.png in Resources */,
 				034267F617B8EDB8000248C2 /* nav_bg@2x.png in Resources */,
 				E458B21717B9121100D0DFBD /* WENowPortraitViewController.xib in Resources */,
-				E458B21E17B916D900D0DFBD /* WENowPortraitWeekListViewController.xib in Resources */,
+				034267FD17B9277D000248C2 /* WEActivityCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1822,7 +1817,6 @@
 				0351489417B69F34006E67B2 /* Base64.m in Sources */,
 				0351489517B69F34006E67B2 /* NSError+WTSDKClientErrorGenerator.m in Sources */,
 				0351489617B69F34006E67B2 /* NSString+URLEncoding.m in Sources */,
-				E44E547E17B920EE000426E1 /* NSDate-Utilities.m in Sources */,
 				0351489717B69F34006E67B2 /* NSString+WTSDKAddition.m in Sources */,
 				0351489817B69F34006E67B2 /* NSUserDefaults+WTSDKAddition.m in Sources */,
 				0351489917B69F34006E67B2 /* WTClient.m in Sources */,
@@ -1896,7 +1890,7 @@
 				034267ED17B8DAF7000248C2 /* WEActivitiesViewController.m in Sources */,
 				034267F217B8E825000248C2 /* UIBarButtonItem+Addition.m in Sources */,
 				E458B21617B9121100D0DFBD /* WENowPortraitViewController.m in Sources */,
-				E458B21D17B916D900D0DFBD /* WENowPortraitWeekListViewController.m in Sources */,
+				034267FB17B9276C000248C2 /* WEActivityCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

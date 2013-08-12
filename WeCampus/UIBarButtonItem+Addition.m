@@ -10,7 +10,7 @@
 
 @implementation UIBarButtonItem (Addition)
 
-- (UIBarButtonItem *)initBarButtonWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normal
+- (id)initBarButtonWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normal
 {
     self = [super init];
     if (self) {
@@ -21,10 +21,11 @@
         [button setImage:filterNormalIconImage forState:UIControlStateNormal];
         [button setImage:filterNormalIconImage forState:UIControlStateHighlighted];
         [button setImage:filterNormalIconImage forState:UIControlStateSelected];
-        [button resetWidth:filterNormalIconImage.size.width];
+        [button resetSize:filterNormalIconImage.size];
         
         UIView *containerView = [[UIView alloc] initWithFrame:button.frame];
-        [button resetOrigin:CGPointMake(0, 1)];
+        [containerView resetWidth:containerView.frame.size.width + 4];
+        [button resetOriginXByOffset:4];
         [containerView addSubview:button];
         
         self = [self initWithCustomView:containerView];
@@ -32,6 +33,8 @@
     
     return self;
 }
+
+
 
 
 @end

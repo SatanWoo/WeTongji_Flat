@@ -8,6 +8,7 @@
 
 #import "WEContentViewController.h"
 #import "WENavigationViewController.h"
+#import "UIBarButtonItem+Addition.h"
 
 @interface WEContentViewController () 
 
@@ -26,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:nil normalImage:@"back_btn"];
     [self configureNavigationBar];
 }
 
