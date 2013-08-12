@@ -10,6 +10,10 @@
 #import "UIImageView+AsyncLoading.h"
 #define kWESchoolEventHeadLineViewNibName @"WESchoolEventHeadLineView"
 
+@interface WESchoolEventHeadLineView()
+@property (nonatomic, strong) Activity *act;
+@end
+
 @implementation WESchoolEventHeadLineView
 
 - (id)initWithFrame:(CGRect)frame
@@ -32,6 +36,7 @@
 
 - (void)configureViewWithActivity:(Activity *)act
 {
+    self.act = act;
     self.categoryLabel.text = act.categoryString;
     [self configureCategoryColor];
     
@@ -79,6 +84,13 @@
 {
     [self.titleLabel resetOriginX:originXWithoutImage];
     [self.timeLabel resetOriginX:originXWithoutImage];
+}
+
+- (IBAction)didClickShowCategory:(id)sender
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickShowCategoryButtonWithModel:)]) {
+        [self.delegate didClickShowCategoryButtonWithModel:self.act];
+    }
 }
 
 @end

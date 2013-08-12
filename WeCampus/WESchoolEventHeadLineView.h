@@ -9,19 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "Activity+Addition.h"
 
-typedef enum {
-    WESchoolEventHeadLineActivity = 0,
-    WESchoolEventHeadLineLecture = 1,
-    WESchoolEventHeadLineGame = 2,
-    WESchoolEventHeadLineJob = 3
-}WESchoolEventHeadLineType;
+@protocol WESchoolEventHeadLineViewDelegate <NSObject>
+
+- (void)didClickShowCategoryButtonWithModel:(Activity *)act;
+
+@end
 
 @interface WESchoolEventHeadLineView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
+@property (weak, nonatomic) id<WESchoolEventHeadLineViewDelegate> delegate;
 
 + (WESchoolEventHeadLineView *)createWESchoolEventHeadLineViewWithModel:(Activity *)act;
+- (IBAction)didClickShowCategory:(id)sender;
 
 @end
