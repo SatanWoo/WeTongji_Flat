@@ -7,6 +7,7 @@
 //
 
 #import "WEActivitiesViewController.h"
+#import "UIBarButtonItem+Addition.h"
 
 @interface WEActivitiesViewController ()
 @property (assign, nonatomic) ActivityShowTypes type;
@@ -57,7 +58,15 @@
         self.title = NSLocalizedString(@"Entertainment", nil);
     }
     
-    [self.navigationController.navigationBar setBackgroundColor:[UIColor greenColor]];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
+    [self configureNavigationBarButton];
+}
+
+- (void)configureNavigationBarButton
+{
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:nil normalImage:@"back_btn"];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:nil normalImage:@"back_btn"];
 }
 
 @end

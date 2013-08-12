@@ -42,6 +42,9 @@
 		034267E817B8D926000248C2 /* WTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034267E717B8D926000248C2 /* WTCoreDataTableViewController.m */; };
 		034267ED17B8DAF7000248C2 /* WEActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034267EB17B8DAF7000248C2 /* WEActivitiesViewController.m */; };
 		034267EE17B8DAF7000248C2 /* WEActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034267EC17B8DAF7000248C2 /* WEActivitiesViewController.xib */; };
+		034267F217B8E825000248C2 /* UIBarButtonItem+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 034267F117B8E825000248C2 /* UIBarButtonItem+Addition.m */; };
+		034267F517B8EDB8000248C2 /* nav_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 034267F317B8EDB7000248C2 /* nav_bg.png */; };
+		034267F617B8EDB8000248C2 /* nav_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 034267F417B8EDB8000248C2 /* nav_bg@2x.png */; };
 		0351487B17B69F1D006E67B2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486917B69F1D006E67B2 /* AFHTTPClient.m */; };
 		0351487C17B69F1D006E67B2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486B17B69F1D006E67B2 /* AFHTTPRequestOperation.m */; };
 		0351487D17B69F1D006E67B2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486D17B69F1D006E67B2 /* AFImageRequestOperation.m */; };
@@ -371,6 +374,10 @@
 		034267EA17B8DAF7000248C2 /* WEActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivitiesViewController.h; sourceTree = "<group>"; };
 		034267EB17B8DAF7000248C2 /* WEActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivitiesViewController.m; sourceTree = "<group>"; };
 		034267EC17B8DAF7000248C2 /* WEActivitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivitiesViewController.xib; sourceTree = "<group>"; };
+		034267F017B8E825000248C2 /* UIBarButtonItem+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Addition.h"; sourceTree = "<group>"; };
+		034267F117B8E825000248C2 /* UIBarButtonItem+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Addition.m"; sourceTree = "<group>"; };
+		034267F317B8EDB7000248C2 /* nav_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bg.png; sourceTree = "<group>"; };
+		034267F417B8EDB8000248C2 /* nav_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bg@2x.png"; sourceTree = "<group>"; };
 		0351486817B69F1D006E67B2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0351486917B69F1D006E67B2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		0351486A17B69F1D006E67B2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -1147,6 +1154,8 @@
 				E40A64E917B734A400082B4F /* UIView+Animation.m */,
 				E40A64EA17B734A400082B4F /* UIView+Resize.h */,
 				E40A64EB17B734A400082B4F /* UIView+Resize.m */,
+				034267F017B8E825000248C2 /* UIBarButtonItem+Addition.h */,
+				034267F117B8E825000248C2 /* UIBarButtonItem+Addition.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -1155,6 +1164,8 @@
 			isa = PBXGroup;
 			children = (
 				034164E217B7DAD8005CFD98 /* 参考图 */,
+				034267F317B8EDB7000248C2 /* nav_bg.png */,
+				034267F417B8EDB8000248C2 /* nav_bg@2x.png */,
 				E458B07817B754C100D0DFBD /* back_btn.png */,
 				E458B07917B754C100D0DFBD /* back_btn@2x.png */,
 				E458B07A17B754C100D0DFBD /* switch_bg_off.png */,
@@ -1688,6 +1699,8 @@
 				034164F717B7E26F005CFD98 /* WESchoolEventHeadLineView.xib in Resources */,
 				0368DAA717B80064000F83A1 /* Localizable.strings in Resources */,
 				034267EE17B8DAF7000248C2 /* WEActivitiesViewController.xib in Resources */,
+				034267F517B8EDB8000248C2 /* nav_bg.png in Resources */,
+				034267F617B8EDB8000248C2 /* nav_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1820,6 +1833,7 @@
 				034164F517B7E226005CFD98 /* WESchoolEventHeadLineView.m in Sources */,
 				034267E817B8D926000248C2 /* WTCoreDataTableViewController.m in Sources */,
 				034267ED17B8DAF7000248C2 /* WEActivitiesViewController.m in Sources */,
+				034267F217B8E825000248C2 /* UIBarButtonItem+Addition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
