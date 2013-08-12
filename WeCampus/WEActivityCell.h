@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *attendPeopleCountLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *posterImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *timeIconImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *locationIconImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *likeIconImageView;
 
 + (WEActivityCell *)createWEActivityCell;
 -(void)configureCellWithActivity:(Activity *)activity;

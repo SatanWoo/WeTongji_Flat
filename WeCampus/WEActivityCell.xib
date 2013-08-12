@@ -171,7 +171,7 @@
 							<object class="IBUILabel" id="198051225">
 								<reference key="NSNextResponder" ref="273605974"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{111, 34}, {186, 21}}</string>
+								<string key="NSFrame">{{111, 35}, {194, 21}}</string>
 								<reference key="NSSuperview" ref="273605974"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="664390455"/>
@@ -204,7 +204,7 @@
 							<object class="IBUILabel" id="536052377">
 								<reference key="NSNextResponder" ref="273605974"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{111, 54}, {186, 21}}</string>
+								<string key="NSFrame">{{111, 54}, {194, 21}}</string>
 								<reference key="NSSuperview" ref="273605974"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="933131508"/>
@@ -224,8 +224,8 @@
 							</object>
 							<object class="IBUILabel" id="179438758">
 								<reference key="NSNextResponder" ref="273605974"/>
-								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{111, 73}, {50, 21}}</string>
+								<int key="NSvFlags">293</int>
+								<string key="NSFrame">{{111, 73}, {28, 21}}</string>
 								<reference key="NSSuperview" ref="273605974"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="422187262"/>
@@ -383,6 +383,30 @@
 					</object>
 					<int key="connectionID">23</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">timeIconImageView</string>
+						<reference key="source" ref="242921351"/>
+						<reference key="destination" ref="914991538"/>
+					</object>
+					<int key="connectionID">24</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">locationIconImageView</string>
+						<reference key="source" ref="242921351"/>
+						<reference key="destination" ref="664390455"/>
+					</object>
+					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">likeIconImageView</string>
+						<reference key="source" ref="242921351"/>
+						<reference key="destination" ref="933131508"/>
+					</object>
+					<int key="connectionID">26</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -509,7 +533,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">23</int>
+			<int key="maxID">26</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -519,8 +543,11 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="attendPeopleCountLabel">UILabel</string>
 						<string key="likeCountLabel">UILabel</string>
+						<string key="likeIconImageView">UIImageView</string>
+						<string key="locationIconImageView">UIImageView</string>
 						<string key="locationLabel">UILabel</string>
 						<string key="posterImageView">UIImageView</string>
+						<string key="timeIconImageView">UIImageView</string>
 						<string key="timeLabel">UILabel</string>
 						<string key="titleLabel">UILabel</string>
 					</dictionary>
@@ -533,12 +560,24 @@
 							<string key="name">likeCountLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="likeIconImageView">
+							<string key="name">likeIconImageView</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="locationIconImageView">
+							<string key="name">locationIconImageView</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="locationLabel">
 							<string key="name">locationLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="posterImageView">
 							<string key="name">posterImageView</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="timeIconImageView">
+							<string key="name">timeIconImageView</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="timeLabel">

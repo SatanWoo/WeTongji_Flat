@@ -41,7 +41,63 @@
     self.likeCountLabel.text = activity.likeCount.stringValue;
     self.attendPeopleCountLabel.text = activity.friendsCount.stringValue;
     
-    [self.posterImageView loadImageWithImageURLString:activity.image];
+    if (activity.image) {
+        self.posterImageView.alpha = 1;
+        [self.posterImageView loadImageWithImageURLString:activity.image];
+        [self configureWithImageLayout];
+        
+    } else {
+        [self configureNoImageLayout];
+        self.posterImageView.alpha = 0;
+    }
+}
+
+
+#define noImageIconOriginX 17
+#define noImageLabelOriginX 42
+
+#define maxRightLabelBorder 305
+- (void)configureNoImageLayout
+{
+    [self.timeLabel resetOriginX:noImageLabelOriginX];
+    [self resizeLableLength:self.timeLabel];
+    
+    [self.locationLabel resetOriginX:noImageLabelOriginX];
+    [self resizeLableLength:self.locationLabel];
+    
+    [self.likeCountLabel resetOriginX:noImageLabelOriginX];
+    
+    [self.titleLabel resetOriginX:noImageIconOriginX];
+    [self resizeLableLength:self.titleLabel];
+     
+    [self.timeIconImageView resetOriginX:noImageIconOriginX];
+    [self.locationIconImageView resetOriginX:noImageIconOriginX];
+    [self.likeIconImageView resetOriginX:noImageIconOriginX];
+}
+
+#define withImageIconOriginX 86
+#define withImageLabelOriginX 111
+- (void)configureWithImageLayout
+{
+    [self.timeLabel resetOriginX:withImageLabelOriginX];
+    [self resizeLableLength:self.timeLabel];
+    
+    [self.locationLabel resetOriginX:withImageLabelOriginX];
+    [self resizeLableLength:self.locationLabel];
+    
+    [self.likeCountLabel resetOriginX:withImageLabelOriginX];
+    
+    [self.titleLabel resetOriginX:withImageIconOriginX];
+    [self resizeLableLength:self.titleLabel];
+    
+    [self.timeIconImageView resetOriginX:withImageIconOriginX];
+    [self.likeIconImageView resetOriginX:withImageIconOriginX];
+    [self.locationIconImageView resetOriginX:withImageIconOriginX];
+}
+
+- (void)resizeLableLength:(UILabel *)label
+{
+    [label resetWidth:maxRightLabelBorder - label.frame.origin.x];
 }
 
 @end
