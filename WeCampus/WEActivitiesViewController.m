@@ -140,11 +140,10 @@
     
     Activity *activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    //[activityCell configureCellWithIndexPath:indexPath activity:activity];
+    [activityCell configureCellWithActivity:activity];
 }
 
 - (void)configureFetchRequest:(NSFetchRequest *)request {
-    NSLog(@"configureFetchRequest");
     [request setEntity:[NSEntityDescription entityForName:@"Activity" inManagedObjectContext:[WTCoreDataManager sharedManager].managedObjectContext]];
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];

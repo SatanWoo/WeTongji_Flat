@@ -81,7 +81,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"[self.fetchedResultsController.sections[section] numberOfObjects]; is %d", [self.fetchedResultsController.sections[section] numberOfObjects]);
     return [self.fetchedResultsController.sections[section] numberOfObjects];
 }
 
@@ -155,23 +154,19 @@
     
     switch(type) {
         case NSFetchedResultsChangeInsert:
-            NSLog(@"did insert");
             [self insertCellAtIndexPath:newIndexPath];
             break;
             
         case NSFetchedResultsChangeDelete:
-             NSLog(@"did delete");
             [self deleteCellAtIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeUpdate:
-             NSLog(@"did update");
             [self updateCell:[tableView cellForRowAtIndexPath:indexPath]
                  atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
-             NSLog(@"did move");
             [self deleteCellAtIndexPath:indexPath];
             [self insertCellAtIndexPath:newIndexPath];
             break;

@@ -7,6 +7,8 @@
 //
 
 #import "WEActivityCell.h"
+#import "Activity+Addition.h"
+#import "UIImageView+AsyncLoading.h"
 #define kWEActivityCellNibName @"WEActivityCell"
 
 @implementation WEActivityCell
@@ -29,6 +31,17 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
+}
+
+- (void)configureCellWithActivity:(Activity *)activity
+{
+    self.titleLabel.text = activity.what;
+    self.timeLabel.text = activity.yearMonthDayBeginToEndTimeString;
+    self.locationLabel.text = activity.where;
+    self.likeCountLabel.text = activity.likeCount.stringValue;
+    self.attendPeopleCountLabel.text = activity.friendsCount.stringValue;
+    
+    [self.posterImageView loadImageWithImageURLString:activity.image];
 }
 
 @end

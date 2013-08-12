@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class Activity;
+
 @interface WEActivityCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -17,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *posterImageView;
 
 + (WEActivityCell *)createWEActivityCell;
+-(void)configureCellWithActivity:(Activity *)activity;
 
 @end
