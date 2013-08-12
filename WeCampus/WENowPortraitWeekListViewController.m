@@ -16,6 +16,8 @@
     NSDate *today;
     
     NSMutableDictionary *buttonDateDict;
+    
+    
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -72,11 +74,11 @@
 - (void)updateButtonColors
 {
     [buttonDateDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        UIButton *button = key;
-        NSDate *theDay = obj;
+        UIButton *button = obj;
+        NSDate *theDay = key;
         if([_selectedDate isEqualToDateIgnoringTime:today])
         {
-            [button setTitleColor:[theDay isToday] ? [UIColor darkGrayColor] : [UIColor lightGrayColor] forState:UIControlStateNormal];
+            [button setTitleColor:[theDay isToday] ? [UIColor redColor] : [UIColor lightGrayColor] forState:UIControlStateNormal];
         }
         else
         {
@@ -108,10 +110,11 @@
         UILabel *sampleDateLabel = sampleDateLables[i];
         UIButton *button = [[UIButton alloc] initWithFrame:sampleDateLabel.frame];
         [button setTitle:[NSString stringWithFormat:@"%d",theDay.day] forState:UIControlStateNormal];
-        
+        [button addTarget:self action:@selector(didTapOnDate:) forControlEvents:UIControlEventTouchUpInside];
         [button.titleLabel setFont:sampleDateLabel.font];
         [view addSubview:button];
-        buttonDateDict[button] = theDay;
+        buttonDateDict[theDay] = button;
+        button.tag = i + 1;
     }
     [self updateButtonColors];
     return view;
@@ -130,10 +133,34 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+
+- (void)didTapOnDate:(UIButton*)sender
+{
+    __block NSDate *date;
+    [buttonDateDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        UIButton *button = obj;
+        NSDate *theDay = key;
+        if(button == sender)
+        {
+            date = theDay;
+            *stop = YES;
+        }
+    }];
+    if(!date)
+    {
+        NSLog(@"!!!!!!");
+        return;
+    }
+    _selectedDate = date;
+    [self updateButtonColors];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
