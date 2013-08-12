@@ -47,7 +47,7 @@
 								<string key="NSFrame">{{5, 0}, {310, 101}}</string>
 								<reference key="NSSuperview" ref="273605974"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="3371655"/>
+								<reference key="NSNextKeyView" ref="695758715"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -80,6 +80,7 @@
 								<string key="NSFrame">{{17, 7}, {56, 87}}</string>
 								<reference key="NSSuperview" ref="273605974"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="3371655"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="201365752"/>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -227,7 +228,7 @@
 								<string key="NSFrame">{{111, 73}, {50, 21}}</string>
 								<reference key="NSSuperview" ref="273605974"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="432863137"/>
+								<reference key="NSNextKeyView" ref="422187262"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -248,6 +249,7 @@
 								<string key="NSFrame">{{271, 73}, {40, 21}}</string>
 								<reference key="NSSuperview" ref="273605974"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -277,6 +279,7 @@
 								<string key="NSFrame">{{223, 75}, {44, 21}}</string>
 								<reference key="NSSuperview" ref="273605974"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="432863137"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -326,6 +329,7 @@
 				<reference key="IBUIBackgroundColor" ref="201365752"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIContentView" ref="273605974"/>
+				<string key="IBUIReuseIdentifier">WEActivityCell</string>
 				<real value="107" key="IBUIRowHeight"/>
 			</object>
 		</array>
