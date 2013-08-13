@@ -249,7 +249,6 @@
 {
     [[NSUserDefaults standardUserDefaults] setActivityShowTypes:ActivityShowTypesAll];
     WEActivitiesViewController *vc = [[WEActivitiesViewController alloc] initWithTitle:ActivityShowTypesAll];
-    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -258,7 +257,6 @@
 {
     [[NSUserDefaults standardUserDefaults] setActivityShowTypes:act.category.integerValue];
     WEActivitiesViewController *vc = [[WEActivitiesViewController alloc] initWithTitle:act.category.integerValue];
-    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -63,6 +63,8 @@
 		035148A017B6A1F9006E67B2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0351489F17B6A1F9006E67B2 /* MainWindow.xib */; };
 		0359175217B92E0600BD64AE /* 活动列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 0359175117B92E0600BD64AE /* 活动列表.png */; };
 		0368DAA717B80064000F83A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0368DAA517B80064000F83A1 /* Localizable.strings */; };
+		03883AC317BA11C900ED081D /* WEActivitySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */; };
+		03883AC417BA11C900ED081D /* WEActivitySettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */; };
 		03E8B60817B7890D00AC12C8 /* WENavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */; };
 		03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */; };
 		03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */; };
@@ -426,6 +428,9 @@
 		0359175117B92E0600BD64AE /* 活动列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动列表.png"; sourceTree = "<group>"; };
 		0368DAA617B80064000F83A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0368DAA817B80067000F83A1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		03883AC017BA11C900ED081D /* WEActivitySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivitySettingViewController.h; sourceTree = "<group>"; };
+		03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivitySettingViewController.m; sourceTree = "<group>"; };
+		03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivitySettingViewController.xib; sourceTree = "<group>"; };
 		03AB77E117B7FF2C00B41FD5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENavigationViewController.h; sourceTree = "<group>"; };
 		03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENavigationViewController.m; sourceTree = "<group>"; };
@@ -971,6 +976,9 @@
 				034267EA17B8DAF7000248C2 /* WEActivitiesViewController.h */,
 				034267EB17B8DAF7000248C2 /* WEActivitiesViewController.m */,
 				034267EC17B8DAF7000248C2 /* WEActivitiesViewController.xib */,
+				03883AC017BA11C900ED081D /* WEActivitySettingViewController.h */,
+				03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */,
+				03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -1787,6 +1795,7 @@
 				E458B21717B9121100D0DFBD /* WENowPortraitViewController.xib in Resources */,
 				034267FD17B9277D000248C2 /* WEActivityCell.xib in Resources */,
 				0359175217B92E0600BD64AE /* 活动列表.png in Resources */,
+				03883AC417BA11C900ED081D /* WEActivitySettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1927,6 +1936,7 @@
 				034267F217B8E825000248C2 /* UIBarButtonItem+Addition.m in Sources */,
 				E458B21617B9121100D0DFBD /* WENowPortraitViewController.m in Sources */,
 				034267FB17B9276C000248C2 /* WEActivityCell.m in Sources */,
+				03883AC317BA11C900ED081D /* WEActivitySettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
