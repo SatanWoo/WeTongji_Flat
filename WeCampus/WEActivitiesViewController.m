@@ -215,7 +215,15 @@
     [self.settingViewController.view removeFromSuperview];
     self.settingViewController = nil;
     [self configureNavigationBarTitle];
+    
+    self.fetchedResultsController = nil;
     [self.tableView reloadData];
+    
+    self.nextPage = 1;
+    [self loadMoreDataWithSuccessBlock:^{
+    } failureBlock:^{
+    }];
+
 }
 
 @end
