@@ -8,8 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class WENowPortraitWeekListViewController;
+
+@protocol  WENowPortraitWeekListViewControllerDelegate <NSObject>
+
+- (void)weekListViewController:(WENowPortraitWeekListViewController*)vc dateDidChanged:(NSDate*)date;
+
+@end
+
+
 @interface WENowPortraitWeekListViewController : UIViewController
 
+@property (nonatomic,weak) id<WENowPortraitWeekListViewControllerDelegate> delegate;
+
 @property (nonatomic,retain,readonly) NSDate *selectedDate;
+
+
+- (void)selectPreviousDay;
+- (void)selectNextDay;
 
 @end

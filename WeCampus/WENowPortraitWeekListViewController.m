@@ -219,14 +219,52 @@
         return;
     }
     _selectedDate = date;
+    [self.delegate weekListViewController:self dateDidChanged:_selectedDate];
     [self updateButtonColors];
+}
+
+#pragma mark 
+
+
+- (void)selectDay:(NSDate*)date
+{
+    if([date isSameWeekAsDate:_selectedDate])
+    {
+        _selectedDate = date;
+    }
+    else
+    {
+        NSDate *toSelectSunday = [self lastSundayForDate:date];
+        NSDate *currentSunday = [self lastSundayForDate:today];
+        
+        
+        int expectIndex = [currentSunday distanceInDaysToDate:toSelectSunday] / 7;
+        NSLog(@"expectIndex %d",expectIndex);
+        [self.scrollView setContentOffset:CGPointMake(expectIndex * self.scrollView.bounds.size.width, 0) animated:YES];
+        //currentIndex = expectIndex;
+        _selectedDate = date;
+    }
+    
+    [self updateButtonColors];
+}
+
+- (void)selectPreviousDay
+{
+    [self selectDay:[_selectedDate dateByAddingDays:-1]];
+}
+
+- (void)selectNextDay
+{
+    [self selectDay:[_selectedDate dateByAddingDays:1]];
 }
 
 #pragma mark UIScrollView Delegate
 static int lastIndex;
+static int originalIndex;
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     lastIndex = currentIndex;
+    originalIndex = currentIndex;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;
@@ -239,6 +277,7 @@ static int lastIndex;
     if(currentIndex != lastIndex)
     {
         NSLog(@"cur ind:%d",currentIndex);
+        
         lastIndex = currentIndex;
         
         CGRect visibleRect = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, scrollView.frame.size.width, scrollView.frame.size.height);
@@ -297,7 +336,9 @@ static int lastIndex;
 
 - (void)scrollViewBecomeStable
 {
+    _selectedDate = [_selectedDate dateByAddingDays: (currentIndex - originalIndex) * 7];
     [self updateButtonColors];
+    [self.delegate weekListViewController:self dateDidChanged:_selectedDate];
 	NSLog(@"cur ind:%d",currentIndex);
     
 }
