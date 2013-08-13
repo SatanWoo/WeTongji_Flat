@@ -327,6 +327,7 @@
 		E49A325717B753D500AF8C77 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A325617B753D500AF8C77 /* CoreData.framework */; };
 		E49A325917B753D900AF8C77 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A325817B753D900AF8C77 /* CoreText.framework */; };
 		E49A325B17B753E300AF8C77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A325A17B753E300AF8C77 /* SystemConfiguration.framework */; };
+		E4B2948817B9C9A800ED68C6 /* WENowPortraitWeekListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44E548217B92AF9000426E1 /* WENowPortraitWeekListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1579,6 +1580,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B2948817B9C9A800ED68C6 /* WENowPortraitWeekListViewController.xib in Resources */,
 				033729C917B67D7600D2EC9F /* InfoPlist.strings in Resources */,
 				E44E547217B90F80000426E1 /* WTNowActivityCell.xib in Resources */,
 				033729D117B67D7600D2EC9F /* Default.png in Resources */,

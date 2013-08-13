@@ -67,10 +67,6 @@
 - (NSInteger)distanceInDaysToDate:(NSDate *)anotherDate;
 
 
-- (NSString*)autoTimeAgo;
-
-
-
 
 // Decomposing dates
 @property (readonly) NSInteger nearestHour;
