@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "WENowPortraitWeekListViewController.h"
+#import "WENowPortraitDayEventListViewController.h"
 
 @interface WENowPortraitViewController : UIViewController<WENowPortraitWeekListViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *weekTitleContainerView;
-- (IBAction)previousDay:(id)sender;
-- (IBAction)nextDay:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *dayEventListContainerView;
+
 
 @end

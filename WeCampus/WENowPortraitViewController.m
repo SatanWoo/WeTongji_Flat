@@ -11,6 +11,7 @@
 @interface WENowPortraitViewController ()
 {
     WENowPortraitWeekListViewController *weekTitleVC;
+    WENowPortraitDayEventListViewController *dayEventListVC;
 }
 @end
 
@@ -28,11 +29,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    weekTitleVC = [[WENowPortraitWeekListViewController alloc] init];
-    weekTitleVC.delegate = self;
-    weekTitleVC.view.frame = self.weekTitleContainerView.bounds;
-    [self.weekTitleContainerView addSubview:weekTitleVC.view];
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if(!weekTitleVC)
+    {
+        weekTitleVC = [[WENowPortraitWeekListViewController alloc] init];
+        weekTitleVC.delegate = self;
+        weekTitleVC.view.frame = self.weekTitleContainerView.bounds;
+        [self.weekTitleContainerView addSubview:weekTitleVC.view];
+    }
+    if(!dayEventListVC)
+    {
+        dayEventListVC = [[WENowPortraitDayEventListViewController alloc] init];
+        
+        dayEventListVC.view.frame = self.dayEventListContainerView.bounds;
+        [self.dayEventListContainerView addSubview:dayEventListVC.view];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,11 +63,4 @@
     NSLog(@"%@",date);
 }
 
-- (IBAction)previousDay:(id)sender {
-    [weekTitleVC selectPreviousDay];
-}
-
-- (IBAction)nextDay:(id)sender {
-    [weekTitleVC selectNextDay];
-}
 @end

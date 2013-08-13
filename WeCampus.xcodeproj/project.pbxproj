@@ -330,6 +330,8 @@
 		E49A325717B753D500AF8C77 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A325617B753D500AF8C77 /* CoreData.framework */; };
 		E49A325917B753D900AF8C77 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A325817B753D900AF8C77 /* CoreText.framework */; };
 		E49A325B17B753E300AF8C77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A325A17B753E300AF8C77 /* SystemConfiguration.framework */; };
+		E4B02E0E17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B02E0C17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m */; };
+		E4B02E0F17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4B02E0D17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib */; };
 		E4B2948817B9C9A800ED68C6 /* WENowPortraitWeekListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44E548217B92AF9000426E1 /* WENowPortraitWeekListViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -766,6 +768,9 @@
 		E49A325617B753D500AF8C77 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E49A325817B753D900AF8C77 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E49A325A17B753E300AF8C77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E4B02E0B17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENowPortraitDayEventListViewController.h; sourceTree = "<group>"; };
+		E4B02E0C17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENowPortraitDayEventListViewController.m; sourceTree = "<group>"; };
+		E4B02E0D17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WENowPortraitDayEventListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1217,6 +1222,9 @@
 				E44E548017B92AF9000426E1 /* WENowPortraitWeekListViewController.h */,
 				E44E548117B92AF9000426E1 /* WENowPortraitWeekListViewController.m */,
 				E44E548217B92AF9000426E1 /* WENowPortraitWeekListViewController.xib */,
+				E4B02E0B17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.h */,
+				E4B02E0C17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m */,
+				E4B02E0D17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib */,
 			);
 			name = Now;
 			sourceTree = "<group>";
@@ -1800,6 +1808,7 @@
 				0359175217B92E0600BD64AE /* 活动列表.png in Resources */,
 				03883AC417BA11C900ED081D /* WEActivitySettingViewController.xib in Resources */,
 				03883AC617BA128B00ED081D /* 活动列表_分类.png in Resources */,
+				E4B02E0F17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1941,6 +1950,7 @@
 				E458B21617B9121100D0DFBD /* WENowPortraitViewController.m in Sources */,
 				034267FB17B9276C000248C2 /* WEActivityCell.m in Sources */,
 				03883AC317BA11C900ED081D /* WEActivitySettingViewController.m in Sources */,
+				E4B02E0E17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
