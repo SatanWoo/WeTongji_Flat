@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+ 
 @interface WEAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 
 @property (strong, nonatomic) IBOutlet UITabBarController *tabBarController;
+
 
 @end

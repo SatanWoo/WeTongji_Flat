@@ -30,8 +30,9 @@
 
 - (void)initRootViewController
 {
-    self.rootViewController = [[WEHomeRootViewController alloc] init];
-    [self pushViewController:self.rootViewController animated:NO];
+    WEHomeRootViewController *rootViewController = [[WEHomeRootViewController alloc] init];
+    rootViewController.hidesBottomBarWhenPushed = NO;
+    [self pushViewController:rootViewController animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,7 +7,6 @@
 //
 
 #import "WENowPortraitViewController.h"
-#import "WENowPortraitWeekListViewController.h"
 
 @interface WENowPortraitViewController ()
 {
@@ -30,6 +29,7 @@
 {
     [super viewDidLoad];
     weekTitleVC = [[WENowPortraitWeekListViewController alloc] init];
+    weekTitleVC.delegate = self;
     weekTitleVC.view.frame = self.weekTitleContainerView.bounds;
     [self.weekTitleContainerView addSubview:weekTitleVC.view];
     // Do any additional setup after loading the view from its nib.
@@ -41,4 +41,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark Week List Delegate
+- (void)weekListViewController:(WENowPortraitWeekListViewController*)vc dateDidChanged:(NSDate*)date
+{
+    NSLog(@"%@",date);
+}
+
+- (IBAction)previousDay:(id)sender {
+    [weekTitleVC selectPreviousDay];
+}
+
+- (IBAction)nextDay:(id)sender {
+    [weekTitleVC selectNextDay];
+}
 @end

@@ -17,15 +17,15 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
         
-        UIImage *filterNormalIconImage = [UIImage imageNamed:normal];
-        [button setImage:filterNormalIconImage forState:UIControlStateNormal];
-        [button setImage:filterNormalIconImage forState:UIControlStateHighlighted];
-        [button setImage:filterNormalIconImage forState:UIControlStateSelected];
-        [button resetSize:filterNormalIconImage.size];
+        UIImage *normalImage = [UIImage imageNamed:normal];
+        [button setImage:normalImage forState:UIControlStateNormal];
+        [button setImage:normalImage forState:UIControlStateHighlighted];
+        [button setImage:normalImage forState:UIControlStateSelected];
+        [button resetSize:normalImage.size];
         
         UIView *containerView = [[UIView alloc] initWithFrame:button.frame];
-        [containerView resetWidth:containerView.frame.size.width + 4];
-        [button resetOriginXByOffset:4];
+        [containerView resetWidth:containerView.frame.size.width + 2];
+        [button resetOriginXByOffset:2];
         [containerView addSubview:button];
         
         self = [self initWithCustomView:containerView];

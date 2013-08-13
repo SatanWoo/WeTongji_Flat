@@ -22,8 +22,9 @@
 #import "WTClient.h"
 #import "WESchoolEventHeadLineView.h"
 #import "WEActivitiesViewController.h"
+#import "NSUserDefaults+WTAddition.h"
 
-@interface WEHomeRootViewController () <WESeeAllSchoolEventsHeaderViewDelegate>
+@interface WEHomeRootViewController () <WESeeAllSchoolEventsHeaderViewDelegate, WESchoolEventHeadLineViewDelegate>
 @property (nonatomic, strong) WEBannerContainerView *bannerContainerView;
 @property (nonatomic, strong) WESeeAllSchoolEventsHeaderView *seeAllHeaderView;
 
@@ -199,6 +200,7 @@
     int i = 0;
     for (Activity *act in activityArray) {
         WESchoolEventHeadLineView *activityHeadlineView = [WESchoolEventHeadLineView createWESchoolEventHeadLineViewWithModel:act];
+        activityHeadlineView.delegate = self;
         [self.headlineViewArray addObject:activityHeadlineView];
         [activityHeadlineView resetOriginY:self.seeAllHeaderView.frame.origin.y + self.seeAllHeaderView.frame.size.height + i * activityHeadlineView.frame.size.height];
         [self.scrollView addSubview:activityHeadlineView];
@@ -245,7 +247,16 @@
 #pragma mark - WESeeAllSchoolEventsHeaderViewDelegate
 - (void)didClickSeeAllEvent
 {
+    [[NSUserDefaults standardUserDefaults] setActivityShowTypes:ActivityShowTypesAll];
     WEActivitiesViewController *vc = [[WEActivitiesViewController alloc] initWithTitle:ActivityShowTypesAll];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - WESchoolEventHeadLineViewDelegate
+- (void)didClickShowCategoryButtonWithModel:(Activity *)act
+{
+    [[NSUserDefaults standardUserDefaults] setActivityShowTypes:act.category.integerValue];
+    WEActivitiesViewController *vc = [[WEActivitiesViewController alloc] initWithTitle:act.category.integerValue];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

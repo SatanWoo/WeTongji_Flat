@@ -12,8 +12,6 @@
 
 @interface WENavigationViewController : UINavigationController
 
-@property (strong, nonatomic) WERootViewController *rootViewController;
-
 - (void)initRootViewController;
 - (void)configureNavigationBar;
 
