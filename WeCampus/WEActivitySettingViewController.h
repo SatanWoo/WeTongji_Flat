@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WEActivitySettingViewControllerDelegate <NSObject>
+
+- (void)didClickFinshSetting;
+
+@end
+
 @interface WEActivitySettingViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *maskView;
@@ -21,5 +27,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *zhaopingButton;
 @property (weak, nonatomic) IBOutlet UISwitch *showExpireSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *finshButton;
+@property (weak, nonatomic) id<WEActivitySettingViewControllerDelegate> delegate;
+
+- (IBAction)selectShowCategory:(UIButton *)sender;
+- (IBAction)selectOrderMethod:(UIButton *)sender;
+- (IBAction)clickFinishSetting:(UIButton *)sender;
 
 @end

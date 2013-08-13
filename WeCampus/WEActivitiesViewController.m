@@ -14,9 +14,10 @@
 #import "WTClient.h"
 #import "WEActivitySettingViewController.h"
 
-@interface WEActivitiesViewController ()
-@property (assign, nonatomic) ActivityShowTypes type;
+@interface WEActivitiesViewController () <WEActivitySettingViewControllerDelegate>
+@property (nonatomic, assign) ActivityShowTypes type;
 @property (nonatomic, assign) NSInteger nextPage;
+@property (nonatomic, strong) WEActivitySettingViewController *settingViewController;
 @end
 
 @implementation WEActivitiesViewController
@@ -77,20 +78,31 @@
 }
 
 #pragma mark - UI Method
+- (void)configureNavigationBarTitle
+{
+    //    if (self.type == ActivityShowTypesAll) {
+    //        self.title = NSLocalizedString(@"Activities", nil);
+    //    } else if (self.type == ActivityShowTypeAcademics) {
+    //        self.title = NSLocalizedString(@"Academics", nil);
+    //    } else if (self.type == ActivityShowTypeCompetition) {
+    //        self.title = NSLocalizedString(@"Competition", nil);
+    //    } else if (self.type == ActivityShowTypeEnterprise) {
+    //        self.title = NSLocalizedString(@"Enterprise", nil);
+    //    } else {
+    //        self.title = NSLocalizedString(@"Entertainment", nil);
+    //    }
+    
+    NSSet *activityShowTypesSet = [NSUserDefaults getActivityShowTypesSet];
+    if (activityShowTypesSet.count == 1) {
+        self.title = [Activity convertCategoryStringFromCategory:activityShowTypesSet.anyObject];
+    } else {
+        self.title = NSLocalizedString(@"Activities", nil);
+    }
+}
+
 - (void)configureNavigationBar
 {
-    if (self.type == ActivityShowTypesAll) {
-        self.title = NSLocalizedString(@"Activities", nil);
-    } else if (self.type == ActivityShowTypeAcademics) {
-        self.title = NSLocalizedString(@"Academics", nil);
-    } else if (self.type == ActivityShowTypeCompetition) {
-        self.title = NSLocalizedString(@"Competition", nil);
-    } else if (self.type == ActivityShowTypeEnterprise) {
-        self.title = NSLocalizedString(@"Enterprise", nil);
-    } else {
-        self.title = NSLocalizedString(@"Entertainment", nil);
-    }
-    
+    [self configureNavigationBarTitle];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
     [self configureNavigationBarButton];
 }
@@ -102,8 +114,11 @@
 
 - (void)didClickShowSettingView
 {
-    WEActivitySettingViewController *vc = [[WEActivitySettingViewController alloc] init];
-    [self.view addSubview:vc.view];
+    if (self.settingViewController) return;
+    
+    self.settingViewController = [[WEActivitySettingViewController alloc] init];
+    self.settingViewController.delegate = self;
+    [self.view addSubview:self.settingViewController.view];
 }
 
 - (void)configureTableView {
@@ -192,6 +207,15 @@
 
 - (NSString *)customSectionNameKeyPath {
     return nil;
+}
+
+#pragma mark - WEActivitySettingViewControllerDelegate
+- (void)didClickFinshSetting
+{
+    [self.settingViewController.view removeFromSuperview];
+    self.settingViewController = nil;
+    [self configureNavigationBarTitle];
+    [self.tableView reloadData];
 }
 
 @end
