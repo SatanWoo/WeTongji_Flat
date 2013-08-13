@@ -65,6 +65,7 @@
 		0368DAA717B80064000F83A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0368DAA517B80064000F83A1 /* Localizable.strings */; };
 		03883AC317BA11C900ED081D /* WEActivitySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */; };
 		03883AC417BA11C900ED081D /* WEActivitySettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */; };
+		03883AC617BA128B00ED081D /* 活动列表_分类.png in Resources */ = {isa = PBXBuildFile; fileRef = 03883AC517BA128B00ED081D /* 活动列表_分类.png */; };
 		03E8B60817B7890D00AC12C8 /* WENavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */; };
 		03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */; };
 		03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */; };
@@ -431,6 +432,7 @@
 		03883AC017BA11C900ED081D /* WEActivitySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivitySettingViewController.h; sourceTree = "<group>"; };
 		03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivitySettingViewController.m; sourceTree = "<group>"; };
 		03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivitySettingViewController.xib; sourceTree = "<group>"; };
+		03883AC517BA128B00ED081D /* 活动列表_分类.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动列表_分类.png"; sourceTree = "<group>"; };
 		03AB77E117B7FF2C00B41FD5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENavigationViewController.h; sourceTree = "<group>"; };
 		03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENavigationViewController.m; sourceTree = "<group>"; };
@@ -953,6 +955,7 @@
 		034164E217B7DAD8005CFD98 /* 参考图 */ = {
 			isa = PBXGroup;
 			children = (
+				03883AC517BA128B00ED081D /* 活动列表_分类.png */,
 				0359175117B92E0600BD64AE /* 活动列表.png */,
 				034164E317B7DAE9005CFD98 /* 首页.png */,
 			);
@@ -1796,6 +1799,7 @@
 				034267FD17B9277D000248C2 /* WEActivityCell.xib in Resources */,
 				0359175217B92E0600BD64AE /* 活动列表.png in Resources */,
 				03883AC417BA11C900ED081D /* WEActivitySettingViewController.xib in Resources */,
+				03883AC617BA128B00ED081D /* 活动列表_分类.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

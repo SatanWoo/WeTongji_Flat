@@ -12,6 +12,7 @@
 #import "WEActivityCell.h"
 #import "Controller+Addition.h"
 #import "WTClient.h"
+#import "WEActivitySettingViewController.h"
 
 @interface WEActivitiesViewController ()
 @property (assign, nonatomic) ActivityShowTypes type;
@@ -96,7 +97,13 @@
 
 - (void)configureNavigationBarButton
 {
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:nil normalImage:@"event_filter_btn"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:@selector(didClickShowSettingView) normalImage:@"event_filter_btn"];
+}
+
+- (void)didClickShowSettingView
+{
+    WEActivitySettingViewController *vc = [[WEActivitySettingViewController alloc] init];
+    [self.view addSubview:vc.view];
 }
 
 - (void)configureTableView {
