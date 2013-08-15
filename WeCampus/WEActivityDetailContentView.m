@@ -14,6 +14,7 @@
 @interface WEActivityDetailContentView()
 @property (strong, nonatomic) WTActivityImageRollView *imageRollView;
 @property (strong, nonatomic) WEActivityDetailControlAreaView *controlAreaView;
+@property (strong, nonatomic) WEActivityDetailControlAreaView *bottomAreaView;
 @end
 
 @implementation WEActivityDetailContentView
@@ -35,6 +36,13 @@
     return self;
 }
 
+- (void)resetLayout:(CGFloat)percent
+{
+    if (percent < 0) return;
+    if (percent > 1) percent = 1;
+    
+    self.controlAreaView.alpha = 1 - percent;
+}
 
 #define kSpan 20
 - (void)configureContentWithInfo:(Activity *)act
@@ -51,9 +59,13 @@
     
     if (self.imageRollView) {
         [self.contentLabel resetOriginY:self.imageRollView.frame.origin.y + self.imageRollView.frame.size.height + kSpan];
+    } else {
+        [self.contentLabel resetOriginY:self.controlAreaView.frame.origin.y + self.controlAreaView.frame.size.height + kSpan / 2];
     }
+    
+    [self configureBottomControlArea:act];
 
-    [self resetHeight:self.contentLabel.frame.origin.y + self.contentLabel.frame.size.height];
+    [self resetHeight:self.bottomAreaView.frame.origin.y + self.bottomAreaView.frame.size.height];
 }
 
 #define CONTENT_LABEL_LINE_SPACING 6.0f
@@ -81,6 +93,14 @@
     self.controlAreaView = [WEActivityDetailControlAreaView createActivityDetailViewWithInfo:act];
     [self.controlAreaView resetOriginY:0];
     [self addSubview:self.controlAreaView];
+}
+
+#define kBigSpan 25
+- (void)configureBottomControlArea:(Activity *)act
+{
+    self.bottomAreaView = [WEActivityDetailControlAreaView createActivityDetailViewWithInfo:act];
+    [self.bottomAreaView resetOriginY:self.contentLabel.frame.origin.y + self.contentLabel.frame.size.height + kBigSpan];
+    [self addSubview:self.bottomAreaView];
 }
 
 

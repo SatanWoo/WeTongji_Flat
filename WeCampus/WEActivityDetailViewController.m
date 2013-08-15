@@ -117,6 +117,7 @@ static CGFloat lastOffsetY = 0;
     CGFloat height = self.transparentHeaderView.frame.size.height;
     
     [self.detailHeaderView resetLayout:(offsetY - kIgnoreOffset)/ height];
+    [self.contentViewCell resetLayout:(offsetY - kIgnoreOffset)/ height];
     
     lastOffsetY = offsetY;
 }

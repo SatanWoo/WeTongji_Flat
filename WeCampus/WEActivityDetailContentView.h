@@ -14,6 +14,6 @@
 @property (weak, nonatomic) IBOutlet OHAttributedLabel *contentLabel;
 
 + (WEActivityDetailContentView *)createDetailContentViewWithInfo:(Activity *)act;
-- (void)configureContentWithInfo:(Activity *)act;
+- (void)resetLayout:(CGFloat)percent;
 
 @end
