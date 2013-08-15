@@ -112,12 +112,15 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:@selector(didClickShowSettingView) normalImage:@"event_filter_btn"];
 }
 
+#define offset (460 - self.view.frame.size.height)
+
 - (void)didClickShowSettingView
 {
     if (self.settingViewController) return;
     
     self.settingViewController = [[WEActivitySettingViewController alloc] init];
     self.settingViewController.delegate = self;
+    [self.settingViewController.view resetOriginYByOffset:-offset];
     [self.view addSubview:self.settingViewController.view];
 }
 

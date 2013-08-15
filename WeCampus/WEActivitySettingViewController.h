@@ -15,7 +15,6 @@
 @end
 
 @interface WEActivitySettingViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *maskView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIButton *wenyuButton;

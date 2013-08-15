@@ -24,8 +24,6 @@
     return self;
 }
 
-#define offsetY 336
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -38,7 +36,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.scrollView setContentOffset:CGPointMake(0, offsetY) animated:YES];
+    [UIView animateWithDuration:1.0f animations:^{
+        [self.containerView resetOriginY:self.view.frame.size.height - self.containerView.frame.size.height];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +48,6 @@
 
 - (IBAction)clickFinishSetting:(UIButton *)sender
 {
-    [self.scrollView setContentOffset:CGPointMake(0, -offsetY) animated:YES];
     if (self.delegate && [self.delegate respondsToSelector:@selector(didClickFinshSetting)]) {
         [self.delegate didClickFinshSetting];
     }

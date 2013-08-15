@@ -7,7 +7,10 @@
 //
 
 #import "WEContentViewController.h"
+#import "Activity+Addition.h"
 
 @interface WEActivityDetailViewController : WEContentViewController
+
++ (WEActivityDetailViewController *)createDetailViewControllerWithModel:(Activity *)act;
 
 @end

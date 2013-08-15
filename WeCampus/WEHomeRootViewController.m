@@ -186,6 +186,9 @@
 }
 
 - (void)updateScrollView {
+    
+    [self adjustScrollView];
+    
     UIView *bottomView = self.headlineViewArray.lastObject;
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, bottomView.frame.origin.y + bottomView.frame.size.height);
 }

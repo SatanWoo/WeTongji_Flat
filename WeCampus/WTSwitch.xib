@@ -58,7 +58,7 @@
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 										<object class="NSCustomResource" key="IBUIImage">
 											<string key="NSClassName">NSImage</string>
-											<string key="NSResourceName">WTSwitchBg.png</string>
+											<string key="NSResourceName">switch_bg_off.png</string>
 										</object>
 									</object>
 									<object class="IBUILabel" id="38646719">
@@ -150,7 +150,7 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
-						<string key="NSFrame">{{0, 0.5}, {78, 27}}</string>
+						<string key="NSFrameSize">{78, 27}</string>
 						<reference key="NSSuperview" ref="204522400"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="583812026"/>
@@ -169,38 +169,41 @@
 					<object class="IBUIImageView" id="627853367">
 						<reference key="NSNextResponder" ref="204522400"/>
 						<int key="NSvFlags">293</int>
-						<string key="NSFrame">{{0, -2.5}, {78, 32}}</string>
+						<string key="NSFrame">{{0, -3}, {78, 32}}</string>
 						<reference key="NSSuperview" ref="204522400"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="577044042"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4wNTg3NzgxNTE4NyAwLjYwNDczOTYwNjQgMQA</bytes>
+						<object class="NSColor" key="IBUIBackgroundColor" id="345068296">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">switch_bg_on.png</string>
+						</object>
 					</object>
 					<object class="IBUIButton" id="294256668">
 						<reference key="NSNextResponder" ref="204522400"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{48, -2}, {32, 32}}</string>
+						<string key="NSFrame">{{44, -2}, {32, 32}}</string>
 						<reference key="NSSuperview" ref="204522400"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="264540279">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="345068296"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIHighlightedTitleColor" ref="264540279"/>
+						<object class="NSColor" key="IBUIHighlightedTitleColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+						</object>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
@@ -211,7 +214,7 @@
 						</object>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">WTSwitchHandler.png</string>
+							<string key="NSResourceName">switch_handle.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<int key="type">2</int>
@@ -224,15 +227,12 @@
 						</object>
 					</object>
 				</array>
-				<string key="NSFrameSize">{78, 28}</string>
+				<string key="NSFrameSize">{78, 27}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="627853367"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MCAwAA</bytes>
-				</object>
+				<reference key="IBUIBackgroundColor" ref="345068296"/>
 				<object class="IBUISimulatedSizeMetrics" key="IBUISimulatedDestinationMetrics">
 					<string key="IBUISimulatedSizeMetricsClass">IBUISimulatedFreeformSizeMetricsSentinel</string>
 					<string key="IBUIDisplayName">Freeform</string>
@@ -385,7 +385,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">37</int>
+			<int key="maxID">38</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -451,8 +451,9 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="WTSwitchBg.png">{128, 27}</string>
-			<string key="WTSwitchHandler.png">{32, 32}</string>
+			<string key="switch_bg_off.png">{63, 28}</string>
+			<string key="switch_bg_on.png">{62, 27}</string>
+			<string key="switch_handle.png">{29, 31}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2078</string>
 	</data>
