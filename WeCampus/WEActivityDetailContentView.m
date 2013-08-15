@@ -33,6 +33,8 @@
     return self;
 }
 
+
+#define kSpan 20
 - (void)configureContentWithInfo:(Activity *)act
 {
     if (act.image) {
@@ -43,7 +45,7 @@
     [self configureContentLabel:act.content];
     
     if (self.imageRollView) {
-        [self.contentLabel resetOriginY:self.imageRollView.frame.origin.y + self.imageRollView.frame.size.height];
+        [self.contentLabel resetOriginY:self.imageRollView.frame.origin.y + self.imageRollView.frame.size.height + kSpan];
     }
 
     [self resetHeight:self.contentLabel.frame.origin.y + self.contentLabel.frame.size.height];

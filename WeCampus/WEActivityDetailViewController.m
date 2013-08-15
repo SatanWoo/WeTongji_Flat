@@ -42,7 +42,6 @@
     self.title = NSLocalizedString(@"Activity Detail", nil);
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
     [self updateScrollView];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,10 +72,11 @@
     [self.scrollView addSubview:self.controlAreaView];
 }
 
+#define kSpan 20
 - (void)configureContentView
 {
     self.contentView = [WEActivityDetailContentView createDetailContentViewWithInfo:self.act];
-    [self.contentView resetOriginY:self.controlAreaView.frame.origin.y + self.controlAreaView.frame.size.height];
+    [self.contentView resetOriginY:self.controlAreaView.frame.origin.y + self.controlAreaView.frame.size.height + kSpan];
     [self.scrollView addSubview:self.contentView];
 }
 

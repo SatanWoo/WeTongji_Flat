@@ -33,12 +33,12 @@
 			</object>
 			<object class="IBUIView" id="191373211">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">274</int>
+				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUILabel" id="554785989">
+					<object class="IBUILabel" id="420964473">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 8}, {280, 72}}</string>
+						<int key="NSvFlags">290</int>
+						<string key="NSFrame">{{20, 8}, {280, 91}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -49,13 +49,13 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">self.scrollViewself.scrollViewself.scrollViewself.scrollViewself.scrollViewself.scrollViewself.scrollView</string>
 						<object class="NSColor" key="IBUITextColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAAA</bytes>
-							<string key="IBUIColorCocoaTouchKeyPath">darkTextColor</string>
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUINumberOfLines">0</int>
+						<int key="IBUILineBreakMode">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<string key="name">STHeitiSC-Light</string>
 							<string key="family">Heiti SC</string>
@@ -71,10 +71,10 @@
 						<double key="preferredMaxLayoutWidth">280</double>
 					</object>
 				</array>
-				<string key="NSFrame">{{0, 20}, {320, 85}}</string>
+				<string key="NSFrame">{{0, 20}, {320, 223}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="554785989"/>
+				<reference key="NSNextKeyView" ref="420964473"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MCAwAA</bytes>
@@ -93,7 +93,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">contentLabel</string>
 						<reference key="source" ref="191373211"/>
-						<reference key="destination" ref="554785989"/>
+						<reference key="destination" ref="420964473"/>
 					</object>
 					<int key="connectionID">4</int>
 				</object>
@@ -110,7 +110,7 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="554785989"/>
+							<reference ref="420964473"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -127,7 +127,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">3</int>
-						<reference key="object" ref="554785989"/>
+						<reference key="object" ref="420964473"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>

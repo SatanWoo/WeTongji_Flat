@@ -13,6 +13,7 @@
 #import "Controller+Addition.h"
 #import "WTClient.h"
 #import "WEActivitySettingViewController.h"
+#import "WEActivityDetailViewController.h"
 
 @interface WEActivitiesViewController () <WEActivitySettingViewControllerDelegate>
 @property (nonatomic, assign) ActivityShowTypes type;
@@ -203,6 +204,15 @@
 
 - (NSString *)customSectionNameKeyPath {
     return nil;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Activity *activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    WEActivityDetailViewController *detailVC = [WEActivityDetailViewController createDetailViewControllerWithModel:activity];
+    [self.navigationController pushViewController:detailVC animated:YES];
+
 }
 
 #pragma mark - WEActivitySettingViewControllerDelegate
