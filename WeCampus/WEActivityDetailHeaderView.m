@@ -30,6 +30,7 @@
 }
 
 #define maxRightLabelBorder 305
+#define kSpan 10
 
 - (void)configureWithInfo:(Activity *)act
 {
@@ -47,6 +48,12 @@
     [self resizeLabel:self.timeLabel];
     [self resizeLabel:self.titleLabel];
     [self resizeLabel:self.locationLabel];
+    
+    [self.colorContainerView resetHeight:self.titleLabel.frame.origin.y + self.titleLabel.frame.size.height + kSpan];
+    [self.infoContainerView resetOriginY:
+     self.colorContainerView.frame.origin.y + self.colorContainerView.frame.size.height];
+    
+    [self resetHeight:self.infoContainerView.frame.origin.y + self.infoContainerView.frame.size.height];
 }
 
 - (void)resizeLabel:(UILabel *)label
