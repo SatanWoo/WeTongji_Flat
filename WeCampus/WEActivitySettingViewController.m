@@ -87,11 +87,13 @@
 
 - (void)configureUserDefaultForCategory:(NSString *)type button:(UIButton *)btn
 {
+    NSLog(@"tag is %d",btn.tag);
     NSInteger value = 1 << btn.tag;
+    NSLog(@"value is %d",value);
     NSInteger result = [[NSUserDefaults standardUserDefaults] integerForKey:type];
-    
+    NSLog(@"result is %d",result);
     if ([type isEqualToString:showCategory]) {
-        btn.selected = !((result & value) == 0);
+        btn.selected = ((result & value) != 0);
     } else {
         btn.selected = (value == result);
     }
