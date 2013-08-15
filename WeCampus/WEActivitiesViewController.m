@@ -66,7 +66,7 @@
     [request getActivitiesInTypes:[NSUserDefaults getActivityShowTypesArray]
                       orderMethod:[userDefaults getActivityOrderMethod]
                        smartOrder:[userDefaults getActivitySmartOrderProperty]
-                       showExpire:YES
+                       showExpire:[userDefaults getActivityHidePastProperty]
                              page:self.nextPage];
 }
 
@@ -171,7 +171,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     ActivityOrderMethod orderMethod = [userDefaults getActivityOrderMethod];
     BOOL smartOrder = [userDefaults getActivitySmartOrderProperty];
-    BOOL showExpire = YES;
+    BOOL showExpire = [userDefaults getActivityHidePastProperty];
     BOOL orderByAsc = ![WTRequest shouldActivityOrderByDesc:orderMethod smartOrder:smartOrder showExpire:showExpire];
     NSArray *descriptors = nil;
     NSSortDescriptor *updateTimeDescriptor = [[NSSortDescriptor alloc] initWithKey:@"updatedAt" ascending:YES];
@@ -199,6 +199,11 @@
     [request setSortDescriptors:descriptors];
     
     [request setPredicate:[NSPredicate predicateWithFormat:@"(category in %@) AND (SELF in %@)", [NSUserDefaults getActivityShowTypesSet], [Controller controllerModelForClass:[self class]].hasObjects]];
+    
+    if ([[NSUserDefaults standardUserDefaults] getActivityHidePastProperty]) {
+        [request setPredicate:[NSCompoundPredicate andPredicateWithSubpredicates:@[request.predicate, [NSPredicate predicateWithFormat:@"endTime > %@", [NSDate date]]
+                               ]]];
+    }
 }
 
 - (NSString *)customCellClassNameAtIndexPath:(NSIndexPath *)indexPath {

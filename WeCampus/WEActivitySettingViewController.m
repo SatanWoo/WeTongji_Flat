@@ -7,9 +7,10 @@
 //
 
 #import "WEActivitySettingViewController.h"
+#import "WTSwitch.h"
 
-@interface WEActivitySettingViewController ()
-
+@interface WEActivitySettingViewController () <WTSwitchDelegate>
+@property (nonatomic, strong) WTSwitch *swtich;
 @end
 
 @implementation WEActivitySettingViewController
@@ -31,6 +32,7 @@
     [self.containerView resetOriginY:self.view.frame.size.height];
     [self configureAllCategoryButton];
     [self configureOrderMethodButton];
+    [self configureSwitch];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -50,6 +52,20 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(didClickFinshSetting)]) {
         [self.delegate didClickFinshSetting];
     }
+}
+
+#define switchX 236
+#define switchY 242
+#define hidePast @"ActivityHidePast"
+
+- (void)configureSwitch
+{
+    self.swtich = [WTSwitch createSwitchWithDelegate:self];
+    [self.swtich resetOriginX:switchX];
+    [self.swtich resetOriginY:switchY];
+    [self.containerView addSubview:self.swtich];
+    
+    self.swtich.on = [[NSUserDefaults standardUserDefaults] boolForKey:hidePast];
 }
 
 #define showCategory @"ActivityShowTypes"
@@ -112,6 +128,16 @@
     self.newsButton.selected = NO;
     self.hotButton.selected = NO;
     self.latesetButton.selected = NO;
+}
+
+#pragma mark - WTSwitchDelegate
+- (void)switchDidChange:(WTSwitch *)sender
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:hidePast] != self.swtich.isOn) {
+        
+        [[NSUserDefaults standardUserDefaults] setBool:self.swtich.isOn forKey:hidePast];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 @end

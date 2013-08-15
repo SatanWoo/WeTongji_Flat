@@ -111,6 +111,8 @@
 		03E8B68E17B795C400AC12C8 /* Star+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B67E17B795C400AC12C8 /* Star+Addition.m */; };
 		03E8B68F17B795C400AC12C8 /* User+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B68017B795C400AC12C8 /* User+Addition.m */; };
 		03E8B69417B79B3600AC12C8 /* WTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B69317B79B3600AC12C8 /* WTCoreDataManager.m */; };
+		03EB4EA717BC99080082132D /* WTSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EB4EA517BC99080082132D /* WTSwitch.m */; };
+		03EB4EA817BC99080082132D /* WTSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EB4EA617BC99080082132D /* WTSwitch.xib */; };
 		2D0549075E2B46C4AC299AF2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C5F1033434B719E6325EF /* libPods.a */; };
 		E40A64D017B733A500082B4F /* WTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64CF17B733A500082B4F /* WTRootTabBarController.m */; };
 		E40A64EC17B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
@@ -526,6 +528,9 @@
 		03E8B69217B79B3600AC12C8 /* WTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCoreDataManager.h; sourceTree = "<group>"; };
 		03E8B69317B79B3600AC12C8 /* WTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCoreDataManager.m; sourceTree = "<group>"; };
 		03E8B69517B79C4300AC12C8 /* WTCommonConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCommonConstant.h; sourceTree = "<group>"; };
+		03EB4EA417BC99080082132D /* WTSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSwitch.h; sourceTree = "<group>"; };
+		03EB4EA517BC99080082132D /* WTSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSwitch.m; sourceTree = "<group>"; };
+		03EB4EA617BC99080082132D /* WTSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSwitch.xib; sourceTree = "<group>"; };
 		852FA862DE854B8F88F43748 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		875C5F1033434B719E6325EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40A64CE17B733A500082B4F /* WTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRootTabBarController.h; sourceTree = "<group>"; };
@@ -925,6 +930,7 @@
 		0341647E17B7B3F6005CFD98 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				03EB4EA317BC98FE0082132D /* Widget */,
 				0341648A17B7D710005CFD98 /* Home */,
 				0341648417B7B641005CFD98 /* Banner */,
 			);
@@ -1173,6 +1179,16 @@
 				03E8B69317B79B3600AC12C8 /* WTCoreDataManager.m */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		03EB4EA317BC98FE0082132D /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				03EB4EA417BC99080082132D /* WTSwitch.h */,
+				03EB4EA517BC99080082132D /* WTSwitch.m */,
+				03EB4EA617BC99080082132D /* WTSwitch.xib */,
+			);
+			name = Widget;
 			sourceTree = "<group>";
 		};
 		E40A64D117B7349A00082B4F /* Category */ = {
@@ -1809,6 +1825,7 @@
 				03883AC417BA11C900ED081D /* WEActivitySettingViewController.xib in Resources */,
 				03883AC617BA128B00ED081D /* 活动列表_分类.png in Resources */,
 				E4B02E0F17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib in Resources */,
+				03EB4EA817BC99080082132D /* WTSwitch.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1951,6 +1968,7 @@
 				034267FB17B9276C000248C2 /* WEActivityCell.m in Sources */,
 				03883AC317BA11C900ED081D /* WEActivitySettingViewController.m in Sources */,
 				E4B02E0E17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m in Sources */,
+				03EB4EA717BC99080082132D /* WTSwitch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
