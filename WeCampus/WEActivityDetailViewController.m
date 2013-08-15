@@ -9,11 +9,13 @@
 #import "WEActivityDetailViewController.h"
 #import "WEActivityDetailHeaderView.h"
 #import "WEActivityDetailControlAreaView.h"
+#import "WEActivityDetailContentView.h"
 
 @interface WEActivityDetailViewController ()
 @property (strong, nonatomic) Activity *act;
 @property (strong, nonatomic) WEActivityDetailHeaderView *headerView;
 @property (strong, nonatomic) WEActivityDetailControlAreaView *controlAreaView;
+@property (strong, nonatomic) WEActivityDetailContentView *contentView;
 @end
 
 @implementation WEActivityDetailViewController
@@ -54,6 +56,8 @@
 {
     [self configureHeaderView];
     [self configureControlArea];
+    [self configureContentView];
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.contentView.frame.size.height + self.contentView.frame.origin.y)];
 }
 
 - (void)configureHeaderView
@@ -67,6 +71,13 @@
     self.controlAreaView = [WEActivityDetailControlAreaView createActivityDetailViewWithInfo:self.act];
     [self.controlAreaView resetOriginY:self.headerView.frame.origin.y + self.headerView.frame.size.height];
     [self.scrollView addSubview:self.controlAreaView];
+}
+
+- (void)configureContentView
+{
+    self.contentView = [WEActivityDetailContentView createDetailContentViewWithInfo:self.act];
+    [self.contentView resetOriginY:self.controlAreaView.frame.origin.y + self.controlAreaView.frame.size.height];
+    [self.scrollView addSubview:self.contentView];
 }
 
 @end

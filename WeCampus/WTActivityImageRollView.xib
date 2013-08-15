@@ -37,23 +37,6 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="763245137">
-						<reference key="NSNextResponder" ref="242127372"/>
-						<int key="NSvFlags">274</int>
-						<string key="NSFrameSize">{320, 130}</string>
-						<reference key="NSSuperview" ref="242127372"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="28173564"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">2</int>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">WTGrayPlaceholderImage.jpg</string>
-						</object>
-					</object>
 					<object class="IBUIScrollView" id="28173564">
 						<reference key="NSNextResponder" ref="242127372"/>
 						<int key="NSvFlags">274</int>
@@ -79,7 +62,7 @@
 								<string key="NSFrame">{{320, 0}, {2, 130}}</string>
 								<reference key="NSSuperview" ref="28173564"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="95266572"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -104,35 +87,6 @@
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIShowsVerticalScrollIndicator">NO</bool>
 					</object>
-					<object class="IBUIView" id="95266572">
-						<reference key="NSNextResponder" ref="242127372"/>
-						<int key="NSvFlags">274</int>
-						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIImageView" id="426524338">
-								<reference key="NSNextResponder" ref="95266572"/>
-								<int key="NSvFlags">266</int>
-								<string key="NSFrame">{{0, 128}, {320, 3}}</string>
-								<reference key="NSSuperview" ref="95266572"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="774610917"/>
-								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<object class="NSCustomResource" key="IBUIImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">WTBannerBottomShadowUnit.png</string>
-								</object>
-							</object>
-						</array>
-						<string key="NSFrameSize">{320, 130}</string>
-						<reference key="NSSuperview" ref="242127372"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="426524338"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="559266791"/>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-					</object>
 					<object class="IBUIPageControl" id="774610917">
 						<reference key="NSNextResponder" ref="242127372"/>
 						<int key="NSvFlags">1293</int>
@@ -151,7 +105,7 @@
 				<string key="NSFrameSize">{320, 130}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="763245137"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<reference key="IBUIBackgroundColor" ref="559266791"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -194,14 +148,6 @@
 						<reference key="destination" ref="774610917"/>
 					</object>
 					<int key="connectionID">66</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">rightShadowImageView</string>
-						<reference key="source" ref="242127372"/>
-						<reference key="destination" ref="609974433"/>
-					</object>
-					<int key="connectionID">67</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -251,25 +197,10 @@
 						<int key="objectID">3</int>
 						<reference key="object" ref="242127372"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="95266572"/>
-							<reference ref="763245137"/>
 							<reference ref="28173564"/>
 							<reference ref="774610917"/>
 						</array>
 						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">4</int>
-						<reference key="object" ref="95266572"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="426524338"/>
-						</array>
-						<reference key="parent" ref="242127372"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">5</int>
-						<reference key="object" ref="763245137"/>
-						<reference key="parent" ref="242127372"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">6</int>
@@ -299,11 +230,6 @@
 						<reference key="parent" ref="28173564"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">10</int>
-						<reference key="object" ref="426524338"/>
-						<reference key="parent" ref="95266572"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">42</int>
 						<reference key="object" ref="916221241"/>
 						<array class="NSMutableArray" key="children">
@@ -322,14 +248,11 @@
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="10.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="3.CustomClassName">WTActivityImageRollView</string>
 				<string key="3.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="42.CustomClassName">WTActivityImageRollItemView</string>
 				<string key="42.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="43.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -367,17 +290,12 @@
 					<string key="superclassName">UIView</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="pageControl">UIPageControl</string>
-						<string key="rightShadowImageView">UIImageView</string>
 						<string key="scrollView">UIScrollView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="pageControl">
 							<string key="name">pageControl</string>
 							<string key="candidateClassName">UIPageControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="rightShadowImageView">
-							<string key="name">rightShadowImageView</string>
-							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="scrollView">
 							<string key="name">scrollView</string>
@@ -400,8 +318,6 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="WTBannerBottomShadowUnit.png">{3, 3}</string>
-			<string key="WTGrayPlaceholderImage.jpg">{320, 320}</string>
 			<string key="WTLeftShadow.png">{4, 130}</string>
 			<string key="WTRightShadow.png">{4, 130}</string>
 		</dictionary>

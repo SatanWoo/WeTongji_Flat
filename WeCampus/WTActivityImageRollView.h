@@ -14,7 +14,6 @@
 
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIPageControl *pageControl;
-@property (nonatomic, weak) IBOutlet UIImageView *rightShadowImageView;
 
 + (WTActivityImageRollView *)createImageRollViewWithImageURLStringArray:(NSArray *)imageURLArray;
 

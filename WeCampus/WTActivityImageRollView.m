@@ -59,8 +59,6 @@
     
     [itemView resetOriginX:self.itemViewArray.count * self.scrollView.frame.size.width];
     
-    [self.rightShadowImageView resetOriginX:(self.itemViewArray.count + 1) * self.scrollView.frame.size.width];
-    
     [self.scrollView addSubview:itemView];
     [self.itemViewArray addObject:itemView];
 }
