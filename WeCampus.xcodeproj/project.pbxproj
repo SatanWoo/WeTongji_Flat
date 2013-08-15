@@ -126,6 +126,8 @@
 		03EB4EC417BCD0EA0082132D /* WEActivityDetailContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EB4EC317BCD0E90082132D /* WEActivityDetailContentView.m */; };
 		03EB4EC617BCD0FC0082132D /* WEActivityDetailContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EB4EC517BCD0FB0082132D /* WEActivityDetailContentView.xib */; };
 		2D0549075E2B46C4AC299AF2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C5F1033434B719E6325EF /* libPods.a */; };
+		B717B6B817BD2903008D6CB8 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = B717B6B717BD2903008D6CB8 /* icon_114.png */; };
+		B717B6BA17BD2908008D6CB8 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = B717B6B917BD2908008D6CB8 /* icon_57.png */; };
 		E40A64D017B733A500082B4F /* WTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64CF17B733A500082B4F /* WTRootTabBarController.m */; };
 		E40A64EC17B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		E40A64ED17B734A400082B4F /* NSAttributedString+WTAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64D517B734A400082B4F /* NSAttributedString+WTAddition.m */; };
@@ -562,6 +564,8 @@
 		03EB4EC517BCD0FB0082132D /* WEActivityDetailContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivityDetailContentView.xib; sourceTree = "<group>"; };
 		852FA862DE854B8F88F43748 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		875C5F1033434B719E6325EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B717B6B717BD2903008D6CB8 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
+		B717B6B917BD2908008D6CB8 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
 		E40A64CE17B733A500082B4F /* WTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRootTabBarController.h; sourceTree = "<group>"; };
 		E40A64CF17B733A500082B4F /* WTRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTRootTabBarController.m; sourceTree = "<group>"; };
 		E40A64D217B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
@@ -839,6 +843,8 @@
 		033729B217B67D7600D2EC9F = {
 			isa = PBXGroup;
 			children = (
+				B717B6B917BD2908008D6CB8 /* icon_57.png */,
+				B717B6B717BD2903008D6CB8 /* icon_114.png */,
 				033729C417B67D7600D2EC9F /* WeCampus */,
 				033729BD17B67D7600D2EC9F /* Frameworks */,
 				033729BC17B67D7600D2EC9F /* Products */,
@@ -1887,6 +1893,8 @@
 				03EB4EBC17BCC5B80082132D /* WEActivityDetailControlAreaView.xib in Resources */,
 				03EB4EC117BCD0D30082132D /* WTActivityImageRollView.xib in Resources */,
 				03EB4EC617BCD0FC0082132D /* WEActivityDetailContentView.xib in Resources */,
+				B717B6B817BD2903008D6CB8 /* icon_114.png in Resources */,
+				B717B6BA17BD2908008D6CB8 /* icon_57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
