@@ -8,10 +8,12 @@
 
 #import "WEActivityDetailViewController.h"
 #import "WEActivityDetailHeaderView.h"
+#import "WEActivityDetailControlAreaView.h"
 
 @interface WEActivityDetailViewController ()
 @property (strong, nonatomic) Activity *act;
 @property (strong, nonatomic) WEActivityDetailHeaderView *headerView;
+@property (strong, nonatomic) WEActivityDetailControlAreaView *controlAreaView;
 @end
 
 @implementation WEActivityDetailViewController
@@ -35,9 +37,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"活动详情";
+    self.title = NSLocalizedString(@"Activity Detail", nil);
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
-    [self configureHeaderView];
+    [self updateScrollView];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,13 +52,21 @@
 
 - (void)updateScrollView
 {
-    
+    [self configureHeaderView];
+    [self configureControlArea];
 }
 
 - (void)configureHeaderView
 {
     self.headerView = [WEActivityDetailHeaderView createActivityDetailViewWithInfo:self.act];
     [self.scrollView addSubview:self.headerView];
+}
+
+- (void)configureControlArea
+{
+    self.controlAreaView = [WEActivityDetailControlAreaView createActivityDetailViewWithInfo:self.act];
+    [self.controlAreaView resetOriginY:self.headerView.frame.origin.y + self.headerView.frame.size.height];
+    [self.scrollView addSubview:self.controlAreaView];
 }
 
 @end

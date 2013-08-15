@@ -119,6 +119,8 @@
 		03EB4EB317BCB2F70082132D /* WEActivityDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EB4EB217BCB2F70082132D /* WEActivityDetailHeaderView.xib */; };
 		03EB4EB517BCB3300082132D /* 活动详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EB4EB417BCB3300082132D /* 活动详情1.png */; };
 		03EB4EB717BCBCB10082132D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EB4EB617BCBCB00082132D /* QuartzCore.framework */; };
+		03EB4EBA17BCC5A70082132D /* WEActivityDetailControlAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EB4EB917BCC5A60082132D /* WEActivityDetailControlAreaView.m */; };
+		03EB4EBC17BCC5B80082132D /* WEActivityDetailControlAreaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EB4EBB17BCC5B70082132D /* WEActivityDetailControlAreaView.xib */; };
 		2D0549075E2B46C4AC299AF2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C5F1033434B719E6325EF /* libPods.a */; };
 		E40A64D017B733A500082B4F /* WTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64CF17B733A500082B4F /* WTRootTabBarController.m */; };
 		E40A64EC17B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
@@ -545,6 +547,9 @@
 		03EB4EB217BCB2F70082132D /* WEActivityDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivityDetailHeaderView.xib; sourceTree = "<group>"; };
 		03EB4EB417BCB3300082132D /* 活动详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情1.png"; sourceTree = "<group>"; };
 		03EB4EB617BCBCB00082132D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		03EB4EB817BCC5A60082132D /* WEActivityDetailControlAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivityDetailControlAreaView.h; sourceTree = "<group>"; };
+		03EB4EB917BCC5A60082132D /* WEActivityDetailControlAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivityDetailControlAreaView.m; sourceTree = "<group>"; };
+		03EB4EBB17BCC5B70082132D /* WEActivityDetailControlAreaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivityDetailControlAreaView.xib; sourceTree = "<group>"; };
 		852FA862DE854B8F88F43748 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		875C5F1033434B719E6325EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40A64CE17B733A500082B4F /* WTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRootTabBarController.h; sourceTree = "<group>"; };
@@ -1218,6 +1223,9 @@
 				03EB4EAF17BCB2CA0082132D /* WEActivityDetailHeaderView.h */,
 				03EB4EB017BCB2CA0082132D /* WEActivityDetailHeaderView.m */,
 				03EB4EB217BCB2F70082132D /* WEActivityDetailHeaderView.xib */,
+				03EB4EB817BCC5A60082132D /* WEActivityDetailControlAreaView.h */,
+				03EB4EB917BCC5A60082132D /* WEActivityDetailControlAreaView.m */,
+				03EB4EBB17BCC5B70082132D /* WEActivityDetailControlAreaView.xib */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -1860,6 +1868,7 @@
 				03EB4EAD17BC9D3B0082132D /* WEActivityDetailViewController.xib in Resources */,
 				03EB4EB317BCB2F70082132D /* WEActivityDetailHeaderView.xib in Resources */,
 				03EB4EB517BCB3300082132D /* 活动详情1.png in Resources */,
+				03EB4EBC17BCC5B80082132D /* WEActivityDetailControlAreaView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2005,6 +2014,7 @@
 				03EB4EA717BC99080082132D /* WTSwitch.m in Sources */,
 				03EB4EAC17BC9D3B0082132D /* WEActivityDetailViewController.m in Sources */,
 				03EB4EB117BCB2CB0082132D /* WEActivityDetailHeaderView.m in Sources */,
+				03EB4EBA17BCC5A70082132D /* WEActivityDetailControlAreaView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

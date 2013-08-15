@@ -79,19 +79,7 @@
 
 #pragma mark - UI Method
 - (void)configureNavigationBarTitle
-{
-    //    if (self.type == ActivityShowTypesAll) {
-    //        self.title = NSLocalizedString(@"Activities", nil);
-    //    } else if (self.type == ActivityShowTypeAcademics) {
-    //        self.title = NSLocalizedString(@"Academics", nil);
-    //    } else if (self.type == ActivityShowTypeCompetition) {
-    //        self.title = NSLocalizedString(@"Competition", nil);
-    //    } else if (self.type == ActivityShowTypeEnterprise) {
-    //        self.title = NSLocalizedString(@"Enterprise", nil);
-    //    } else {
-    //        self.title = NSLocalizedString(@"Entertainment", nil);
-    //    }
-    
+{    
     NSSet *activityShowTypesSet = [NSUserDefaults getActivityShowTypesSet];
     if (activityShowTypesSet.count == 1) {
         self.title = [Activity convertCategoryStringFromCategory:activityShowTypesSet.anyObject];
