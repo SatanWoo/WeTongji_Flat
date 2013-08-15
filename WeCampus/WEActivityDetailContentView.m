@@ -8,10 +8,12 @@
 
 #import "WEActivityDetailContentView.h"
 #import "WTActivityImageRollView.h"
+#import "WEActivityDetailControlAreaView.h"
 #import <OHAttributedLabel.h>
 
 @interface WEActivityDetailContentView()
 @property (strong, nonatomic) WTActivityImageRollView *imageRollView;
+@property (strong, nonatomic) WEActivityDetailControlAreaView *controlAreaView;
 @end
 
 @implementation WEActivityDetailContentView
@@ -37,9 +39,12 @@
 #define kSpan 20
 - (void)configureContentWithInfo:(Activity *)act
 {
+    [self configureControlArea:act];
+    
     if (act.image) {
         self.imageRollView = [WTActivityImageRollView createImageRollViewWithImageURLStringArray:@[act.image]];
-        [self insertSubview:self.imageRollView atIndex:0];
+        [self.imageRollView resetOriginY:self.controlAreaView.frame.origin.y + self.controlAreaView.frame.size.height];
+        [self addSubview:self.imageRollView];
     }
     
     [self configureContentLabel:act.content];
@@ -65,11 +70,17 @@
     self.contentLabel.attributedText = contentAttributedString;
     
     CGFloat contentLabelHeight = [contentAttributedString sizeConstrainedToSize:CGSizeMake(self.contentLabel.frame.size.width, 200000.0f)].height;
-    //[self.contentLabel sizeToFit];
     
     [self.contentLabel resetHeight:contentLabelHeight];
     
     self.contentLabel.automaticallyAddLinksForType = NSTextCheckingTypeLink;
+}
+
+- (void)configureControlArea:(Activity *)act
+{
+    self.controlAreaView = [WEActivityDetailControlAreaView createActivityDetailViewWithInfo:act];
+    [self.controlAreaView resetOriginY:0];
+    [self addSubview:self.controlAreaView];
 }
 
 

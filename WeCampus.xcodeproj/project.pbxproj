@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0320CCC817BD5BCA005B2110 /* WEDetailTransparentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0320CCC717BD5BC9005B2110 /* WEDetailTransparentHeaderView.m */; };
+		0320CCCA17BD5BE8005B2110 /* WEDetailTransparentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0320CCC917BD5BE7005B2110 /* WEDetailTransparentHeaderView.xib */; };
 		033729BF17B67D7600D2EC9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729BE17B67D7600D2EC9F /* UIKit.framework */; };
 		033729C117B67D7600D2EC9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C017B67D7600D2EC9F /* Foundation.framework */; };
 		033729C317B67D7600D2EC9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C217B67D7600D2EC9F /* CoreGraphics.framework */; };
@@ -352,6 +354,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0320CCC617BD5BC9005B2110 /* WEDetailTransparentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEDetailTransparentHeaderView.h; sourceTree = "<group>"; };
+		0320CCC717BD5BC9005B2110 /* WEDetailTransparentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEDetailTransparentHeaderView.m; sourceTree = "<group>"; };
+		0320CCC917BD5BE7005B2110 /* WEDetailTransparentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEDetailTransparentHeaderView.xib; sourceTree = "<group>"; };
 		033729BB17B67D7600D2EC9F /* WeCampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCampus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033729BE17B67D7600D2EC9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		033729C017B67D7600D2EC9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1248,6 +1253,9 @@
 				03EB4EC217BCD0E90082132D /* WEActivityDetailContentView.h */,
 				03EB4EC317BCD0E90082132D /* WEActivityDetailContentView.m */,
 				03EB4EC517BCD0FB0082132D /* WEActivityDetailContentView.xib */,
+				0320CCC617BD5BC9005B2110 /* WEDetailTransparentHeaderView.h */,
+				0320CCC717BD5BC9005B2110 /* WEDetailTransparentHeaderView.m */,
+				0320CCC917BD5BE7005B2110 /* WEDetailTransparentHeaderView.xib */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -1895,6 +1903,7 @@
 				03EB4EC617BCD0FC0082132D /* WEActivityDetailContentView.xib in Resources */,
 				B717B6B817BD2903008D6CB8 /* icon_114.png in Resources */,
 				B717B6BA17BD2908008D6CB8 /* icon_57.png in Resources */,
+				0320CCCA17BD5BE8005B2110 /* WEDetailTransparentHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2043,6 +2052,7 @@
 				03EB4EBA17BCC5A70082132D /* WEActivityDetailControlAreaView.m in Sources */,
 				03EB4EC017BCD0D30082132D /* WTActivityImageRollView.m in Sources */,
 				03EB4EC417BCD0EA0082132D /* WEActivityDetailContentView.m in Sources */,
+				0320CCC817BD5BCA005B2110 /* WEDetailTransparentHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

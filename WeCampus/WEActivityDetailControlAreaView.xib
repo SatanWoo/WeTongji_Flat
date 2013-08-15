@@ -41,7 +41,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{44, 8}, {18, 15}}</string>
 						<reference key="NSSuperview" ref="531762447"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1033343173"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -83,7 +82,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{70, 6}, {48, 21}}</string>
 						<reference key="NSSuperview" ref="531762447"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="256894695"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -119,7 +117,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{253, 5}, {47, 22}}</string>
 						<reference key="NSSuperview" ref="531762447"/>
-						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -147,7 +144,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{189, 5}, {47, 22}}</string>
 						<reference key="NSSuperview" ref="531762447"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="993350108"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -171,7 +167,6 @@
 				</array>
 				<string key="NSFrameSize">{320, 32}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="1006082894"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
@@ -292,42 +287,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">12</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">WEActivityDetailControlAreaView</string>
-					<string key="superclassName">UIView</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="inviteButton">UIButton</string>
-						<string key="joinButton">UIButton</string>
-						<string key="likeButton">UIButton</string>
-						<string key="likeCountLabel">UILabel</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="inviteButton">
-							<string key="name">inviteButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="joinButton">
-							<string key="name">joinButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="likeButton">
-							<string key="name">likeButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="likeCountLabel">
-							<string key="name">likeCountLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/WEActivityDetailControlAreaView.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

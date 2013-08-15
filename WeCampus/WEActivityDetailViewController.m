@@ -8,14 +8,12 @@
 
 #import "WEActivityDetailViewController.h"
 #import "WEActivityDetailHeaderView.h"
-#import "WEActivityDetailControlAreaView.h"
 #import "WEActivityDetailContentView.h"
+#import "WEDetailTransparentHeaderView.h"
 
-@interface WEActivityDetailViewController ()
+@interface WEActivityDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) Activity *act;
-@property (strong, nonatomic) WEActivityDetailHeaderView *headerView;
-@property (strong, nonatomic) WEActivityDetailControlAreaView *controlAreaView;
-@property (strong, nonatomic) WEActivityDetailContentView *contentView;
+@property (strong, nonatomic) WEActivityDetailContentView *contentViewCell;
 @end
 
 @implementation WEActivityDetailViewController
@@ -28,6 +26,14 @@
     return vc;
 }
 
+- (WEActivityDetailContentView *)contentViewCell
+{
+    if (!_contentViewCell) {
+        _contentViewCell = [WEActivityDetailContentView createDetailContentViewWithInfo:self.act];
+    }
+    return _contentViewCell;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,12 +42,14 @@
     return self;
 }
 
+
+#define kDefaultOffsetY 400
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Activity Detail", nil);
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
-    [self updateScrollView];
+    
+    //[self.tableView setContentOffset:CGPointMake(0, kDefaultOffsetY)];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,35 +57,41 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0) return 0;
+    else return 1;
+}
+
+- (float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) return 80;
+    else return 246;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.contentViewCell;
+}
+
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.contentViewCell.frame.size.height;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) return [WEDetailTransparentHeaderView createTransparentHeaderView];
+    return [WEActivityDetailHeaderView createActivityDetailViewWithInfo:self.act];
+}
+
 #pragma mark - UI Method
-
-- (void)updateScrollView
-{
-    [self configureHeaderView];
-    [self configureControlArea];
-    [self configureContentView];
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.contentView.frame.size.height + self.contentView.frame.origin.y)];
-}
-
-- (void)configureHeaderView
-{
-    self.headerView = [WEActivityDetailHeaderView createActivityDetailViewWithInfo:self.act];
-    [self.scrollView addSubview:self.headerView];
-}
-
-- (void)configureControlArea
-{
-    self.controlAreaView = [WEActivityDetailControlAreaView createActivityDetailViewWithInfo:self.act];
-    [self.controlAreaView resetOriginY:self.headerView.frame.origin.y + self.headerView.frame.size.height];
-    [self.scrollView addSubview:self.controlAreaView];
-}
-
-#define kSpan 20
-- (void)configureContentView
-{
-    self.contentView = [WEActivityDetailContentView createDetailContentViewWithInfo:self.act];
-    [self.contentView resetOriginY:self.controlAreaView.frame.origin.y + self.controlAreaView.frame.size.height + kSpan];
-    [self.scrollView addSubview:self.contentView];
-}
 
 @end

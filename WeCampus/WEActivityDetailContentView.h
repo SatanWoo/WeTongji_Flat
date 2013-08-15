@@ -10,9 +10,10 @@
 #import <OHAttributedLabel.h>
 #import "Activity+Addition.h"
 
-@interface WEActivityDetailContentView : UIView
+@interface WEActivityDetailContentView : UITableViewCell
 @property (weak, nonatomic) IBOutlet OHAttributedLabel *contentLabel;
 
 + (WEActivityDetailContentView *)createDetailContentViewWithInfo:(Activity *)act;
+- (void)configureContentWithInfo:(Activity *)act;
 
 @end

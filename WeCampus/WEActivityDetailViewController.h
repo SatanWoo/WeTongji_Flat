@@ -10,7 +10,7 @@
 #import "Activity+Addition.h"
 
 @interface WEActivityDetailViewController : WEContentViewController
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 + (WEActivityDetailViewController *)createDetailViewControllerWithModel:(Activity *)act;
 
