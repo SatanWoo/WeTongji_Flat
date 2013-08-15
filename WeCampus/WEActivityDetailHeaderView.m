@@ -53,9 +53,11 @@
     [label resetWidth:maxRightLabelBorder - label.frame.origin.x];
 }
 
+#define kBorderRadius 20
+
 - (void)configureAvatar
 {
     self.avatarContainerView.layer.masksToBounds = YES;
-    self.avatarContainerView.layer.cornerRadius = 6;
+    self.avatarContainerView.layer.cornerRadius = kBorderRadius;
 }
 @end
