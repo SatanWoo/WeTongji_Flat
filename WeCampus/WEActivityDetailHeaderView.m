@@ -33,6 +33,8 @@
 
 - (void)configureWithInfo:(Activity *)act
 {
+    self.colorContainerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
+    
     [self configureAvatar];
     [self.avatar loadImageWithImageURLString:act.author.avatar];
     
@@ -54,10 +56,20 @@
 }
 
 #define kBorderRadius 20
-
 - (void)configureAvatar
 {
     self.avatarContainerView.layer.masksToBounds = YES;
     self.avatarContainerView.layer.cornerRadius = kBorderRadius;
 }
+
+#pragma mark - Public Method
+- (void)resetLayout:(CGFloat)percent
+{
+    if (percent <= 0) return;
+    if (percent > 1) percent = 1;
+    
+    self.infoContainerView.alpha = 1 - percent;
+    self.titleLabel.alpha = 1 - 0.5 * percent;
+}
+
 @end

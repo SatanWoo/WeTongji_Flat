@@ -14,6 +14,8 @@
 @interface WEActivityDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) Activity *act;
 @property (strong, nonatomic) WEActivityDetailContentView *contentViewCell;
+@property (strong, nonatomic) WEActivityDetailHeaderView *detailHeaderView;
+@property (strong, nonatomic) WEDetailTransparentHeaderView *transparentHeaderView;
 @end
 
 @implementation WEActivityDetailViewController
@@ -34,6 +36,22 @@
     return _contentViewCell;
 }
 
+- (WEActivityDetailHeaderView *)detailHeaderView
+{
+    if (!_detailHeaderView) {
+        _detailHeaderView = [WEActivityDetailHeaderView createActivityDetailViewWithInfo:self.act];
+    }
+    return _detailHeaderView;
+}
+
+- (WEDetailTransparentHeaderView *)transparentHeaderView
+{
+    if (!_transparentHeaderView) {
+        _transparentHeaderView = [WEDetailTransparentHeaderView createTransparentHeaderView];
+    }
+    return _transparentHeaderView;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,13 +60,11 @@
     return self;
 }
 
-
-#define kDefaultOffsetY 400
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    //[self.tableView setContentOffset:CGPointMake(0, kDefaultOffsetY)];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
     [self.navigationController setNavigationBarHidden:YES];
 }
 
@@ -72,8 +88,8 @@
 
 - (float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) return 80;
-    else return 246;
+    if (section == 0) return self.transparentHeaderView.frame.size.height;
+    else return self.detailHeaderView.frame.size.height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -88,10 +104,21 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) return [WEDetailTransparentHeaderView createTransparentHeaderView];
-    return [WEActivityDetailHeaderView createActivityDetailViewWithInfo:self.act];
+    if (section == 0) return self.transparentHeaderView;
+    return self.detailHeaderView;
 }
 
-#pragma mark - UI Method
+
+#define kIgnoreOffset 44
+static CGFloat lastOffsetY = 0;
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offsetY = scrollView.contentOffset.y;
+    CGFloat height = self.transparentHeaderView.frame.size.height;
+    
+    [self.detailHeaderView resetLayout:(offsetY - kIgnoreOffset)/ height];
+    
+    lastOffsetY = offsetY;
+}
 
 @end

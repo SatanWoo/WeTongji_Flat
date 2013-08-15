@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define kTransparentHeight 40
+
 @interface WEDetailTransparentHeaderView : UIView
 
 + (WEDetailTransparentHeaderView *)createTransparentHeaderView;
