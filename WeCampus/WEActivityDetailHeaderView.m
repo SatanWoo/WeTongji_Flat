@@ -29,14 +29,28 @@
     return self;
 }
 
+#define maxRightLabelBorder 305
+
 - (void)configureWithInfo:(Activity *)act
 {
     [self configureAvatar];
     [self.avatar loadImageWithImageURLString:act.author.avatar];
+    
     self.orgName.text = act.author.name;
     self.titleLabel.text = act.what;
     self.timeLabel.text = act.yearMonthDayBeginToEndTimeString;
     self.locationLabel.text = act.where;
+    
+    [self resizeLabel:self.orgName];
+    [self resizeLabel:self.timeLabel];
+    [self resizeLabel:self.titleLabel];
+    [self resizeLabel:self.locationLabel];
+}
+
+- (void)resizeLabel:(UILabel *)label
+{
+    [label sizeToFit];
+    [label resetWidth:maxRightLabelBorder - label.frame.origin.x];
 }
 
 - (void)configureAvatar
