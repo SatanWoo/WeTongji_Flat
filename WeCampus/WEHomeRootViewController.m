@@ -23,6 +23,7 @@
 #import "WESchoolEventHeadLineView.h"
 #import "WEActivitiesViewController.h"
 #import "NSUserDefaults+WTAddition.h"
+#import "WEActivityDetailViewController.h"
 
 @interface WEHomeRootViewController () <WESeeAllSchoolEventsHeaderViewDelegate, WESchoolEventHeadLineViewDelegate>
 @property (nonatomic, strong) WEBannerContainerView *bannerContainerView;
@@ -228,25 +229,16 @@
     [self.bannerContainerView reloadItemImages];
 }
 
-//
-//- (void)pushDetailViewControllerWithModelObject:(Object *)modelObject {
-//    if ([modelObject isKindOfClass:[Activity class]]) {
-//        WTActivityDetailViewController *vc = [WTActivityDetailViewController createDetailViewControllerWithActivity:(Activity *)modelObject backBarButtonText:nil];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    } else if ([modelObject isKindOfClass:[News class]]) {
-//        WTNewsDetailViewController *vc = [WTNewsDetailViewController createDetailViewControllerWithNews:(News *)modelObject backBarButtonText:nil];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    } else if ([modelObject isKindOfClass:[Organization class]]) {
-//        WTOrganizationDetailViewController *vc = [WTOrganizationDetailViewController createDetailViewControllerWithOrganization:(Organization *)modelObject backBarButtonText:nil];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    } else if([modelObject isKindOfClass:[Star class]]) {
-//        WTStarDetailViewController *vc = [WTStarDetailViewController createDetailViewControllerWithStar:(Star *)modelObject backBarButtonText:nil];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    } else if ([modelObject isKindOfClass:[Advertisement class]]) {
-//        Advertisement *ad = (Advertisement *)modelObject;
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:ad.website]];
-//    }
-//}
+
+- (void)pushDetailViewControllerWithModelObject:(Object *)modelObject {
+    if ([modelObject isKindOfClass:[Activity class]]) {
+        WEActivityDetailViewController *vc = [WEActivityDetailViewController createDetailViewControllerWithModel:(Activity *)modelObject];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if ([modelObject isKindOfClass:[Advertisement class]]) {
+        Advertisement *ad = (Advertisement *)modelObject;
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:ad.website]];
+    }
+}
 #pragma mark - WESeeAllSchoolEventsHeaderViewDelegate
 - (void)didClickSeeAllEvent
 {
@@ -263,5 +255,9 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)didTapToSeeDetailInfo:(Activity *)act
+{
+    [self pushDetailViewControllerWithModelObject:act];
+}
 
 @end

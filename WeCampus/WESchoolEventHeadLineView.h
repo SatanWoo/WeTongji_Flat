@@ -12,6 +12,7 @@
 @protocol WESchoolEventHeadLineViewDelegate <NSObject>
 
 - (void)didClickShowCategoryButtonWithModel:(Activity *)act;
+- (void)didTapToSeeDetailInfo:(Activity *)act;
 
 @end
 

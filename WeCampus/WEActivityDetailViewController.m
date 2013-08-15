@@ -7,9 +7,11 @@
 //
 
 #import "WEActivityDetailViewController.h"
+#import "WEActivityDetailHeaderView.h"
 
 @interface WEActivityDetailViewController ()
-
+@property (strong, nonatomic) Activity *act;
+@property (strong, nonatomic) WEActivityDetailHeaderView *headerView;
 @end
 
 @implementation WEActivityDetailViewController
@@ -17,6 +19,7 @@
 + (WEActivityDetailViewController *)createDetailViewControllerWithModel:(Activity *)act
 {
     WEActivityDetailViewController *vc = [[WEActivityDetailViewController alloc] initWithNibName:@"WEActivityDetailViewController" bundle:nil];
+    vc.act = act;
     
     return vc;
 }
@@ -32,11 +35,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"活动详情";
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
+    [self configureHeaderView];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - UI Method
+
+- (void)updateScrollView
+{
+    
+}
+
+- (void)configureHeaderView
+{
+    self.headerView = [WEActivityDetailHeaderView createActivityDetailViewWithInfo:self.act];
+    [self.scrollView addSubview:self.headerView];
 }
 
 @end

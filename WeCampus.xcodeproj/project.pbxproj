@@ -115,6 +115,10 @@
 		03EB4EA817BC99080082132D /* WTSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EB4EA617BC99080082132D /* WTSwitch.xib */; };
 		03EB4EAC17BC9D3B0082132D /* WEActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EB4EAA17BC9D3B0082132D /* WEActivityDetailViewController.m */; };
 		03EB4EAD17BC9D3B0082132D /* WEActivityDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EB4EAB17BC9D3B0082132D /* WEActivityDetailViewController.xib */; };
+		03EB4EB117BCB2CB0082132D /* WEActivityDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EB4EB017BCB2CA0082132D /* WEActivityDetailHeaderView.m */; };
+		03EB4EB317BCB2F70082132D /* WEActivityDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EB4EB217BCB2F70082132D /* WEActivityDetailHeaderView.xib */; };
+		03EB4EB517BCB3300082132D /* 活动详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EB4EB417BCB3300082132D /* 活动详情1.png */; };
+		03EB4EB717BCBCB10082132D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EB4EB617BCBCB00082132D /* QuartzCore.framework */; };
 		2D0549075E2B46C4AC299AF2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C5F1033434B719E6325EF /* libPods.a */; };
 		E40A64D017B733A500082B4F /* WTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64CF17B733A500082B4F /* WTRootTabBarController.m */; };
 		E40A64EC17B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
@@ -536,6 +540,11 @@
 		03EB4EA917BC9D3B0082132D /* WEActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivityDetailViewController.h; sourceTree = "<group>"; };
 		03EB4EAA17BC9D3B0082132D /* WEActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivityDetailViewController.m; sourceTree = "<group>"; };
 		03EB4EAB17BC9D3B0082132D /* WEActivityDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivityDetailViewController.xib; sourceTree = "<group>"; };
+		03EB4EAF17BCB2CA0082132D /* WEActivityDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivityDetailHeaderView.h; sourceTree = "<group>"; };
+		03EB4EB017BCB2CA0082132D /* WEActivityDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivityDetailHeaderView.m; sourceTree = "<group>"; };
+		03EB4EB217BCB2F70082132D /* WEActivityDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivityDetailHeaderView.xib; sourceTree = "<group>"; };
+		03EB4EB417BCB3300082132D /* 活动详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情1.png"; sourceTree = "<group>"; };
+		03EB4EB617BCBCB00082132D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		852FA862DE854B8F88F43748 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		875C5F1033434B719E6325EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40A64CE17B733A500082B4F /* WTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRootTabBarController.h; sourceTree = "<group>"; };
@@ -788,6 +797,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03EB4EB717BCBCB10082132D /* QuartzCore.framework in Frameworks */,
 				E49A325B17B753E300AF8C77 /* SystemConfiguration.framework in Frameworks */,
 				E49A324917B7539300AF8C77 /* MobileCoreServices.framework in Frameworks */,
 				E49A325917B753D900AF8C77 /* CoreText.framework in Frameworks */,
@@ -832,6 +842,7 @@
 		033729BD17B67D7600D2EC9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03EB4EB617BCBCB00082132D /* QuartzCore.framework */,
 				E49A325A17B753E300AF8C77 /* SystemConfiguration.framework */,
 				E49A325817B753D900AF8C77 /* CoreText.framework */,
 				E49A325617B753D500AF8C77 /* CoreData.framework */,
@@ -935,6 +946,7 @@
 		0341647E17B7B3F6005CFD98 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				03EB4EAE17BCB2480082132D /* Activity */,
 				03EB4EA317BC98FE0082132D /* Widget */,
 				0341648A17B7D710005CFD98 /* Home */,
 				0341648417B7B641005CFD98 /* Banner */,
@@ -971,6 +983,7 @@
 		034164E217B7DAD8005CFD98 /* 参考图 */ = {
 			isa = PBXGroup;
 			children = (
+				03EB4EB417BCB3300082132D /* 活动详情1.png */,
 				03883AC517BA128B00ED081D /* 活动列表_分类.png */,
 				0359175117B92E0600BD64AE /* 活动列表.png */,
 				034164E317B7DAE9005CFD98 /* 首页.png */,
@@ -1197,6 +1210,16 @@
 				03EB4EA617BC99080082132D /* WTSwitch.xib */,
 			);
 			name = Widget;
+			sourceTree = "<group>";
+		};
+		03EB4EAE17BCB2480082132D /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				03EB4EAF17BCB2CA0082132D /* WEActivityDetailHeaderView.h */,
+				03EB4EB017BCB2CA0082132D /* WEActivityDetailHeaderView.m */,
+				03EB4EB217BCB2F70082132D /* WEActivityDetailHeaderView.xib */,
+			);
+			name = Activity;
 			sourceTree = "<group>";
 		};
 		E40A64D117B7349A00082B4F /* Category */ = {
@@ -1835,6 +1858,8 @@
 				E4B02E0F17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib in Resources */,
 				03EB4EA817BC99080082132D /* WTSwitch.xib in Resources */,
 				03EB4EAD17BC9D3B0082132D /* WEActivityDetailViewController.xib in Resources */,
+				03EB4EB317BCB2F70082132D /* WEActivityDetailHeaderView.xib in Resources */,
+				03EB4EB517BCB3300082132D /* 活动详情1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1979,6 +2004,7 @@
 				E4B02E0E17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m in Sources */,
 				03EB4EA717BC99080082132D /* WTSwitch.m in Sources */,
 				03EB4EAC17BC9D3B0082132D /* WEActivityDetailViewController.m in Sources */,
+				03EB4EB117BCB2CB0082132D /* WEActivityDetailHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

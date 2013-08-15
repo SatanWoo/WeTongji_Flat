@@ -102,8 +102,8 @@
 
 - (void)configureNavigationBar
 {
-    [self configureNavigationBarTitle];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
+    [self configureNavigationBarTitle];
     [self configureNavigationBarButton];
 }
 

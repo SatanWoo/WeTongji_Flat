@@ -54,6 +54,9 @@
     
     [self.titleLabel sizeToFit];
     [self.titleLabel resetWidth:maxLabelRightBorder - self.titleLabel.frame.origin.x];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];
+    [self addGestureRecognizer:tap];
 }
 
 - (void)configureCategoryColor
@@ -90,6 +93,13 @@
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(didClickShowCategoryButtonWithModel:)]) {
         [self.delegate didClickShowCategoryButtonWithModel:self.act];
+    }
+}
+
+- (void)didTap:(UITapGestureRecognizer *)tap
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didTapToSeeDetailInfo:)]) {
+        [self.delegate didTapToSeeDetailInfo:self.act];
     }
 }
 
