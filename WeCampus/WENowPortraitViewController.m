@@ -11,6 +11,11 @@
 #import "WTRequest.h"
 #import "User+Addition.h"
 #import "WTCoreDataTableViewController.h"
+#import "Activity+Addition.h"
+#import "Object+Addition.h"
+#import "Course+Addition.h"
+#import "Exam+Addition.h"
+#import "NSDate-Utilities.h"
 
 @interface WENowPortraitViewController ()
 {
@@ -30,6 +35,46 @@
     return self;
 }
 
+- (void)loadDataFrom:(NSDate *)fromDate
+                  to:(NSDate *)toDate
+        successBlock:(void (^)(void))success
+        failureBlock:(void (^)(void))failure {
+    WTRequest * request = [WTRequest requestWithSuccessBlock:^(id responseData) {
+        NSLog(@"Get Now Data Success: %@", responseData);
+        
+        if (success) {
+            success();
+        }
+        
+        NSDictionary *resultDict = (NSDictionary *)responseData;
+        NSArray *activitiesArray = resultDict[@"Activities"];
+        for (NSDictionary *dict in activitiesArray) {
+            Activity *activity= [Activity insertActivity:dict];
+            [activity setObjectHeldByHolder:[self class]];
+        }
+        
+        NSArray *coursesArray = resultDict[@"CourseInstances"];
+        for (NSDictionary *dict in coursesArray) {
+            CourseInstance *courseInstance = [CourseInstance insertCourseInstance:dict];
+            [courseInstance setObjectHeldByHolder:[self class]];
+            courseInstance.scheduledByCurrentUser = YES;
+        }
+        
+        NSArray *examsArray = resultDict[@"Exams"];
+        for (NSDictionary *dict in examsArray) {
+            Exam *exam = [Exam insertExam:dict];
+            [exam setObjectHeldByHolder:[self class]];
+            exam.scheduledByCurrentUser = YES;
+        }
+    } failureBlock:^(NSError * error) {
+        
+    }];
+    [request getScheduleWithBeginDate:fromDate endDate:toDate];
+    [[WTClient sharedClient] enqueueRequest:request];
+}
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,13 +84,20 @@
         User *user = [User insertUser:[responseData objectForKey:@"User"]];
         [WTCoreDataManager sharedManager].currentUser = user;
         
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
-        
-        request.predicate = [NSPredicate predicateWithFormat:@"(SELF in %@)", [WTCoreDataManager sharedManager].currentUser.scheduledEvents, [NSDate date]];
-        request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"beginTime" ascending:YES]];
-        
-        NSArray *matches = [[WTCoreDataManager sharedManager].managedObjectContext executeFetchRequest:request error:nil];
-        NSLog(@"success :%@",matches);
+        [self loadDataFrom:[[NSDate date] dateByAddingDays:-200] to:[[NSDate date] dateByAddingDays:-190] successBlock:^()
+        {
+            NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
+            
+            request.predicate = [NSPredicate predicateWithFormat:@"(SELF in %@)", [WTCoreDataManager sharedManager].currentUser.scheduledEvents, [NSDate date]];
+            request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"beginTime" ascending:YES]];
+            
+            NSArray *matches = [[WTCoreDataManager sharedManager].managedObjectContext executeFetchRequest:request error:nil];
+            NSLog(@"success :%@",matches);
+        }
+        failureBlock:^()
+        {
+            NSLog(@"faill");
+        }];
         
     } failureBlock:^(NSError * error) {
         NSLog(@"fail");
