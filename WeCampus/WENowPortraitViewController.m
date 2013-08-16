@@ -7,6 +7,10 @@
 //
 
 #import "WENowPortraitViewController.h"
+#import "WTClient.h"
+#import "WTRequest.h"
+#import "User+Addition.h"
+#import "WTCoreDataTableViewController.h"
 
 @interface WENowPortraitViewController ()
 {
@@ -29,6 +33,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    WTClient *client = [WTClient sharedClient];
+    WTRequest *request = [WTRequest requestWithSuccessBlock: ^(id responseData) {
+        User *user = [User insertUser:[responseData objectForKey:@"User"]];
+        [WTCoreDataManager sharedManager].currentUser = user;
+        
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
+        
+        request.predicate = [NSPredicate predicateWithFormat:@"(SELF in %@)", [WTCoreDataManager sharedManager].currentUser.scheduledEvents, [NSDate date]];
+        request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"beginTime" ascending:YES]];
+        
+        NSArray *matches = [[WTCoreDataManager sharedManager].managedObjectContext executeFetchRequest:request error:nil];
+        NSLog(@"success :%@",matches);
+        
+    } failureBlock:^(NSError * error) {
+        NSLog(@"fail");
+    }];
+    [request loginWithStudentNumber:@"000000" password:@"123456"];
+    [client enqueueRequest:request];
+
     
     // Do any additional setup after loading the view from its nib.
 }

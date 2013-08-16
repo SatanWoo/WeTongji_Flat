@@ -352,6 +352,7 @@
 		E4B02E0E17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B02E0C17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m */; };
 		E4B02E0F17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4B02E0D17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib */; };
 		E4B2948817B9C9A800ED68C6 /* WENowPortraitWeekListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44E548217B92AF9000426E1 /* WENowPortraitWeekListViewController.xib */; };
+		E4DE121417BE17D900651486 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = E4DE121317BE17D900651486 /* public_key.der */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -816,6 +817,7 @@
 		E4B02E0B17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENowPortraitDayEventListViewController.h; sourceTree = "<group>"; };
 		E4B02E0C17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENowPortraitDayEventListViewController.m; sourceTree = "<group>"; };
 		E4B02E0D17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WENowPortraitDayEventListViewController.xib; sourceTree = "<group>"; };
+		E4DE121317BE17D900651486 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1343,6 +1345,7 @@
 		E458B07717B754C100D0DFBD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E4DE121217BE17D000651486 /* keys */,
 				0320CCCB17BD5E6E005B2110 /* green_point.png */,
 				034164E217B7DAD8005CFD98 /* 参考图 */,
 				034267F317B8EDB7000248C2 /* nav_bg.png */,
@@ -1632,6 +1635,14 @@
 			name = Root;
 			sourceTree = "<group>";
 		};
+		E4DE121217BE17D000651486 /* keys */ = {
+			isa = PBXGroup;
+			children = (
+				E4DE121317BE17D900651486 /* public_key.der */,
+			);
+			name = keys;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1908,6 +1919,7 @@
 				B717B6BA17BD2908008D6CB8 /* icon_57.png in Resources */,
 				0320CCCA17BD5BE8005B2110 /* WEDetailTransparentHeaderView.xib in Resources */,
 				0320CCCC17BD5E6E005B2110 /* green_point.png in Resources */,
+				E4DE121417BE17D900651486 /* public_key.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
