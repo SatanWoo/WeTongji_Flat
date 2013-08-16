@@ -128,28 +128,26 @@
 
 - (void)updateButtonColors
 {
-    UIColor *selectColor = [UIColor colorWithRed:233/255.0 green:71/255.0 blue:59/255.0 alpha:1.0];
-    
     [buttonDateDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         UIButton *button = obj;
         NSDate *theDay = key;
         if([_selectedDate isEqualToDateIgnoringTime:today])
         {
-            [button setTitleColor:[theDay isToday] ? selectColor : [UIColor lightGrayColor] forState:UIControlStateNormal];
+            [button setTitleColor:[theDay isToday] ? [UIColor appNowWeekListDateSelectColor] : [UIColor appNowWeekListDateUnselectColor] forState:UIControlStateNormal];
         }
         else
         {
             if([theDay isToday])
             {
-                [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+                [button setTitleColor:[UIColor appNowWeekListDateTodayColor] forState:UIControlStateNormal];
             }
             else if([theDay isEqualToDateIgnoringTime:_selectedDate])
             {
-                [button setTitleColor:selectColor forState:UIControlStateNormal];
+                [button setTitleColor:[UIColor appNowWeekListDateSelectColor] forState:UIControlStateNormal];
             }
             else
             {
-                [button setTitleColor: [UIColor lightGrayColor] forState:UIControlStateNormal];
+                [button setTitleColor: [UIColor appNowWeekListDateUnselectColor] forState:UIControlStateNormal];
             }
         }
         

@@ -13,6 +13,9 @@
 //#import "WENowViewController.h"
 #import "OHAttributedLabel.h"
 #import "NSAttributedString+WTAddition.h"
+#import "Activity+Addition.h"
+#import "Course+Addition.h"
+#import "NSDate+WTAddition.h"
 
 @interface WTNowBaseCell ()
 
@@ -39,48 +42,33 @@
 }
 
 - (void)awakeFromNib {
-    self.nowDisplayLabel.text = NSLocalizedString(@"Ongoing", nil);
-    CGFloat nowDisplayLabelHeight = self.nowDisplayLabel.frame.size.height;
-    [self.nowDisplayLabel sizeToFit];
-    [self.nowDisplayLabel resetHeight:nowDisplayLabelHeight];
     
-    self.friendsCountLabel.automaticallyAddLinksForType = 0;
 }
 
 - (void)configureCellWithEvent:(Event *)event {
     self.event = event;
-    
-    self.friendsCountLabel.attributedText = [NSAttributedString friendCountStringConvertFromCountNumber:self.event.friendsCount font:self.friendsCountLabel.font textColor:self.friendsCountLabel.textColor];
+    self.whereLabel.text = self.event.where;
+    self.eventNameLabel.text = event.what;
+    self.startTimeLabel.text = [self.event.beginTime convertToTimeString];
+    self.endTimeLabel.text = [self.event.endTime convertToTimeString];
 }
 
 #pragma mark - UI methods
 
-- (void)showNowView {
-    self.nowView.hidden = NO;
-    CGPoint nowDisplayLabelOrigin = [self.nowDisplayLabel convertPoint:self.nowDisplayLabel.frame.origin toView:self.nowView];
-    [self.whenLabel resetOriginX:nowDisplayLabelOrigin.x + self.nowDisplayLabel.frame.size.width + 20];
-}
-
-- (void)hideNowView {
-    self.nowView.hidden = YES;
-    [self.whenLabel resetOriginX:self.nowView.frame.origin.x + 2];
-}
-
 - (void)setCellPast:(BOOL)past {
-    if (past) {
-        [self.bgButton setBackgroundImage:[UIImage imageNamed:@"WTRoundCornerPanelCuppedBg"] forState:UIControlStateNormal];
-        [self.bgButton setBackgroundImage:[UIImage imageNamed:@"WTRoundCornerPanelCuppedBg"] forState:UIControlStateHighlighted];
-        self.whenLabel.highlighted = YES;
-        self.whenLabel.shadowOffset = CGSizeZero;
-        self.whereLabel.highlighted = YES;
-        self.whereLabel.shadowOffset = CGSizeZero;
-    } else {
-        [self.bgButton setBackgroundImage:[UIImage imageNamed:@"WTRoundCornerPanelBg"] forState:UIControlStateNormal];
-        [self.bgButton setBackgroundImage:[UIImage imageNamed:@"WTRoundCornerPanelHighlightBg"] forState:UIControlStateHighlighted];
-        self.whenLabel.highlighted = NO;
-        self.whenLabel.shadowOffset = CGSizeMake(0, 1);
-        self.whereLabel.highlighted = NO;
-        self.whereLabel.shadowOffset = CGSizeMake(0, 1);
+    if (past)
+    {
+        [self.startTimeLabel setTextColor:[UIColor appNowEventPastStartTimeLabelColor]];
+    }
+    else
+    {
+        UIColor *color;
+        if ([self.event isKindOfClass:[Activity class]]) {
+            color = [UIColor appNowActivityEventStartTimeLabelColor];
+        } else if ([self.event isKindOfClass:[CourseInstance class]]){
+            color = [UIColor appNowCourseEventStartTimeLabelColor];
+        }
+        [self.startTimeLabel setTextColor:color];
     }
 }
 
@@ -89,14 +77,6 @@
         [self setCellPast:YES];
     } else {
         [self setCellPast:NO];
-    }
-        
-    if (type == WTNowBaseCellTypeNow){
-        [self showNowView];
-        self.ringImageView.hidden = NO;
-    } else {
-        [self hideNowView];
-        self.ringImageView.hidden = YES;
     }
 }
 

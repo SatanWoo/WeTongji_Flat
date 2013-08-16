@@ -7,8 +7,6 @@
 //
 
 #import "WENowPortraitDayEventListViewController.h"
-#import "WTNowActivityCell.h"
-#import "WTNowCourseCell.h"
 #import "WTNowBaseCell.h"
 #import "Activity+Addition.h"
 #import "Course+Addition.h"
@@ -78,13 +76,7 @@
 }
 
 - (NSString *)customCellClassNameAtIndexPath:(NSIndexPath *)indexPath {
-    Event *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    if ([item isKindOfClass:[Activity class]]) {
-        return @"WTNowActivityCell";
-    } else if ([item isKindOfClass:[CourseInstance class]]){
-        return @"WTNowCourseCell";
-    }
-    return nil;
+    return @"WTNowBaseCell";
 }
 
 - (NSString *)customSectionNameKeyPath {

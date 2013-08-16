@@ -20,12 +20,10 @@ typedef enum {
 
 @interface WTNowBaseCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UIView *nowView;
-@property (nonatomic, weak) IBOutlet UILabel *whenLabel;
-@property (nonatomic, weak) IBOutlet OHAttributedLabel *friendsCountLabel;
+@property (nonatomic, weak) IBOutlet UILabel *startTimeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *endTimeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *eventNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *whereLabel;
-@property (nonatomic, weak) IBOutlet UIImageView *ringImageView;
-@property (nonatomic, weak) IBOutlet UILabel *nowDisplayLabel;
 @property (nonatomic, weak) IBOutlet UIView *containerView;
 @property (nonatomic, weak) IBOutlet UIButton *bgButton;
 
