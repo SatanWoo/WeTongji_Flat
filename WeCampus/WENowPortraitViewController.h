@@ -13,6 +13,8 @@
 @interface WENowPortraitViewController : UIViewController<WENowPortraitWeekListViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *weekTitleContainerView;
 @property (weak, nonatomic) IBOutlet UIView *dayEventListContainerView;
+@property (weak, nonatomic) IBOutlet UILabel *weekNumberLabel;
 
+- (IBAction)nowPressed:(id)sender;
 
 @end

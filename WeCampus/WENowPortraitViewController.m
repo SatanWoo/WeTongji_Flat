@@ -133,6 +133,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark IBAction
+- (IBAction)nowPressed:(id)sender
+{
+    [weekTitleVC selectToday];
+    
+}
+
+
 #pragma mark Week List Delegate
 - (void)weekListViewController:(WENowPortraitWeekListViewController*)vc dateDidChanged:(NSDate*)date
 {

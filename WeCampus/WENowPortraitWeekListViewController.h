@@ -26,5 +26,6 @@
 
 - (void)selectPreviousDay;
 - (void)selectNextDay;
+- (void)selectToday;
 
 @end

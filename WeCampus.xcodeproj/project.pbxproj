@@ -336,6 +336,7 @@
 		E470584717BE6949007ABECC /* 活动列表.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584317BE6949007ABECC /* 活动列表.png */; };
 		E470584817BE6949007ABECC /* 活动详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584417BE6949007ABECC /* 活动详情1.png */; };
 		E470584917BE6949007ABECC /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584517BE6949007ABECC /* 首页.png */; };
+		E470584B17BE6ACC007ABECC /* cal.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584A17BE6ACC007ABECC /* cal.png */; };
 		E49A324517B7538800AF8C77 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324417B7538800AF8C77 /* AddressBook.framework */; };
 		E49A324717B7538C00AF8C77 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324617B7538C00AF8C77 /* AddressBookUI.framework */; };
 		E49A324917B7539300AF8C77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324817B7539200AF8C77 /* MobileCoreServices.framework */; };
@@ -800,6 +801,7 @@
 		E470584317BE6949007ABECC /* 活动列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动列表.png"; sourceTree = "<group>"; };
 		E470584417BE6949007ABECC /* 活动详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情1.png"; sourceTree = "<group>"; };
 		E470584517BE6949007ABECC /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
+		E470584A17BE6ACC007ABECC /* cal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cal.png; sourceTree = "<group>"; };
 		E49A324417B7538800AF8C77 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		E49A324617B7538C00AF8C77 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		E49A324817B7539200AF8C77 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -1013,6 +1015,7 @@
 			children = (
 				E470584217BE6949007ABECC /* 活动列表_分类.png */,
 				E470584317BE6949007ABECC /* 活动列表.png */,
+				E470584A17BE6ACC007ABECC /* cal.png */,
 				E470584417BE6949007ABECC /* 活动详情1.png */,
 				E470584517BE6949007ABECC /* 首页.png */,
 			);
@@ -1916,6 +1919,7 @@
 				E470584717BE6949007ABECC /* 活动列表.png in Resources */,
 				E470584817BE6949007ABECC /* 活动详情1.png in Resources */,
 				E470584917BE6949007ABECC /* 首页.png in Resources */,
+				E470584B17BE6ACC007ABECC /* cal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

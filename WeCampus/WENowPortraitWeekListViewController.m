@@ -258,29 +258,51 @@
     [self selectDay:[_selectedDate dateByAddingDays:1]];
 }
 
+- (void)selectToday
+{
+//    UIView *middleView = dateViewBlocks[1];
+//    UIView *previous = dateViewBlocks[0];
+//    UIView *next = dateViewBlocks[2];
+//    [previous resetOriginX:-self.scrollView.bounds.size.width];
+//    [middleView resetOriginX:0];
+//    [next resetOriginX:self.scrollView.bounds.size.width];
+//    
+//    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
+//    _selectedDate = today;
+//    minIndex = -1;
+//    maxIndex = 1;
+//    [self updateButtonColors];
+    [self selectDay:today];
+}
+
+
 #pragma mark UIScrollView Delegate
 static int lastIndex;
 static int originalIndex;
+static CGFloat lastContentOffsetX;
+
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     lastIndex = currentIndex;
     originalIndex = currentIndex;
+    lastContentOffsetX = scrollView.contentOffset.x;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView;
-{
-    CGFloat width = scrollView.frame.size.width;
-    //NSLog(@"%f",scrollView.contentOffset.x);
-    currentIndex = floorf((scrollView.contentOffset.x + width / 2) / width);
 
+- (void)handleOneShift:(CGFloat)contentOffsetX
+{
+    CGFloat width = self.scrollView.frame.size.width;
+    //NSLog(@"%f",scrollView.contentOffset.x);
+    currentIndex = floorf((contentOffsetX + width / 2) / width);
+    
     NSDate *currentIndexStartDay = [self lastSundayForDate: [today dateByAddingDays:currentIndex * 7]];
     if(currentIndex != lastIndex)
     {
         NSLog(@"cur ind:%d",currentIndex);
+        CGRect visibleRect = CGRectMake(contentOffsetX, self.scrollView.contentOffset.y, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
         
         lastIndex = currentIndex;
         
-        CGRect visibleRect = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, scrollView.frame.size.width, scrollView.frame.size.height);
         int invisibleIndex = -1;
         UIView *previousView;
         UIView *nextView;
@@ -332,6 +354,21 @@ static int originalIndex;
             }
         }
     }
+}
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat currentOffsetX = scrollView.contentOffset.x;
+    CGFloat delta = currentOffsetX - lastContentOffsetX;
+    while (fabs(delta) >= 160)
+    {
+        [self handleOneShift:lastContentOffsetX + delta / fabs(delta) * 160];
+        lastContentOffsetX += + delta / fabs(delta) * 160;
+        delta -= delta / fabs(delta) * 160;
+    }
+    [self handleOneShift:currentOffsetX];
+    lastContentOffsetX = currentOffsetX;
 }
 
 - (void)scrollViewBecomeStable
