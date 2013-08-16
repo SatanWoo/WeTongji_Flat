@@ -7,6 +7,13 @@
 //
 
 #import "WENowPortraitDayEventListViewController.h"
+#import "WTNowActivityCell.h"
+#import "WTNowCourseCell.h"
+#import "WTNowBaseCell.h"
+#import "Activity+Addition.h"
+#import "Course+Addition.h"
+#import "Exam+Addition.h"
+#import "Object+Addition.h"
 
 @interface WENowPortraitDayEventListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -37,20 +44,59 @@
 
 
 #pragma mark UITableView Datasource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 1;
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    return 1;
+//}
+
+
+
+#pragma mark - CoreDataTableViewController methods
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    Event *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    WTNowBaseCell *nowCell = (WTNowBaseCell *)cell;
+    [nowCell configureCellWithEvent:item];
+    
+    NSDate *nowDate = [NSDate date];
+    if ([nowDate compare:item.beginTime] == NSOrderedAscending) {
+        [nowCell updateCellStatus:WTNowBaseCellTypeNormal];
+        
+    } else if ([nowDate compare:item.endTime] == NSOrderedDescending) {
+        [nowCell updateCellStatus:WTNowBaseCellTypePast];
+    } else {
+        [nowCell updateCellStatus:WTNowBaseCellTypeNow];
+    }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString *cellIdentifier =  @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+- (void)configureFetchRequest:(NSFetchRequest *)request {
+    [request setEntity:[NSEntityDescription entityForName:@"Event" inManagedObjectContext:[WTCoreDataManager sharedManager].managedObjectContext]];
+    
+    //request.predicate = [NSPredicate predicateWithFormat:@"(SELF in %@)", [WTCoreDataManager sharedManager].currentUser.scheduledEvents];
+    
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"beginTime" ascending:YES]];
+}
+
+- (NSString *)customCellClassNameAtIndexPath:(NSIndexPath *)indexPath {
+    Event *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    if ([item isKindOfClass:[Activity class]]) {
+        return @"WTNowActivityCell";
+    } else if ([item isKindOfClass:[CourseInstance class]]){
+        return @"WTNowCourseCell";
     }
-    return cell;
+    return nil;
+}
+
+- (NSString *)customSectionNameKeyPath {
+    return @"beginDay";
+}
+
+- (void)fetchedResultsControllerDidPerformFetch {
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 300 * NSEC_PER_MSEC), dispatch_get_current_queue(), ^{
+//        if ([self.fetchedResultsController.sections.lastObject numberOfObjects] == 0) {
+//            [self.dragToLoadDecorator setTopViewLoading:YES];
+//        }
+//    });
 }
 
 @end

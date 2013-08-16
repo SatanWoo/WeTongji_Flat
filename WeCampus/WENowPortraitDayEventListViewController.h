@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WTCoreDataTableViewController.h"
 
-@interface WENowPortraitDayEventListViewController : UIViewController
+@interface WENowPortraitDayEventListViewController : WTCoreDataTableViewController
 
 @end
