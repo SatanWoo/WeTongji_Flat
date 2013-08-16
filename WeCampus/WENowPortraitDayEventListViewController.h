@@ -10,5 +10,11 @@
 #import "WTCoreDataTableViewController.h"
 
 @interface WENowPortraitDayEventListViewController : WTCoreDataTableViewController
+{
+    NSDate *needDate;
+}
+- (void)loadDataForDate:(NSDate*)date;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

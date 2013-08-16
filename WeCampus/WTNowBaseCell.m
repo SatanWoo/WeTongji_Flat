@@ -51,6 +51,7 @@
     self.eventNameLabel.text = event.what;
     self.startTimeLabel.text = [self.event.beginTime convertToTimeString];
     self.endTimeLabel.text = [self.event.endTime convertToTimeString];
+    NSLog(@"Begin~~~~:%@",self.event.beginTime);
 }
 
 #pragma mark - UI methods

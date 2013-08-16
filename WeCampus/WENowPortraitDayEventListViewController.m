@@ -12,6 +12,8 @@
 #import "Course+Addition.h"
 #import "Exam+Addition.h"
 #import "Object+Addition.h"
+#import "NSDate-Utilities.h"
+#import "NSDate+WTAddition.h"
 
 @interface WENowPortraitDayEventListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -31,7 +33,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    needDate = [NSDate date];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)loadDataForDate:(NSDate*)date
+{
+    needDate = date;
+    self.fetchedResultsController = nil;
+    [NSFetchedResultsController deleteCacheWithName:nil];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    [self configureFetchRequest:fetchRequest];
+    [self.fetchedResultsController performFetch:NULL];
+    [[super tableView] reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,7 +85,9 @@
 - (void)configureFetchRequest:(NSFetchRequest *)request {
     [request setEntity:[NSEntityDescription entityForName:@"Event" inManagedObjectContext:[WTCoreDataManager sharedManager].managedObjectContext]];
     
-    //request.predicate = [NSPredicate predicateWithFormat:@"(SELF in %@)", [WTCoreDataManager sharedManager].currentUser.scheduledEvents];
+    request.predicate = [NSPredicate predicateWithFormat:@"(beginTime >= %@) AND (beginTime <= %@)", [needDate dateAtStartOfDay],[[needDate dateByAddingDays:1] dateAtStartOfDay]];
+    
+    //request.predicate = [NSPredicate predicateWithFormat:@"(beginTime <= %@)", [needDate dateAtStartOfDay]];
     
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"beginTime" ascending:YES]];
 }

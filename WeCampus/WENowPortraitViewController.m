@@ -84,7 +84,7 @@
         User *user = [User insertUser:[responseData objectForKey:@"User"]];
         [WTCoreDataManager sharedManager].currentUser = user;
         
-        [self loadDataFrom:[[NSDate date] dateByAddingDays:-200] to:[[NSDate date] dateByAddingDays:-190] successBlock:^()
+        [self loadDataFrom:[[NSDate date] dateByAddingDays:-7] to:[[NSDate date] dateByAddingDays:0] successBlock:^()
         {
             NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
             
@@ -137,7 +137,7 @@
 - (IBAction)nowPressed:(id)sender
 {
     [weekTitleVC selectToday];
-    
+    [dayEventListVC loadDataForDate:[NSDate date]];
 }
 
 
@@ -145,6 +145,7 @@
 - (void)weekListViewController:(WENowPortraitWeekListViewController*)vc dateDidChanged:(NSDate*)date
 {
     NSLog(@"%@",date);
+    [dayEventListVC loadDataForDate:date];
 }
 
 @end
