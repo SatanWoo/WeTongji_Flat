@@ -24,6 +24,7 @@
 #import "WEActivitiesViewController.h"
 #import "NSUserDefaults+WTAddition.h"
 #import "WEActivityDetailViewController.h"
+#import "UIApplication+WTAddition.h"
 
 @interface WEHomeRootViewController () <WESeeAllSchoolEventsHeaderViewDelegate, WESchoolEventHeadLineViewDelegate>
 @property (nonatomic, strong) WEBannerContainerView *bannerContainerView;

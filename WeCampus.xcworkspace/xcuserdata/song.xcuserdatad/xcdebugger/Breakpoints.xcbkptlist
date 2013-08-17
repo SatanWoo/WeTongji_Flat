@@ -7,13 +7,13 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "WeCampus/WTCoreDataTableViewController.m"
-         timestampString = "398359175.534221"
+         filePath = "WeCampus/UIApplication+WTAddition.m"
+         timestampString = "398432686.854408"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
-         landmarkName = "-numberOfSectionsInTableView:"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
+         landmarkName = "-rootTabBarController"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
