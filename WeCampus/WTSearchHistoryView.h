@@ -11,8 +11,11 @@
 @interface WTSearchHistoryView : UIView <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *maskView;
 
 + (WTSearchHistoryView *)createSearchHistoryView;
+- (void)cover;
+- (void)uncover;
 
 @end
 

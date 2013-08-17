@@ -34,11 +34,21 @@
     for (UIView *view in views) {
         if ([view isKindOfClass:[WTSearchHistoryView class]]) {
             result = (WTSearchHistoryView *)view;
+            result.maskView.hidden = YES;
             break;
         }
     }
     
     return result;
+}
+
+- (void)cover{
+    self.maskView.hidden = NO;
+}
+
+- (void)uncover
+{
+    self.maskView.hidden = YES;
 }
 
 #pragma mark - UITableViewDelegate

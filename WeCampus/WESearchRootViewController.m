@@ -63,6 +63,7 @@
     } completion:^(BOOL finished) {
     }];
     
+    [self.defaultViewController.historyView cover];
     [textField becomeFirstResponder];
 }
 
@@ -81,6 +82,7 @@
     }];
     
     [self.searchBarTextField resignFirstResponder];
+    [self.defaultViewController.historyView uncover];
 }
 
 @end
