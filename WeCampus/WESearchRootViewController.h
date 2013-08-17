@@ -14,5 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *searchIconImageView;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIView *resultContainerView;
+@property (weak, nonatomic) IBOutlet UIView *textFieldContainerView;
+
+- (IBAction)didClickCancelButton:(id)sender;
 
 @end

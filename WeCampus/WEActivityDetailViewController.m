@@ -116,8 +116,6 @@ static CGFloat lastOffsetY = 0;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat offsetY = scrollView.contentOffset.y;
-    NSLog(@"scrollViewDidScroll is %g", offsetY);
-
     CGFloat height = self.transparentHeaderView.frame.size.height;
     
     [self.detailHeaderView resetLayout:(offsetY - kIgnoreOffset)/ height];

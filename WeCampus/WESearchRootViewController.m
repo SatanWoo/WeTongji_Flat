@@ -7,10 +7,12 @@
 //
 
 #import "WESearchRootViewController.h"
+#import "WTSearchDefaultViewController.h"
+#import "NSUserDefaults+WTAddition.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface WESearchRootViewController () <UITextFieldDelegate>
-
+@property (strong, nonatomic) WTSearchDefaultViewController *defaultViewController;
 @end
 
 @implementation WESearchRootViewController
@@ -28,6 +30,7 @@
 {
     [super viewDidLoad];
     [self configureSearchBar];
+    [self configureDefaultView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,27 +38,49 @@
     [super didReceiveMemoryWarning];
 }
 
-#define kSearchbarEditinX 230
-#define kSearchbarNotEditingX 305
+#define kSearchbarEditinWidth 230
+#define kSearchbarNotEditingWidth 305
+#define kCancelButtonAppearX 244
 
 - (void)configureSearchBar
 {
-    self.cancelButton.hidden = YES;
-    [self.searchBarTextField resetWidth:kSearchbarNotEditingX];
+    [self.cancelButton resetOriginX:self.searchBarContainerView.frame.size.width];
+    [self.textFieldContainerView resetWidth:kSearchbarNotEditingWidth];
     self.searchBarContainerView.layer.shadowColor = [UIColor colorWithWhite:0 alpha:0.8].CGColor;
-    [self.searchBarTextField becomeFirstResponder];
+}
+
+- (void)configureDefaultView {
+    self.defaultViewController = [[WTSearchDefaultViewController alloc] init];
+    [self.defaultViewController.view resetHeight:self.resultContainerView.frame.size.height];
+    [self.resultContainerView addSubview:self.defaultViewController.view];
 }
 
 #pragma mark - UITextFieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     [UIView animateWithDuration:0.5f animations:^{
-        [self.searchBarTextField resetWidth:kSearchbarEditinX];
+        [self.textFieldContainerView resetWidth:kSearchbarEditinWidth];
+        [self.cancelButton resetOriginX:kCancelButtonAppearX];
     } completion:^(BOOL finished) {
-        self.cancelButton.hidden = NO;
     }];
     
     [textField becomeFirstResponder];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [[NSUserDefaults standardUserDefaults] addSearchHistoryItemWithSearchKeyword:textField.text searchCategory:0];
+    return YES;
+}
+
+- (IBAction)didClickCancelButton:(id)sender
+{
+    [UIView animateWithDuration:0.5f animations:^{
+        [self.textFieldContainerView resetWidth:kSearchbarNotEditingWidth];
+        [self.cancelButton resetOriginX:self.searchBarContainerView.frame.size.width];
+    } completion:^(BOOL finished) {
+    }];
+    
+    [self.searchBarTextField resignFirstResponder];
 }
 
 @end
