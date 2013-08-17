@@ -19,7 +19,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -39,7 +38,6 @@
 - (void)initRootViewController
 {
     WESearchRootViewController *rootViewController = [[WESearchRootViewController alloc] init];
-    rootViewController.hidesBottomBarWhenPushed = NO;
     [self pushViewController:rootViewController animated:NO];
 }
 

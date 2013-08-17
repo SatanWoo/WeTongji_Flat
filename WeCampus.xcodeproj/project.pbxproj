@@ -73,6 +73,8 @@
 		03BA1D1E17BF6E8E0040712F /* WESearchNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA1D1C17BF6E8E0040712F /* WESearchNavigationController.m */; };
 		03BA1D2317BF6EBF0040712F /* WESearchRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA1D2117BF6EBF0040712F /* WESearchRootViewController.m */; };
 		03BA1D2417BF6EBF0040712F /* WESearchRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D2217BF6EBF0040712F /* WESearchRootViewController.xib */; };
+		03BA1D2817BF7B210040712F /* WTSearchDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA1D2617BF7B210040712F /* WTSearchDefaultViewController.m */; };
+		03BA1D2917BF7B210040712F /* WTSearchDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */; };
 		03E8B60817B7890D00AC12C8 /* WENavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */; };
 		03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */; };
 		03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */; };
@@ -475,6 +477,9 @@
 		03BA1D2017BF6EBF0040712F /* WESearchRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchRootViewController.h; sourceTree = "<group>"; };
 		03BA1D2117BF6EBF0040712F /* WESearchRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESearchRootViewController.m; sourceTree = "<group>"; };
 		03BA1D2217BF6EBF0040712F /* WESearchRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESearchRootViewController.xib; sourceTree = "<group>"; };
+		03BA1D2517BF7B200040712F /* WTSearchDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSearchDefaultViewController.h; sourceTree = "<group>"; };
+		03BA1D2617BF7B210040712F /* WTSearchDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSearchDefaultViewController.m; sourceTree = "<group>"; };
+		03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSearchDefaultViewController.xib; sourceTree = "<group>"; };
 		03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENavigationViewController.h; sourceTree = "<group>"; };
 		03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENavigationViewController.m; sourceTree = "<group>"; };
 		03E8B60917B789AA00AC12C8 /* WEHomeNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHomeNavigationViewController.h; sourceTree = "<group>"; };
@@ -1149,6 +1154,9 @@
 		03BA1D1A17BF6E5E0040712F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				03BA1D2517BF7B200040712F /* WTSearchDefaultViewController.h */,
+				03BA1D2617BF7B210040712F /* WTSearchDefaultViewController.m */,
+				03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */,
 				03BA1D1B17BF6E8E0040712F /* WESearchNavigationController.h */,
 				03BA1D1C17BF6E8E0040712F /* WESearchNavigationController.m */,
 				03BA1D2017BF6EBF0040712F /* WESearchRootViewController.h */,
@@ -1968,6 +1976,7 @@
 				03BA1D1417BF6A0B0040712F /* WTSearchHistoryView.xib in Resources */,
 				03BA1D1917BF6A590040712F /* WTSearchHistoryCell.xib in Resources */,
 				03BA1D2417BF6EBF0040712F /* WESearchRootViewController.xib in Resources */,
+				03BA1D2917BF7B210040712F /* WTSearchDefaultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2121,6 +2130,7 @@
 				03BA1D1817BF6A590040712F /* WTSearchHistoryCell.m in Sources */,
 				03BA1D1E17BF6E8E0040712F /* WESearchNavigationController.m in Sources */,
 				03BA1D2317BF6EBF0040712F /* WESearchRootViewController.m in Sources */,
+				03BA1D2817BF7B210040712F /* WTSearchDefaultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,7 +50,6 @@
 {
     [UIView animateWithDuration:0.5f animations:^{
         [self.searchBarTextField resetWidth:kSearchbarEditinX];
-        
     } completion:^(BOOL finished) {
         self.cancelButton.hidden = NO;
     }];
