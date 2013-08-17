@@ -66,6 +66,13 @@
 		0368DAA717B80064000F83A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0368DAA517B80064000F83A1 /* Localizable.strings */; };
 		03883AC317BA11C900ED081D /* WEActivitySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */; };
 		03883AC417BA11C900ED081D /* WEActivitySettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */; };
+		03BA1D1317BF6A0B0040712F /* WTSearchHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA1D1117BF6A0B0040712F /* WTSearchHistoryView.m */; };
+		03BA1D1417BF6A0B0040712F /* WTSearchHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D1217BF6A0B0040712F /* WTSearchHistoryView.xib */; };
+		03BA1D1817BF6A590040712F /* WTSearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA1D1617BF6A580040712F /* WTSearchHistoryCell.m */; };
+		03BA1D1917BF6A590040712F /* WTSearchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D1717BF6A580040712F /* WTSearchHistoryCell.xib */; };
+		03BA1D1E17BF6E8E0040712F /* WESearchNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA1D1C17BF6E8E0040712F /* WESearchNavigationController.m */; };
+		03BA1D2317BF6EBF0040712F /* WESearchRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA1D2117BF6EBF0040712F /* WESearchRootViewController.m */; };
+		03BA1D2417BF6EBF0040712F /* WESearchRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D2217BF6EBF0040712F /* WESearchRootViewController.xib */; };
 		03E8B60817B7890D00AC12C8 /* WENavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */; };
 		03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */; };
 		03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */; };
@@ -457,6 +464,17 @@
 		03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivitySettingViewController.m; sourceTree = "<group>"; };
 		03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivitySettingViewController.xib; sourceTree = "<group>"; };
 		03AB77E117B7FF2C00B41FD5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		03BA1D1017BF6A0B0040712F /* WTSearchHistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSearchHistoryView.h; sourceTree = "<group>"; };
+		03BA1D1117BF6A0B0040712F /* WTSearchHistoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSearchHistoryView.m; sourceTree = "<group>"; };
+		03BA1D1217BF6A0B0040712F /* WTSearchHistoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSearchHistoryView.xib; sourceTree = "<group>"; };
+		03BA1D1517BF6A580040712F /* WTSearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSearchHistoryCell.h; sourceTree = "<group>"; };
+		03BA1D1617BF6A580040712F /* WTSearchHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSearchHistoryCell.m; sourceTree = "<group>"; };
+		03BA1D1717BF6A580040712F /* WTSearchHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSearchHistoryCell.xib; sourceTree = "<group>"; };
+		03BA1D1B17BF6E8E0040712F /* WESearchNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchNavigationController.h; sourceTree = "<group>"; };
+		03BA1D1C17BF6E8E0040712F /* WESearchNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESearchNavigationController.m; sourceTree = "<group>"; };
+		03BA1D2017BF6EBF0040712F /* WESearchRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchRootViewController.h; sourceTree = "<group>"; };
+		03BA1D2117BF6EBF0040712F /* WESearchRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESearchRootViewController.m; sourceTree = "<group>"; };
+		03BA1D2217BF6EBF0040712F /* WESearchRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESearchRootViewController.xib; sourceTree = "<group>"; };
 		03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENavigationViewController.h; sourceTree = "<group>"; };
 		03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENavigationViewController.m; sourceTree = "<group>"; };
 		03E8B60917B789AA00AC12C8 /* WEHomeNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHomeNavigationViewController.h; sourceTree = "<group>"; };
@@ -976,6 +994,7 @@
 		0341647E17B7B3F6005CFD98 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				03BA1D0F17BF6A010040712F /* Search */,
 				03EB4EAE17BCB2480082132D /* Activity */,
 				03EB4EA317BC98FE0082132D /* Widget */,
 				0341648A17B7D710005CFD98 /* Home */,
@@ -1105,12 +1124,38 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				03BA1D1A17BF6E5E0040712F /* Search */,
 				E44E547617B90FC9000426E1 /* Now */,
 				034267E917B8D935000248C2 /* Activity */,
 				03E8B60517B785EF00AC12C8 /* Home */,
 				E47D58D617B731EA00D55EC7 /* Root */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		03BA1D0F17BF6A010040712F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				03BA1D1517BF6A580040712F /* WTSearchHistoryCell.h */,
+				03BA1D1617BF6A580040712F /* WTSearchHistoryCell.m */,
+				03BA1D1717BF6A580040712F /* WTSearchHistoryCell.xib */,
+				03BA1D1017BF6A0B0040712F /* WTSearchHistoryView.h */,
+				03BA1D1117BF6A0B0040712F /* WTSearchHistoryView.m */,
+				03BA1D1217BF6A0B0040712F /* WTSearchHistoryView.xib */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		03BA1D1A17BF6E5E0040712F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				03BA1D1B17BF6E8E0040712F /* WESearchNavigationController.h */,
+				03BA1D1C17BF6E8E0040712F /* WESearchNavigationController.m */,
+				03BA1D2017BF6EBF0040712F /* WESearchRootViewController.h */,
+				03BA1D2117BF6EBF0040712F /* WESearchRootViewController.m */,
+				03BA1D2217BF6EBF0040712F /* WESearchRootViewController.xib */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 		03E8B60517B785EF00AC12C8 /* Home */ = {
@@ -1920,6 +1965,9 @@
 				E470584817BE6949007ABECC /* 活动详情1.png in Resources */,
 				E470584917BE6949007ABECC /* 首页.png in Resources */,
 				E470584B17BE6ACC007ABECC /* cal.png in Resources */,
+				03BA1D1417BF6A0B0040712F /* WTSearchHistoryView.xib in Resources */,
+				03BA1D1917BF6A590040712F /* WTSearchHistoryCell.xib in Resources */,
+				03BA1D2417BF6EBF0040712F /* WESearchRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2069,6 +2117,10 @@
 				0320CCC817BD5BCA005B2110 /* WEDetailTransparentHeaderView.m in Sources */,
 				E470584017BE6325007ABECC /* UIColor+AppColor.m in Sources */,
 				E470584117BE6325007ABECC /* UIColor+Hex.m in Sources */,
+				03BA1D1317BF6A0B0040712F /* WTSearchHistoryView.m in Sources */,
+				03BA1D1817BF6A590040712F /* WTSearchHistoryCell.m in Sources */,
+				03BA1D1E17BF6E8E0040712F /* WESearchNavigationController.m in Sources */,
+				03BA1D2317BF6EBF0040712F /* WESearchRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
