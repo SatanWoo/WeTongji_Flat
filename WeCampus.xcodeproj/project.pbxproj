@@ -153,6 +153,10 @@
 		E40B74C717BE6203000066E4 /* WTNowBaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40B74C617BE6202000066E4 /* WTNowBaseCell.xib */; };
 		E44E547317B90F80000426E1 /* WTNowBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E546D17B90F80000426E1 /* WTNowBaseCell.m */; };
 		E44E547917B9102B000426E1 /* WENowNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E547817B9102B000426E1 /* WENowNavigationController.m */; };
+		E4511F3917BFA3D6005494C1 /* WEFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4511F3717BFA3D6005494C1 /* WEFriendListViewController.m */; };
+		E4511F3A17BFA3D6005494C1 /* WEFriendListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4511F3817BFA3D6005494C1 /* WEFriendListViewController.xib */; };
+		E4511F4017BFA4A5005494C1 /* WEFriendHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4511F3F17BFA4A5005494C1 /* WEFriendHeadCell.m */; };
+		E4511F4217BFA4C2005494C1 /* WEFriendHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4511F4117BFA4C2005494C1 /* WEFriendHeadCell.xib */; };
 		E458B13717B754C100D0DFBD /* back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E458B07817B754C100D0DFBD /* back_btn.png */; };
 		E458B13817B754C100D0DFBD /* back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E458B07917B754C100D0DFBD /* back_btn@2x.png */; };
 		E458B13917B754C100D0DFBD /* switch_bg_off.png in Resources */ = {isa = PBXBuildFile; fileRef = E458B07A17B754C100D0DFBD /* switch_bg_off.png */; };
@@ -631,6 +635,12 @@
 		E44E548217B92AF9000426E1 /* WENowPortraitWeekListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WENowPortraitWeekListViewController.xib; sourceTree = "<group>"; };
 		E44E548417B92BC6000426E1 /* NSDate-Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate-Utilities.h"; sourceTree = "<group>"; };
 		E44E548517B92BC6000426E1 /* NSDate-Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate-Utilities.m"; sourceTree = "<group>"; };
+		E4511F3617BFA3D6005494C1 /* WEFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEFriendListViewController.h; sourceTree = "<group>"; };
+		E4511F3717BFA3D6005494C1 /* WEFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEFriendListViewController.m; sourceTree = "<group>"; };
+		E4511F3817BFA3D6005494C1 /* WEFriendListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEFriendListViewController.xib; sourceTree = "<group>"; };
+		E4511F3E17BFA4A5005494C1 /* WEFriendHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEFriendHeadCell.h; sourceTree = "<group>"; };
+		E4511F3F17BFA4A5005494C1 /* WEFriendHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEFriendHeadCell.m; sourceTree = "<group>"; };
+		E4511F4117BFA4C2005494C1 /* WEFriendHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEFriendHeadCell.xib; sourceTree = "<group>"; };
 		E458B07817B754C100D0DFBD /* back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_btn.png; sourceTree = "<group>"; };
 		E458B07917B754C100D0DFBD /* back_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_btn@2x.png"; sourceTree = "<group>"; };
 		E458B07A17B754C100D0DFBD /* switch_bg_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch_bg_off.png; sourceTree = "<group>"; };
@@ -1129,6 +1139,7 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E4511F3417BFA059005494C1 /* Friend */,
 				03BA1D1A17BF6E5E0040712F /* Search */,
 				E44E547617B90FC9000426E1 /* Now */,
 				034267E917B8D935000248C2 /* Activity */,
@@ -1393,6 +1404,26 @@
 				E44E548517B92BC6000426E1 /* NSDate-Utilities.m */,
 			);
 			path = "NSDate-Utilities";
+			sourceTree = "<group>";
+		};
+		E4511F3417BFA059005494C1 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				E4511F3617BFA3D6005494C1 /* WEFriendListViewController.h */,
+				E4511F3717BFA3D6005494C1 /* WEFriendListViewController.m */,
+				E4511F3817BFA3D6005494C1 /* WEFriendListViewController.xib */,
+			);
+			name = Friend;
+			sourceTree = "<group>";
+		};
+		E4511F3517BFA20B005494C1 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				E4511F3E17BFA4A5005494C1 /* WEFriendHeadCell.h */,
+				E4511F3F17BFA4A5005494C1 /* WEFriendHeadCell.m */,
+				E4511F4117BFA4C2005494C1 /* WEFriendHeadCell.xib */,
+			);
+			name = Friends;
 			sourceTree = "<group>";
 		};
 		E458B07717B754C100D0DFBD /* Resource */ = {
@@ -1665,6 +1696,7 @@
 		E458B21217B90ED700D0DFBD /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				E4511F3517BFA20B005494C1 /* Friends */,
 				E44E547F17B92AE6000426E1 /* Now */,
 				034267F817B92754000248C2 /* Activity */,
 			);
@@ -1977,6 +2009,8 @@
 				03BA1D1917BF6A590040712F /* WTSearchHistoryCell.xib in Resources */,
 				03BA1D2417BF6EBF0040712F /* WESearchRootViewController.xib in Resources */,
 				03BA1D2917BF7B210040712F /* WTSearchDefaultViewController.xib in Resources */,
+				E4511F3A17BFA3D6005494C1 /* WEFriendListViewController.xib in Resources */,
+				E4511F4217BFA4C2005494C1 /* WEFriendHeadCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2131,6 +2165,8 @@
 				03BA1D1E17BF6E8E0040712F /* WESearchNavigationController.m in Sources */,
 				03BA1D2317BF6EBF0040712F /* WESearchRootViewController.m in Sources */,
 				03BA1D2817BF7B210040712F /* WTSearchDefaultViewController.m in Sources */,
+				E4511F3917BFA3D6005494C1 /* WEFriendListViewController.m in Sources */,
+				E4511F4017BFA4A5005494C1 /* WEFriendHeadCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2183,7 +2219,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -2207,7 +2243,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
