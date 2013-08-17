@@ -86,6 +86,12 @@
     else return 1;
 }
 
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) return 0;
+    else return self.contentViewCell.frame.size.height;
+}
+
 - (float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0) return self.transparentHeaderView.frame.size.height;
@@ -97,11 +103,6 @@
     return self.contentViewCell;
 }
 
-- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return self.contentViewCell.frame.size.height;
-}
-
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (section == 0) return self.transparentHeaderView;
@@ -109,7 +110,8 @@
 }
 
 
-#define kIgnoreOffset 44
+#define kIgnoreOffset 34
+#define autoScrollThershold 75
 static CGFloat lastOffsetY = 0;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -120,6 +122,26 @@ static CGFloat lastOffsetY = 0;
     [self.contentViewCell resetLayout:(offsetY - kIgnoreOffset)/ height];
     
     lastOffsetY = offsetY;
+}
+
+static bool hasEnterContentMode = false;
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+//    CGFloat offsetY = scrollView.contentOffset.y;
+//    if (offsetY > autoScrollThershold + kIgnoreOffset && !hasEnterContentMode) {
+//        [self.tableView setContentOffset:CGPointMake(0, self.transparentHeaderView.frame.size.height)];
+//        hasEnterContentMode = true;
+//    } else if (offsetY <= autoScrollThershold +kIgnoreOffset && hasEnterContentMode) {
+//        [self.tableView setContentOffset:CGPointMake(0, 0)];
+//        hasEnterContentMode = false;
+//    }
+}
+
+#pragma mark - IBAction
+- (IBAction)popBack:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

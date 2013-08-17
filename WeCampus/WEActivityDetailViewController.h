@@ -11,7 +11,9 @@
 
 @interface WEActivityDetailViewController : WEContentViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *buttonContainerView;
 
 + (WEActivityDetailViewController *)createDetailViewControllerWithModel:(Activity *)act;
+- (IBAction)popBack:(id)sender;
 
 @end

@@ -77,6 +77,8 @@
     
     self.infoContainerView.alpha = 1 - percent;
     self.titleLabel.alpha = 1 - 0.5 * percent;
+    self.avatarContainerView.alpha = 1 - percent;
+    self.orgName.alpha = 1 - percent;
 }
 
 @end
