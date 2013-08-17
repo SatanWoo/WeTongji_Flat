@@ -43,6 +43,7 @@
     self.cancelButton.hidden = YES;
     [self.searchBarTextField resetWidth:kSearchbarNotEditingX];
     self.searchBarContainerView.layer.shadowColor = [UIColor colorWithWhite:0 alpha:0.8].CGColor;
+    [self.searchBarTextField becomeFirstResponder];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -53,6 +54,8 @@
     } completion:^(BOOL finished) {
         self.cancelButton.hidden = NO;
     }];
+    
+    [textField becomeFirstResponder];
 }
 
 @end
