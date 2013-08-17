@@ -65,7 +65,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
-    self.buttonContainerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
+    //self.buttonContainerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
     [self.navigationController setNavigationBarHidden:YES];
 }
 
@@ -110,7 +110,7 @@
 }
 
 
-#define kIgnoreOffset 44
+#define kIgnoreOffset 34
 static CGFloat lastOffsetY = 0;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
