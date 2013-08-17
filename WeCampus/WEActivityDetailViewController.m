@@ -65,6 +65,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
+    self.buttonContainerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
     [self.navigationController setNavigationBarHidden:YES];
 }
 
@@ -120,6 +121,12 @@ static CGFloat lastOffsetY = 0;
     [self.contentViewCell resetLayout:(offsetY - kIgnoreOffset)/ height];
     
     lastOffsetY = offsetY;
+}
+
+#pragma mark - IBAction
+- (IBAction)popBack:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
