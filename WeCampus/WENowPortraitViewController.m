@@ -16,6 +16,7 @@
 #import "Course+Addition.h"
 #import "Exam+Addition.h"
 #import "NSDate-Utilities.h"
+#import "NSDate+WTAddition.h"
 
 @interface WENowPortraitViewController ()
 {
@@ -125,6 +126,7 @@
         dayEventListVC.view.frame = self.dayEventListContainerView.bounds;
         [self.dayEventListContainerView addSubview:dayEventListVC.view];
     }
+    self.weekNumberLabel.text = [[NSDate date] convertToYearMonthDayString];
 }
 
 - (void)didReceiveMemoryWarning
@@ -138,6 +140,7 @@
 {
     [weekTitleVC selectToday];
     [dayEventListVC loadDataForDate:[NSDate date]];
+    self.weekNumberLabel.text = [[NSDate date] convertToYearMonthDayString];
 }
 
 
@@ -146,6 +149,7 @@
 {
     NSLog(@"%@",date);
     [dayEventListVC loadDataForDate:date];
+    self.weekNumberLabel.text = [date convertToYearMonthDayString];
 }
 
 @end

@@ -133,7 +133,7 @@
         NSDate *theDay = key;
         if([_selectedDate isEqualToDateIgnoringTime:today])
         {
-            [button setTitleColor:[theDay isToday] ? [UIColor appNowWeekListDateSelectColor] : [UIColor appNowWeekListDateUnselectColor] forState:UIControlStateNormal];
+            [button setTitleColor:[theDay isToday] ? [UIColor appNowWeekListDateTodayColor] : [UIColor appNowWeekListDateUnselectColor] forState:UIControlStateNormal];
         }
         else
         {
@@ -376,6 +376,7 @@ static CGFloat lastContentOffsetX;
     _selectedDate = [_selectedDate dateByAddingDays: (currentIndex - originalIndex) * 7];
     [self updateButtonColors];
     [self.delegate weekListViewController:self dateDidChanged:_selectedDate];
+        
 	NSLog(@"cur ind:%d",currentIndex);
     
 }

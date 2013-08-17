@@ -18,12 +18,12 @@
 
 + (UIColor*)appNowWeekListDateSelectColor
 {
-    return RGB(233, 71, 59);
+    return [UIColor darkGrayColor];
 }
 
 + (UIColor*)appNowWeekListDateTodayColor
 {
-    return [UIColor darkGrayColor];
+    return RGB(233, 71, 59);
 }
 
 
