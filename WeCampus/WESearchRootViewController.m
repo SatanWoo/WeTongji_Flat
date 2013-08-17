@@ -41,7 +41,6 @@
 #define kSearchbarEditinWidth 230
 #define kSearchbarNotEditingWidth 305
 #define kCancelButtonAppearX 244
-
 - (void)configureSearchBar
 {
     [self.cancelButton resetOriginX:self.searchBarContainerView.frame.size.width];
@@ -69,6 +68,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [[NSUserDefaults standardUserDefaults] addSearchHistoryItemWithSearchKeyword:textField.text searchCategory:0];
+    //[self.defaultViewController.historyView.tableView reloadData];
     return YES;
 }
 

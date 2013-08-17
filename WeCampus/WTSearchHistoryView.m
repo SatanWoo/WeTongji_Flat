@@ -23,7 +23,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
     }
     return self;
 }
@@ -39,14 +38,7 @@
         }
     }
     
-    [result configureView];
-    
     return result;
-}
-
-- (void)configureView {
-    WTSearchHistoryTableViewHeaderView *headerView = [WTSearchHistoryTableViewHeaderView createHeaderView];
-    self.tableView.tableHeaderView = headerView;
 }
 
 #pragma mark - UITableViewDelegate
@@ -79,7 +71,6 @@
     }
     
     WTSearchHistoryCell *searchHistoryCell = (WTSearchHistoryCell *)cell;
-    
     
     if (indexPath.row != CLEAR_HISTORY_CELL_ROW) {
         

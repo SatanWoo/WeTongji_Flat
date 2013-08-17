@@ -15,12 +15,25 @@
                      searchKeyword:(NSString *)keyword
                     searchCategory:(NSInteger)category {
     if (keyword) {
-        self.searchKeywordLabel.text = keyword;
-        self.searchIconImageView.hidden = NO;
+        [self resetNormalLayout:keyword];
     } else {
-        self.searchKeywordLabel.text = NSLocalizedString(@"Clear search history", nil);
-        self.searchIconImageView.hidden = YES;
+        [self resetClearHistoryLayout];
     }
+}
+
+- (void)resetNormalLayout:(NSString *)keyword
+{
+    self.searchKeywordLabel.text = keyword;
+    [self.searchKeywordLabel sizeToFit];
+    self.searchIconImageView.hidden = NO;
+}
+
+- (void)resetClearHistoryLayout
+{
+    self.searchKeywordLabel.text = NSLocalizedString(@"Clear search history", nil);
+    [self.searchKeywordLabel sizeToFit];
+    [self.searchKeywordLabel resetCenterX:self.frame.size.width / 2];
+    self.searchIconImageView.hidden = YES;
 }
 
 @end
