@@ -350,6 +350,9 @@
 		E470584817BE6949007ABECC /* 活动详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584417BE6949007ABECC /* 活动详情1.png */; };
 		E470584917BE6949007ABECC /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584517BE6949007ABECC /* 首页.png */; };
 		E470584B17BE6ACC007ABECC /* cal.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584A17BE6ACC007ABECC /* cal.png */; };
+		E4910BF117C080C900DD9DCC /* NSString+NaturlLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BF017C080C900DD9DCC /* NSString+NaturlLanguage.m */; };
+		E4910BF417C0877900DD9DCC /* WEFriendListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BF317C0877900DD9DCC /* WEFriendListHeaderView.m */; };
+		E4910BF617C0881A00DD9DCC /* WEFriendListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910BF517C0881A00DD9DCC /* WEFriendListHeaderView.xib */; };
 		E49A324517B7538800AF8C77 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324417B7538800AF8C77 /* AddressBook.framework */; };
 		E49A324717B7538C00AF8C77 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324617B7538C00AF8C77 /* AddressBookUI.framework */; };
 		E49A324917B7539300AF8C77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324817B7539200AF8C77 /* MobileCoreServices.framework */; };
@@ -835,6 +838,11 @@
 		E470584417BE6949007ABECC /* 活动详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情1.png"; sourceTree = "<group>"; };
 		E470584517BE6949007ABECC /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
 		E470584A17BE6ACC007ABECC /* cal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cal.png; sourceTree = "<group>"; };
+		E4910BEF17C080C900DD9DCC /* NSString+NaturlLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+NaturlLanguage.h"; path = "NSDate-Utilities/NSString+NaturlLanguage.h"; sourceTree = "<group>"; };
+		E4910BF017C080C900DD9DCC /* NSString+NaturlLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+NaturlLanguage.m"; path = "NSDate-Utilities/NSString+NaturlLanguage.m"; sourceTree = "<group>"; };
+		E4910BF217C0877900DD9DCC /* WEFriendListHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEFriendListHeaderView.h; sourceTree = "<group>"; };
+		E4910BF317C0877900DD9DCC /* WEFriendListHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEFriendListHeaderView.m; sourceTree = "<group>"; };
+		E4910BF517C0881A00DD9DCC /* WEFriendListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEFriendListHeaderView.xib; sourceTree = "<group>"; };
 		E49A324417B7538800AF8C77 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		E49A324617B7538C00AF8C77 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		E49A324817B7539200AF8C77 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -1335,6 +1343,8 @@
 				E44E548317B92BC6000426E1 /* NSDate-Utilities */,
 				E40A64D217B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.h */,
 				E40A64D317B734A400082B4F /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+				E4910BEF17C080C900DD9DCC /* NSString+NaturlLanguage.h */,
+				E4910BF017C080C900DD9DCC /* NSString+NaturlLanguage.m */,
 				E40A64D417B734A400082B4F /* NSAttributedString+WTAddition.h */,
 				E40A64D517B734A400082B4F /* NSAttributedString+WTAddition.m */,
 				E40A64D617B734A400082B4F /* NSDate+WTAddition.h */,
@@ -1422,6 +1432,9 @@
 				E4511F3E17BFA4A5005494C1 /* WEFriendHeadCell.h */,
 				E4511F3F17BFA4A5005494C1 /* WEFriendHeadCell.m */,
 				E4511F4117BFA4C2005494C1 /* WEFriendHeadCell.xib */,
+				E4910BF217C0877900DD9DCC /* WEFriendListHeaderView.h */,
+				E4910BF317C0877900DD9DCC /* WEFriendListHeaderView.m */,
+				E4910BF517C0881A00DD9DCC /* WEFriendListHeaderView.xib */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -2011,6 +2024,7 @@
 				03BA1D2917BF7B210040712F /* WTSearchDefaultViewController.xib in Resources */,
 				E4511F3A17BFA3D6005494C1 /* WEFriendListViewController.xib in Resources */,
 				E4511F4217BFA4C2005494C1 /* WEFriendHeadCell.xib in Resources */,
+				E4910BF617C0881A00DD9DCC /* WEFriendListHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2167,6 +2181,8 @@
 				03BA1D2817BF7B210040712F /* WTSearchDefaultViewController.m in Sources */,
 				E4511F3917BFA3D6005494C1 /* WEFriendListViewController.m in Sources */,
 				E4511F4017BFA4A5005494C1 /* WEFriendHeadCell.m in Sources */,
+				E4910BF117C080C900DD9DCC /* NSString+NaturlLanguage.m in Sources */,
+				E4910BF417C0877900DD9DCC /* WEFriendListHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
