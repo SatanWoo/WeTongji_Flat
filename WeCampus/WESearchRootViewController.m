@@ -8,11 +8,14 @@
 
 #import "WESearchRootViewController.h"
 #import "WTSearchDefaultViewController.h"
+#import "WTSearchResultTableViewController.h"
+
 #import "NSUserDefaults+WTAddition.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface WESearchRootViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) WTSearchDefaultViewController *defaultViewController;
+@property (nonatomic, strong) WTSearchResultTableViewController *resultViewController;
 @end
 
 @implementation WESearchRootViewController
@@ -59,6 +62,20 @@
     [self.resultContainerView addSubview:self.defaultViewController.view];
 }
 
+- (void)updateSearchResultViewForSearchKeyword:(NSString *)keyword searchCategory:(NSInteger)category {
+    if (self.resultViewController) {
+        [self.resultViewController.view removeFromSuperview];
+        self.resultViewController = nil;
+    }
+    
+    WTSearchResultTableViewController *vc = [WTSearchResultTableViewController createViewControllerWithSearchKeyword:keyword searchCategory:0];
+    self.resultViewController = vc;
+    [vc.view resetHeight:self.resultContainerView.frame.size.height];
+    [self.resultContainerView insertSubview:vc.view aboveSubview:self.defaultViewController.view];
+    
+    [self.defaultViewController.historyView.tableView reloadData];
+}
+
 #pragma mark - UITextFieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
@@ -73,8 +90,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [[NSUserDefaults standardUserDefaults] addSearchHistoryItemWithSearchKeyword:textField.text searchCategory:0];
-    //[self.defaultViewController.historyView.tableView reloadData];
+    [self updateSearchResultViewForSearchKeyword:self.searchBarTextField.text searchCategory:0];
     return YES;
 }
 

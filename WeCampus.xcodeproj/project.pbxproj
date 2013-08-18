@@ -1173,9 +1173,6 @@
 		03BA1D0F17BF6A010040712F /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				0321418717C0A94D002BBA9E /* WTSearchResultTableViewController.h */,
-				0321418817C0A94D002BBA9E /* WTSearchResultTableViewController.m */,
-				0321418917C0A94D002BBA9E /* WTSearchResultTableViewController.xib */,
 				03BA1D1517BF6A580040712F /* WTSearchHistoryCell.h */,
 				03BA1D1617BF6A580040712F /* WTSearchHistoryCell.m */,
 				03BA1D1717BF6A580040712F /* WTSearchHistoryCell.xib */,
@@ -1192,6 +1189,9 @@
 		03BA1D1A17BF6E5E0040712F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				0321418717C0A94D002BBA9E /* WTSearchResultTableViewController.h */,
+				0321418817C0A94D002BBA9E /* WTSearchResultTableViewController.m */,
+				0321418917C0A94D002BBA9E /* WTSearchResultTableViewController.xib */,
 				03BA1D2517BF7B200040712F /* WTSearchDefaultViewController.h */,
 				03BA1D2617BF7B210040712F /* WTSearchDefaultViewController.m */,
 				03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */,

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define kWEActivityCell 107
 
 @class Activity;
 

@@ -7,10 +7,8 @@
 //
 
 #import "WTSearchResultTableViewController.h"
-#import "WTDragToLoadDecorator.h"
-#import <WeTongjiSDK/WeTongjiSDK.h>
 #import "NSUserDefaults+WTAddition.h"
-
+#import "WeTongjiSDK.h"
 #import "News+Addition.h"
 #import "Activity+Addition.h"
 #import "Star+Addition.h"
@@ -20,8 +18,6 @@
 #import "User+Addition.h"
 
 @interface WTSearchResultTableViewController ()
-
-@property (nonatomic, strong) WTDragToLoadDecorator *dragToLoadDecorator;
 
 @property (nonatomic, copy) NSString *searchKeyword;
 @property (nonatomic, assign) NSInteger searchCategory;
@@ -42,14 +38,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
         
     [self clearSearchResultObjects];
+    
+    [self loadSearchResult];
 }
 
 + (WTSearchResultTableViewController *)createViewControllerWithSearchKeyword:(NSString *)keyword
                                                               searchCategory:(NSInteger)category
-                                                                    delegate:(id<WTSearchResultTableViewControllerDelegate>)delegate {
+{
     WTSearchResultTableViewController *result = [[WTSearchResultTableViewController alloc] init];
     
     result.searchKeyword = keyword;
@@ -62,18 +59,6 @@
     return result;
 }
 
-#pragma mark - WTDragToLoadDecoratorDataSource
-
-- (UIScrollView *)dragToLoadScrollView {
-    return self.tableView;
-}
-
-#pragma mark - WTDragToLoadDecoratorDelegate
-
-- (void)dragToLoadDecoratorDidDragDown {
-    [self loadSearchResult];
-}
-
 #pragma mark - Load data methods
 
 - (void)clearSearchResultObjects {
@@ -82,8 +67,6 @@
 
 - (void)loadSearchResult {
     WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
-        WTLOG(@"Load serach result success:%@", responseObject);
-        
         [self clearSearchResultObjects];
         
         NSDictionary *resultDict = (NSDictionary *)responseObject;
@@ -116,25 +99,13 @@
             User *user = [User insertUser:infoDict];
             [user setObjectHeldByHolder:[self class]];
         }
-        
-        [self.dragToLoadDecorator topViewLoadFinished:YES];
-
     } failureBlock:^(NSError *error) {
-        WTLOGERROR(@"Load search result failure:%@", error.localizedDescription);
-        [self.dragToLoadDecorator topViewLoadFinished:NO];
-        [WTErrorHandler handleError:error];
     }];
     [request getSearchResultInCategory:self.searchCategory keyword:self.searchKeyword];
     [[WTClient sharedClient] enqueueRequest:request];
 }
 
 #pragma mark - UI methods
-
-- (void)configureDragToLoadDecorator {
-    self.dragToLoadDecorator = [WTDragToLoadDecorator createDecoratorWithDataSource:self delegate:self bottomActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    [self.dragToLoadDecorator setTopViewLoading:YES];
-    [self.dragToLoadDecorator setBottomViewDisabled:YES immediately:YES];
-}
 
 #pragma mark - Actions
 
@@ -160,28 +131,28 @@
 
 #pragma mark - UITableViewDelegate
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WTTableViewSectionBg"]];
-    CGFloat sectionHeaderHeight = 24.0f;
-    
-    NSString *sectionName = NSLocalizedString([self.fetchedResultsController.sections[section] name], nil);
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 0, tableView.bounds.size.width, sectionHeaderHeight)];
-    label.text = sectionName;
-    label.font = [UIFont boldSystemFontOfSize:12.0f];
-    label.textColor = WTSectionHeaderViewGrayColor;
-    label.backgroundColor = [UIColor clearColor];
-    
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, sectionHeaderHeight)];
-    [headerView addSubview:bgImageView];
-    [headerView addSubview:label];
-    
-    return headerView;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WTTableViewSectionBg"]];
+//    CGFloat sectionHeaderHeight = 24.0f;
+//    
+//    NSString *sectionName = NSLocalizedString([self.fetchedResultsController.sections[section] name], nil);
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 0, tableView.bounds.size.width, sectionHeaderHeight)];
+//    label.text = sectionName;
+//    label.font = [UIFont boldSystemFontOfSize:12.0f];
+//    label.textColor = WTSectionHeaderViewGrayColor;
+//    label.backgroundColor = [UIColor clearColor];
+//    
+//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, sectionHeaderHeight)];
+//    [headerView addSubview:bgImageView];
+//    [headerView addSubview:label];
+//    
+//    return headerView;
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *vc = [super detailViewControllerForIndexPath:indexPath];
-    if (vc)
-        [self.delegate wantToPushViewController:vc];
+//    if (vc)
+//        [self.delegate wantToPushViewController:vc];
 }
 
 @end
