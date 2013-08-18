@@ -52,16 +52,12 @@
         self.imageURLString = ad.image;
         self.title.text = ad.title;
         self.org.text = ad.publisher;
-        self.containerView.backgroundColor = [ad.bgColorHex converHexStringToColorWithAlpha:0.6f];
     }
     
     CGPoint titleLabelCenter = self.title.center;
     [self.title sizeToFit];
     self.title.center = titleLabelCenter;
     [self.org resetOriginY:self.title.frame.size.height + self.title.frame.origin.y];
-    
-//    self.org = self.org.frame.origin.y;
-//    self.title = self.title.frame.origin.y;
     
     [self.imageView loadImageWithImageURLString:self.imageURLString];
 }
