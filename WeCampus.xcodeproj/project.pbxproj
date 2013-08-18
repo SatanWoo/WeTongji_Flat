@@ -15,6 +15,8 @@
 		0321418A17C0A94D002BBA9E /* WTSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321418817C0A94D002BBA9E /* WTSearchResultTableViewController.m */; };
 		0321418B17C0A94D002BBA9E /* WTSearchResultTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321418917C0A94D002BBA9E /* WTSearchResultTableViewController.xib */; };
 		0321418E17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321418D17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m */; };
+		0321419317C0C904002BBA9E /* WESettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321419117C0C904002BBA9E /* WESettingViewController.m */; };
+		0321419417C0C904002BBA9E /* WESettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321419217C0C904002BBA9E /* WESettingViewController.xib */; };
 		033729BF17B67D7600D2EC9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729BE17B67D7600D2EC9F /* UIKit.framework */; };
 		033729C117B67D7600D2EC9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C017B67D7600D2EC9F /* Foundation.framework */; };
 		033729C317B67D7600D2EC9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C217B67D7600D2EC9F /* CoreGraphics.framework */; };
@@ -389,6 +391,9 @@
 		0321418917C0A94D002BBA9E /* WTSearchResultTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSearchResultTableViewController.xib; sourceTree = "<group>"; };
 		0321418C17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTShowAllKindsOfCellsViewController.h; sourceTree = "<group>"; };
 		0321418D17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTShowAllKindsOfCellsViewController.m; sourceTree = "<group>"; };
+		0321419017C0C904002BBA9E /* WESettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESettingViewController.h; sourceTree = "<group>"; };
+		0321419117C0C904002BBA9E /* WESettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESettingViewController.m; sourceTree = "<group>"; };
+		0321419217C0C904002BBA9E /* WESettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESettingViewController.xib; sourceTree = "<group>"; };
 		033729BB17B67D7600D2EC9F /* WeCampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCampus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033729BE17B67D7600D2EC9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		033729C017B67D7600D2EC9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -903,6 +908,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0321418F17C0C8E5002BBA9E /* Setting & About */ = {
+			isa = PBXGroup;
+			children = (
+				0321419017C0C904002BBA9E /* WESettingViewController.h */,
+				0321419117C0C904002BBA9E /* WESettingViewController.m */,
+				0321419217C0C904002BBA9E /* WESettingViewController.xib */,
+			);
+			name = "Setting & About";
+			sourceTree = "<group>";
+		};
 		033729B217B67D7600D2EC9F = {
 			isa = PBXGroup;
 			children = (
@@ -1160,6 +1175,7 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0321418F17C0C8E5002BBA9E /* Setting & About */,
 				E4511F3417BFA059005494C1 /* Friend */,
 				03BA1D1A17BF6E5E0040712F /* Search */,
 				E44E547617B90FC9000426E1 /* Now */,
@@ -2048,6 +2064,7 @@
 				E4910BF617C0881A00DD9DCC /* WEFriendListHeaderView.xib in Resources */,
 				0321418617C0A840002BBA9E /* WESearchResultAvatarCell.xib in Resources */,
 				0321418B17C0A94D002BBA9E /* WTSearchResultTableViewController.xib in Resources */,
+				0321419417C0C904002BBA9E /* WESettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2209,6 +2226,7 @@
 				0321418417C0A78D002BBA9E /* WESearchResultAvatarCell.m in Sources */,
 				0321418A17C0A94D002BBA9E /* WTSearchResultTableViewController.m in Sources */,
 				0321418E17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m in Sources */,
+				0321419317C0C904002BBA9E /* WESettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
