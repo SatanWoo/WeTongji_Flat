@@ -45,7 +45,12 @@
 {
     [self.cancelButton resetOriginX:self.searchBarContainerView.frame.size.width];
     [self.textFieldContainerView resetWidth:kSearchbarNotEditingWidth];
-    self.searchBarContainerView.layer.shadowColor = [UIColor colorWithWhite:0 alpha:0.8].CGColor;
+    
+    self.searchBarContainerView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.searchBarContainerView.layer.shadowRadius = 3.0f;
+    self.searchBarContainerView.layer.shadowOpacity = 0.2f;
+    self.searchBarContainerView.layer.shadowOffset = CGSizeMake(0, 0);
+    [self.searchBarTextField endEditing:YES];
 }
 
 - (void)configureDefaultView {
@@ -81,7 +86,7 @@
     } completion:^(BOOL finished) {
     }];
     
-    [self.searchBarTextField resignFirstResponder];
+    [self.searchBarTextField endEditing:YES];
     [self.defaultViewController.historyView uncover];
 }
 
