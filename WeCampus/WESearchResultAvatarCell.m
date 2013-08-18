@@ -9,6 +9,7 @@
 #import "WESearchResultAvatarCell.h"
 #import "Organization+Addition.h"
 #import "User+Addition.h"
+#import "WEFriendHeadCell.h"
 
 @interface WESearchResultAvatarCell()
 @property (nonatomic, strong) NSMutableArray *avatars;
@@ -48,7 +49,31 @@
 
 - (void)addObject:(LikeableObject *)object
 {
+    [self clearAllAvatars];
     [self.avatars addObject:object];
+    [self layoutAvatars];
+}
+
+- (void)clearAllAvatars
+{
+    for (UIView *view in self.avatarContainerView.subviews) {
+        [view removeFromSuperview];
+    }
+}
+
+- (void)layoutAvatars
+{
+    [self clearAllAvatars];
+    
+    for (LikeableObject *object in self.avatars) {
+        if ([object isKindOfClass:[Organization class]]) {
+            WEFriendHeadCell *cell = [WEFriendHeadCell createFriendCellWithOrg:(Organization *)object];
+            [self.avatarContainerView addSubview:cell];
+        } else {
+            WEFriendHeadCell *cell = [WEFriendHeadCell createFriendCellWithUser:(User *)object];
+            [self.avatarContainerView addSubview:cell];
+        }
+    }
 }
 
 @end

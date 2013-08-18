@@ -48,10 +48,10 @@
         [activityCell configureCellWithActivity:(Activity *)object];
     }  else if ([object isKindOfClass:[Organization class]]) {
         WESearchResultAvatarCell *orgCell = (WESearchResultAvatarCell *)cell;
-        //[orgCell configureCellWithIndexPath:indexPath organization:(Organization *)object];
+        [orgCell configureWithObject:(LikeableObject *)object];
     } else if ([object isKindOfClass:[User class]]) {
         WESearchResultAvatarCell *userCell = (WESearchResultAvatarCell *)cell;
-        //[userCell configureCellWithIndexPath:indexPath user:(User *)object];
+        [userCell configureWithObject:(LikeableObject *)object];
     }
 }
 
