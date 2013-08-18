@@ -31,6 +31,12 @@
     self.navigationController.delegate = self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [((WEAppDelegate *)[UIApplication sharedApplication].delegate) showTabbar];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

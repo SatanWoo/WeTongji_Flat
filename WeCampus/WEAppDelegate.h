@@ -16,4 +16,10 @@
 @property (strong, nonatomic) IBOutlet UITabBarController *tabBarController;
 
 @property (strong, nonatomic) IBOutlet WTRootTabBarController *rootTabBarController;
+
+- (void)hideTabbar;
+- (void)showTabbar;
+
 @end
+
+

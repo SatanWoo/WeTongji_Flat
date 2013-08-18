@@ -15,7 +15,7 @@
     #import "UIView+Resize.h"
     #import "UIView+Animation.h"
     #import "WTCommon.h"
-
+    #import "WEAppDelegate.h"
     #import "UIColor+AppColor.h"
 
 #endif

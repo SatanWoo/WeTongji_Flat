@@ -31,6 +31,12 @@
     [self configureNavigationBar];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [((WEAppDelegate *)[UIApplication sharedApplication].delegate) hideTabbar];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

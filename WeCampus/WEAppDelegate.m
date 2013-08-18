@@ -57,4 +57,14 @@
 }
 */
 
+- (void)hideTabbar
+{
+    [self.rootTabBarController hideTabBar];
+}
+
+- (void)showTabbar
+{
+    [self.rootTabBarController showTabBar];
+}
+
 @end
