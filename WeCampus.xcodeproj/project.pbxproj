@@ -10,6 +10,11 @@
 		0320CCC817BD5BCA005B2110 /* WEDetailTransparentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0320CCC717BD5BC9005B2110 /* WEDetailTransparentHeaderView.m */; };
 		0320CCCA17BD5BE8005B2110 /* WEDetailTransparentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0320CCC917BD5BE7005B2110 /* WEDetailTransparentHeaderView.xib */; };
 		0320CCCC17BD5E6E005B2110 /* green_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 0320CCCB17BD5E6E005B2110 /* green_point.png */; };
+		0321418417C0A78D002BBA9E /* WESearchResultAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321418317C0A78D002BBA9E /* WESearchResultAvatarCell.m */; };
+		0321418617C0A840002BBA9E /* WESearchResultAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321418517C0A840002BBA9E /* WESearchResultAvatarCell.xib */; };
+		0321418A17C0A94D002BBA9E /* WTSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321418817C0A94D002BBA9E /* WTSearchResultTableViewController.m */; };
+		0321418B17C0A94D002BBA9E /* WTSearchResultTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321418917C0A94D002BBA9E /* WTSearchResultTableViewController.xib */; };
+		0321418E17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321418D17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m */; };
 		033729BF17B67D7600D2EC9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729BE17B67D7600D2EC9F /* UIKit.framework */; };
 		033729C117B67D7600D2EC9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C017B67D7600D2EC9F /* Foundation.framework */; };
 		033729C317B67D7600D2EC9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C217B67D7600D2EC9F /* CoreGraphics.framework */; };
@@ -376,6 +381,14 @@
 		0320CCC717BD5BC9005B2110 /* WEDetailTransparentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEDetailTransparentHeaderView.m; sourceTree = "<group>"; };
 		0320CCC917BD5BE7005B2110 /* WEDetailTransparentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEDetailTransparentHeaderView.xib; sourceTree = "<group>"; };
 		0320CCCB17BD5E6E005B2110 /* green_point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_point.png; sourceTree = "<group>"; };
+		0321418217C0A78D002BBA9E /* WESearchResultAvatarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultAvatarCell.h; sourceTree = "<group>"; };
+		0321418317C0A78D002BBA9E /* WESearchResultAvatarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESearchResultAvatarCell.m; sourceTree = "<group>"; };
+		0321418517C0A840002BBA9E /* WESearchResultAvatarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESearchResultAvatarCell.xib; sourceTree = "<group>"; };
+		0321418717C0A94D002BBA9E /* WTSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSearchResultTableViewController.h; sourceTree = "<group>"; };
+		0321418817C0A94D002BBA9E /* WTSearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSearchResultTableViewController.m; sourceTree = "<group>"; };
+		0321418917C0A94D002BBA9E /* WTSearchResultTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSearchResultTableViewController.xib; sourceTree = "<group>"; };
+		0321418C17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTShowAllKindsOfCellsViewController.h; sourceTree = "<group>"; };
+		0321418D17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTShowAllKindsOfCellsViewController.m; sourceTree = "<group>"; };
 		033729BB17B67D7600D2EC9F /* WeCampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCampus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033729BE17B67D7600D2EC9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		033729C017B67D7600D2EC9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1160,12 +1173,18 @@
 		03BA1D0F17BF6A010040712F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				0321418717C0A94D002BBA9E /* WTSearchResultTableViewController.h */,
+				0321418817C0A94D002BBA9E /* WTSearchResultTableViewController.m */,
+				0321418917C0A94D002BBA9E /* WTSearchResultTableViewController.xib */,
 				03BA1D1517BF6A580040712F /* WTSearchHistoryCell.h */,
 				03BA1D1617BF6A580040712F /* WTSearchHistoryCell.m */,
 				03BA1D1717BF6A580040712F /* WTSearchHistoryCell.xib */,
 				03BA1D1017BF6A0B0040712F /* WTSearchHistoryView.h */,
 				03BA1D1117BF6A0B0040712F /* WTSearchHistoryView.m */,
 				03BA1D1217BF6A0B0040712F /* WTSearchHistoryView.xib */,
+				0321418217C0A78D002BBA9E /* WESearchResultAvatarCell.h */,
+				0321418317C0A78D002BBA9E /* WESearchResultAvatarCell.m */,
+				0321418517C0A840002BBA9E /* WESearchResultAvatarCell.xib */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -1719,6 +1738,8 @@
 		E47D58D617B731EA00D55EC7 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				0321418C17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.h */,
+				0321418D17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m */,
 				034267E617B8D926000248C2 /* WTCoreDataTableViewController.h */,
 				034267E717B8D926000248C2 /* WTCoreDataTableViewController.m */,
 				E40A64CE17B733A500082B4F /* WTRootTabBarController.h */,
@@ -2025,6 +2046,8 @@
 				E4511F3A17BFA3D6005494C1 /* WEFriendListViewController.xib in Resources */,
 				E4511F4217BFA4C2005494C1 /* WEFriendHeadCell.xib in Resources */,
 				E4910BF617C0881A00DD9DCC /* WEFriendListHeaderView.xib in Resources */,
+				0321418617C0A840002BBA9E /* WESearchResultAvatarCell.xib in Resources */,
+				0321418B17C0A94D002BBA9E /* WTSearchResultTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2183,6 +2206,9 @@
 				E4511F4017BFA4A5005494C1 /* WEFriendHeadCell.m in Sources */,
 				E4910BF117C080C900DD9DCC /* NSString+NaturlLanguage.m in Sources */,
 				E4910BF417C0877900DD9DCC /* WEFriendListHeaderView.m in Sources */,
+				0321418417C0A78D002BBA9E /* WESearchResultAvatarCell.m in Sources */,
+				0321418A17C0A94D002BBA9E /* WTSearchResultTableViewController.m in Sources */,
+				0321418E17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
