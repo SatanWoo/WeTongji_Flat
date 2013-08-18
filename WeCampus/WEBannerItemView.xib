@@ -93,6 +93,7 @@
 								<string key="NSFrame">{{10, 89}, {300, 18}}</string>
 								<reference key="NSSuperview" ref="815818582"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="1019875502">
 									<int key="NSColorSpace">3</int>
@@ -134,7 +135,7 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC41Mjk2MDA3OTkxIDAuNTI5NjY1NzY4MSAwLjUyOTU1NjI3NDQAA</bytes>
 						</object>
-						<float key="IBUIAlpha">0.80000001192092896</float>
+						<float key="IBUIAlpha">0.5</float>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
