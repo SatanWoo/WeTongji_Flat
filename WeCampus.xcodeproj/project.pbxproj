@@ -17,6 +17,8 @@
 		0321418E17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321418D17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m */; };
 		0321419317C0C904002BBA9E /* WESettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321419117C0C904002BBA9E /* WESettingViewController.m */; };
 		0321419417C0C904002BBA9E /* WESettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321419217C0C904002BBA9E /* WESettingViewController.xib */; };
+		0321419917C0CD67002BBA9E /* WEAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321419717C0CD66002BBA9E /* WEAboutViewController.m */; };
+		0321419A17C0CD67002BBA9E /* WEAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321419817C0CD67002BBA9E /* WEAboutViewController.xib */; };
 		033729BF17B67D7600D2EC9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729BE17B67D7600D2EC9F /* UIKit.framework */; };
 		033729C117B67D7600D2EC9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C017B67D7600D2EC9F /* Foundation.framework */; };
 		033729C317B67D7600D2EC9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C217B67D7600D2EC9F /* CoreGraphics.framework */; };
@@ -394,6 +396,9 @@
 		0321419017C0C904002BBA9E /* WESettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESettingViewController.h; sourceTree = "<group>"; };
 		0321419117C0C904002BBA9E /* WESettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESettingViewController.m; sourceTree = "<group>"; };
 		0321419217C0C904002BBA9E /* WESettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESettingViewController.xib; sourceTree = "<group>"; };
+		0321419617C0CD66002BBA9E /* WEAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEAboutViewController.h; sourceTree = "<group>"; };
+		0321419717C0CD66002BBA9E /* WEAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEAboutViewController.m; sourceTree = "<group>"; };
+		0321419817C0CD67002BBA9E /* WEAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEAboutViewController.xib; sourceTree = "<group>"; };
 		033729BB17B67D7600D2EC9F /* WeCampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCampus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033729BE17B67D7600D2EC9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		033729C017B67D7600D2EC9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -914,6 +919,9 @@
 				0321419017C0C904002BBA9E /* WESettingViewController.h */,
 				0321419117C0C904002BBA9E /* WESettingViewController.m */,
 				0321419217C0C904002BBA9E /* WESettingViewController.xib */,
+				0321419617C0CD66002BBA9E /* WEAboutViewController.h */,
+				0321419717C0CD66002BBA9E /* WEAboutViewController.m */,
+				0321419817C0CD67002BBA9E /* WEAboutViewController.xib */,
 			);
 			name = "Setting & About";
 			sourceTree = "<group>";
@@ -2065,6 +2073,7 @@
 				0321418617C0A840002BBA9E /* WESearchResultAvatarCell.xib in Resources */,
 				0321418B17C0A94D002BBA9E /* WTSearchResultTableViewController.xib in Resources */,
 				0321419417C0C904002BBA9E /* WESettingViewController.xib in Resources */,
+				0321419A17C0CD67002BBA9E /* WEAboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2227,6 +2236,7 @@
 				0321418A17C0A94D002BBA9E /* WTSearchResultTableViewController.m in Sources */,
 				0321418E17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m in Sources */,
 				0321419317C0C904002BBA9E /* WESettingViewController.m in Sources */,
+				0321419917C0CD67002BBA9E /* WEAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

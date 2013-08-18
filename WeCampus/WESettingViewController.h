@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+- (IBAction)didClickSeeAboutButton:(id)sender;
 @end
