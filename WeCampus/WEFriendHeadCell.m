@@ -36,12 +36,36 @@
     return self;
 }
 
++ (WEFriendHeadCell *)createFriendCellWithUser:(User *)user
+{
+    WEFriendHeadCell *cell = [[[NSBundle mainBundle]loadNibNamed:@"WEFriendHeadCell" owner:self options:nil] lastObject];
+    [cell configureWithUser:user];
+    return cell;
+}
+
++ (WEFriendHeadCell *)createFriendCellWithOrg:(Organization *)org
+{
+    WEFriendHeadCell *cell = [[[NSBundle mainBundle]loadNibNamed:@"WEFriendHeadCell" owner:self options:nil] lastObject];
+    [cell configureWithOrg:org];
+    return cell;
+}
+
+- (void)configureWithOrg:(Organization *)org
+{
+    [self configureCellWithImage:org.avatar andName:org.name];
+}
+
 - (void)configureWithUser:(User*)user
+{
+    [self configureCellWithImage:user.avatar andName:user.name];
+}
+
+- (void)configureCellWithImage:(NSString *)imgURL andName:(NSString *)name
 {
     self.avatarImageView.layer.masksToBounds = YES;
     self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.height / 2;
-    [self.avatarImageView loadImageWithImageURLString:user.avatar];
-    self.nameLabel.text = user.name;
+    [self.avatarImageView loadImageWithImageURLString:imgURL];
+    self.nameLabel.text = name;
 }
 
 /*

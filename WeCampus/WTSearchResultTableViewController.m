@@ -151,8 +151,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *vc = [super detailViewControllerForIndexPath:indexPath];
-//    if (vc)
-//        [self.delegate wantToPushViewController:vc];
+    if (vc)
+        [self.delegate wantToPushViewController:vc];
 }
 
 @end

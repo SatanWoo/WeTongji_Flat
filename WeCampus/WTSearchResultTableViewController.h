@@ -9,10 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "WTShowAllKindsOfCellsViewController.h"
 
+@protocol WTSearchResultTableViewControllerDelegate <NSObject>
+
+- (void)wantToPushViewController:(UIViewController *)vc;
+
+@end
+
 @interface WTSearchResultTableViewController : WTShowAllKindsOfCellsViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, copy, readonly) NSString *searchKeyword;
+@property (nonatomic, weak) id<WTSearchResultTableViewControllerDelegate> delegate;
 
 
 + (WTSearchResultTableViewController *)createViewControllerWithSearchKeyword:(NSString *)keyword

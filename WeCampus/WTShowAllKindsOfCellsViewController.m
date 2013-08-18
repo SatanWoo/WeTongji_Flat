@@ -21,7 +21,8 @@
 #import "WEActivityDetailViewController.h"
 
 @interface WTShowAllKindsOfCellsViewController ()
-
+@property (nonatomic, strong) WESearchResultAvatarCell *userAvatarCell;
+@property (nonatomic, strong) WESearchResultAvatarCell *orgAvatarCell;
 @end
 
 @implementation WTShowAllKindsOfCellsViewController
@@ -38,7 +39,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
@@ -58,11 +58,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     if ([object isKindOfClass:[Activity class]])
-        return kWEActivityCell;
+        return kWEActivityCellHeight;
     else if ([object isKindOfClass:[Organization class]])
-        return 78.0f;
+        return kWESearchAvatarCellHeight;
     else if ([object isKindOfClass:[User class]])
-        return 78.0f;
+        return kWESearchAvatarCellHeight;
     else
         return 0;
 }

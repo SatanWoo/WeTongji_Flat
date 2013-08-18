@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LikeableObject+Addition.h"
+
+#define kWESearchAvatarCellHeight 100
 
 @interface WESearchResultAvatarCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *avatarContainerView;
+
+- (void)configureWithObject:(LikeableObject *)object;
 
 @end
