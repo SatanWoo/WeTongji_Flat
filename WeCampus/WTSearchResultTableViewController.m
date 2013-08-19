@@ -97,6 +97,7 @@
         NSArray *userArray = resultDict[@"Users"];
         for (NSDictionary *infoDict in userArray) {
             User *user = [User insertUser:infoDict];
+            NSLog(@"user is %@", user.name);
             [user setObjectHeldByHolder:[self class]];
         }
     } failureBlock:^(NSError *error) {

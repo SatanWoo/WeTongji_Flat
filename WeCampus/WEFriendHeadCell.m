@@ -16,20 +16,20 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"WEFriendHeadCell" owner:self options:nil];
-        
-        if ([arrayOfViews count] < 1) {
-            return nil;
-        }
-        
-        if (![[arrayOfViews objectAtIndex:0] isKindOfClass:[UICollectionViewCell class]]) {
-            return nil;
-        }
-        
-        self = [arrayOfViews objectAtIndex:0];
-        
-        self.avatarImageView = (UIImageView*)[self viewWithTag:1];
-        self.nameLabel = (UILabel*)[self viewWithTag:2];
+//        NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"WEFriendHeadCell" owner:self options:nil];
+//        
+//        if ([arrayOfViews count] < 1) {
+//            return nil;
+//        }
+//        
+//        if (![[arrayOfViews objectAtIndex:0] isKindOfClass:[UICollectionViewCell class]]) {
+//            return nil;
+//        }
+//        
+//        self = [arrayOfViews objectAtIndex:0];
+//        
+//        self.avatarImageView = (UIImageView*)[self viewWithTag:1];
+//        self.nameLabel = (UILabel*)[self viewWithTag:2];
         
         // Initialization code
     }
