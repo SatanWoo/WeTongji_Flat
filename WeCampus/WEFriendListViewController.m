@@ -42,6 +42,8 @@
     [self.collectionView registerClass:[WEFriendListHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"WEFriendListHeaderView"];
     
     [self logIn];
+    
+    self.collectionView.allowsMultipleSelection = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,6 +61,10 @@
     {
         User *user = [User insertUser:[responseData objectForKey:@"User"]];
         [WTCoreDataManager sharedManager].currentUser = user;
+        if(!self.friendOfPerson)
+        {
+            self.friendOfPerson = user;
+        }
         [self loadMoreDataWithSuccessBlock:nil failureBlock:nil];
         
     } failureBlock:^(NSError * error) {
@@ -89,9 +95,9 @@
         
     }];
     //if ([WTCoreDataManager sharedManager].currentUser == self.user)
-    [request getFriendsList];
+    //[request getFriendsList];
     //else
-    //    [request getFriendsOfUser:self.user.identifier];
+    [request getFriendsOfUser:self.friendOfPerson.identifier];
     [[WTClient sharedClient] enqueueRequest:request];
 }
 
@@ -143,7 +149,17 @@
     friendDict = firstLetters;
 }
 
-
+- (NSArray*)selectedUsers
+{
+    NSMutableArray *arr = [@[] mutableCopy];
+    NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
+    for(NSIndexPath *indexPath in indexPaths)
+    {
+        WEFriendHeadCell *cell = (WEFriendHeadCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+        [arr addObject:cell.user];
+    }
+    return arr;
+}
 
 #pragma mark UICollectionView Datasource
 
@@ -178,6 +194,13 @@
         return v;
     }
     return nil;
+}
+
+#pragma mark UICollectionView Delegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    WEFriendHeadCell *cell = (WEFriendHeadCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    [self.delegate WEFriendListViewController:self didSelectUser:cell.user];
 }
 
 @end

@@ -13,7 +13,7 @@
 @interface WEFriendHeadCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
+@property (retain,nonatomic,readonly) User *user;
 - (void)configureWithUser:(User*)user;
 + (WEFriendHeadCell *)createFriendCellWithUser:(User *)user;
 + (WEFriendHeadCell *)createFriendCellWithOrg:(Organization *)org;

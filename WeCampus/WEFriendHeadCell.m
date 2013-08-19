@@ -57,6 +57,7 @@
 
 - (void)configureWithUser:(User*)user
 {
+    _user = user;
     [self configureCellWithImage:user.avatar andName:user.name];
 }
 

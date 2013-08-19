@@ -8,7 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@class User;
+@class WEFriendListViewController;
+
+@protocol WEFriendListViewControllerDelegate <NSObject>
+
+- (void)WEFriendListViewController:(WEFriendListViewController*)vc didSelectUser:(User*)user;
+
+@end
+
+
 @interface WEFriendListViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (retain,nonatomic) User *friendOfPerson;
+@property (nonatomic,assign) id<WEFriendListViewControllerDelegate> delegate;
+
+- (NSArray*)selectedUsers;
 
 @end
