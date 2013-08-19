@@ -84,6 +84,8 @@
 		03BA1D2417BF6EBF0040712F /* WESearchRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D2217BF6EBF0040712F /* WESearchRootViewController.xib */; };
 		03BA1D2817BF7B210040712F /* WTSearchDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA1D2617BF7B210040712F /* WTSearchDefaultViewController.m */; };
 		03BA1D2917BF7B210040712F /* WTSearchDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */; };
+		03E37DB617C207E2008029D5 /* search_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB417C207E2008029D5 /* search_arrow.png */; };
+		03E37DB717C207E2008029D5 /* search_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB517C207E2008029D5 /* search_arrow@2x.png */; };
 		03E8B60817B7890D00AC12C8 /* WENavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */; };
 		03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */; };
 		03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */; };
@@ -510,6 +512,8 @@
 		03BA1D2517BF7B200040712F /* WTSearchDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSearchDefaultViewController.h; sourceTree = "<group>"; };
 		03BA1D2617BF7B210040712F /* WTSearchDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSearchDefaultViewController.m; sourceTree = "<group>"; };
 		03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSearchDefaultViewController.xib; sourceTree = "<group>"; };
+		03E37DB417C207E2008029D5 /* search_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_arrow.png; sourceTree = "<group>"; };
+		03E37DB517C207E2008029D5 /* search_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_arrow@2x.png"; sourceTree = "<group>"; };
 		03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENavigationViewController.h; sourceTree = "<group>"; };
 		03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENavigationViewController.m; sourceTree = "<group>"; };
 		03E8B60917B789AA00AC12C8 /* WEHomeNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHomeNavigationViewController.h; sourceTree = "<group>"; };
@@ -1607,6 +1611,8 @@
 		E458B0C317B754C100D0DFBD /* 搜索 */ = {
 			isa = PBXGroup;
 			children = (
+				03E37DB417C207E2008029D5 /* search_arrow.png */,
+				03E37DB517C207E2008029D5 /* search_arrow@2x.png */,
 				E458B0C417B754C100D0DFBD /* cancel_btn.png */,
 				E458B0C517B754C100D0DFBD /* cancel_btn@2x.png */,
 				E458B0C617B754C100D0DFBD /* history_icon.png */,
@@ -2082,6 +2088,8 @@
 				0321418B17C0A94D002BBA9E /* WTSearchResultTableViewController.xib in Resources */,
 				0321419417C0C904002BBA9E /* WESettingViewController.xib in Resources */,
 				0321419A17C0CD67002BBA9E /* WEAboutViewController.xib in Resources */,
+				03E37DB617C207E2008029D5 /* search_arrow.png in Resources */,
+				03E37DB717C207E2008029D5 /* search_arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
