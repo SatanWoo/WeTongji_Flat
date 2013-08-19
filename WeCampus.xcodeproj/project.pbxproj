@@ -86,6 +86,8 @@
 		03BA1D2917BF7B210040712F /* WTSearchDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */; };
 		03E37DB617C207E2008029D5 /* search_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB417C207E2008029D5 /* search_arrow.png */; };
 		03E37DB717C207E2008029D5 /* search_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB517C207E2008029D5 /* search_arrow@2x.png */; };
+		03E37DBA17C20EF9008029D5 /* WESearchResultHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E37DB917C20EF9008029D5 /* WESearchResultHeaderView.m */; };
+		03E37DBC17C2106F008029D5 /* WESearchResultHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DBB17C2106F008029D5 /* WESearchResultHeaderView.xib */; };
 		03E8B60817B7890D00AC12C8 /* WENavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */; };
 		03E8B60B17B789AA00AC12C8 /* WEHomeNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60A17B789AA00AC12C8 /* WEHomeNavigationViewController.m */; };
 		03E8B60E17B78B3F00AC12C8 /* WERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8B60D17B78B3F00AC12C8 /* WERootViewController.m */; };
@@ -514,6 +516,9 @@
 		03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSearchDefaultViewController.xib; sourceTree = "<group>"; };
 		03E37DB417C207E2008029D5 /* search_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_arrow.png; sourceTree = "<group>"; };
 		03E37DB517C207E2008029D5 /* search_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_arrow@2x.png"; sourceTree = "<group>"; };
+		03E37DB817C20EF9008029D5 /* WESearchResultHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultHeaderView.h; sourceTree = "<group>"; };
+		03E37DB917C20EF9008029D5 /* WESearchResultHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESearchResultHeaderView.m; sourceTree = "<group>"; };
+		03E37DBB17C2106F008029D5 /* WESearchResultHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESearchResultHeaderView.xib; sourceTree = "<group>"; };
 		03E8B60617B7890D00AC12C8 /* WENavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENavigationViewController.h; sourceTree = "<group>"; };
 		03E8B60717B7890D00AC12C8 /* WENavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENavigationViewController.m; sourceTree = "<group>"; };
 		03E8B60917B789AA00AC12C8 /* WEHomeNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHomeNavigationViewController.h; sourceTree = "<group>"; };
@@ -1204,6 +1209,9 @@
 				03BA1D1017BF6A0B0040712F /* WTSearchHistoryView.h */,
 				03BA1D1117BF6A0B0040712F /* WTSearchHistoryView.m */,
 				03BA1D1217BF6A0B0040712F /* WTSearchHistoryView.xib */,
+				03E37DB817C20EF9008029D5 /* WESearchResultHeaderView.h */,
+				03E37DB917C20EF9008029D5 /* WESearchResultHeaderView.m */,
+				03E37DBB17C2106F008029D5 /* WESearchResultHeaderView.xib */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -2090,6 +2098,7 @@
 				0321419A17C0CD67002BBA9E /* WEAboutViewController.xib in Resources */,
 				03E37DB617C207E2008029D5 /* search_arrow.png in Resources */,
 				03E37DB717C207E2008029D5 /* search_arrow@2x.png in Resources */,
+				03E37DBC17C2106F008029D5 /* WESearchResultHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2253,6 +2262,7 @@
 				0321418E17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m in Sources */,
 				0321419317C0C904002BBA9E /* WESettingViewController.m in Sources */,
 				0321419917C0CD67002BBA9E /* WEAboutViewController.m in Sources */,
+				03E37DBA17C20EF9008029D5 /* WESearchResultHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

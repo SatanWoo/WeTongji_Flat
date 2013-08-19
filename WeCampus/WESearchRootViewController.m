@@ -69,11 +69,16 @@
     [self.resultContainerView addSubview:self.defaultViewController.view];
 }
 
-- (void)updateSearchResultViewForSearchKeyword:(NSString *)keyword searchCategory:(NSInteger)category {
+- (void)clearSearchResultView
+{
     if (self.resultViewController) {
         [self.resultViewController.view removeFromSuperview];
         self.resultViewController = nil;
     }
+}
+
+- (void)updateSearchResultViewForSearchKeyword:(NSString *)keyword searchCategory:(NSInteger)category {
+    [self clearSearchResultView];
     
     WTSearchResultTableViewController *vc = [WTSearchResultTableViewController createViewControllerWithSearchKeyword:keyword searchCategory:0];
     self.resultViewController = vc;
@@ -86,6 +91,8 @@
 #pragma mark - UITextFieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    [self clearSearchResultView];
+    
     [UIView animateWithDuration:0.5f animations:^{
         [self.textFieldContainerView resetWidth:kSearchbarEditinWidth];
         [self.cancelButton resetOriginX:kCancelButtonAppearX];

@@ -16,6 +16,7 @@
 #import "Object+Addition.h"
 #import "Controller+Addition.h"
 #import "User+Addition.h"
+#import "WESearchResultHeaderView.h"
 
 @interface WTSearchResultTableViewController ()
 
@@ -132,23 +133,13 @@
 
 #pragma mark - UITableViewDelegate
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WTTableViewSectionBg"]];
-//    CGFloat sectionHeaderHeight = 24.0f;
-//    
-//    NSString *sectionName = NSLocalizedString([self.fetchedResultsController.sections[section] name], nil);
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 0, tableView.bounds.size.width, sectionHeaderHeight)];
-//    label.text = sectionName;
-//    label.font = [UIFont boldSystemFontOfSize:12.0f];
-//    label.textColor = WTSectionHeaderViewGrayColor;
-//    label.backgroundColor = [UIColor clearColor];
-//    
-//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, sectionHeaderHeight)];
-//    [headerView addSubview:bgImageView];
-//    [headerView addSubview:label];
-//    
-//    return headerView;
-//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    NSString *sectionName = NSLocalizedString([self.fetchedResultsController.sections[section] name], nil);    
+    NSInteger count = [self.fetchedResultsController.sections[section] numberOfObjects];
+    
+    WESearchResultHeaderView *headerView = [WESearchResultHeaderView createSearchResultHeaderViewWithName:[NSString stringWithFormat:@"%@(%d)", sectionName, count]];
+    return headerView;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *vc = [super detailViewControllerForIndexPath:indexPath];
