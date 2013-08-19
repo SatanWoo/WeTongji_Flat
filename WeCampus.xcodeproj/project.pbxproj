@@ -34,6 +34,7 @@
 		033E1FC717B69EAA00009FDE /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FBF17B69EAA00009FDE /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		033E1FC817B69EAA00009FDE /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FC117B69EAA00009FDE /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		033E1FC917B69EAA00009FDE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FC317B69EAA00009FDE /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		03400AA517C2979B000937B7 /* bg_unit.png in Resources */ = {isa = PBXBuildFile; fileRef = 03400AA417C2979B000937B7 /* bg_unit.png */; };
 		0341648117B7B425005CFD98 /* WEBannerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0341648017B7B425005CFD98 /* WEBannerContainerView.m */; };
 		0341648317B7B48A005CFD98 /* WEBannerContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341648217B7B48A005CFD98 /* WEBannerContainerView.xib */; };
 		0341648717B7B8E0005CFD98 /* WEBannerItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0341648617B7B8E0005CFD98 /* WEBannerItemView.m */; };
@@ -437,6 +438,7 @@
 		033E1FC117B69EAA00009FDE /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		033E1FC217B69EAA00009FDE /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		033E1FC317B69EAA00009FDE /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		03400AA417C2979B000937B7 /* bg_unit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_unit.png; sourceTree = "<group>"; };
 		0341647F17B7B425005CFD98 /* WEBannerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEBannerContainerView.h; sourceTree = "<group>"; };
 		0341648017B7B425005CFD98 /* WEBannerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEBannerContainerView.m; sourceTree = "<group>"; };
 		0341648217B7B48A005CFD98 /* WEBannerContainerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEBannerContainerView.xib; sourceTree = "<group>"; };
@@ -1526,6 +1528,7 @@
 		E458B07717B754C100D0DFBD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				03400AA417C2979B000937B7 /* bg_unit.png */,
 				E4DE121217BE17D000651486 /* keys */,
 				0320CCCB17BD5E6E005B2110 /* green_point.png */,
 				034164E217B7DAD8005CFD98 /* 参考图 */,
@@ -2151,6 +2154,7 @@
 				E4910C0417C261D000DD9DCC /* WECourseDetailControlAreaView.xib in Resources */,
 				E4910C0617C261D000DD9DCC /* WECourseDetailHeaderView.xib in Resources */,
 				E4910C0C17C264BE00DD9DCC /* WECourseDetailViewController.xib in Resources */,
+				03400AA517C2979B000937B7 /* bg_unit.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
