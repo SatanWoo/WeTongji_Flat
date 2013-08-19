@@ -22,10 +22,13 @@
 #import "WEActivityDetailViewController.h"
 
 #define kActivitySection 2
+#define kOrgSection 1
+#define kUserSection 0
 
 @interface WTShowAllKindsOfCellsViewController ()
 //@property (nonatomic, strong) WESearchResultAvatarCell *userAvatarCell;
 //@property (nonatomic, strong) WESearchResultAvatarCell *orgAvatarCell;
+
 @end
 
 @implementation WTShowAllKindsOfCellsViewController
@@ -90,11 +93,34 @@
     }  else if ([object isKindOfClass:[Organization class]]) {
         if (indexPath.row > 0) return;
         WESearchResultAvatarCell *orgCell = (WESearchResultAvatarCell *)cell;
-        [orgCell configureWithObject:(LikeableObject *)object];
+        [self configureWithOrgs:orgCell];
+        //[orgCell configureWithObject:(LikeableObject *)object];
     } else if ([object isKindOfClass:[User class]]) {
         if (indexPath.row > 0) return;
         WESearchResultAvatarCell *userCell = (WESearchResultAvatarCell *)cell;
         [userCell configureWithObject:(LikeableObject *)object];
+    }
+}
+
+- (void)configureWithUsers:(WESearchResultAvatarCell *)cell
+{
+    if ([self.fetchedResultsController.sections count] > kUserSection) {
+        NSInteger userNumber = [self.fetchedResultsController.sections[kUserSection] numberOfObjects];
+        for (int i = 0; i < userNumber; i++) {
+            User *user = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:kUserSection]];
+            [cell configureWithObject:user];
+        }
+    }
+}
+
+- (void)configureWithOrgs:(WESearchResultAvatarCell *)cell
+{
+    if ([self.fetchedResultsController.sections count] > kOrgSection) {
+        NSInteger Number = [self.fetchedResultsController.sections[kOrgSection] numberOfObjects];
+        for (int i = 0; i < Number; i++) {
+            Organization *org = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:kOrgSection]];
+            [cell configureWithObject:org];
+        }
     }
 }
 

@@ -68,14 +68,18 @@
     
     [self clearAllAvatars];
     
+    int i = 0;
     for (LikeableObject *object in self.avatars) {
         if ([object isKindOfClass:[Organization class]]) {
             WEFriendHeadCell *cell = [WEFriendHeadCell createFriendCellWithOrg:(Organization *)object];
+            [cell resetOriginX:i * cell.frame.size.width];
             [self.avatarContainerView addSubview:cell];
         } else {
             WEFriendHeadCell *cell = [WEFriendHeadCell createFriendCellWithUser:(User *)object];
+            [cell resetOriginX:i * cell.frame.size.width];
             [self.avatarContainerView addSubview:cell];
         }
+        i ++;
     }
 }
 
