@@ -84,7 +84,6 @@
         NSArray *userArray = resultDict[@"Users"];
         for (NSDictionary *infoDict in userArray) {
             User *user = [User insertUser:infoDict];
-            NSLog(@"user is %@", user.name);
             [user setObjectHeldByHolder:[self class]];
         }
     } failureBlock:^(NSError *error) {
@@ -133,5 +132,24 @@
         [self.delegate wantToPushViewController:vc];
 }
 
+- (float)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return kWESearchResultHeaderViewHeight;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat sectionHeaderHeight = kWESearchResultHeaderViewHeight;
+    if (scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y >= 0) {
+        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+    } else if (scrollView.contentOffset.y >= sectionHeaderHeight) {
+        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+    }
+}
 
 @end

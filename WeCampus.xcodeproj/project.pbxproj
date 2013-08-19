@@ -35,6 +35,8 @@
 		033E1FC817B69EAA00009FDE /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FC117B69EAA00009FDE /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		033E1FC917B69EAA00009FDE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FC317B69EAA00009FDE /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		03400AA517C2979B000937B7 /* bg_unit.png in Resources */ = {isa = PBXBuildFile; fileRef = 03400AA417C2979B000937B7 /* bg_unit.png */; };
+		03400AAD17C2A8E4000937B7 /* WESeeMoreObjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03400AAC17C2A8E4000937B7 /* WESeeMoreObjectCell.m */; };
+		03400AAF17C2A8F9000937B7 /* WESeeMoreObjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03400AAE17C2A8F9000937B7 /* WESeeMoreObjectCell.xib */; };
 		0341648117B7B425005CFD98 /* WEBannerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0341648017B7B425005CFD98 /* WEBannerContainerView.m */; };
 		0341648317B7B48A005CFD98 /* WEBannerContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341648217B7B48A005CFD98 /* WEBannerContainerView.xib */; };
 		0341648717B7B8E0005CFD98 /* WEBannerItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0341648617B7B8E0005CFD98 /* WEBannerItemView.m */; };
@@ -439,6 +441,9 @@
 		033E1FC217B69EAA00009FDE /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		033E1FC317B69EAA00009FDE /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		03400AA417C2979B000937B7 /* bg_unit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_unit.png; sourceTree = "<group>"; };
+		03400AAB17C2A8E3000937B7 /* WESeeMoreObjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESeeMoreObjectCell.h; sourceTree = "<group>"; };
+		03400AAC17C2A8E4000937B7 /* WESeeMoreObjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESeeMoreObjectCell.m; sourceTree = "<group>"; };
+		03400AAE17C2A8F9000937B7 /* WESeeMoreObjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESeeMoreObjectCell.xib; sourceTree = "<group>"; };
 		0341647F17B7B425005CFD98 /* WEBannerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEBannerContainerView.h; sourceTree = "<group>"; };
 		0341648017B7B425005CFD98 /* WEBannerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEBannerContainerView.m; sourceTree = "<group>"; };
 		0341648217B7B48A005CFD98 /* WEBannerContainerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEBannerContainerView.xib; sourceTree = "<group>"; };
@@ -1267,6 +1272,9 @@
 				0321418217C0A78D002BBA9E /* WESearchResultAvatarCell.h */,
 				0321418317C0A78D002BBA9E /* WESearchResultAvatarCell.m */,
 				0321418517C0A840002BBA9E /* WESearchResultAvatarCell.xib */,
+				03400AAB17C2A8E3000937B7 /* WESeeMoreObjectCell.h */,
+				03400AAC17C2A8E4000937B7 /* WESeeMoreObjectCell.m */,
+				03400AAE17C2A8F9000937B7 /* WESeeMoreObjectCell.xib */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -2155,6 +2163,7 @@
 				E4910C0617C261D000DD9DCC /* WECourseDetailHeaderView.xib in Resources */,
 				E4910C0C17C264BE00DD9DCC /* WECourseDetailViewController.xib in Resources */,
 				03400AA517C2979B000937B7 /* bg_unit.png in Resources */,
+				03400AAF17C2A8F9000937B7 /* WESeeMoreObjectCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2323,6 +2332,7 @@
 				E4910C0317C261D000DD9DCC /* WECourseDetailControlAreaView.m in Sources */,
 				E4910C0517C261D000DD9DCC /* WECourseDetailHeaderView.m in Sources */,
 				E4910C0B17C264BE00DD9DCC /* WECourseDetailViewController.m in Sources */,
+				03400AAD17C2A8E4000937B7 /* WESeeMoreObjectCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

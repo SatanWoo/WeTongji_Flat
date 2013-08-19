@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#define kWESearchResultHeaderViewHeight 25
 
 @interface WESearchResultHeaderView : UIView
 
-+ (WESearchResultHeaderView *)createSearchResultHeaderViewWithName:(NSString *)name;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
++ (WESearchResultHeaderView *)createSearchResultHeaderViewWithName:(NSString *)name;
 
 @end

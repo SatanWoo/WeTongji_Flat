@@ -79,11 +79,4 @@
     }
 }
 
-- (void)setFrame:(CGRect)frame
-{
-    frame.origin.x += 2;
-    //frame.size.width = ;
-    [super setFrame:frame];
-}
-
 @end

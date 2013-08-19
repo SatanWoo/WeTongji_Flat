@@ -17,8 +17,11 @@
 
 #import "WEActivityCell.h"
 #import "WESearchResultAvatarCell.h"
+#import "WESeeMoreObjectCell.h"
 
 #import "WEActivityDetailViewController.h"
+
+#define kActivitySection 2
 
 @interface WTShowAllKindsOfCellsViewController ()
 @property (nonatomic, strong) WESearchResultAvatarCell *userAvatarCell;
@@ -41,9 +44,53 @@
     [super viewDidLoad];
 }
 
+#pragma mark - Pay Attention
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSInteger numberOfRows = [self.fetchedResultsController.sections[indexPath.section] numberOfObjects];
+    if (indexPath.row >= numberOfRows)
+        return nil;
+    
+    Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    NSString *name = [self customCellClassNameAtIndexPath:indexPath];
+    
+    NSString *cellIdentifier = name ? name : @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        if (name) {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:[self customCellClassNameAtIndexPath:indexPath] owner:self options:nil];
+            cell = nib[0];
+        }
+        else {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+    }
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSInteger number = [self.fetchedResultsController.sections[section] numberOfObjects];
+//    if (section == kActivitySection) {
+//        if (number <= 3) return number;
+//        else return 4;
+//    }
+    return number;
+}
+
+#pragma mark - normal
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    if ([cell isKindOfClass:[WESeeMoreObjectCell class]]) return;
+    
     Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     if ([object isKindOfClass:[Activity class]]) {
+        
+        if (indexPath.row > 3) return;
         WEActivityCell *activityCell = (WEActivityCell *)cell;
         [activityCell configureCellWithActivity:(Activity *)object];
     }  else if ([object isKindOfClass:[Organization class]]) {
@@ -57,25 +104,36 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    if ([object isKindOfClass:[Activity class]])
-        return kWEActivityCellHeight;
-    else if ([object isKindOfClass:[Organization class]])
+    if ([object isKindOfClass:[Activity class]]) {
+        if (indexPath.row <= 2)
+            return kWEActivityCellHeight;
+        else if (indexPath.row == 3)
+            return kWESeeMoreObjectCellHeight;
+        else
+            return 0;
+    } else if ([object isKindOfClass:[Organization class]]) {
+            return kWESearchAvatarCellHeight;
+    } else if ([object isKindOfClass:[User class]]) {
         return kWESearchAvatarCellHeight;
-    else if ([object isKindOfClass:[User class]])
-        return kWESearchAvatarCellHeight;
-    else
+    } else
         return 0;
 }
 
 - (NSString *)customCellClassNameAtIndexPath:(NSIndexPath *)indexPath {
     Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    if ([object isKindOfClass:[Activity class]])
-        return @"WEActivityCell";
-    else if ([object isKindOfClass:[Organization class]])
+    if ([object isKindOfClass:[Activity class]]) {
+        if (indexPath.row <= 2) {
+            return @"WEActivityCell";
+        } else if (indexPath.row == 3){
+            return @"WESeeMoreObjectCell";
+        } else {
+            return nil;
+        }
+    } else if ([object isKindOfClass:[Organization class]]) {
         return @"WESearchResultAvatarCell";
-    else if ([object isKindOfClass:[User class]])
+    } else if ([object isKindOfClass:[User class]]) {
         return @"WESearchResultAvatarCell";
-    else
+    } else
         return nil;
 }
 
