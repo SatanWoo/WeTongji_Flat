@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WTSearchHistoryViewDelegate <NSObject>
+- (void)didClickHistoryItem:(NSString *)searchKeyword;
+@end
+
 @interface WTSearchHistoryView : UIView <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *maskView;
+@property (weak, nonatomic) id<WTSearchHistoryViewDelegate> delegate;
 
 + (WTSearchHistoryView *)createSearchHistoryView;
 - (void)cover;

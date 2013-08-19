@@ -55,7 +55,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row != CLEAR_HISTORY_CELL_ROW) {
-       // NSDictionary *searchHistoryInfoDict = [[NSUserDefaults standardUserDefaults] getSearchHistoryArray][indexPath.row];
+        NSDictionary *searchHistoryInfoDict = [[NSUserDefaults standardUserDefaults] getSearchHistoryArray][indexPath.row];
+        NSString *keyword = [NSUserDefaults getSearchHistoryKeyword:searchHistoryInfoDict];
+        if (self.delegate) {
+            [self.delegate didClickHistoryItem:keyword];
+        }
     } else {
         [[NSUserDefaults standardUserDefaults] clearAllSearchHistoryItems];
         [tableView reloadData];

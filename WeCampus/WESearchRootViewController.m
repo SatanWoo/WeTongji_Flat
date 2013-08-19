@@ -13,7 +13,7 @@
 #import "NSUserDefaults+WTAddition.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface WESearchRootViewController () <UITextFieldDelegate>
+@interface WESearchRootViewController () <UITextFieldDelegate, WTSearchDefaultViewControllerDelegate>
 @property (strong, nonatomic) WTSearchDefaultViewController *defaultViewController;
 @property (nonatomic, strong) WTSearchResultTableViewController *resultViewController;
 @end
@@ -64,6 +64,7 @@
 
 - (void)configureDefaultView {
     self.defaultViewController = [[WTSearchDefaultViewController alloc] init];
+    self.defaultViewController.delegate = self;
     [self.defaultViewController.view resetHeight:self.resultContainerView.frame.size.height];
     [self.resultContainerView addSubview:self.defaultViewController.view];
 }
@@ -111,5 +112,12 @@
     [self.searchBarTextField endEditing:YES];
     [self.defaultViewController.historyView uncover];
 }
+
+#pragma mark - WTSearchDefaultViewControllerDelegate
+- (void)didClickSearchHistoryItem:(NSString *)keyword
+{
+    [self updateSearchResultViewForSearchKeyword:keyword searchCategory:0];
+}
+
 
 @end
