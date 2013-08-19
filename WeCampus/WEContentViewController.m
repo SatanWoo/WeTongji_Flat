@@ -35,6 +35,7 @@
 {
     [super viewWillAppear:animated];
     [((WEAppDelegate *)[UIApplication sharedApplication].delegate) hideTabbar];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning

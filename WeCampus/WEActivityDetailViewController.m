@@ -65,6 +65,11 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
 }
 
@@ -141,7 +146,7 @@ static bool hasEnterContentMode = false;
 #pragma mark - IBAction
 - (IBAction)popBack:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
