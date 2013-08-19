@@ -34,6 +34,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
     [((WEAppDelegate *)[UIApplication sharedApplication].delegate) showTabbar];
 }
 
@@ -45,14 +46,6 @@
 - (BOOL)shouldHideNavigationBar
 {
     return YES;
-}
-
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    if ([navigationController isKindOfClass:[WENavigationViewController class]]) {
-        WENavigationViewController *vc = (WENavigationViewController *)navigationController;
-        [vc configureNavigationBar];
-    }    
 }
 
 @end

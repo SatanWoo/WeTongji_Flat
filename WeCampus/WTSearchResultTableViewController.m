@@ -16,6 +16,7 @@
 #import "Object+Addition.h"
 #import "Controller+Addition.h"
 #import "User+Addition.h"
+#import "WESearchResultHeaderView.h"
 
 @interface WTSearchResultTableViewController ()
 
@@ -38,9 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
     [self clearSearchResultObjects];
-    
     [self loadSearchResult];
 }
 
@@ -76,18 +75,6 @@
             [activity setObjectHeldByHolder:[self class]];
         }
         
-        NSArray *newsInfoArray = resultDict[@"Information"];
-        for (NSDictionary *infoDict in newsInfoArray) {
-            News *news = [News insertNews:infoDict];
-            [news setObjectHeldByHolder:[self class]];
-        }
-        
-        NSArray *starInfoArray = resultDict[@"Person"];
-        for (NSDictionary *infoDict in starInfoArray) {
-            Star *star = [Star insertStar:infoDict];
-            [star setObjectHeldByHolder:[self class]];
-        }
-        
         NSArray *orgInfoArray = resultDict[@"Accounts"];
         for (NSDictionary *infoDict in orgInfoArray) {
             Organization *org = [Organization insertOrganization:infoDict];
@@ -97,6 +84,7 @@
         NSArray *userArray = resultDict[@"Users"];
         for (NSDictionary *infoDict in userArray) {
             User *user = [User insertUser:infoDict];
+            NSLog(@"user is %@", user.name);
             [user setObjectHeldByHolder:[self class]];
         }
     } failureBlock:^(NSError *error) {
@@ -131,28 +119,19 @@
 
 #pragma mark - UITableViewDelegate
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WTTableViewSectionBg"]];
-//    CGFloat sectionHeaderHeight = 24.0f;
-//    
-//    NSString *sectionName = NSLocalizedString([self.fetchedResultsController.sections[section] name], nil);
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 0, tableView.bounds.size.width, sectionHeaderHeight)];
-//    label.text = sectionName;
-//    label.font = [UIFont boldSystemFontOfSize:12.0f];
-//    label.textColor = WTSectionHeaderViewGrayColor;
-//    label.backgroundColor = [UIColor clearColor];
-//    
-//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, sectionHeaderHeight)];
-//    [headerView addSubview:bgImageView];
-//    [headerView addSubview:label];
-//    
-//    return headerView;
-//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    NSString *sectionName = NSLocalizedString([self.fetchedResultsController.sections[section] name], nil);    
+    NSInteger count = [self.fetchedResultsController.sections[section] numberOfObjects];
+    
+    WESearchResultHeaderView *headerView = [WESearchResultHeaderView createSearchResultHeaderViewWithName:[NSString stringWithFormat:@"%@(%d)", sectionName, count]];
+    return headerView;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *vc = [super detailViewControllerForIndexPath:indexPath];
     if (vc)
         [self.delegate wantToPushViewController:vc];
 }
+
 
 @end

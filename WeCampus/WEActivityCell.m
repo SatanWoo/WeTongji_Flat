@@ -24,6 +24,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        NSLog(@"initWithStyle");
     }
     return self;
 }
@@ -35,6 +36,10 @@
 
 - (void)configureCellWithActivity:(Activity *)activity
 {
+    [self resetWidth:320];
+    self.backgroundColor = [UIColor clearColor];
+    self.backgroundView = [[UIView alloc] init];
+    
     self.titleLabel.text = activity.what;
     self.timeLabel.text = activity.yearMonthDayBeginToEndTimeString;
     self.locationLabel.text = activity.where;
@@ -51,7 +56,6 @@
         self.posterImageView.alpha = 0;
     }
 }
-
 
 #define noImageIconOriginX 17
 #define noImageLabelOriginX 42

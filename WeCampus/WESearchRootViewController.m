@@ -13,7 +13,7 @@
 #import "NSUserDefaults+WTAddition.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface WESearchRootViewController () <UITextFieldDelegate>
+@interface WESearchRootViewController () <UITextFieldDelegate, WTSearchDefaultViewControllerDelegate>
 @property (strong, nonatomic) WTSearchDefaultViewController *defaultViewController;
 @property (nonatomic, strong) WTSearchResultTableViewController *resultViewController;
 @end
@@ -34,6 +34,12 @@
     [super viewDidLoad];
     [self configureSearchBar];
     [self configureDefaultView];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [((WEAppDelegate *)[UIApplication sharedApplication].delegate) hideTabbar];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,15 +64,21 @@
 
 - (void)configureDefaultView {
     self.defaultViewController = [[WTSearchDefaultViewController alloc] init];
+    self.defaultViewController.delegate = self;
     [self.defaultViewController.view resetHeight:self.resultContainerView.frame.size.height];
     [self.resultContainerView addSubview:self.defaultViewController.view];
 }
 
-- (void)updateSearchResultViewForSearchKeyword:(NSString *)keyword searchCategory:(NSInteger)category {
+- (void)clearSearchResultView
+{
     if (self.resultViewController) {
         [self.resultViewController.view removeFromSuperview];
         self.resultViewController = nil;
     }
+}
+
+- (void)updateSearchResultViewForSearchKeyword:(NSString *)keyword searchCategory:(NSInteger)category {
+    [self clearSearchResultView];
     
     WTSearchResultTableViewController *vc = [WTSearchResultTableViewController createViewControllerWithSearchKeyword:keyword searchCategory:0];
     self.resultViewController = vc;
@@ -79,6 +91,8 @@
 #pragma mark - UITextFieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    [self clearSearchResultView];
+    
     [UIView animateWithDuration:0.5f animations:^{
         [self.textFieldContainerView resetWidth:kSearchbarEditinWidth];
         [self.cancelButton resetOriginX:kCancelButtonAppearX];
@@ -105,5 +119,12 @@
     [self.searchBarTextField endEditing:YES];
     [self.defaultViewController.historyView uncover];
 }
+
+#pragma mark - WTSearchDefaultViewControllerDelegate
+- (void)didClickSearchHistoryItem:(NSString *)keyword
+{
+    [self updateSearchResultViewForSearchKeyword:keyword searchCategory:0];
+}
+
 
 @end

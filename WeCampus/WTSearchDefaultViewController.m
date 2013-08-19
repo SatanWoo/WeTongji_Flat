@@ -8,7 +8,7 @@
 
 #import "WTSearchDefaultViewController.h"
 
-@interface WTSearchDefaultViewController ()
+@interface WTSearchDefaultViewController () <WTSearchHistoryViewDelegate>
 
 @property (nonatomic, weak) WTSearchHistoryView *historyView;
 
@@ -31,12 +31,21 @@
 }
 
 #pragma mark - UI methods
-
 - (void)configureSearchHistoryView {
     WTSearchHistoryView *historyView = [WTSearchHistoryView createSearchHistoryView];
+    historyView.delegate = self;
     [historyView resetHeight:self.view.frame.size.height];
     [self.view insertSubview:historyView belowSubview:self.shadowCoverView];
     self.historyView = historyView;
+}
+
+#pragma mark - WTSearchHistoryViewDelegate
+
+- (void)didClickHistoryItem:(NSString *)searchKeyword
+{
+    if (self.delegate) {
+        [self.delegate didClickSearchHistoryItem:searchKeyword];
+    }
 }
 
 @end

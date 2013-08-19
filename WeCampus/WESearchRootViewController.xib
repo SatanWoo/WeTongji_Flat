@@ -44,7 +44,7 @@
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
+						<object class="NSColor" key="IBUIBackgroundColor" id="463279614">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC45MjQ4MjEwMTkyIDAuOTI0OTM0NDQ2OCAwLjkyNDc0MzI5NDcAA</bytes>
 						</object>
@@ -76,10 +76,9 @@
 										<int key="IBUIContentVerticalAlignment">0</int>
 										<string key="IBUIText"/>
 										<string key="IBUIPlaceholder">搜索活动、课程、用户...</string>
-										<object class="NSColor" key="IBUITextColor" id="182734887">
+										<object class="NSColor" key="IBUITextColor">
 											<int key="NSColorSpace">1</int>
-											<bytes key="NSRGB">MCAwIDAAA</bytes>
-											<string key="IBUIColorCocoaTouchKeyPath">darkTextColor</string>
+											<bytes key="NSRGB">MC41Mjk2MDA3OTkxIDAuNTI5NjY1NzY4MSAwLjUyOTU1NjI3NDQAA</bytes>
 										</object>
 										<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 										<float key="IBUIMinimumFontSize">17</float>
@@ -146,7 +145,10 @@
 								<int key="IBUIContentVerticalAlignment">0</int>
 								<string key="IBUINormalTitle">取消</string>
 								<reference key="IBUIHighlightedTitleColor" ref="508930298"/>
-								<reference key="IBUINormalTitleColor" ref="182734887"/>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC41Mjk2MDA3OTkxIDAuNTI5NjY1NzY4MSAwLjUyOTU1NjI3NDQAA</bytes>
+								</object>
 								<object class="NSColor" key="IBUINormalTitleShadowColor">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
@@ -171,10 +173,7 @@
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="792165214"/>
-				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC45MjQ4MjEwMTkyIDAuOTI0OTM0NDQ2OCAwLjkyNDc0MzI5NDcAA</bytes>
-				</object>
+				<reference key="IBUIBackgroundColor" ref="463279614"/>
 				<object class="IBUISimulatedSizeMetrics" key="IBUISimulatedDestinationMetrics">
 					<string key="IBUISimulatedSizeMetricsClass">IBUISimulatedFreeformSizeMetricsSentinel</string>
 					<string key="IBUIDisplayName">Freeform</string>

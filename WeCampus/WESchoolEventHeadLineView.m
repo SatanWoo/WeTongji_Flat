@@ -64,13 +64,13 @@
     NSString *text = self.categoryLabel.text;
   
     if ([text isEqualToString:NSLocalizedString(@"Academics", nil)]) {
-        [self.categoryLabel setTextColor:[UIColor colorWithHue:0.169 saturation:0.86 brightness:0.63 alpha:1]];
+        [self.categoryLabel setTextColor:[UIColor colorWithHue:0.469 saturation:0.86 brightness:0.63 alpha:1]];
     } else if ([text isEqualToString:NSLocalizedString(@"Competition", nil)]){
-        [self.categoryLabel setTextColor:[UIColor colorWithHue:0.28 saturation:0.85 brightness:0.91 alpha:1]];
+        [self.categoryLabel setTextColor:[UIColor colorWithHue:0.078 saturation:0.85 brightness:0.91 alpha:1]];
     } else if ([text isEqualToString:NSLocalizedString(@"Entertainment", nil)]) {
         [self.categoryLabel setTextColor:[UIColor colorWithHue:0 saturation:0.65 brightness:0.92 alpha:1]];
     } else {
-        [self.categoryLabel setTextColor:[UIColor colorWithHue:0.213 saturation:0.92 brightness:0.98 alpha:1]];
+        [self.categoryLabel setTextColor:[UIColor colorWithHue:0.592 saturation:0.92 brightness:0.98 alpha:1]];
     }
 }
 

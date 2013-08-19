@@ -8,7 +8,7 @@
 
 #import "WERootViewController.h"
 
-@interface WEContentViewController : WERootViewController
+@interface WEContentViewController : UIViewController
 
 - (void)configureNavigationBar;
 

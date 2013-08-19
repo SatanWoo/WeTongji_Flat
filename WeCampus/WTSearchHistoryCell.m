@@ -11,8 +11,7 @@
 
 @implementation WTSearchHistoryCell
 
-- (void)configureCellWithIndexPath:(NSIndexPath *)indexPath
-                     searchKeyword:(NSString *)keyword
+- (void)configureCellWithSearchKeyword:(NSString *)keyword
                     searchCategory:(NSInteger)category {
     if (keyword) {
         [self resetNormalLayout:keyword];
@@ -21,10 +20,13 @@
     }
 }
 
+
+#define kDefaultOriginX 47
 - (void)resetNormalLayout:(NSString *)keyword
 {
     self.searchKeywordLabel.text = keyword;
     [self.searchKeywordLabel sizeToFit];
+    [self.searchKeywordLabel resetOriginX:kDefaultOriginX];
     self.searchIconImageView.hidden = NO;
 }
 
