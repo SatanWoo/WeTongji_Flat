@@ -14,8 +14,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *searchIconImageView;
 @property (nonatomic, weak) IBOutlet UILabel *searchKeywordLabel;
 
-- (void)configureCellWithIndexPath:(NSIndexPath *)indexPath
-                     searchKeyword:(NSString *)keyword
+- (void)configureCellWithSearchKeyword:(NSString *)keyword
                     searchCategory:(NSInteger)category;
 
 @end

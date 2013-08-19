@@ -82,17 +82,13 @@
     
     WTSearchHistoryCell *searchHistoryCell = (WTSearchHistoryCell *)cell;
     
-    if (indexPath.row != CLEAR_HISTORY_CELL_ROW) {
+    if (indexPath.row < CLEAR_HISTORY_CELL_ROW) {
         
         NSDictionary *searchHistoryInfoDict = [[NSUserDefaults standardUserDefaults] getSearchHistoryArray][indexPath.row];
-    
-        [searchHistoryCell configureCellWithIndexPath:indexPath
-                                        searchKeyword:[NSUserDefaults getSearchHistoryKeyword:searchHistoryInfoDict]
-                                       searchCategory:[NSUserDefaults getSearchHistoryCategory:searchHistoryInfoDict]];
+        [searchHistoryCell configureCellWithSearchKeyword:[NSUserDefaults getSearchHistoryKeyword:searchHistoryInfoDict] searchCategory:[NSUserDefaults getSearchHistoryCategory:searchHistoryInfoDict]];
+        
     } else {    
-        [searchHistoryCell configureCellWithIndexPath:indexPath
-                                        searchKeyword:nil
-                                       searchCategory:0];
+        [searchHistoryCell configureCellWithSearchKeyword:nil searchCategory:0];
     }
     return cell;
 }

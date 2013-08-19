@@ -44,7 +44,7 @@
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
+						<object class="NSColor" key="IBUIBackgroundColor" id="463279614">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC45MjQ4MjEwMTkyIDAuOTI0OTM0NDQ2OCAwLjkyNDc0MzI5NDcAA</bytes>
 						</object>
@@ -173,10 +173,7 @@
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="792165214"/>
-				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC45MjQ4MjEwMTkyIDAuOTI0OTM0NDQ2OCAwLjkyNDc0MzI5NDcAA</bytes>
-				</object>
+				<reference key="IBUIBackgroundColor" ref="463279614"/>
 				<object class="IBUISimulatedSizeMetrics" key="IBUISimulatedDestinationMetrics">
 					<string key="IBUISimulatedSizeMetricsClass">IBUISimulatedFreeformSizeMetricsSentinel</string>
 					<string key="IBUIDisplayName">Freeform</string>
