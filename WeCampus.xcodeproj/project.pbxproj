@@ -362,6 +362,14 @@
 		E4910BF117C080C900DD9DCC /* NSString+NaturlLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BF017C080C900DD9DCC /* NSString+NaturlLanguage.m */; };
 		E4910BF417C0877900DD9DCC /* WEFriendListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BF317C0877900DD9DCC /* WEFriendListHeaderView.m */; };
 		E4910BF617C0881A00DD9DCC /* WEFriendListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910BF517C0881A00DD9DCC /* WEFriendListHeaderView.xib */; };
+		E4910C0117C261D000DD9DCC /* WECourseDetailContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BF917C261D000DD9DCC /* WECourseDetailContentView.m */; };
+		E4910C0217C261D000DD9DCC /* WECourseDetailContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910BFA17C261D000DD9DCC /* WECourseDetailContentView.xib */; };
+		E4910C0317C261D000DD9DCC /* WECourseDetailControlAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BFC17C261D000DD9DCC /* WECourseDetailControlAreaView.m */; };
+		E4910C0417C261D000DD9DCC /* WECourseDetailControlAreaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910BFD17C261D000DD9DCC /* WECourseDetailControlAreaView.xib */; };
+		E4910C0517C261D000DD9DCC /* WECourseDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BFF17C261D000DD9DCC /* WECourseDetailHeaderView.m */; };
+		E4910C0617C261D000DD9DCC /* WECourseDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910C0017C261D000DD9DCC /* WECourseDetailHeaderView.xib */; };
+		E4910C0B17C264BE00DD9DCC /* WECourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910C0817C264BE00DD9DCC /* WECourseDetailViewController.m */; };
+		E4910C0C17C264BE00DD9DCC /* WECourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910C0917C264BE00DD9DCC /* WECourseDetailViewController.xib */; };
 		E49A324517B7538800AF8C77 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324417B7538800AF8C77 /* AddressBook.framework */; };
 		E49A324717B7538C00AF8C77 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324617B7538C00AF8C77 /* AddressBookUI.framework */; };
 		E49A324917B7539300AF8C77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324817B7539200AF8C77 /* MobileCoreServices.framework */; };
@@ -866,6 +874,18 @@
 		E4910BF217C0877900DD9DCC /* WEFriendListHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEFriendListHeaderView.h; sourceTree = "<group>"; };
 		E4910BF317C0877900DD9DCC /* WEFriendListHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEFriendListHeaderView.m; sourceTree = "<group>"; };
 		E4910BF517C0881A00DD9DCC /* WEFriendListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEFriendListHeaderView.xib; sourceTree = "<group>"; };
+		E4910BF817C261D000DD9DCC /* WECourseDetailContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WECourseDetailContentView.h; sourceTree = "<group>"; };
+		E4910BF917C261D000DD9DCC /* WECourseDetailContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WECourseDetailContentView.m; sourceTree = "<group>"; };
+		E4910BFA17C261D000DD9DCC /* WECourseDetailContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WECourseDetailContentView.xib; sourceTree = "<group>"; };
+		E4910BFB17C261D000DD9DCC /* WECourseDetailControlAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WECourseDetailControlAreaView.h; sourceTree = "<group>"; };
+		E4910BFC17C261D000DD9DCC /* WECourseDetailControlAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WECourseDetailControlAreaView.m; sourceTree = "<group>"; };
+		E4910BFD17C261D000DD9DCC /* WECourseDetailControlAreaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WECourseDetailControlAreaView.xib; sourceTree = "<group>"; };
+		E4910BFE17C261D000DD9DCC /* WECourseDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WECourseDetailHeaderView.h; sourceTree = "<group>"; };
+		E4910BFF17C261D000DD9DCC /* WECourseDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WECourseDetailHeaderView.m; sourceTree = "<group>"; };
+		E4910C0017C261D000DD9DCC /* WECourseDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WECourseDetailHeaderView.xib; sourceTree = "<group>"; };
+		E4910C0817C264BE00DD9DCC /* WECourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WECourseDetailViewController.m; sourceTree = "<group>"; };
+		E4910C0917C264BE00DD9DCC /* WECourseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WECourseDetailViewController.xib; sourceTree = "<group>"; };
+		E4910C0A17C264BE00DD9DCC /* WECourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WECourseDetailViewController.h; sourceTree = "<group>"; };
 		E49A324417B7538800AF8C77 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		E49A324617B7538C00AF8C77 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		E49A324817B7539200AF8C77 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -1053,6 +1073,7 @@
 		0341647E17B7B3F6005CFD98 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				E4910BF717C2613000DD9DCC /* Course */,
 				03BA1D0F17BF6A010040712F /* Search */,
 				03EB4EAE17BCB2480082132D /* Activity */,
 				03EB4EA317BC98FE0082132D /* Widget */,
@@ -1183,6 +1204,7 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E4910C0717C2646B00DD9DCC /* Course */,
 				0321418F17C0C8E5002BBA9E /* Setting & About */,
 				E4511F3417BFA059005494C1 /* Friend */,
 				03BA1D1A17BF6E5E0040712F /* Search */,
@@ -1778,6 +1800,32 @@
 			name = Root;
 			sourceTree = "<group>";
 		};
+		E4910BF717C2613000DD9DCC /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				E4910BF817C261D000DD9DCC /* WECourseDetailContentView.h */,
+				E4910BF917C261D000DD9DCC /* WECourseDetailContentView.m */,
+				E4910BFA17C261D000DD9DCC /* WECourseDetailContentView.xib */,
+				E4910BFB17C261D000DD9DCC /* WECourseDetailControlAreaView.h */,
+				E4910BFC17C261D000DD9DCC /* WECourseDetailControlAreaView.m */,
+				E4910BFD17C261D000DD9DCC /* WECourseDetailControlAreaView.xib */,
+				E4910BFE17C261D000DD9DCC /* WECourseDetailHeaderView.h */,
+				E4910BFF17C261D000DD9DCC /* WECourseDetailHeaderView.m */,
+				E4910C0017C261D000DD9DCC /* WECourseDetailHeaderView.xib */,
+			);
+			name = Course;
+			sourceTree = "<group>";
+		};
+		E4910C0717C2646B00DD9DCC /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				E4910C0A17C264BE00DD9DCC /* WECourseDetailViewController.h */,
+				E4910C0817C264BE00DD9DCC /* WECourseDetailViewController.m */,
+				E4910C0917C264BE00DD9DCC /* WECourseDetailViewController.xib */,
+			);
+			name = Course;
+			sourceTree = "<group>";
+		};
 		E4DE121217BE17D000651486 /* keys */ = {
 			isa = PBXGroup;
 			children = (
@@ -2074,6 +2122,10 @@
 				0321418B17C0A94D002BBA9E /* WTSearchResultTableViewController.xib in Resources */,
 				0321419417C0C904002BBA9E /* WESettingViewController.xib in Resources */,
 				0321419A17C0CD67002BBA9E /* WEAboutViewController.xib in Resources */,
+				E4910C0217C261D000DD9DCC /* WECourseDetailContentView.xib in Resources */,
+				E4910C0417C261D000DD9DCC /* WECourseDetailControlAreaView.xib in Resources */,
+				E4910C0617C261D000DD9DCC /* WECourseDetailHeaderView.xib in Resources */,
+				E4910C0C17C264BE00DD9DCC /* WECourseDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2237,6 +2289,10 @@
 				0321418E17C0AA04002BBA9E /* WTShowAllKindsOfCellsViewController.m in Sources */,
 				0321419317C0C904002BBA9E /* WESettingViewController.m in Sources */,
 				0321419917C0CD67002BBA9E /* WEAboutViewController.m in Sources */,
+				E4910C0117C261D000DD9DCC /* WECourseDetailContentView.m in Sources */,
+				E4910C0317C261D000DD9DCC /* WECourseDetailControlAreaView.m in Sources */,
+				E4910C0517C261D000DD9DCC /* WECourseDetailHeaderView.m in Sources */,
+				E4910C0B17C264BE00DD9DCC /* WECourseDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
