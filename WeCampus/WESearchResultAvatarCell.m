@@ -63,6 +63,9 @@
 
 - (void)layoutAvatars
 {
+    self.backgroundColor = [UIColor clearColor];
+    self.backgroundView = [[UIView alloc] init];
+    
     [self clearAllAvatars];
     
     for (LikeableObject *object in self.avatars) {
@@ -74,6 +77,13 @@
             [self.avatarContainerView addSubview:cell];
         }
     }
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    frame.origin.x += 2;
+    //frame.size.width = ;
+    [super setFrame:frame];
 }
 
 @end

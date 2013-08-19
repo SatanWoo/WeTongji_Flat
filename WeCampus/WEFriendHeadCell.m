@@ -66,6 +66,8 @@
     self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.height / 2;
     [self.avatarImageView loadImageWithImageURLString:imgURL];
     self.nameLabel.text = name;
+    [self.nameLabel sizeToFit];
+    [self.nameLabel resetCenterX:self.frame.size.width / 2];
 }
 
 @end

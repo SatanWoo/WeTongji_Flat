@@ -39,9 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
     [self clearSearchResultObjects];
-    
     [self loadSearchResult];
 }
 
@@ -75,18 +73,6 @@
         for (NSDictionary *infoDict in activityInfoArray) {
             Activity *activity = [Activity insertActivity:infoDict];
             [activity setObjectHeldByHolder:[self class]];
-        }
-        
-        NSArray *newsInfoArray = resultDict[@"Information"];
-        for (NSDictionary *infoDict in newsInfoArray) {
-            News *news = [News insertNews:infoDict];
-            [news setObjectHeldByHolder:[self class]];
-        }
-        
-        NSArray *starInfoArray = resultDict[@"Person"];
-        for (NSDictionary *infoDict in starInfoArray) {
-            Star *star = [Star insertStar:infoDict];
-            [star setObjectHeldByHolder:[self class]];
         }
         
         NSArray *orgInfoArray = resultDict[@"Accounts"];
