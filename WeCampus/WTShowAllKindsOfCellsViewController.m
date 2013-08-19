@@ -24,8 +24,8 @@
 #define kActivitySection 2
 
 @interface WTShowAllKindsOfCellsViewController ()
-@property (nonatomic, strong) WESearchResultAvatarCell *userAvatarCell;
-@property (nonatomic, strong) WESearchResultAvatarCell *orgAvatarCell;
+//@property (nonatomic, strong) WESearchResultAvatarCell *userAvatarCell;
+//@property (nonatomic, strong) WESearchResultAvatarCell *orgAvatarCell;
 @end
 
 @implementation WTShowAllKindsOfCellsViewController
@@ -51,9 +51,7 @@
     NSInteger numberOfRows = [self.fetchedResultsController.sections[indexPath.section] numberOfObjects];
     if (indexPath.row >= numberOfRows)
         return nil;
-    
-    Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
+        
     NSString *name = [self customCellClassNameAtIndexPath:indexPath];
     
     NSString *cellIdentifier = name ? name : @"Cell";
@@ -75,10 +73,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger number = [self.fetchedResultsController.sections[section] numberOfObjects];
-//    if (section == kActivitySection) {
-//        if (number <= 3) return number;
-//        else return 4;
-//    }
     return number;
 }
 
@@ -94,9 +88,11 @@
         WEActivityCell *activityCell = (WEActivityCell *)cell;
         [activityCell configureCellWithActivity:(Activity *)object];
     }  else if ([object isKindOfClass:[Organization class]]) {
+        if (indexPath.row > 0) return;
         WESearchResultAvatarCell *orgCell = (WESearchResultAvatarCell *)cell;
         [orgCell configureWithObject:(LikeableObject *)object];
     } else if ([object isKindOfClass:[User class]]) {
+        if (indexPath.row > 0) return;
         WESearchResultAvatarCell *userCell = (WESearchResultAvatarCell *)cell;
         [userCell configureWithObject:(LikeableObject *)object];
     }
@@ -112,8 +108,10 @@
         else
             return 0;
     } else if ([object isKindOfClass:[Organization class]]) {
-            return kWESearchAvatarCellHeight;
+        if (indexPath.row > 0) return 0;
+        return kWESearchAvatarCellHeight;
     } else if ([object isKindOfClass:[User class]]) {
+        if (indexPath.row > 0) return 0;
         return kWESearchAvatarCellHeight;
     } else
         return 0;
@@ -130,8 +128,10 @@
             return nil;
         }
     } else if ([object isKindOfClass:[Organization class]]) {
+        if (indexPath.row > 0) return nil;
         return @"WESearchResultAvatarCell";
     } else if ([object isKindOfClass:[User class]]) {
+        if (indexPath.row > 0) return nil;
         return @"WESearchResultAvatarCell";
     } else
         return nil;
