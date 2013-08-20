@@ -39,8 +39,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureScrollView];
     [self clearSearchResultObjects];
-    [self loadSearchResult];
+    [self loadSearchResultWithBlock:^(int k) {
+        NSLog(@"result number is %d", k);
+        if (k == 0) [self setScrollViewVisible:YES];
+    }];
+}
+
+- (void)configureScrollView
+{
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height + 1);
+    self.scrollView.hidden = YES;
+}
+
+- (void)setScrollViewVisible:(BOOL)visible
+{
+    self.scrollView.hidden = !visible;
+    self.tableView.hidden = visible;
 }
 
 + (WTSearchResultTableViewController *)createViewControllerWithSearchKeyword:(NSString *)keyword
@@ -64,29 +80,38 @@
     [Object setAllObjectsFreeFromHolder:[self class]];
 }
 
-- (void)loadSearchResult {
+- (void)loadSearchResultWithBlock:(void (^)(int))completion {
     WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
         [self clearSearchResultObjects];
         
+        int count = 0;
+        
         NSDictionary *resultDict = (NSDictionary *)responseObject;
         NSArray *activityInfoArray = resultDict[@"Activities"];
+        count += [activityInfoArray count];
         for (NSDictionary *infoDict in activityInfoArray) {
             Activity *activity = [Activity insertActivity:infoDict];
-            NSLog(@"act is %@", activity);
             [activity setObjectHeldByHolder:[self class]];
         }
         
         NSArray *orgInfoArray = resultDict[@"Accounts"];
+        count += [orgInfoArray count];
         for (NSDictionary *infoDict in orgInfoArray) {
             Organization *org = [Organization insertOrganization:infoDict];
             [org setObjectHeldByHolder:[self class]];
         }
         
         NSArray *userArray = resultDict[@"Users"];
+        count += [userArray count];
         for (NSDictionary *infoDict in userArray) {
             User *user = [User insertUser:infoDict];
             [user setObjectHeldByHolder:[self class]];
         }
+        
+        if (completion) {
+            completion(count);
+        }
+        
     } failureBlock:^(NSError *error) {
     }];
     [request getSearchResultInCategory:self.searchCategory keyword:self.searchKeyword];

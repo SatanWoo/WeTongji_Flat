@@ -19,6 +19,7 @@
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, copy, readonly) NSString *searchKeyword;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) id<WTSearchResultTableViewControllerDelegate> delegate;
 
 
