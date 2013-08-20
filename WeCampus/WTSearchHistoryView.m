@@ -35,6 +35,10 @@
         if ([view isKindOfClass:[WTSearchHistoryView class]]) {
             result = (WTSearchHistoryView *)view;
             result.maskView.hidden = YES;
+            result.scrollView.hidden = YES;
+            result.scrollView.contentSize = CGSizeMake(result.scrollView.frame.size.width, result.scrollView.frame.size.height + 1);
+            
+            [result configureScrollView];
             break;
         }
     }
@@ -60,6 +64,23 @@
     self.returnButton.hidden = YES;
 }
 
+- (void)configureScrollView
+{
+    if ([[NSUserDefaults standardUserDefaults] getSearchHistoryArray].count) {
+        self.scrollView.hidden = YES;
+        self.tableView.hidden = NO;
+    } else {
+        self.scrollView.hidden = NO;
+        self.tableView.hidden = YES;
+    }
+}
+
+- (void)reload
+{
+    [self.tableView reloadData];
+    [self configureScrollView];
+}
+
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -71,6 +92,7 @@
         }
     } else {
         [[NSUserDefaults standardUserDefaults] clearAllSearchHistoryItems];
+        [self configureScrollView];
         [tableView reloadData];
     }
     

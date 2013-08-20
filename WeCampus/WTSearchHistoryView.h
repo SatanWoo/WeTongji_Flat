@@ -17,12 +17,15 @@
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *maskView;
-@property (weak, nonatomic) id<WTSearchHistoryViewDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIButton *returnButton;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) id<WTSearchHistoryViewDelegate> delegate;
 
 + (WTSearchHistoryView *)createSearchHistoryView;
 - (void)cover;
 - (void)uncover;
+- (void)reload;
 - (IBAction)backToNoEditingState;
 
 @end

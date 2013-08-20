@@ -85,7 +85,7 @@
     [vc.view resetHeight:self.resultContainerView.frame.size.height];
     [self.resultContainerView insertSubview:vc.view aboveSubview:self.defaultViewController.view];
     
-    [self.defaultViewController.historyView.tableView reloadData];
+    [self.defaultViewController.historyView reload];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -130,9 +130,8 @@
 
 - (void)backToNoEditingState
 {
-    [self.defaultViewController.historyView uncover];
     self.searchBarTextField.text = @"";
-    [self.searchBarTextField endEditing:YES];
+    [self didClickCancelButton:nil];
 }
 
 @end
