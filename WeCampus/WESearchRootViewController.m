@@ -39,7 +39,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [((WEAppDelegate *)[UIApplication sharedApplication].delegate) hideTabbar];
+    //[((WEAppDelegate *)[UIApplication sharedApplication].delegate) hideTabbar];
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,6 +100,7 @@
     }];
     
     [self.defaultViewController.historyView cover];
+    [((WEAppDelegate *)[UIApplication sharedApplication].delegate) hideTabbar];
     [textField becomeFirstResponder];
 }
 
@@ -111,14 +112,17 @@
 
 - (IBAction)didClickCancelButton:(id)sender
 {
+    [self clearSearchResultView];
+    
     [UIView animateWithDuration:0.5f animations:^{
         [self.textFieldContainerView resetWidth:kSearchbarNotEditingWidth];
         [self.cancelButton resetOriginX:self.searchBarContainerView.frame.size.width];
     } completion:^(BOOL finished) {
     }];
-    
+    self.searchBarTextField.text = @"";
     [self.searchBarTextField endEditing:YES];
     [self.defaultViewController.historyView uncover];
+    [((WEAppDelegate *)[UIApplication sharedApplication].delegate) showTabbar];
 }
 
 #pragma mark - WTSearchDefaultViewControllerDelegate
@@ -130,7 +134,6 @@
 
 - (void)backToNoEditingState
 {
-    self.searchBarTextField.text = @"";
     [self didClickCancelButton:nil];
 }
 
