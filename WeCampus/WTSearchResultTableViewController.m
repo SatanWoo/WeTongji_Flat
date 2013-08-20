@@ -72,6 +72,7 @@
         NSArray *activityInfoArray = resultDict[@"Activities"];
         for (NSDictionary *infoDict in activityInfoArray) {
             Activity *activity = [Activity insertActivity:infoDict];
+            NSLog(@"act is %@", activity);
             [activity setObjectHeldByHolder:[self class]];
         }
         

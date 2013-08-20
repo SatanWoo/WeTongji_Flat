@@ -26,12 +26,13 @@
 #define kUserSection 0
 
 @interface WTShowAllKindsOfCellsViewController ()
-//@property (nonatomic, strong) WESearchResultAvatarCell *userAvatarCell;
-//@property (nonatomic, strong) WESearchResultAvatarCell *orgAvatarCell;
-
 @end
 
 @implementation WTShowAllKindsOfCellsViewController
+
+static int orgSection = 100;
+static int userSection = 100;
+static int actSection = 100;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,6 +57,7 @@
         return nil;
         
     NSString *name = [self customCellClassNameAtIndexPath:indexPath];
+    NSLog(@"cell name is %@", name);
     
     NSString *cellIdentifier = name ? name : @"Cell";
     
@@ -85,8 +87,8 @@
     if ([cell isKindOfClass:[WESeeMoreObjectCell class]]) return;
     
     Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+
     if ([object isKindOfClass:[Activity class]]) {
-        
         if (indexPath.row > 3) return;
         WEActivityCell *activityCell = (WEActivityCell *)cell;
         [activityCell configureCellWithActivity:(Activity *)object];
@@ -94,7 +96,6 @@
         if (indexPath.row > 0) return;
         WESearchResultAvatarCell *orgCell = (WESearchResultAvatarCell *)cell;
         [self configureWithOrgs:orgCell];
-        //[orgCell configureWithObject:(LikeableObject *)object];
     } else if ([object isKindOfClass:[User class]]) {
         if (indexPath.row > 0) return;
         WESearchResultAvatarCell *userCell = (WESearchResultAvatarCell *)cell;
@@ -104,8 +105,8 @@
 
 - (void)configureWithUsers:(WESearchResultAvatarCell *)cell
 {
-    if ([self.fetchedResultsController.sections count] > kUserSection) {
-        NSInteger userNumber = [self.fetchedResultsController.sections[kUserSection] numberOfObjects];
+    if ([self.fetchedResultsController.sections count] > userSection) {
+        NSInteger userNumber = [self.fetchedResultsController.sections[userSection] numberOfObjects];
         for (int i = 0; i < userNumber; i++) {
             User *user = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:kUserSection]];
             [cell configureWithObject:user];
@@ -115,18 +116,22 @@
 
 - (void)configureWithOrgs:(WESearchResultAvatarCell *)cell
 {
-    if ([self.fetchedResultsController.sections count] > kOrgSection) {
-        NSInteger Number = [self.fetchedResultsController.sections[kOrgSection] numberOfObjects];
+    if ([self.fetchedResultsController.sections count] > orgSection) {
+        NSInteger Number = [self.fetchedResultsController.sections[orgSection] numberOfObjects];
         for (int i = 0; i < Number; i++) {
-            Organization *org = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:kOrgSection]];
+            Organization *org = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:orgSection]];
             [cell configureWithObject:org];
         }
     }
 }
 
+
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     if ([object isKindOfClass:[Activity class]]) {
+        actSection = indexPath.section;
+        
         if (indexPath.row <= 2)
             return kWEActivityCellHeight;
         else if (indexPath.row == 3)
@@ -134,9 +139,13 @@
         else
             return 0;
     } else if ([object isKindOfClass:[Organization class]]) {
+        orgSection = indexPath.section;
         if (indexPath.row > 0) return 0;
         return kWESearchAvatarCellHeight;
+        
+        
     } else if ([object isKindOfClass:[User class]]) {
+        userSection = indexPath.section;
         if (indexPath.row > 0) return 0;
         return kWESearchAvatarCellHeight;
     } else
@@ -145,6 +154,7 @@
 
 - (NSString *)customCellClassNameAtIndexPath:(NSIndexPath *)indexPath {
     Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSLog(@"object name is %@", object);
     if ([object isKindOfClass:[Activity class]]) {
         if (indexPath.row <= 2) {
             return @"WEActivityCell";
