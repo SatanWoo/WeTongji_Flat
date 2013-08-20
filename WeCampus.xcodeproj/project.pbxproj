@@ -366,6 +366,8 @@
 		E470584817BE6949007ABECC /* 活动详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584417BE6949007ABECC /* 活动详情1.png */; };
 		E470584917BE6949007ABECC /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584517BE6949007ABECC /* 首页.png */; };
 		E470584B17BE6ACC007ABECC /* cal.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584A17BE6ACC007ABECC /* cal.png */; };
+		E4906C4117C3A4EC00BBFB62 /* WEMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4906C4017C3A4EC00BBFB62 /* WEMeViewController.m */; };
+		E4906C4317C3A50200BBFB62 /* WEMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4906C4217C3A50200BBFB62 /* WEMeViewController.xib */; };
 		E4910BF117C080C900DD9DCC /* NSString+NaturlLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BF017C080C900DD9DCC /* NSString+NaturlLanguage.m */; };
 		E4910BF417C0877900DD9DCC /* WEFriendListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BF317C0877900DD9DCC /* WEFriendListHeaderView.m */; };
 		E4910BF617C0881A00DD9DCC /* WEFriendListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910BF517C0881A00DD9DCC /* WEFriendListHeaderView.xib */; };
@@ -885,6 +887,10 @@
 		E470584417BE6949007ABECC /* 活动详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情1.png"; sourceTree = "<group>"; };
 		E470584517BE6949007ABECC /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
 		E470584A17BE6ACC007ABECC /* cal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cal.png; sourceTree = "<group>"; };
+		E4906C3F17C3A4EC00BBFB62 /* WEMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEMeViewController.h; sourceTree = "<group>"; };
+		E4906C4017C3A4EC00BBFB62 /* WEMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEMeViewController.m; sourceTree = "<group>"; };
+		E4906C4217C3A50200BBFB62 /* WEMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEMeViewController.xib; sourceTree = "<group>"; };
+		E4906C4417C3A5CF00BBFB62 /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
 		E4910BEF17C080C900DD9DCC /* NSString+NaturlLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+NaturlLanguage.h"; path = "NSDate-Utilities/NSString+NaturlLanguage.h"; sourceTree = "<group>"; };
 		E4910BF017C080C900DD9DCC /* NSString+NaturlLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+NaturlLanguage.m"; path = "NSDate-Utilities/NSString+NaturlLanguage.m"; sourceTree = "<group>"; };
 		E4910BF217C0877900DD9DCC /* WEFriendListHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEFriendListHeaderView.h; sourceTree = "<group>"; };
@@ -1128,6 +1134,7 @@
 		034164E217B7DAD8005CFD98 /* 参考图 */ = {
 			isa = PBXGroup;
 			children = (
+				E4906C4417C3A5CF00BBFB62 /* me.png */,
 				E470584217BE6949007ABECC /* 活动列表_分类.png */,
 				E470584317BE6949007ABECC /* 活动列表.png */,
 				E470584A17BE6ACC007ABECC /* cal.png */,
@@ -1220,14 +1227,15 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E4910C0717C2646B00DD9DCC /* Course */,
-				0321418F17C0C8E5002BBA9E /* Setting & About */,
-				E4511F3417BFA059005494C1 /* Friend */,
-				03BA1D1A17BF6E5E0040712F /* Search */,
-				E44E547617B90FC9000426E1 /* Now */,
 				034267E917B8D935000248C2 /* Activity */,
+				E4910C0717C2646B00DD9DCC /* Course */,
+				E4511F3417BFA059005494C1 /* Friend */,
 				03E8B60517B785EF00AC12C8 /* Home */,
+				E4906C3E17C3A44800BBFB62 /* Me */,
+				E44E547617B90FC9000426E1 /* Now */,
 				E47D58D617B731EA00D55EC7 /* Root */,
+				03BA1D1A17BF6E5E0040712F /* Search */,
+				0321418F17C0C8E5002BBA9E /* Setting & About */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1833,6 +1841,16 @@
 			name = Root;
 			sourceTree = "<group>";
 		};
+		E4906C3E17C3A44800BBFB62 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				E4906C3F17C3A4EC00BBFB62 /* WEMeViewController.h */,
+				E4906C4017C3A4EC00BBFB62 /* WEMeViewController.m */,
+				E4906C4217C3A50200BBFB62 /* WEMeViewController.xib */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
 		E4910BF717C2613000DD9DCC /* Course */ = {
 			isa = PBXGroup;
 			children = (
@@ -2164,6 +2182,7 @@
 				E4910C0C17C264BE00DD9DCC /* WECourseDetailViewController.xib in Resources */,
 				03400AA517C2979B000937B7 /* bg_unit.png in Resources */,
 				03400AAF17C2A8F9000937B7 /* WESeeMoreObjectCell.xib in Resources */,
+				E4906C4317C3A50200BBFB62 /* WEMeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2333,6 +2352,7 @@
 				E4910C0517C261D000DD9DCC /* WECourseDetailHeaderView.m in Sources */,
 				E4910C0B17C264BE00DD9DCC /* WECourseDetailViewController.m in Sources */,
 				03400AAD17C2A8E4000937B7 /* WESeeMoreObjectCell.m in Sources */,
+				E4906C4117C3A4EC00BBFB62 /* WEMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
