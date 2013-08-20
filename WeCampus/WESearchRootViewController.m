@@ -124,6 +124,7 @@
 #pragma mark - WTSearchDefaultViewControllerDelegate
 - (void)didClickSearchHistoryItem:(NSString *)keyword
 {
+    self.searchBarTextField.text = keyword;
     [self updateSearchResultViewForSearchKeyword:keyword searchCategory:0];
 }
 
