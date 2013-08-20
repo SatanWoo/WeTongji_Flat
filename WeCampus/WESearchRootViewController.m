@@ -105,6 +105,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self updateSearchResultViewForSearchKeyword:self.searchBarTextField.text searchCategory:0];
+    [self.searchBarTextField endEditing:YES];
     return YES;
 }
 
