@@ -48,4 +48,11 @@
     }
 }
 
+- (void)didClickHistoryMaskView
+{
+    if (self.delegate) {
+        [self.delegate backToNoEditingState];
+    }
+}
+
 @end

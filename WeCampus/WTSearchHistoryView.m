@@ -42,13 +42,22 @@
     return result;
 }
 
+- (IBAction)backToNoEditingState
+{
+    if (self.delegate) {
+        [self.delegate didClickHistoryMaskView];
+    }
+}
+
 - (void)cover{
     self.maskView.hidden = NO;
+    self.returnButton.hidden = NO;
 }
 
 - (void)uncover
 {
     self.maskView.hidden = YES;
+    self.returnButton.hidden = YES;
 }
 
 #pragma mark - UITableViewDelegate

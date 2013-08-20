@@ -11,6 +11,7 @@
 
 @protocol WTSearchDefaultViewControllerDelegate <NSObject>
 - (void)didClickSearchHistoryItem:(NSString *)keyword;
+- (void)backToNoEditingState;
 @end
 
 @interface WTSearchDefaultViewController : UIViewController

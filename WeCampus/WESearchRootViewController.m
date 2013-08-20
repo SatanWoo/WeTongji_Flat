@@ -126,5 +126,11 @@
     [self updateSearchResultViewForSearchKeyword:keyword searchCategory:0];
 }
 
+- (void)backToNoEditingState
+{
+    [self.defaultViewController.historyView uncover];
+    self.searchBarTextField.text = @"";
+    [self.searchBarTextField endEditing:YES];
+}
 
 @end
