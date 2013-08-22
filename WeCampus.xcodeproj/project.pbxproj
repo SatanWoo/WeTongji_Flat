@@ -19,6 +19,10 @@
 		0321419417C0C904002BBA9E /* WESettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321419217C0C904002BBA9E /* WESettingViewController.xib */; };
 		0321419917C0CD67002BBA9E /* WEAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321419717C0CD66002BBA9E /* WEAboutViewController.m */; };
 		0321419A17C0CD67002BBA9E /* WEAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321419817C0CD67002BBA9E /* WEAboutViewController.xib */; };
+		0331AC0A17C64498009A29EB /* WTDetailImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0331AC0817C64498009A29EB /* WTDetailImageViewController.m */; };
+		0331AC0B17C64498009A29EB /* WTDetailImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0331AC0917C64498009A29EB /* WTDetailImageViewController.xib */; };
+		0331AC0F17C646C6009A29EB /* WTDetailImageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0331AC0D17C646C6009A29EB /* WTDetailImageItemView.m */; };
+		0331AC1017C646C6009A29EB /* WTDetailImageItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0331AC0E17C646C6009A29EB /* WTDetailImageItemView.xib */; };
 		033729BF17B67D7600D2EC9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729BE17B67D7600D2EC9F /* UIKit.framework */; };
 		033729C117B67D7600D2EC9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C017B67D7600D2EC9F /* Foundation.framework */; };
 		033729C317B67D7600D2EC9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033729C217B67D7600D2EC9F /* CoreGraphics.framework */; };
@@ -416,6 +420,12 @@
 		0321419617C0CD66002BBA9E /* WEAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEAboutViewController.h; sourceTree = "<group>"; };
 		0321419717C0CD66002BBA9E /* WEAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEAboutViewController.m; sourceTree = "<group>"; };
 		0321419817C0CD67002BBA9E /* WEAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEAboutViewController.xib; sourceTree = "<group>"; };
+		0331AC0717C64498009A29EB /* WTDetailImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDetailImageViewController.h; sourceTree = "<group>"; };
+		0331AC0817C64498009A29EB /* WTDetailImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDetailImageViewController.m; sourceTree = "<group>"; };
+		0331AC0917C64498009A29EB /* WTDetailImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTDetailImageViewController.xib; sourceTree = "<group>"; };
+		0331AC0C17C646C6009A29EB /* WTDetailImageItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDetailImageItemView.h; sourceTree = "<group>"; };
+		0331AC0D17C646C6009A29EB /* WTDetailImageItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDetailImageItemView.m; sourceTree = "<group>"; };
+		0331AC0E17C646C6009A29EB /* WTDetailImageItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTDetailImageItemView.xib; sourceTree = "<group>"; };
 		033729BB17B67D7600D2EC9F /* WeCampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCampus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033729BE17B67D7600D2EC9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		033729C017B67D7600D2EC9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1158,6 +1168,9 @@
 		034267E917B8D935000248C2 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				0331AC0717C64498009A29EB /* WTDetailImageViewController.h */,
+				0331AC0817C64498009A29EB /* WTDetailImageViewController.m */,
+				0331AC0917C64498009A29EB /* WTDetailImageViewController.xib */,
 				034267EA17B8DAF7000248C2 /* WEActivitiesViewController.h */,
 				034267EB17B8DAF7000248C2 /* WEActivitiesViewController.m */,
 				034267EC17B8DAF7000248C2 /* WEActivitiesViewController.xib */,
@@ -1420,6 +1433,9 @@
 		03EB4EAE17BCB2480082132D /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				0331AC0C17C646C6009A29EB /* WTDetailImageItemView.h */,
+				0331AC0D17C646C6009A29EB /* WTDetailImageItemView.m */,
+				0331AC0E17C646C6009A29EB /* WTDetailImageItemView.xib */,
 				03EB4EBD17BCD0D10082132D /* WTActivityImageRollView.h */,
 				03EB4EBE17BCD0D20082132D /* WTActivityImageRollView.m */,
 				03EB4EBF17BCD0D20082132D /* WTActivityImageRollView.xib */,
@@ -2183,6 +2199,8 @@
 				03400AA517C2979B000937B7 /* bg_unit.png in Resources */,
 				03400AAF17C2A8F9000937B7 /* WESeeMoreObjectCell.xib in Resources */,
 				E4906C4317C3A50200BBFB62 /* WEMeViewController.xib in Resources */,
+				0331AC0B17C64498009A29EB /* WTDetailImageViewController.xib in Resources */,
+				0331AC1017C646C6009A29EB /* WTDetailImageItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2353,6 +2371,8 @@
 				E4910C0B17C264BE00DD9DCC /* WECourseDetailViewController.m in Sources */,
 				03400AAD17C2A8E4000937B7 /* WESeeMoreObjectCell.m in Sources */,
 				E4906C4117C3A4EC00BBFB62 /* WEMeViewController.m in Sources */,
+				0331AC0A17C64498009A29EB /* WTDetailImageViewController.m in Sources */,
+				0331AC0F17C646C6009A29EB /* WTDetailImageItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

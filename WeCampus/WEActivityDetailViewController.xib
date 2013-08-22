@@ -54,6 +54,7 @@
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIShowsVerticalScrollIndicator">NO</bool>
 						<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
+						<bool key="IBUIAllowsSelection">NO</bool>
 						<float key="IBUIRowHeight">223</float>
 						<float key="IBUISectionHeaderHeight">246</float>
 						<float key="IBUISectionFooterHeight">1</float>

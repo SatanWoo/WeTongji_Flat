@@ -10,8 +10,15 @@
 #import <OHAttributedLabel.h>
 #import "Activity+Addition.h"
 
+@protocol WEActivityDetailContentViewDelegate <NSObject>
+
+- (void)shouldDismissDetailImageView;
+
+@end
+
 @interface WEActivityDetailContentView : UITableViewCell
 @property (weak, nonatomic) IBOutlet OHAttributedLabel *contentLabel;
+@property (weak, nonatomic) id<WEActivityDetailContentViewDelegate> delegate;
 
 + (WEActivityDetailContentView *)createDetailContentViewWithInfo:(Activity *)act;
 - (void)resetLayout:(CGFloat)percent;

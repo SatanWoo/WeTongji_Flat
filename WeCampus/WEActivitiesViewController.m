@@ -212,7 +212,6 @@
     Activity *activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
     WEActivityDetailViewController *detailVC = [WEActivityDetailViewController createDetailViewControllerWithModel:activity];
     [self.navigationController pushViewController:detailVC animated:YES];
-
 }
 
 #pragma mark - WEActivitySettingViewControllerDelegate

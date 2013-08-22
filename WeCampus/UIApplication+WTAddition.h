@@ -30,6 +30,16 @@
 
 @property (nonatomic, readonly) WTMeViewController *meViewController;
 
++ (void)showTopCorner;
 
++ (void)dismissKeyWindowViewControllerAnimated:(BOOL)animated;
+
++ (void)presentKeyWindowViewController:(UIViewController *)vc animated:(BOOL)animated;
+
+- (void)addEventAlertNotificationWithEvent:(Event *)event;
+
+- (void)removeEventAlertNotificationWithEvent:(Event *)event;
+
+- (void)handleLocalNotification:(UILocalNotification *)localNotif;
 
 @end

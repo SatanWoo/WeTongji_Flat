@@ -64,7 +64,6 @@
 {
     [super viewDidLoad];
     self.tableView.scrollsToTop = YES;
-    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
 }
 

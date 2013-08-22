@@ -9,12 +9,14 @@
 #import "WEActivityDetailContentView.h"
 #import "WTActivityImageRollView.h"
 #import "WEActivityDetailControlAreaView.h"
+#import "WTDetailImageViewController.h"
 #import <OHAttributedLabel.h>
 
-@interface WEActivityDetailContentView()
+@interface WEActivityDetailContentView() <WTDetailImageViewControllerDelegate>
 @property (strong, nonatomic) WTActivityImageRollView *imageRollView;
 @property (strong, nonatomic) WEActivityDetailControlAreaView *controlAreaView;
 @property (strong, nonatomic) WEActivityDetailControlAreaView *bottomAreaView;
+@property (strong, nonatomic) Activity *act;
 @end
 
 @implementation WEActivityDetailContentView
@@ -23,6 +25,7 @@
 {
      WEActivityDetailContentView *view = [[[NSBundle mainBundle] loadNibNamed:@"WEActivityDetailContentView" owner:nil options:nil] lastObject];
     
+    view.act = act;
     [view configureContentWithInfo:act];
     return view;
 }
@@ -53,6 +56,9 @@
         self.imageRollView = [WTActivityImageRollView createImageRollViewWithImageURLStringArray:@[act.image]];
         [self.imageRollView resetOriginY:self.controlAreaView.frame.origin.y + self.controlAreaView.frame.size.height];
         [self addSubview:self.imageRollView];
+        
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTagImageRollView:)];
+        [self.imageRollView.scrollView addGestureRecognizer:tapGestureRecognizer];
     }
     
     [self configureContentLabel:act.content];
@@ -64,7 +70,6 @@
     }
     
     [self configureBottomControlArea:act];
-
     [self resetHeight:self.bottomAreaView.frame.origin.y + self.bottomAreaView.frame.size.height];
 }
 
@@ -101,6 +106,26 @@
     self.bottomAreaView = [WEActivityDetailControlAreaView createActivityDetailViewWithInfo:act];
     [self.bottomAreaView resetOriginY:self.contentLabel.frame.origin.y + self.contentLabel.frame.size.height + kBigSpan];
     [self addSubview:self.bottomAreaView];
+}
+
+#pragma mark - Handle gesture methods
+- (void)didTagImageRollView:(UITapGestureRecognizer *)gesture {
+    WTActivityImageRollItemView *currentImageRollItemView = [self.imageRollView currentItemView];
+    UIImageView *currentImageView = currentImageRollItemView.imageView;
+    CGRect imageViewFrame = [self.superview convertRect:currentImageView.frame fromView:currentImageRollItemView.superview];
+    imageViewFrame.origin.y += 128.0f;
+    
+    [WTDetailImageViewController showDetailImageViewWithImageURLString:self.act.image
+                                                         fromImageView:currentImageView
+                                                              fromRect:imageViewFrame
+                                                              delegate:self];
+}
+
+#pragma mark - delgate
+- (void)detailImageViewControllerDidDismiss:(NSUInteger)currentPage {
+    self.imageRollView.scrollView.contentOffset = CGPointMake(self.imageRollView.frame.size.width * currentPage, 0);
+    self.imageRollView.pageControl.currentPage = currentPage;
+    [self.imageRollView reloadItemImages];
 }
 
 
