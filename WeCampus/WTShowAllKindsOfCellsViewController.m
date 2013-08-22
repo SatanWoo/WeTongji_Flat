@@ -174,12 +174,23 @@ static int actSection = 100;
 }
 
 - (UIViewController *)detailViewControllerForIndexPath:(NSIndexPath *)indexPath {
-    Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     UIViewController *vc = nil;
-    
-    if ([object isKindOfClass:[Activity class]]) {
-        vc = [WEActivityDetailViewController createDetailViewControllerWithModel:(Activity *)object];
+    if (indexPath.section == orgSection) {
+        
+    } else if (indexPath.section == actSection) {
+        if (indexPath.row >= 3) {
+            
+        } else {
+            Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            if ([object isKindOfClass:[Activity class]]) {
+                vc = [WEActivityDetailViewController createDetailViewControllerWithModel:(Activity *)object];
+            }
+        }
+    } else if (indexPath.section == userSection) {
+        
     }
+    
+    
     
 //    if ([object isKindOfClass:[News class]]) {
 //        vc = [WTNewsDetailViewController createDetailViewControllerWithNews:(News *)object backBarButtonText:backBarButtonText];

@@ -13,7 +13,7 @@
 #import "NSUserDefaults+WTAddition.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface WESearchRootViewController () <UITextFieldDelegate, WTSearchDefaultViewControllerDelegate>
+@interface WESearchRootViewController () <UITextFieldDelegate, WTSearchDefaultViewControllerDelegate, WTSearchResultTableViewControllerDelegate>
 @property (strong, nonatomic) WTSearchDefaultViewController *defaultViewController;
 @property (nonatomic, strong) WTSearchResultTableViewController *resultViewController;
 @end
@@ -64,7 +64,7 @@
 - (void)configureDefaultView {
     self.defaultViewController = [[WTSearchDefaultViewController alloc] init];
     self.defaultViewController.delegate = self;
-    [self.defaultViewController.view resetHeight:self.resultContainerView.frame.size.height];
+    [self.defaultViewController.view resetHeight:self.resultContainerView.frame.size.height - 50];
     [self.resultContainerView addSubview:self.defaultViewController.view];
 }
 
@@ -81,6 +81,7 @@
     
     WTSearchResultTableViewController *vc = [WTSearchResultTableViewController createViewControllerWithSearchKeyword:keyword searchCategory:0];
     self.resultViewController = vc;
+    self.resultViewController.delegate = self;
     [vc.view resetHeight:self.resultContainerView.frame.size.height];
     [self.resultContainerView insertSubview:vc.view aboveSubview:self.defaultViewController.view];
     
@@ -122,6 +123,11 @@
     [self.searchBarTextField endEditing:YES];
     [self.defaultViewController.historyView uncover];
     [((WEAppDelegate *)[UIApplication sharedApplication].delegate) showTabbar];
+}
+
+#pragma mark - WTSearchResultTableViewControllerDelegate
+- (void)wantToPushViewController:(UIViewController *)vc {
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - WTSearchDefaultViewControllerDelegate

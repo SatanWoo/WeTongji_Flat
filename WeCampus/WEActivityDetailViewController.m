@@ -63,6 +63,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.scrollsToTop = YES;
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
 }
@@ -116,31 +117,35 @@
 
 
 #define kIgnoreOffset 34
-#define autoScrollThershold 75
 static CGFloat lastOffsetY = 0;
+static bool isAnimatedOver = true;
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    if (!isAnimatedOver) return;
+    
     CGFloat offsetY = scrollView.contentOffset.y;
     CGFloat height = self.transparentHeaderView.frame.size.height;
     
     [self.detailHeaderView resetLayout:(offsetY - kIgnoreOffset)/ height];
     [self.contentViewCell resetLayout:(offsetY - kIgnoreOffset)/ height];
-    
-    lastOffsetY = offsetY;
-}
 
-static bool hasEnterContentMode = false;
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-//    CGFloat offsetY = scrollView.contentOffset.y;
-//    if (offsetY > autoScrollThershold + kIgnoreOffset && !hasEnterContentMode) {
-//        [self.tableView setContentOffset:CGPointMake(0, self.transparentHeaderView.frame.size.height)];
-//        hasEnterContentMode = true;
-//    } else if (offsetY <= autoScrollThershold +kIgnoreOffset && hasEnterContentMode) {
-//        [self.tableView setContentOffset:CGPointMake(0, 0)];
-//        hasEnterContentMode = false;
+//    if (offsetY < lastOffsetY && isAnimatedOver) { // upward
+//        [UIView animateWithDuration:0.5f animations:^{
+//            [self.tableView setContentOffset:CGPointZero animated:NO];
+//        } completion:^(BOOL finished) {
+//            isAnimatedOver = finished;
+//        }];
+//    } else  {
+//        [UIView animateWithDuration:0.5f animations:^{
+//            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+//        } completion:^(BOOL finished) {
+//            isAnimatedOver = finished;
+//        }];
 //    }
+    
+    if (isAnimatedOver)
+        lastOffsetY = offsetY;
 }
 
 #pragma mark - IBAction
