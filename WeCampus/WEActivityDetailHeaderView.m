@@ -81,4 +81,20 @@
     self.orgName.alpha = 1 - percent;
 }
 
+- (void)resetNormalLayout
+{
+    self.infoContainerView.alpha = 1;
+    self.titleLabel.alpha = 1;
+    self.avatarContainerView.alpha = 1;
+    self.orgName.alpha = 1;
+}
+
+- (void)resetTransparentLayout
+{
+    self.infoContainerView.alpha = 0;
+    self.titleLabel.alpha = 0.5;
+    self.avatarContainerView.alpha = 0;
+    self.orgName.alpha = 0;
+}
+
 @end

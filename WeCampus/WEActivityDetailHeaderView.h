@@ -22,4 +22,7 @@
 + (WEActivityDetailHeaderView *)createActivityDetailViewWithInfo:(Activity *)act;
 - (void)resetLayout:(CGFloat)percent;
 
+- (void)resetNormalLayout;
+- (void)resetTransparentLayout;
+
 @end

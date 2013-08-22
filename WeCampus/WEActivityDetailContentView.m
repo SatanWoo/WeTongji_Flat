@@ -47,6 +47,17 @@
     self.controlAreaView.alpha = 1 - percent;
 }
 
+- (void)resetNormalLayout
+{
+    self.controlAreaView.alpha = 1;
+}
+
+- (void)resetTransparentLayout
+{
+    self.controlAreaView.alpha = 0;
+}
+
+
 #define kSpan 20
 - (void)configureContentWithInfo:(Activity *)act
 {

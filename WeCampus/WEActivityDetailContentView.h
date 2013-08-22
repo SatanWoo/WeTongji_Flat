@@ -22,5 +22,6 @@
 
 + (WEActivityDetailContentView *)createDetailContentViewWithInfo:(Activity *)act;
 - (void)resetLayout:(CGFloat)percent;
-
+- (void)resetNormalLayout;
+- (void)resetTransparentLayout;
 @end

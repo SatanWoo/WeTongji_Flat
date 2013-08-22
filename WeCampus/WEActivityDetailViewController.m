@@ -4,7 +4,7 @@
 //
 //  Created by 吴 wuziqi on 13-8-15.
 //  Copyright (c) 2013年 Ziqi Wu. All rights reserved.
-//
+
 
 #import "WEActivityDetailViewController.h"
 #import "WEActivityDetailHeaderView.h"
@@ -117,34 +117,64 @@
 
 #define kIgnoreOffset 34
 static CGFloat lastOffsetY = 0;
-static bool isAnimatedOver = true;
+static bool shouldRecalculateTransparecy = false;
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    lastOffsetY = scrollView.contentOffset.y;
+    shouldRecalculateTransparecy = true;
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY > 80 && lastOffsetY < offsetY) {
+        shouldRecalculateTransparecy = false;
+        
+        [UIView animateWithDuration:1.5f animations:^{
+            self.tableView.contentOffset = CGPointMake(0, self.transparentHeaderView.frame.size.height + 150);
+            [self resetTransparentLayout];
+        } completion:^(BOOL finished) {
+            
+            
+        }];
+    } else if (offsetY < 250 && lastOffsetY > offsetY) {
+        shouldRecalculateTransparecy = false;
+        
+        [UIView animateWithDuration:1.5f animations:^{
+            self.tableView.contentOffset = CGPointZero;
+             [self resetNormalLayout];
+        } completion:^(BOOL finished) {
+            [self.tableView setContentOffset:CGPointZero animated:NO];
+        }];
+    }
+}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (!isAnimatedOver) return;
+    if (!shouldRecalculateTransparecy) return;
     
     CGFloat offsetY = scrollView.contentOffset.y;
     CGFloat height = self.transparentHeaderView.frame.size.height;
     
-    [self.detailHeaderView resetLayout:(offsetY - kIgnoreOffset)/ height];
-    [self.contentViewCell resetLayout:(offsetY - kIgnoreOffset)/ height];
+    [self resetTableViewLayout:(offsetY - kIgnoreOffset)/ height];
+}
 
-//    if (offsetY < lastOffsetY && isAnimatedOver) { // upward
-//        [UIView animateWithDuration:0.5f animations:^{
-//            [self.tableView setContentOffset:CGPointZero animated:NO];
-//        } completion:^(BOOL finished) {
-//            isAnimatedOver = finished;
-//        }];
-//    } else  {
-//        [UIView animateWithDuration:0.5f animations:^{
-//            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
-//        } completion:^(BOOL finished) {
-//            isAnimatedOver = finished;
-//        }];
-//    }
-    
-    if (isAnimatedOver)
-        lastOffsetY = offsetY;
+- (void)resetTableViewLayout:(CGFloat)percent
+{
+    [self.detailHeaderView resetLayout:percent];
+    [self.contentViewCell resetLayout:percent];
+}
+
+- (void)resetNormalLayout
+{
+    [self.detailHeaderView resetNormalLayout];
+    [self.contentViewCell resetNormalLayout];
+}
+
+- (void)resetTransparentLayout
+{
+    [self.detailHeaderView resetTransparentLayout];
+    [self.contentViewCell resetTransparentLayout];
 }
 
 #pragma mark - IBAction
