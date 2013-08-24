@@ -12,3 +12,9 @@
 #define COCOAPODS_VERSION_MINOR_OHAttributedLabel 4
 #define COCOAPODS_VERSION_PATCH_OHAttributedLabel 1
 
+// RHAddressBook
+#define COCOAPODS_POD_AVAILABLE_RHAddressBook
+#define COCOAPODS_VERSION_MAJOR_RHAddressBook 1
+#define COCOAPODS_VERSION_MINOR_RHAddressBook 0
+#define COCOAPODS_VERSION_PATCH_RHAddressBook 2
+

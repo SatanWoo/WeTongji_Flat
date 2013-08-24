@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Pods-RHAddressBook.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,12 +22,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0AE5F0DD45114DF389D27523</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>61B4895D7AF64A34B9CA8C64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A850EDEB0BD0405E8581A9F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB6F5443F51B488C84F48FBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF7595C319D3433284B0B967</key>
 		<dict>
 			<key>primary</key>
 			<true/>
