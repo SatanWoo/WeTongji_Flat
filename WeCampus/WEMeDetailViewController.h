@@ -22,11 +22,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *qqLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *saveAsContactView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 
 - (void)configureWithUser:(User*)user;
 
+- (IBAction)saveAsContact:(id)sender;
 
 @end
