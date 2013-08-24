@@ -28,9 +28,10 @@
 {
     [super viewDidLoad];
     
+    [self.maskView resetHeight:900];
+    [self.maskView resetOriginYByOffset:-200];
     [self.containerView resetOriginY:self.view.frame.size.height];
-    [self.maskView resetHeight:self.view.frame.size.height + 40];
-    
+
     [self configureAllCategoryButton];
     [self configureOrderMethodButton];
     [self configureSwitch];
