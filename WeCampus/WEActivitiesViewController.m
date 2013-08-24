@@ -17,6 +17,7 @@
 
 @interface WEActivitiesViewController () <WEActivitySettingViewControllerDelegate>
 @property (nonatomic, assign) ActivityShowTypes type;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, assign) NSInteger nextPage;
 @property (nonatomic, strong) WEActivitySettingViewController *settingViewController;
 @end
@@ -44,9 +45,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureRrefreshControl];
+    
     self.nextPage = 1;
+    [self.refreshControl beginRefreshing];
+    
     [self loadMoreDataWithSuccessBlock:^{
+        [self.refreshControl endRefreshing];
     } failureBlock:^{
+        [self.refreshControl endRefreshing];
     }];
 }
 
@@ -79,6 +86,15 @@
 }
 
 #pragma mark - UI Method
+
+- (void)configureRrefreshControl
+{
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
+    [self.refreshControl resetOriginY:0];
+    [self.tableView addSubview:self.refreshControl];
+}
+
 - (void)configureNavigationBarTitle
 {    
     NSSet *activityShowTypesSet = [NSUserDefaults getActivityShowTypesSet];
@@ -122,6 +138,8 @@
 
 - (void)loadMoreDataWithSuccessBlock:(void (^)(void))success
                         failureBlock:(void (^)(void))failure {
+    [self.refreshControl beginRefreshing];
+    
     WTRequest * request = [WTRequest requestWithSuccessBlock:^(id responseData) {
         NSDictionary *resultDict = (NSDictionary *)responseData;
         NSString *nextPage = resultDict[@"NextPager"];
@@ -163,7 +181,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     ActivityOrderMethod orderMethod = [userDefaults getActivityOrderMethod];
     BOOL smartOrder = [userDefaults getActivitySmartOrderProperty];
-    BOOL showExpire = [userDefaults getActivityHidePastProperty];
+    BOOL showExpire = ![userDefaults getActivityHidePastProperty];
     BOOL orderByAsc = ![WTRequest shouldActivityOrderByDesc:orderMethod smartOrder:smartOrder showExpire:showExpire];
     NSArray *descriptors = nil;
     NSSortDescriptor *updateTimeDescriptor = [[NSSortDescriptor alloc] initWithKey:@"updatedAt" ascending:YES];
@@ -222,13 +240,30 @@
     [self configureNavigationBarTitle];
     
     self.fetchedResultsController = nil;
-    [self.tableView reloadData];
-    
     self.nextPage = 1;
-    [self loadMoreDataWithSuccessBlock:^{
-    } failureBlock:^{
-    }];
+    
+    [self loadData];
+}
 
+- (void)loadData
+{
+    [self loadMoreDataWithSuccessBlock:^{
+        [self performSelector:@selector(endRefreshing) withObject:nil afterDelay:2.0f];
+        [self.tableView reloadData];
+    } failureBlock:^{
+        [self.refreshControl endRefreshing];
+    }];
+}
+
+#pragma mark - Refresh Control
+- (void)refreshData
+{
+    [self loadData];
+}
+
+- (void)endRefreshing
+{
+    [self.refreshControl endRefreshing];
 }
 
 @end
