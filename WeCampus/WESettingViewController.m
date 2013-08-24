@@ -8,6 +8,7 @@
 
 #import "WESettingViewController.h"
 #import "WEAboutViewController.h"
+#import "WTCoreDataManager.h"
 
 @interface WESettingViewController ()
 @end
@@ -44,7 +45,7 @@
 
 - (IBAction)didClickClearCache:(id)sender
 {
-    
+    [[WTCoreDataManager sharedManager] eraseAllData];
 }
 
 - (IBAction)didClickLogout:(id)sender
