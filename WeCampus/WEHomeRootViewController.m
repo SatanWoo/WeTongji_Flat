@@ -29,6 +29,7 @@
 @interface WEHomeRootViewController () <WESeeAllSchoolEventsHeaderViewDelegate, WESchoolEventHeadLineViewDelegate>
 @property (nonatomic, strong) WEBannerContainerView *bannerContainerView;
 @property (nonatomic, strong) WESeeAllSchoolEventsHeaderView *seeAllHeaderView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @property (nonatomic, strong) NSMutableArray *headlineViewArray;
 @property (nonatomic, assign) BOOL shouldLoadHomeItems;
@@ -53,6 +54,7 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"Home", nil);
     [self configureBannerView];
+    [self configureRrefreshControl];
     [self configureScrollView];
 }
 
@@ -106,6 +108,7 @@
         return;
     
     [self adjustScrollView];
+    [self.refreshControl endRefreshing];
     
     NSDictionary *resultDict = self.homeResponseDict;
     
@@ -150,6 +153,7 @@
     if (self.isLoadingHomeItems)
         return;
     self.isLoadingHomeItems = YES;
+    [self.refreshControl beginRefreshing];
     
     WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
         self.homeResponseDict = (NSDictionary *)responseObject;
@@ -165,7 +169,6 @@
         [[NSUserDefaults standardUserDefaults] setLastHomeUpdateTime:currentTime];
         
         self.isLoadingHomeItems = NO;
-        
     } failureBlock:^(NSError *error) {
         self.shouldLoadHomeItems = YES;
         self.isLoadingHomeItems = NO;
@@ -176,6 +179,14 @@
 }
 
 #pragma mark - UI methods
+
+- (void)configureRrefreshControl
+{
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
+    [self.refreshControl resetOriginY:0];
+    [self.scrollView addSubview:self.refreshControl];
+}
 
 - (void)adjustScrollView {
     self.scrollView.contentOffset = CGPointZero;
@@ -259,6 +270,13 @@
 - (void)didTapToSeeDetailInfo:(Activity *)act
 {
     [self pushDetailViewControllerWithModelObject:act];
+}
+
+#pragma mark - Refresh Control
+- (void)refreshData
+{
+    [self loadHomeSelectedItems];
+    [self performSelector:@selector(refillViews) withObject:nil afterDelay:2.0f];
 }
 
 @end
