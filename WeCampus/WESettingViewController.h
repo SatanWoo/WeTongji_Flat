@@ -14,4 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)didClickSeeAboutButton:(id)sender;
+- (IBAction)didClickClearCache:(id)sender;
+- (IBAction)didClickLogout:(id)sender;
+
 @end

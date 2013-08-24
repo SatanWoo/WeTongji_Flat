@@ -91,6 +91,10 @@
 		03BA1D2417BF6EBF0040712F /* WESearchRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D2217BF6EBF0040712F /* WESearchRootViewController.xib */; };
 		03BA1D2817BF7B210040712F /* WTSearchDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA1D2617BF7B210040712F /* WTSearchDefaultViewController.m */; };
 		03BA1D2917BF7B210040712F /* WTSearchDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */; };
+		03CE63FB17C855E10091718A /* WENotificationControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE63FA17C855E10091718A /* WENotificationControllerViewController.m */; };
+		03CE63FF17C856280091718A /* WENotificationRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE63FD17C856270091718A /* WENotificationRootViewController.m */; };
+		03CE640017C856280091718A /* WENotificationRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03CE63FE17C856270091718A /* WENotificationRootViewController.xib */; };
+		03CE640217C858080091718A /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CE640117C858080091718A /* 设置.png */; };
 		03E37DB617C207E2008029D5 /* search_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB417C207E2008029D5 /* search_arrow.png */; };
 		03E37DB717C207E2008029D5 /* search_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB517C207E2008029D5 /* search_arrow@2x.png */; };
 		03E37DBA17C20EF9008029D5 /* WESearchResultHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E37DB917C20EF9008029D5 /* WESearchResultHeaderView.m */; };
@@ -541,6 +545,12 @@
 		03BA1D2517BF7B200040712F /* WTSearchDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSearchDefaultViewController.h; sourceTree = "<group>"; };
 		03BA1D2617BF7B210040712F /* WTSearchDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSearchDefaultViewController.m; sourceTree = "<group>"; };
 		03BA1D2717BF7B210040712F /* WTSearchDefaultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSearchDefaultViewController.xib; sourceTree = "<group>"; };
+		03CE63F917C855E10091718A /* WENotificationControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENotificationControllerViewController.h; sourceTree = "<group>"; };
+		03CE63FA17C855E10091718A /* WENotificationControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENotificationControllerViewController.m; sourceTree = "<group>"; };
+		03CE63FC17C856270091718A /* WENotificationRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENotificationRootViewController.h; sourceTree = "<group>"; };
+		03CE63FD17C856270091718A /* WENotificationRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENotificationRootViewController.m; sourceTree = "<group>"; };
+		03CE63FE17C856270091718A /* WENotificationRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WENotificationRootViewController.xib; sourceTree = "<group>"; };
+		03CE640117C858080091718A /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
 		03E37DB417C207E2008029D5 /* search_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_arrow.png; sourceTree = "<group>"; };
 		03E37DB517C207E2008029D5 /* search_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_arrow@2x.png"; sourceTree = "<group>"; };
 		03E37DB817C20EF9008029D5 /* WESearchResultHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultHeaderView.h; sourceTree = "<group>"; };
@@ -1144,6 +1154,7 @@
 		034164E217B7DAD8005CFD98 /* 参考图 */ = {
 			isa = PBXGroup;
 			children = (
+				03CE640117C858080091718A /* 设置.png */,
 				E4906C4417C3A5CF00BBFB62 /* me.png */,
 				E470584217BE6949007ABECC /* 活动列表_分类.png */,
 				E470584317BE6949007ABECC /* 活动列表.png */,
@@ -1240,6 +1251,7 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				03CE63F817C855C50091718A /* Notification */,
 				034267E917B8D935000248C2 /* Activity */,
 				E4910C0717C2646B00DD9DCC /* Course */,
 				E4511F3417BFA059005494C1 /* Friend */,
@@ -1282,6 +1294,18 @@
 				03BA1D2217BF6EBF0040712F /* WESearchRootViewController.xib */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		03CE63F817C855C50091718A /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				03CE63F917C855E10091718A /* WENotificationControllerViewController.h */,
+				03CE63FA17C855E10091718A /* WENotificationControllerViewController.m */,
+				03CE63FC17C856270091718A /* WENotificationRootViewController.h */,
+				03CE63FD17C856270091718A /* WENotificationRootViewController.m */,
+				03CE63FE17C856270091718A /* WENotificationRootViewController.xib */,
+			);
+			name = Notification;
 			sourceTree = "<group>";
 		};
 		03E37DB317C1FA3A008029D5 /* Search */ = {
@@ -2201,6 +2225,8 @@
 				E4906C4317C3A50200BBFB62 /* WEMeViewController.xib in Resources */,
 				0331AC0B17C64498009A29EB /* WTDetailImageViewController.xib in Resources */,
 				0331AC1017C646C6009A29EB /* WTDetailImageItemView.xib in Resources */,
+				03CE640017C856280091718A /* WENotificationRootViewController.xib in Resources */,
+				03CE640217C858080091718A /* 设置.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2373,6 +2399,8 @@
 				E4906C4117C3A4EC00BBFB62 /* WEMeViewController.m in Sources */,
 				0331AC0A17C64498009A29EB /* WTDetailImageViewController.m in Sources */,
 				0331AC0F17C646C6009A29EB /* WTDetailImageItemView.m in Sources */,
+				03CE63FB17C855E10091718A /* WENotificationControllerViewController.m in Sources */,
+				03CE63FF17C856280091718A /* WENotificationRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,7 +42,6 @@
     [self configureScrollView];
     [self clearSearchResultObjects];
     [self loadSearchResultWithBlock:^(int k) {
-        NSLog(@"result number is %d", k);
         if (k == 0) [self setScrollViewVisible:YES];
     }];
 }

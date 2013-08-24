@@ -7,9 +7,9 @@
 //
 
 #import "WESettingViewController.h"
+#import "WEAboutViewController.h"
 
 @interface WESettingViewController ()
-
 @end
 
 @implementation WESettingViewController
@@ -25,14 +25,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
     self.title = @"设置";
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 1);
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 5);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)didClickSeeAboutButton:(id)sender
+{
+    WEAboutViewController *aboutVC = [[WEAboutViewController alloc] init];
+    [self.navigationController pushViewController:aboutVC animated:YES];
+}
+
+- (IBAction)didClickClearCache:(id)sender
+{
+    
+}
+
+- (IBAction)didClickLogout:(id)sender
+{
+    
+}
 @end
