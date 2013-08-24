@@ -32,4 +32,22 @@
     self.likeCountLabel.text = act.likeCount.stringValue;
 }
 
+- (IBAction)didClickInviteOthers:(id)sender
+{
+    if (self.delegate)
+        [self.delegate inviteOthers];
+}
+
+- (IBAction)didCLickJoinEvent:(id)sender
+{
+    if (self.delegate)
+        [self.delegate joinEvent];
+}
+
+- (IBAction)didClickLike:(id)sender
+{
+    if (self.delegate)
+        [self.delegate like];
+}
+
 @end

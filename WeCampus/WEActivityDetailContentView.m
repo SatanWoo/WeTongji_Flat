@@ -12,7 +12,7 @@
 #import "WTDetailImageViewController.h"
 #import <OHAttributedLabel.h>
 
-@interface WEActivityDetailContentView() <WTDetailImageViewControllerDelegate>
+@interface WEActivityDetailContentView() <WTDetailImageViewControllerDelegate, WEActivityDetailControlAreaViewDelegate>
 @property (strong, nonatomic) WTActivityImageRollView *imageRollView;
 @property (strong, nonatomic) WEActivityDetailControlAreaView *controlAreaView;
 @property (strong, nonatomic) WEActivityDetailControlAreaView *bottomAreaView;
@@ -139,5 +139,10 @@
     [self.imageRollView reloadItemImages];
 }
 
+#pragma mark - WEActivityDetailControlAreaViewDelegate
+- (void)inviteOthers
+{
+    
+}
 
 @end
