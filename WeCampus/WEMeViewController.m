@@ -9,6 +9,7 @@
 #import "WEMeViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "UIImageView+AsyncLoading.h"
+#import "WTCoreDataManager.h"
 
 @interface WEMeViewController ()
 
@@ -44,7 +45,7 @@
 - (void)configureWithUser:(User*)user
 {
     [self.nameButton setTitle:user.name forState:UIControlStateNormal];
-    //self.genderImageView.image = [UIImage imageNamed:user.gender ];
+    self.genderImageView.image = [UIImage imageNamed:[user.gender isEqualToString:@"male"] ? @"person_male_icn.png" : @"person_female_icn.png"];
     
     self.friendCountLabel.text = [NSString stringWithFormat:@"%@",user.friendCount];
     self.courseCountLabel.text = [NSString stringWithFormat:@"%@",user.scheduledCourseCount];
@@ -52,6 +53,16 @@
     
     [self.headImageView loadImageWithImageURLString:user.avatar];
 	
+    if([WTCoreDataManager sharedManager].currentUser == user)//self visit
+    {
+        self.addFriendButton.hidden = YES;
+        self.likeButton.hidden = YES;
+        self.genderImageView.hidden = YES;
+    }
+    else if([[WTCoreDataManager sharedManager].currentUser.friends member:user])//friend visit
+    {
+        self.addFriendButton.hidden = YES;
+    }
 }
 
 
