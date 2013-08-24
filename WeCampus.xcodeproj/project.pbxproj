@@ -372,7 +372,6 @@
 		E458B21717B9121100D0DFBD /* WENowPortraitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E458B21517B9121100D0DFBD /* WENowPortraitViewController.xib */; };
 		E458B21F17B92B9600D0DFBD /* WENowPortraitWeekListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E548117B92AF9000426E1 /* WENowPortraitWeekListViewController.m */; };
 		E458B22017B92C0600D0DFBD /* NSDate-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E548517B92BC6000426E1 /* NSDate-Utilities.m */; };
-		E464CFBC17C888BF0094B11A /* WEMeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E464CFBA17C888BF0094B11A /* WEMeDetailViewController.m */; };
 		E464CFBD17C888BF0094B11A /* WEMeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E464CFBB17C888BF0094B11A /* WEMeDetailViewController.xib */; };
 		E470584017BE6325007ABECC /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E470583D17BE6325007ABECC /* UIColor+AppColor.m */; };
 		E470584117BE6325007ABECC /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = E470583F17BE6325007ABECC /* UIColor+Hex.m */; };
@@ -394,6 +393,8 @@
 		E4910C0617C261D000DD9DCC /* WECourseDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910C0017C261D000DD9DCC /* WECourseDetailHeaderView.xib */; };
 		E4910C0B17C264BE00DD9DCC /* WECourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910C0817C264BE00DD9DCC /* WECourseDetailViewController.m */; };
 		E4910C0C17C264BE00DD9DCC /* WECourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910C0917C264BE00DD9DCC /* WECourseDetailViewController.xib */; };
+		E4982CBD17C8D6DF0016E694 /* WEMeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E464CFBA17C888BF0094B11A /* WEMeDetailViewController.m */; };
+		E4982CC017C8DE490016E694 /* WEMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4982CBF17C8DE490016E694 /* WEMeNavigationController.m */; };
 		E49A324517B7538800AF8C77 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324417B7538800AF8C77 /* AddressBook.framework */; };
 		E49A324717B7538C00AF8C77 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324617B7538C00AF8C77 /* AddressBookUI.framework */; };
 		E49A324917B7539300AF8C77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324817B7539200AF8C77 /* MobileCoreServices.framework */; };
@@ -944,6 +945,8 @@
 		E4910C0817C264BE00DD9DCC /* WECourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WECourseDetailViewController.m; sourceTree = "<group>"; };
 		E4910C0917C264BE00DD9DCC /* WECourseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WECourseDetailViewController.xib; sourceTree = "<group>"; };
 		E4910C0A17C264BE00DD9DCC /* WECourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WECourseDetailViewController.h; sourceTree = "<group>"; };
+		E4982CBE17C8DE490016E694 /* WEMeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEMeNavigationController.h; sourceTree = "<group>"; };
+		E4982CBF17C8DE490016E694 /* WEMeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEMeNavigationController.m; sourceTree = "<group>"; };
 		E49A324417B7538800AF8C77 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		E49A324617B7538C00AF8C77 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		E49A324817B7539200AF8C77 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -1271,12 +1274,12 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				03CE63F817C855C50091718A /* Notification */,
 				034267E917B8D935000248C2 /* Activity */,
 				E4910C0717C2646B00DD9DCC /* Course */,
 				E4511F3417BFA059005494C1 /* Friend */,
 				03E8B60517B785EF00AC12C8 /* Home */,
 				E4906C3E17C3A44800BBFB62 /* Me */,
+				03CE63F817C855C50091718A /* Notification */,
 				E44E547617B90FC9000426E1 /* Now */,
 				E47D58D617B731EA00D55EC7 /* Root */,
 				03BA1D1A17BF6E5E0040712F /* Search */,
@@ -1912,6 +1915,8 @@
 				E464CFB917C888BF0094B11A /* WEMeDetailViewController.h */,
 				E464CFBA17C888BF0094B11A /* WEMeDetailViewController.m */,
 				E464CFBB17C888BF0094B11A /* WEMeDetailViewController.xib */,
+				E4982CBE17C8DE490016E694 /* WEMeNavigationController.h */,
+				E4982CBF17C8DE490016E694 /* WEMeNavigationController.m */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -2300,6 +2305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4982CBD17C8D6DF0016E694 /* WEMeDetailViewController.m in Sources */,
 				E458B22017B92C0600D0DFBD /* NSDate-Utilities.m in Sources */,
 				E458B21F17B92B9600D0DFBD /* WENowPortraitWeekListViewController.m in Sources */,
 				033729CB17B67D7600D2EC9F /* main.m in Sources */,

@@ -7,7 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User+Addition.h"
+#import "WEContentViewController.h"
 
-@interface WEMeDetailViewController : UIViewController
+@interface WEMeDetailViewController : WEContentViewController
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UILabel *mottoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *birthdayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *schoolLabel;
+@property (weak, nonatomic) IBOutlet UILabel *departmentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mobileLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *qqLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIView *contentView;
+
+- (void)configureWithUser:(User*)user;
+
 
 @end
