@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "UIImageView+AsyncLoading.h"
 #import "WTCoreDataManager.h"
+#import "WTClient.h"
+#import "WTRequest.h"
 
 @interface WEMeViewController ()
 
@@ -40,13 +42,30 @@
     self.contentScrollVIew.alwaysBounceVertical = YES;
     [self initHeadImageView];
     // Do any additional setup after loading the view.
+    [self logIn];
+}
+
+- (void)logIn
+{
+    WTClient *client = [WTClient sharedClient];
+    WTRequest *request = [WTRequest requestWithSuccessBlock: ^(id responseData)
+                          {
+                              User *user = [User insertUser:[responseData objectForKey:@"User"]];
+                              [WTCoreDataManager sharedManager].currentUser = user;
+                              [self configureWithUser:user];
+                              
+                          } failureBlock:^(NSError * error) {
+                              NSLog(@"fail");
+                          }];
+    [request loginWithStudentNumber:@"000000" password:@"123456"];
+    [client enqueueRequest:request];
 }
 
 - (void)configureWithUser:(User*)user
 {
     [self.nameButton setTitle:user.name forState:UIControlStateNormal];
     self.genderImageView.image = [UIImage imageNamed:[user.gender isEqualToString:@"male"] ? @"person_male_icn.png" : @"person_female_icn.png"];
-    
+    self.descriptionLabel.text = user.motto;
     self.friendCountLabel.text = [NSString stringWithFormat:@"%@",user.friendCount];
     self.courseCountLabel.text = [NSString stringWithFormat:@"%@",user.scheduledCourseCount];
     self.likeCountLabel.text = [NSString stringWithFormat:@"%d",user.likedObjects.count];
