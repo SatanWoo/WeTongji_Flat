@@ -370,6 +370,8 @@
 		E458B21717B9121100D0DFBD /* WENowPortraitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E458B21517B9121100D0DFBD /* WENowPortraitViewController.xib */; };
 		E458B21F17B92B9600D0DFBD /* WENowPortraitWeekListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E548117B92AF9000426E1 /* WENowPortraitWeekListViewController.m */; };
 		E458B22017B92C0600D0DFBD /* NSDate-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E548517B92BC6000426E1 /* NSDate-Utilities.m */; };
+		E464CFBC17C888BF0094B11A /* WEMeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E464CFBA17C888BF0094B11A /* WEMeDetailViewController.m */; };
+		E464CFBD17C888BF0094B11A /* WEMeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E464CFBB17C888BF0094B11A /* WEMeDetailViewController.xib */; };
 		E470584017BE6325007ABECC /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E470583D17BE6325007ABECC /* UIColor+AppColor.m */; };
 		E470584117BE6325007ABECC /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = E470583F17BE6325007ABECC /* UIColor+Hex.m */; };
 		E470584617BE6949007ABECC /* 活动列表_分类.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584217BE6949007ABECC /* 活动列表_分类.png */; };
@@ -905,6 +907,9 @@
 		E458B21317B9121100D0DFBD /* WENowPortraitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENowPortraitViewController.h; sourceTree = "<group>"; };
 		E458B21417B9121100D0DFBD /* WENowPortraitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENowPortraitViewController.m; sourceTree = "<group>"; };
 		E458B21517B9121100D0DFBD /* WENowPortraitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WENowPortraitViewController.xib; sourceTree = "<group>"; };
+		E464CFB917C888BF0094B11A /* WEMeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEMeDetailViewController.h; sourceTree = "<group>"; };
+		E464CFBA17C888BF0094B11A /* WEMeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEMeDetailViewController.m; sourceTree = "<group>"; };
+		E464CFBB17C888BF0094B11A /* WEMeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEMeDetailViewController.xib; sourceTree = "<group>"; };
 		E470583C17BE6325007ABECC /* UIColor+AppColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColor.h"; sourceTree = "<group>"; };
 		E470583D17BE6325007ABECC /* UIColor+AppColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
 		E470583E17BE6325007ABECC /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
@@ -1898,6 +1903,9 @@
 				E4906C3F17C3A4EC00BBFB62 /* WEMeViewController.h */,
 				E4906C4017C3A4EC00BBFB62 /* WEMeViewController.m */,
 				E4906C4217C3A50200BBFB62 /* WEMeViewController.xib */,
+				E464CFB917C888BF0094B11A /* WEMeDetailViewController.h */,
+				E464CFBA17C888BF0094B11A /* WEMeDetailViewController.m */,
+				E464CFBB17C888BF0094B11A /* WEMeDetailViewController.xib */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -2240,6 +2248,7 @@
 				03CE640217C858080091718A /* 设置.png in Resources */,
 				03CE640417C86C3A0091718A /* 关于.png in Resources */,
 				03CE640917C87A6C0091718A /* WEUserProtocolViewController.xib in Resources */,
+				E464CFBD17C888BF0094B11A /* WEMeDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2415,6 +2424,7 @@
 				03CE63FB17C855E10091718A /* WENotificationControllerViewController.m in Sources */,
 				03CE63FF17C856280091718A /* WENotificationRootViewController.m in Sources */,
 				03CE640717C879B20091718A /* WEUserProtocolViewController.m in Sources */,
+				E464CFBC17C888BF0094B11A /* WEMeDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
