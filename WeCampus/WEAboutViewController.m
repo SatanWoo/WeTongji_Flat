@@ -9,6 +9,7 @@
 #import "WEAboutViewController.h"
 #import <MessageUI/MFMailComposeViewController.h>
 #import "UIApplication+WTAddition.h"
+#import "WEUserProtocolViewController.h"
 
 #define WE_TONGJI_EMAIL             @"wetongji2012@gmail.com"
 #define WE_TONGJI_SINA_WEIBO_URL    @"http://www.weibo.com/wetongji"
@@ -53,28 +54,8 @@
 
 - (IBAction)didClickUserProtocol:(id)sender
 {
-   
-}
-
-#pragma mark - MFMailComposeViewController delegate
-
-- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
-    if(result == MFMailComposeResultSent) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", nil)
-                                                        message:@"Your feedback has been delieved successfully"
-                                                       delegate:nil
-                                              cancelButtonTitle:NSLocalizedString(@"I see", nil)
-                                              otherButtonTitles:nil];
-        [alert show];
-    } else if(result == MFMailComposeResultFailed) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Failure", nil)
-                                                        message:@"Your feedback has not been delieved"
-                                                       delegate:nil
-                                              cancelButtonTitle:NSLocalizedString(@"I see", nil)
-                                              otherButtonTitles:nil];
-        [alert show];
-    }
-	[self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    WEUserProtocolViewController *vc = [[WEUserProtocolViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)didClickShare:(id)sender
@@ -104,6 +85,27 @@
     [picker setToRecipients:toRecipients];
     [picker setMessageBody:emailBody isHTML:NO];
     [self.navigationController presentViewController:picker animated:YES completion:nil];
+}
+
+#pragma mark - MFMailComposeViewController delegate
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    if(result == MFMailComposeResultSent) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", nil)
+                                                        message:@"Your feedback has been delieved successfully"
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"I see", nil)
+                                              otherButtonTitles:nil];
+        [alert show];
+    } else if(result == MFMailComposeResultFailed) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Failure", nil)
+                                                        message:@"Your feedback has not been delieved"
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"I see", nil)
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+	[self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

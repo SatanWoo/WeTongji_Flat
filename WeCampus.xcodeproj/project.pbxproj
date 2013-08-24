@@ -96,6 +96,8 @@
 		03CE640017C856280091718A /* WENotificationRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03CE63FE17C856270091718A /* WENotificationRootViewController.xib */; };
 		03CE640217C858080091718A /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CE640117C858080091718A /* 设置.png */; };
 		03CE640417C86C3A0091718A /* 关于.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CE640317C86C3A0091718A /* 关于.png */; };
+		03CE640717C879B20091718A /* WEUserProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE640617C879B10091718A /* WEUserProtocolViewController.m */; };
+		03CE640917C87A6C0091718A /* WEUserProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03CE640817C87A6C0091718A /* WEUserProtocolViewController.xib */; };
 		03E37DB617C207E2008029D5 /* search_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB417C207E2008029D5 /* search_arrow.png */; };
 		03E37DB717C207E2008029D5 /* search_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB517C207E2008029D5 /* search_arrow@2x.png */; };
 		03E37DBA17C20EF9008029D5 /* WESearchResultHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E37DB917C20EF9008029D5 /* WESearchResultHeaderView.m */; };
@@ -553,6 +555,9 @@
 		03CE63FE17C856270091718A /* WENotificationRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WENotificationRootViewController.xib; sourceTree = "<group>"; };
 		03CE640117C858080091718A /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
 		03CE640317C86C3A0091718A /* 关于.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关于.png"; sourceTree = "<group>"; };
+		03CE640517C879B10091718A /* WEUserProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEUserProtocolViewController.h; sourceTree = "<group>"; };
+		03CE640617C879B10091718A /* WEUserProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEUserProtocolViewController.m; sourceTree = "<group>"; };
+		03CE640817C87A6C0091718A /* WEUserProtocolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEUserProtocolViewController.xib; sourceTree = "<group>"; };
 		03E37DB417C207E2008029D5 /* search_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_arrow.png; sourceTree = "<group>"; };
 		03E37DB517C207E2008029D5 /* search_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_arrow@2x.png"; sourceTree = "<group>"; };
 		03E37DB817C20EF9008029D5 /* WESearchResultHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultHeaderView.h; sourceTree = "<group>"; };
@@ -986,6 +991,9 @@
 				0321419617C0CD66002BBA9E /* WEAboutViewController.h */,
 				0321419717C0CD66002BBA9E /* WEAboutViewController.m */,
 				0321419817C0CD67002BBA9E /* WEAboutViewController.xib */,
+				03CE640517C879B10091718A /* WEUserProtocolViewController.h */,
+				03CE640617C879B10091718A /* WEUserProtocolViewController.m */,
+				03CE640817C87A6C0091718A /* WEUserProtocolViewController.xib */,
 			);
 			name = "Setting & About";
 			sourceTree = "<group>";
@@ -2231,6 +2239,7 @@
 				03CE640017C856280091718A /* WENotificationRootViewController.xib in Resources */,
 				03CE640217C858080091718A /* 设置.png in Resources */,
 				03CE640417C86C3A0091718A /* 关于.png in Resources */,
+				03CE640917C87A6C0091718A /* WEUserProtocolViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2405,6 +2414,7 @@
 				0331AC0F17C646C6009A29EB /* WTDetailImageItemView.m in Sources */,
 				03CE63FB17C855E10091718A /* WENotificationControllerViewController.m in Sources */,
 				03CE63FF17C856280091718A /* WENotificationRootViewController.m in Sources */,
+				03CE640717C879B20091718A /* WEUserProtocolViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
