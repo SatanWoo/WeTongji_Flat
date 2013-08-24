@@ -13,4 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *copyrightLabel;
 
+- (IBAction)didClickUserProtocol:(id)sender;
+- (IBAction)didClickShare:(id)sender;
+- (IBAction)didClickSuggest:(id)sender;
+
 @end
