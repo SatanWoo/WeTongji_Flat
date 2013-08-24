@@ -38,14 +38,57 @@
     [super viewDidLoad];
     self.contentScrollVIew.alwaysBounceVertical = YES;
     [self initHeadImageView];
-    [self.headImageView loadImageWithImageURLString:@"http://lorempixel.com/90/90/people"];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+- (void)configureWithUser:(User*)user
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.nameButton setTitle:user.name forState:UIControlStateNormal];
+    //self.genderImageView.image = [UIImage imageNamed:user.gender ];
+    
+    self.friendCountLabel.text = [NSString stringWithFormat:@"%@",user.friendCount];
+    self.courseCountLabel.text = [NSString stringWithFormat:@"%@",user.scheduledCourseCount];
+    self.likeCountLabel.text = [NSString stringWithFormat:@"%d",user.likedObjects.count];
+    
+    [self.headImageView loadImageWithImageURLString:user.avatar];
+	
+}
+
+
+#pragma mark - IBActions
+- (IBAction)friendTapped:(id)sender
+{
+    
+}
+
+- (IBAction)courseTapped:(id)sender
+{
+    
+}
+
+- (IBAction)likedTapped:(id)sender
+{
+    
+}
+
+- (IBAction)likeTheUserTapped:(id)sender
+{
+    
+}
+
+- (IBAction)addFriendTapped:(id)sender
+{
+    
+}
+
+- (IBAction)nameTapped:(id)sender
+{
+    
+}
+
+- (IBAction)seeMoreTapped:(id)sender
+{
+    
 }
 
 @end
