@@ -60,18 +60,21 @@
         [UIView animateWithDuration:0.25f animations:^{
             self.scrollView.contentOffset = CGPointMake(50, self.scrollView.frame.size.height);
         } completion:^(BOOL finished) {
+            //_switchState = 1;
             [self.delegate switchDidChange:self];
         }];
     } else if (location.x > 78) {
         [UIView animateWithDuration:0.25f animations:^{
             self.scrollView.contentOffset = CGPointMake(0, self.scrollView.frame.size.height);
         } completion:^(BOOL finished) {
+            //_switchState = 0;
             [self.delegate switchDidChange:self];
         }];
     } else {
         [UIView animateWithDuration:0.25f animations:^{
             self.scrollView.contentOffset = _switchState ? CGPointMake(0, self.scrollView.frame.size.height) : CGPointMake(50, self.scrollView.frame.size.height);
         } completion:^(BOOL finished) {
+            //_switchState = !_switchState;
             [self.delegate switchDidChange:self];
         }];
     }
@@ -86,17 +89,20 @@
     _switchState = (scrollView.contentOffset.x >= 50);
     
     if (self.scrollView.dragging && !self.scrollView.isDecelerating) {
+        // NSLog(@"dragging not decelerating, highlight");
         self.scrollView.handlerButton.highlighted = YES;
     }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     self.scrollView.handlerButton.highlighted = NO;
+    // NSLog(@"end dragging, not highlight");
     [self.delegate switchDidChange:self];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     self.scrollView.handlerButton.highlighted = NO;
+    // NSLog(@"end decelerating, not highlight");
     [self.delegate switchDidChange:self];
 }
 
@@ -106,22 +112,28 @@
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     if ([self pointInside:point withEvent:event]) {
+        // NSLog(@"inside point %@", NSStringFromCGPoint(point));
+        // self.handlerButton.highlighted = YES;
         return self;
     }
     else {
+        // NSLog(@"outside point %@", NSStringFromCGPoint(point));
         return [super hitTest:point withEvent:event];
     }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    // NSLog(@"touchesBegan");
     self.handlerButton.highlighted = YES;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    // NSLog(@"touchesEnded");
     self.handlerButton.highlighted = NO;
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    // NSLog(@"touchesCancelled");
     self.handlerButton.highlighted = NO;
 }
 
