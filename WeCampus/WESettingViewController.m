@@ -30,7 +30,7 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
     self.title = @"设置";
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 5);
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 30);
 }
 
 - (void)didReceiveMemoryWarning

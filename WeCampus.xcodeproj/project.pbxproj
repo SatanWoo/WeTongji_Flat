@@ -95,6 +95,7 @@
 		03CE63FF17C856280091718A /* WENotificationRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE63FD17C856270091718A /* WENotificationRootViewController.m */; };
 		03CE640017C856280091718A /* WENotificationRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03CE63FE17C856270091718A /* WENotificationRootViewController.xib */; };
 		03CE640217C858080091718A /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CE640117C858080091718A /* 设置.png */; };
+		03CE640417C86C3A0091718A /* 关于.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CE640317C86C3A0091718A /* 关于.png */; };
 		03E37DB617C207E2008029D5 /* search_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB417C207E2008029D5 /* search_arrow.png */; };
 		03E37DB717C207E2008029D5 /* search_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB517C207E2008029D5 /* search_arrow@2x.png */; };
 		03E37DBA17C20EF9008029D5 /* WESearchResultHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E37DB917C20EF9008029D5 /* WESearchResultHeaderView.m */; };
@@ -551,6 +552,7 @@
 		03CE63FD17C856270091718A /* WENotificationRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENotificationRootViewController.m; sourceTree = "<group>"; };
 		03CE63FE17C856270091718A /* WENotificationRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WENotificationRootViewController.xib; sourceTree = "<group>"; };
 		03CE640117C858080091718A /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
+		03CE640317C86C3A0091718A /* 关于.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关于.png"; sourceTree = "<group>"; };
 		03E37DB417C207E2008029D5 /* search_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_arrow.png; sourceTree = "<group>"; };
 		03E37DB517C207E2008029D5 /* search_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_arrow@2x.png"; sourceTree = "<group>"; };
 		03E37DB817C20EF9008029D5 /* WESearchResultHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultHeaderView.h; sourceTree = "<group>"; };
@@ -1154,6 +1156,7 @@
 		034164E217B7DAD8005CFD98 /* 参考图 */ = {
 			isa = PBXGroup;
 			children = (
+				03CE640317C86C3A0091718A /* 关于.png */,
 				03CE640117C858080091718A /* 设置.png */,
 				E4906C4417C3A5CF00BBFB62 /* me.png */,
 				E470584217BE6949007ABECC /* 活动列表_分类.png */,
@@ -1584,8 +1587,8 @@
 		E458B07717B754C100D0DFBD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				03400AA417C2979B000937B7 /* bg_unit.png */,
 				E4DE121217BE17D000651486 /* keys */,
+				03400AA417C2979B000937B7 /* bg_unit.png */,
 				0320CCCB17BD5E6E005B2110 /* green_point.png */,
 				034164E217B7DAD8005CFD98 /* 参考图 */,
 				034267F317B8EDB7000248C2 /* nav_bg.png */,
@@ -2227,6 +2230,7 @@
 				0331AC1017C646C6009A29EB /* WTDetailImageItemView.xib in Resources */,
 				03CE640017C856280091718A /* WENotificationRootViewController.xib in Resources */,
 				03CE640217C858080091718A /* 设置.png in Resources */,
+				03CE640417C86C3A0091718A /* 关于.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

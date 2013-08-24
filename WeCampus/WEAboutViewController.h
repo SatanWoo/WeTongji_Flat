@@ -10,5 +10,7 @@
 #import "WEContentViewController.h"
 
 @interface WEAboutViewController : WEContentViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *copyrightLabel;
 
 @end

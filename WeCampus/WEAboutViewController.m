@@ -26,13 +26,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"AboutWeCampus", nil);
+    self.title = @"关于";
+    
+    [self configureScrollView];
+}
+
+- (void)configureScrollView
+{
+    [self.scrollView resetHeight:self.view.frame.size.height];
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 30);
+    [self.scrollView setContentOffset:CGPointZero];
+    
+    [self.copyrightLabel resetOriginY:self.view.frame.size.height - 50];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
