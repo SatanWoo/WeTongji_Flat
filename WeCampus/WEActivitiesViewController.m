@@ -74,7 +74,7 @@
     [request getActivitiesInTypes:[NSUserDefaults getActivityShowTypesArray]
                       orderMethod:[userDefaults getActivityOrderMethod]
                        smartOrder:[userDefaults getActivitySmartOrderProperty]
-                       showExpire:[userDefaults getActivityHidePastProperty]
+                       showExpire:![userDefaults getActivityHidePastProperty]
                              page:self.nextPage];
 }
 
