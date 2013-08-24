@@ -1,10 +1,13 @@
 PODS:
   - OHAttributedLabel (3.4.1)
+  - RHAddressBook (1.0.2)
 
 DEPENDENCIES:
   - OHAttributedLabel
+  - RHAddressBook
 
 SPEC CHECKSUMS:
   OHAttributedLabel: 770332ef810ca15c9bd4a79f300ce620bc443e9d
+  RHAddressBook: 64f78a4058e0a7849275c970bf19fe195edf94d0
 
 COCOAPODS: 0.23.0

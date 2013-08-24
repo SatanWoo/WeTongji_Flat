@@ -394,7 +394,6 @@
 		E4910C0B17C264BE00DD9DCC /* WECourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910C0817C264BE00DD9DCC /* WECourseDetailViewController.m */; };
 		E4910C0C17C264BE00DD9DCC /* WECourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4910C0917C264BE00DD9DCC /* WECourseDetailViewController.xib */; };
 		E4982CBD17C8D6DF0016E694 /* WEMeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E464CFBA17C888BF0094B11A /* WEMeDetailViewController.m */; };
-		E4982CC017C8DE490016E694 /* WEMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4982CBF17C8DE490016E694 /* WEMeNavigationController.m */; };
 		E49A324517B7538800AF8C77 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324417B7538800AF8C77 /* AddressBook.framework */; };
 		E49A324717B7538C00AF8C77 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324617B7538C00AF8C77 /* AddressBookUI.framework */; };
 		E49A324917B7539300AF8C77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49A324817B7539200AF8C77 /* MobileCoreServices.framework */; };
@@ -410,6 +409,7 @@
 		E4B02E0E17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B02E0C17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m */; };
 		E4B02E0F17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4B02E0D17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib */; };
 		E4B2948817B9C9A800ED68C6 /* WENowPortraitWeekListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44E548217B92AF9000426E1 /* WENowPortraitWeekListViewController.xib */; };
+		E4B4237717C8EC3300746A83 /* WEMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4982CBF17C8DE490016E694 /* WEMeNavigationController.m */; };
 		E4DE121417BE17D900651486 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = E4DE121317BE17D900651486 /* public_key.der */; };
 /* End PBXBuildFile section */
 
@@ -2305,6 +2305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B4237717C8EC3300746A83 /* WEMeNavigationController.m in Sources */,
 				E4982CBD17C8D6DF0016E694 /* WEMeDetailViewController.m in Sources */,
 				E458B22017B92C0600D0DFBD /* NSDate-Utilities.m in Sources */,
 				E458B21F17B92B9600D0DFBD /* WENowPortraitWeekListViewController.m in Sources */,
@@ -2437,7 +2438,6 @@
 				03CE63FB17C855E10091718A /* WENotificationControllerViewController.m in Sources */,
 				03CE63FF17C856280091718A /* WENotificationRootViewController.m in Sources */,
 				03CE640717C879B20091718A /* WEUserProtocolViewController.m in Sources */,
-				E464CFBC17C888BF0094B11A /* WEMeDetailViewController.m in Sources */,
 				03A2857217C8E93D00F587E5 /* WTSwitch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
