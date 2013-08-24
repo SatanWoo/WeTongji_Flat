@@ -9,6 +9,7 @@
 #import "WESettingViewController.h"
 #import "WEAboutViewController.h"
 #import "WTCoreDataManager.h"
+#import "WTClient.h"
 
 @interface WESettingViewController ()
 @end
@@ -50,6 +51,7 @@
 
 - (IBAction)didClickLogout:(id)sender
 {
-    
+    [[WTClient sharedClient] logout];
+    [WTCoreDataManager sharedManager].currentUser = nil;
 }
 @end
