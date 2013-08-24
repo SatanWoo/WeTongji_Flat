@@ -324,7 +324,7 @@
 				<string key="15.CustomClassName">WESearchNavigationController</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="17.CustomClassName">WEMeViewController</string>
+				<string key="17.CustomClassName">WEMeNavigationController</string>
 				<string key="17.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="18.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<dictionary class="NSMutableDictionary" key="2.IBAttributePlaceholdersKey"/>

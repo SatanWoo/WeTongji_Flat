@@ -12,9 +12,12 @@
 #import "WTCoreDataManager.h"
 #import "WTClient.h"
 #import "WTRequest.h"
+#import "WEMeDetailViewController.h"
 
 @interface WEMeViewController ()
-
+{
+    User *_user;
+}
 @end
 
 @implementation WEMeViewController
@@ -63,6 +66,7 @@
 
 - (void)configureWithUser:(User*)user
 {
+    _user = user;
     [self.nameButton setTitle:user.name forState:UIControlStateNormal];
     self.genderImageView.image = [UIImage imageNamed:[user.gender isEqualToString:@"male"] ? @"person_male_icn.png" : @"person_female_icn.png"];
     self.descriptionLabel.text = user.motto;
@@ -113,7 +117,9 @@
 
 - (IBAction)nameTapped:(id)sender
 {
-    
+    WEMeDetailViewController *vc = [[WEMeDetailViewController alloc] init];
+    [vc configureWithUser:_user];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)seeMoreTapped:(id)sender

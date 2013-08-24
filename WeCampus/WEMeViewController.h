@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "WEActivityCell.h"
 #import "User+Addition.h"
+#import "WERootViewController.h"
 
-@interface WEMeViewController : UIViewController
+@interface WEMeViewController : WERootViewController
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UIButton *nameButton;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;

@@ -12,7 +12,9 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface WEMeDetailViewController ()
-
+{
+    User* _user;
+}
 @end
 
 @implementation WEMeDetailViewController
@@ -29,7 +31,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureWithUser:_user];
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.scrollView addSubview:self.contentView];
+    self.scrollView.contentSize = self.contentView.bounds.size;
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,8 +53,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)popCLicked:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)configureWithUser:(User*)user
 {
+    _user = user;
+    self.nameLabel.text = user.name;
     self.mobileLabel.text = user.motto;
     self.birthdayLabel.text = [user.birthday convertToYearMonthDayString];
     self.numberLabel.text = user.studentNumber;
