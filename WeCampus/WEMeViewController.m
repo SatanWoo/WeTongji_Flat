@@ -14,6 +14,7 @@
 #import "WTRequest.h"
 #import "WEMeDetailViewController.h"
 #import "WEFriendListViewController.h"
+#import "WEMeFriendListViewController.h"
 
 @interface WEMeViewController ()<WEFriendListViewControllerDelegate>
 {
@@ -45,6 +46,12 @@
     [super viewDidLoad];
     self.contentScrollVIew.alwaysBounceVertical = YES;
     [self initHeadImageView];
+    
+    UIViewController *root = self.navigationController.viewControllers[0];
+    if(root == self)
+    {
+        self.backButto.hidden = YES;
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -54,7 +61,7 @@
 {
     _user = user;
     [self.nameButton setTitle:user.name forState:UIControlStateNormal];
-    self.genderImageView.image = [UIImage imageNamed:[user.gender isEqualToString:@"male"] ? @"person_male_icn.png" : @"person_female_icn.png"];
+    self.genderImageView.image = [UIImage imageNamed:[user.gender isEqualToString:@"男"] ? @"person_male_icn.png" : @"person_female_icn.png"];
     self.descriptionLabel.text = user.motto;
     self.friendCountLabel.text = [NSString stringWithFormat:@"%@",user.friendCount];
     self.courseCountLabel.text = [NSString stringWithFormat:@"%@",user.scheduledCourseCount];
@@ -76,9 +83,15 @@
 
 
 #pragma mark - IBActions
+- (IBAction)popBack:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)friendTapped:(id)sender
 {
-    WEFriendListViewController *vc = [[WEFriendListViewController alloc] init];
+    WEMeFriendListViewController *vc = [[WEMeFriendListViewController alloc] init];
+    vc.view;
     vc.friendOfPerson = _user;
     vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];

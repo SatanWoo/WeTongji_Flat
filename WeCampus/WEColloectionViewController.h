@@ -26,4 +26,6 @@
 
 - (NSArray*)selected;
 
+
+- (void)unselectAll;
 @end

@@ -157,6 +157,15 @@
     return cell;
 }
 
+- (void)unselectAll
+{
+    NSArray *selected = [self.collectionView indexPathsForSelectedItems];
+    for(NSIndexPath *p in selected)
+    {
+        [self.collectionView deselectItemAtIndexPath:p animated:NO];
+    }
+}
+
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     if([kind isEqualToString:UICollectionElementKindSectionHeader])

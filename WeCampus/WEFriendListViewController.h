@@ -24,4 +24,6 @@
 
 - (NSArray*)selectedUsers;
 
+- (void)unselectAll;
+
 @end

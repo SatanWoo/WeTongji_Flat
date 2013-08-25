@@ -399,6 +399,8 @@
 		E470584817BE6949007ABECC /* 活动详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584417BE6949007ABECC /* 活动详情1.png */; };
 		E470584917BE6949007ABECC /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584517BE6949007ABECC /* 首页.png */; };
 		E470584B17BE6ACC007ABECC /* cal.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584A17BE6ACC007ABECC /* cal.png */; };
+		E477AEBD17CA293200F14B3E /* WEMeFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E477AEBB17CA293200F14B3E /* WEMeFriendListViewController.m */; };
+		E477AEBE17CA293200F14B3E /* WEMeFriendListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E477AEBC17CA293200F14B3E /* WEMeFriendListViewController.xib */; };
 		E4906C4117C3A4EC00BBFB62 /* WEMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4906C4017C3A4EC00BBFB62 /* WEMeViewController.m */; };
 		E4906C4317C3A50200BBFB62 /* WEMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4906C4217C3A50200BBFB62 /* WEMeViewController.xib */; };
 		E4910BF117C080C900DD9DCC /* NSString+NaturlLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = E4910BF017C080C900DD9DCC /* NSString+NaturlLanguage.m */; };
@@ -973,6 +975,9 @@
 		E470584417BE6949007ABECC /* 活动详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情1.png"; sourceTree = "<group>"; };
 		E470584517BE6949007ABECC /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
 		E470584A17BE6ACC007ABECC /* cal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cal.png; sourceTree = "<group>"; };
+		E477AEBA17CA293200F14B3E /* WEMeFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEMeFriendListViewController.h; sourceTree = "<group>"; };
+		E477AEBB17CA293200F14B3E /* WEMeFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEMeFriendListViewController.m; sourceTree = "<group>"; };
+		E477AEBC17CA293200F14B3E /* WEMeFriendListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEMeFriendListViewController.xib; sourceTree = "<group>"; };
 		E4906C3F17C3A4EC00BBFB62 /* WEMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEMeViewController.h; sourceTree = "<group>"; };
 		E4906C4017C3A4EC00BBFB62 /* WEMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEMeViewController.m; sourceTree = "<group>"; };
 		E4906C4217C3A50200BBFB62 /* WEMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEMeViewController.xib; sourceTree = "<group>"; };
@@ -2020,6 +2025,9 @@
 				E464CFBB17C888BF0094B11A /* WEMeDetailViewController.xib */,
 				E4982CBE17C8DE490016E694 /* WEMeNavigationController.h */,
 				E4982CBF17C8DE490016E694 /* WEMeNavigationController.m */,
+				E477AEBA17CA293200F14B3E /* WEMeFriendListViewController.h */,
+				E477AEBB17CA293200F14B3E /* WEMeFriendListViewController.m */,
+				E477AEBC17CA293200F14B3E /* WEMeFriendListViewController.xib */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -2089,6 +2097,11 @@
 				CLASSPREFIX = WE;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Ziqi Wu";
+				TargetAttributes = {
+					033729BA17B67D7600D2EC9F = {
+						DevelopmentTeam = R42V6JHNDM;
+					};
+				};
 			};
 			buildConfigurationList = 033729B617B67D7600D2EC9F /* Build configuration list for PBXProject "WeCampus" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2374,6 +2387,7 @@
 				03D6226017C9EA0F00CC1EDD /* WEModifyPasswordViewController.xib in Resources */,
 				03D6226417C9EA8500CC1EDD /* 修改密码.png in Resources */,
 				03288F8917C9F4D300396391 /* WTPropergate.jpg in Resources */,
+				E477AEBE17CA293200F14B3E /* WEMeFriendListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2561,6 +2575,7 @@
 				03D6225A17C9E84D00CC1EDD /* WTInnerNotificationTableViewController.m in Sources */,
 				03D6225F17C9EA0F00CC1EDD /* WEModifyPasswordViewController.m in Sources */,
 				03D6226A17C9F12F00CC1EDD /* RDActivityViewController.m in Sources */,
+				E477AEBD17CA293200F14B3E /* WEMeFriendListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2648,13 +2663,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 852FA862DE854B8F88F43748 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: ping ji (T22KK72UGU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ping ji (T22KK72UGU)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeCampus/WeCampus-Prefix.pch";
 				INFOPLIST_FILE = "WeCampus/WeCampus-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6965CE8B-954B-4F28-8D36-DF37FEBA6EA6";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6965CE8B-954B-4F28-8D36-DF37FEBA6EA6";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2664,13 +2679,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 852FA862DE854B8F88F43748 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: ping ji (T22KK72UGU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ping ji (T22KK72UGU)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeCampus/WeCampus-Prefix.pch";
 				INFOPLIST_FILE = "WeCampus/WeCampus-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6965CE8B-954B-4F28-8D36-DF37FEBA6EA6";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E6CA4B1C-37F6-4466-B1EF-1E30B66EA19A";
 				WRAPPER_EXTENSION = app;
 			};

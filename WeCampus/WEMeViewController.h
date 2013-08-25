@@ -34,9 +34,12 @@
 
 @property (weak, nonatomic) IBOutlet WEActivityCell *firstEvent;
 @property (weak, nonatomic) IBOutlet WEActivityCell *secondEvent;
+@property (weak, nonatomic) IBOutlet UIButton *backButto;
 
 
 - (void)configureWithUser:(User*)user;
+
+- (IBAction)popBack:(id)sender;
 
 
 - (IBAction)friendTapped:(id)sender;

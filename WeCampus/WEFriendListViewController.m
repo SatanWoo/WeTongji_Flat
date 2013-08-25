@@ -15,7 +15,7 @@
 #import "WEFriendListHeaderView.h"
 #import "WEColloectionViewController.h"
 
-@interface WEFriendListViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,WEColloectionViewControllerDelegate>
+@interface WEFriendListViewController ()<WEColloectionViewControllerDelegate>
 {
     WEColloectionViewController *collectionVC;
     
@@ -58,6 +58,10 @@
     [self.view addSubview:collectionVC.view];
 }
 
+- (void)unselectAll
+{
+    [collectionVC unselectAll];
+}
 
 - (void)didReceiveMemoryWarning
 {
