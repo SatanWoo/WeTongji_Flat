@@ -11,6 +11,6 @@
 
 @interface WENotificationRootViewController : WERootViewController
 
-- (IBAction)test:(id)sender;
+//- (IBAction)test:(id)sender;
 
 @end
