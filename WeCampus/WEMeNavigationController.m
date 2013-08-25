@@ -8,9 +8,14 @@
 
 #import "WEMeNavigationController.h"
 #import "WEMeViewController.h"
+#import "WTCoreDataManager.h"
+#import "WTClient.h"
+#import "WTRequest.h"
 
 @interface WEMeNavigationController ()
-
+{
+    WEMeViewController *rootViewController;
+}
 @end
 
 @implementation WEMeNavigationController
@@ -38,7 +43,27 @@
 
 - (void)initRootViewController
 {
-    WEMeViewController *rootViewController = [[WEMeViewController alloc] init];
+    rootViewController = [[WEMeViewController alloc] init];
+    if(![WTCoreDataManager sharedManager].currentUser)
+    {
+        [self logIn];
+    }
     [self pushViewController:rootViewController animated:NO];
+}
+
+- (void)logIn
+{
+    WTClient *client = [WTClient sharedClient];
+    WTRequest *request = [WTRequest requestWithSuccessBlock: ^(id responseData)
+                          {
+                              User *user = [User insertUser:[responseData objectForKey:@"User"]];
+                              [WTCoreDataManager sharedManager].currentUser = user;
+                              [rootViewController configureWithUser:user];
+                              
+                          } failureBlock:^(NSError * error) {
+                              NSLog(@"fail");
+                          }];
+    [request loginWithStudentNumber:@"000000" password:@"123456"];
+    [client enqueueRequest:request];
 }
 @end

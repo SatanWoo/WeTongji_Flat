@@ -16,24 +16,37 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"WEFriendHeadCell" owner:self options:nil];
-//        
-//        if ([arrayOfViews count] < 1) {
-//            return nil;
-//        }
-//        
-//        if (![[arrayOfViews objectAtIndex:0] isKindOfClass:[UICollectionViewCell class]]) {
-//            return nil;
-//        }
-//        
-//        self = [arrayOfViews objectAtIndex:0];
-//        
-//        self.avatarImageView = (UIImageView*)[self viewWithTag:1];
-//        self.nameLabel = (UILabel*)[self viewWithTag:2];
+        NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"WEFriendHeadCell" owner:self options:nil];
+        
+        if ([arrayOfViews count] < 1) {
+            return nil;
+        }
+        
+        if (![[arrayOfViews objectAtIndex:0] isKindOfClass:[UICollectionViewCell class]]) {
+            return nil;
+        }
+        
+        self = [arrayOfViews objectAtIndex:0];
+        
+        self.avatarImageView = (UIImageView*)[self viewWithTag:1];
+        self.nameLabel = (UILabel*)[self viewWithTag:2];
         
         // Initialization code
     }
     return self;
+}
+
+- (void)setHighlighted:(BOOL)highlighted
+{
+//    if(highlighted)
+//    {
+//        self.avatarImageView.layer.borderWidth = 2;
+//        
+//    }
+//    else
+//    {
+//        self.avatarImageView.layer.borderWidth = 0;
+//    }
 }
 
 + (WEFriendHeadCell *)createFriendCellWithUser:(User *)user
@@ -52,12 +65,13 @@
 
 - (void)configureWithOrg:(Organization *)org
 {
+    _obj = org;
     [self configureCellWithImage:org.avatar andName:org.name];
 }
 
 - (void)configureWithUser:(User*)user
 {
-    _user = user;
+    _obj = user;
     [self configureCellWithImage:user.avatar andName:user.name];
 }
 
@@ -65,10 +79,13 @@
 {
     self.avatarImageView.layer.masksToBounds = YES;
     self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.height / 2;
+    self.avatarImageView.layer.borderColor = self.nameLabel.highlightedTextColor.CGColor;
+    self.avatarImageView.layer.borderWidth = 0;
+    
     [self.avatarImageView loadImageWithImageURLString:imgURL];
     self.nameLabel.text = name;
     //[self.nameLabel sizeToFit];
-    [self.nameLabel resetCenterX:self.frame.size.width / 2];
+    //[self.nameLabel resetCenterX:self.frame.size.width / 2];
 }
 
 @end

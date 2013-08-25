@@ -13,8 +13,9 @@
 #import "WTClient.h"
 #import "WTRequest.h"
 #import "WEMeDetailViewController.h"
+#import "WEFriendListViewController.h"
 
-@interface WEMeViewController ()
+@interface WEMeViewController ()<WEFriendListViewControllerDelegate>
 {
     User *_user;
 }
@@ -45,24 +46,9 @@
     self.contentScrollVIew.alwaysBounceVertical = YES;
     [self initHeadImageView];
     // Do any additional setup after loading the view.
-    [self logIn];
 }
 
-- (void)logIn
-{
-    WTClient *client = [WTClient sharedClient];
-    WTRequest *request = [WTRequest requestWithSuccessBlock: ^(id responseData)
-                          {
-                              User *user = [User insertUser:[responseData objectForKey:@"User"]];
-                              [WTCoreDataManager sharedManager].currentUser = user;
-                              [self configureWithUser:user];
-                              
-                          } failureBlock:^(NSError * error) {
-                              NSLog(@"fail");
-                          }];
-    [request loginWithStudentNumber:@"000000" password:@"123456"];
-    [client enqueueRequest:request];
-}
+
 
 - (void)configureWithUser:(User*)user
 {
@@ -92,7 +78,10 @@
 #pragma mark - IBActions
 - (IBAction)friendTapped:(id)sender
 {
-    
+    WEFriendListViewController *vc = [[WEFriendListViewController alloc] init];
+    vc.friendOfPerson = _user;
+    vc.delegate = self;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)courseTapped:(id)sender
@@ -125,6 +114,15 @@
 - (IBAction)seeMoreTapped:(id)sender
 {
     
+}
+
+#pragma mark WEFriendListViewControllerDelegate
+- (void)WEFriendListViewController:(WEFriendListViewController*)vc didSelectUser:(User*)user
+{
+    WEMeViewController *mevc = [[WEMeViewController alloc] init];
+    mevc.view;
+    [mevc configureWithUser:user];
+    [self.navigationController pushViewController:mevc animated:YES];
 }
 
 @end
