@@ -19,7 +19,6 @@
 
 
 @interface WEFriendListViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (retain,nonatomic) User *friendOfPerson;
 @property (nonatomic,assign) id<WEFriendListViewControllerDelegate> delegate;
 
