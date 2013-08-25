@@ -2321,6 +2321,10 @@
 				03A2856D17C8E1DB00F587E5 /* WTSwitchBg@2x.png in Resources */,
 				03A2856F17C8E89200F587E5 /* WTSwitch.xib in Resources */,
 				E44F755817C9BFB300C6DD10 /* WEColloectionViewController.xib in Resources */,
+				03D6224E17C9C9C700CC1EDD /* WTNotificationActivityInvitationCell.xib in Resources */,
+				03D6225117C9C9C700CC1EDD /* WTNotificationCourseInvitationCell.xib in Resources */,
+				03D6225317C9C9C700CC1EDD /* WTNotificationFriendInvitationCell.xib in Resources */,
+				03D6225517C9C9C700CC1EDD /* WTNotificationInvitationAcceptCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2499,6 +2503,12 @@
 				03CE640717C879B20091718A /* WEUserProtocolViewController.m in Sources */,
 				03A2857217C8E93D00F587E5 /* WTSwitch.m in Sources */,
 				E44F755717C9BFB300C6DD10 /* WEColloectionViewController.m in Sources */,
+				03D6224D17C9C9C700CC1EDD /* WTNotificationActivityInvitationCell.m in Sources */,
+				03D6224F17C9C9C700CC1EDD /* WTNotificationCell.m in Sources */,
+				03D6225017C9C9C700CC1EDD /* WTNotificationCourseInvitationCell.m in Sources */,
+				03D6225217C9C9C700CC1EDD /* WTNotificationFriendInvitationCell.m in Sources */,
+				03D6225417C9C9C700CC1EDD /* WTNotificationInvitationAcceptCell.m in Sources */,
+				03D6225617C9C9C700CC1EDD /* WTNotificationInvitationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
