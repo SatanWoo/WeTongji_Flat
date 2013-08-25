@@ -130,7 +130,7 @@ static bool shouldRecalculateTransparecy = false;
     if (offsetY > 80 && lastOffsetY < offsetY) {
         shouldRecalculateTransparecy = false;
         
-        [UIView animateWithDuration:1.5f animations:^{
+        [UIView animateWithDuration:0.5f animations:^{
             self.tableView.contentOffset = CGPointMake(0, self.transparentHeaderView.frame.size.height + 150);
             [self resetTransparentLayout];
         } completion:^(BOOL finished) {
@@ -140,7 +140,7 @@ static bool shouldRecalculateTransparecy = false;
     } else if (offsetY < 250 && lastOffsetY > offsetY) {
         shouldRecalculateTransparecy = false;
         
-        [UIView animateWithDuration:1.5f animations:^{
+        [UIView animateWithDuration:0.5f animations:^{
             self.tableView.contentOffset = CGPointZero;
              [self resetNormalLayout];
         } completion:^(BOOL finished) {

@@ -10,6 +10,7 @@
 #import "WEAboutViewController.h"
 #import "WTCoreDataManager.h"
 #import "WTClient.h"
+#import "WEModifyPasswordViewController.h"
 
 @interface WESettingViewController ()
 @end
@@ -36,6 +37,12 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)didClickModifyPassword:(id)sender
+{
+    WEModifyPasswordViewController *modifyVC = [[WEModifyPasswordViewController alloc] init];
+    [self.navigationController pushViewController:modifyVC animated:YES];
 }
 
 - (IBAction)didClickSeeAboutButton:(id)sender

@@ -16,5 +16,6 @@
 - (IBAction)didClickSeeAboutButton:(id)sender;
 - (IBAction)didClickClearCache:(id)sender;
 - (IBAction)didClickLogout:(id)sender;
+- (IBAction)didClickModifyPassword:(id)sender;
 
 @end
