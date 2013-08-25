@@ -112,6 +112,8 @@
 		03D6225417C9C9C700CC1EDD /* WTNotificationInvitationAcceptCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6224917C9C9C700CC1EDD /* WTNotificationInvitationAcceptCell.m */; };
 		03D6225517C9C9C700CC1EDD /* WTNotificationInvitationAcceptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6224A17C9C9C700CC1EDD /* WTNotificationInvitationAcceptCell.xib */; };
 		03D6225617C9C9C700CC1EDD /* WTNotificationInvitationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6224C17C9C9C700CC1EDD /* WTNotificationInvitationCell.m */; };
+		03D6225A17C9E84D00CC1EDD /* WTInnerNotificationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6225817C9E84C00CC1EDD /* WTInnerNotificationTableViewController.m */; };
+		03D6225B17C9E84D00CC1EDD /* WTInnerNotificationTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6225917C9E84D00CC1EDD /* WTInnerNotificationTableViewController.xib */; };
 		03E37DB617C207E2008029D5 /* search_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB417C207E2008029D5 /* search_arrow.png */; };
 		03E37DB717C207E2008029D5 /* search_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB517C207E2008029D5 /* search_arrow@2x.png */; };
 		03E37DBA17C20EF9008029D5 /* WESearchResultHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E37DB917C20EF9008029D5 /* WESearchResultHeaderView.m */; };
@@ -594,6 +596,9 @@
 		03D6224A17C9C9C700CC1EDD /* WTNotificationInvitationAcceptCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTNotificationInvitationAcceptCell.xib; sourceTree = "<group>"; };
 		03D6224B17C9C9C700CC1EDD /* WTNotificationInvitationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTNotificationInvitationCell.h; sourceTree = "<group>"; };
 		03D6224C17C9C9C700CC1EDD /* WTNotificationInvitationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTNotificationInvitationCell.m; sourceTree = "<group>"; };
+		03D6225717C9E84C00CC1EDD /* WTInnerNotificationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTInnerNotificationTableViewController.h; sourceTree = "<group>"; };
+		03D6225817C9E84C00CC1EDD /* WTInnerNotificationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTInnerNotificationTableViewController.m; sourceTree = "<group>"; };
+		03D6225917C9E84D00CC1EDD /* WTInnerNotificationTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTInnerNotificationTableViewController.xib; sourceTree = "<group>"; };
 		03E37DB417C207E2008029D5 /* search_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_arrow.png; sourceTree = "<group>"; };
 		03E37DB517C207E2008029D5 /* search_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_arrow@2x.png"; sourceTree = "<group>"; };
 		03E37DB817C20EF9008029D5 /* WESearchResultHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultHeaderView.h; sourceTree = "<group>"; };
@@ -1348,6 +1353,9 @@
 		03CE63F817C855C50091718A /* Notification */ = {
 			isa = PBXGroup;
 			children = (
+				03D6225717C9E84C00CC1EDD /* WTInnerNotificationTableViewController.h */,
+				03D6225817C9E84C00CC1EDD /* WTInnerNotificationTableViewController.m */,
+				03D6225917C9E84D00CC1EDD /* WTInnerNotificationTableViewController.xib */,
 				03CE63F917C855E10091718A /* WENotificationControllerViewController.h */,
 				03CE63FA17C855E10091718A /* WENotificationControllerViewController.m */,
 				03CE63FC17C856270091718A /* WENotificationRootViewController.h */,
@@ -2316,6 +2324,7 @@
 				03D6225117C9C9C700CC1EDD /* WTNotificationCourseInvitationCell.xib in Resources */,
 				03D6225317C9C9C700CC1EDD /* WTNotificationFriendInvitationCell.xib in Resources */,
 				03D6225517C9C9C700CC1EDD /* WTNotificationInvitationAcceptCell.xib in Resources */,
+				03D6225B17C9E84D00CC1EDD /* WTInnerNotificationTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2499,6 +2508,7 @@
 				03D6225217C9C9C700CC1EDD /* WTNotificationFriendInvitationCell.m in Sources */,
 				03D6225417C9C9C700CC1EDD /* WTNotificationInvitationAcceptCell.m in Sources */,
 				03D6225617C9C9C700CC1EDD /* WTNotificationInvitationCell.m in Sources */,
+				03D6225A17C9E84D00CC1EDD /* WTInnerNotificationTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
