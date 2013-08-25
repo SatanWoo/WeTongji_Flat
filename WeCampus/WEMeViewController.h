@@ -35,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet WEActivityCell *firstEvent;
 @property (weak, nonatomic) IBOutlet WEActivityCell *secondEvent;
 @property (weak, nonatomic) IBOutlet UIButton *backButto;
+@property (weak, nonatomic) IBOutlet UIView *headerView;
 
 
 - (void)configureWithUser:(User*)user;

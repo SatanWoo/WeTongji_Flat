@@ -60,6 +60,12 @@
 - (void)configureWithUser:(User*)user
 {
     _user = user;
+    if([[WTCoreDataManager sharedManager].currentUser.likedObjects member:user])
+    {
+        [self.likeButton setSelected:YES];
+    }
+    [self.likeButton setTitle:[NSString stringWithFormat:@"%@",user.likeCount] forState:UIControlStateNormal];
+    
     [self.nameButton setTitle:user.name forState:UIControlStateNormal];
     self.genderImageView.image = [UIImage imageNamed:[user.gender isEqualToString:@"男"] ? @"person_male_icn.png" : @"person_female_icn.png"];
     self.descriptionLabel.text = user.motto;
@@ -91,7 +97,8 @@
 - (IBAction)friendTapped:(id)sender
 {
     WEMeFriendListViewController *vc = [[WEMeFriendListViewController alloc] init];
-    vc.view;
+    UIView *v = vc.view;
+    NSLog(@"%@",v);
     vc.friendOfPerson = _user;
     vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
@@ -109,7 +116,24 @@
 
 - (IBAction)likeTheUserTapped:(id)sender
 {
-    
+    if([self.likeButton isSelected])
+    {
+        [self.likeButton setSelected:NO];
+        [[WTCoreDataManager sharedManager].currentUser removeLikedObjectsObject:_user];
+        int count = [_user.likeCount intValue];
+        count--;
+        _user.likeCount = @(count);
+        [self.likeButton setTitle:[NSString stringWithFormat:@"%@",_user.likeCount] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.likeButton setSelected:YES];
+        [[WTCoreDataManager sharedManager].currentUser addLikedObjectsObject:_user];
+        int count = [_user.likeCount intValue];
+        count++;
+        _user.likeCount = @(count);
+        [self.likeButton setTitle:[NSString stringWithFormat:@"%@",_user.likeCount] forState:UIControlStateNormal];
+    }
 }
 
 - (IBAction)addFriendTapped:(id)sender
@@ -133,9 +157,18 @@
 - (void)WEFriendListViewController:(WEFriendListViewController*)vc didSelectUser:(User*)user
 {
     WEMeViewController *mevc = [[WEMeViewController alloc] init];
-    mevc.view;
+    NSLog(@"%@",mevc.view);
     [mevc configureWithUser:user];
     [self.navigationController pushViewController:mevc animated:YES];
+}
+
+#pragma mark ScrollView Delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat yOffset  = scrollView.contentOffset.y;
+    //if(yOffset < 0)
+    {
+        [self.headerView resetOriginY:-yOffset * 0.7];
+    }
 }
 
 @end
