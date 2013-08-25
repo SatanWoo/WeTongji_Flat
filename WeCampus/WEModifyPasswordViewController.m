@@ -7,6 +7,7 @@
 //
 
 #import "WEModifyPasswordViewController.h"
+#import "UIBarButtonItem+Addition.h"
 
 @interface WEModifyPasswordViewController ()
 
@@ -27,7 +28,7 @@
 {
     [super viewDidLoad];
     [self configureTextField];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:nil normalImage:@"submit_nav_btn"];
 }
 
 - (void)configureTextField

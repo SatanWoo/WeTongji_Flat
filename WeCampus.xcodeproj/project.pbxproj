@@ -19,6 +19,7 @@
 		0321419417C0C904002BBA9E /* WESettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321419217C0C904002BBA9E /* WESettingViewController.xib */; };
 		0321419917C0CD67002BBA9E /* WEAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0321419717C0CD66002BBA9E /* WEAboutViewController.m */; };
 		0321419A17C0CD67002BBA9E /* WEAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321419817C0CD67002BBA9E /* WEAboutViewController.xib */; };
+		03288F8917C9F4D300396391 /* WTPropergate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03288F8817C9F4D300396391 /* WTPropergate.jpg */; };
 		0331AC0A17C64498009A29EB /* WTDetailImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0331AC0817C64498009A29EB /* WTDetailImageViewController.m */; };
 		0331AC0B17C64498009A29EB /* WTDetailImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0331AC0917C64498009A29EB /* WTDetailImageViewController.xib */; };
 		0331AC0F17C646C6009A29EB /* WTDetailImageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0331AC0D17C646C6009A29EB /* WTDetailImageItemView.m */; };
@@ -117,6 +118,7 @@
 		03D6225F17C9EA0F00CC1EDD /* WEModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6225D17C9EA0F00CC1EDD /* WEModifyPasswordViewController.m */; };
 		03D6226017C9EA0F00CC1EDD /* WEModifyPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6225E17C9EA0F00CC1EDD /* WEModifyPasswordViewController.xib */; };
 		03D6226417C9EA8500CC1EDD /* 修改密码.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D6226317C9EA8500CC1EDD /* 修改密码.png */; };
+		03D6226A17C9F12F00CC1EDD /* RDActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6226817C9F12F00CC1EDD /* RDActivityViewController.m */; };
 		03E37DB617C207E2008029D5 /* search_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB417C207E2008029D5 /* search_arrow.png */; };
 		03E37DB717C207E2008029D5 /* search_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E37DB517C207E2008029D5 /* search_arrow@2x.png */; };
 		03E37DBA17C20EF9008029D5 /* WESearchResultHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E37DB917C20EF9008029D5 /* WESearchResultHeaderView.m */; };
@@ -449,6 +451,7 @@
 		0321419617C0CD66002BBA9E /* WEAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEAboutViewController.h; sourceTree = "<group>"; };
 		0321419717C0CD66002BBA9E /* WEAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEAboutViewController.m; sourceTree = "<group>"; };
 		0321419817C0CD67002BBA9E /* WEAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEAboutViewController.xib; sourceTree = "<group>"; };
+		03288F8817C9F4D300396391 /* WTPropergate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WTPropergate.jpg; sourceTree = "<group>"; };
 		0331AC0717C64498009A29EB /* WTDetailImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDetailImageViewController.h; sourceTree = "<group>"; };
 		0331AC0817C64498009A29EB /* WTDetailImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDetailImageViewController.m; sourceTree = "<group>"; };
 		0331AC0917C64498009A29EB /* WTDetailImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTDetailImageViewController.xib; sourceTree = "<group>"; };
@@ -608,6 +611,9 @@
 		03D6225D17C9EA0F00CC1EDD /* WEModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEModifyPasswordViewController.m; sourceTree = "<group>"; };
 		03D6225E17C9EA0F00CC1EDD /* WEModifyPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEModifyPasswordViewController.xib; sourceTree = "<group>"; };
 		03D6226317C9EA8500CC1EDD /* 修改密码.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "修改密码.png"; sourceTree = "<group>"; };
+		03D6226717C9F12F00CC1EDD /* RDActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDActivityViewController.h; sourceTree = "<group>"; };
+		03D6226817C9F12F00CC1EDD /* RDActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDActivityViewController.m; sourceTree = "<group>"; };
+		03D6226917C9F12F00CC1EDD /* RDActivityViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDActivityViewControllerDelegate.h; sourceTree = "<group>"; };
 		03E37DB417C207E2008029D5 /* search_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_arrow.png; sourceTree = "<group>"; };
 		03E37DB517C207E2008029D5 /* search_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_arrow@2x.png"; sourceTree = "<group>"; };
 		03E37DB817C20EF9008029D5 /* WESearchResultHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultHeaderView.h; sourceTree = "<group>"; };
@@ -1040,6 +1046,7 @@
 		0321418F17C0C8E5002BBA9E /* Setting & About */ = {
 			isa = PBXGroup;
 			children = (
+				03D6226617C9F12300CC1EDD /* RDActivityViewController */,
 				0321419017C0C904002BBA9E /* WESettingViewController.h */,
 				0321419117C0C904002BBA9E /* WESettingViewController.m */,
 				0321419217C0C904002BBA9E /* WESettingViewController.xib */,
@@ -1054,6 +1061,28 @@
 				03D6225E17C9EA0F00CC1EDD /* WEModifyPasswordViewController.xib */,
 			);
 			name = "Setting & About";
+			sourceTree = "<group>";
+		};
+		03288F8717C9F47000396391 /* 公用 */ = {
+			isa = PBXGroup;
+			children = (
+				03288F8817C9F4D300396391 /* WTPropergate.jpg */,
+				03A2856A17C8E1DB00F587E5 /* WTSwitchBg.png */,
+				03A2856B17C8E1DB00F587E5 /* WTSwitchBg@2x.png */,
+				03400AA417C2979B000937B7 /* bg_unit.png */,
+				0320CCCB17BD5E6E005B2110 /* green_point.png */,
+				034267F317B8EDB7000248C2 /* nav_bg.png */,
+				034267F417B8EDB8000248C2 /* nav_bg@2x.png */,
+				E458B07817B754C100D0DFBD /* back_btn.png */,
+				E458B07917B754C100D0DFBD /* back_btn@2x.png */,
+				E458B07A17B754C100D0DFBD /* switch_bg_off.png */,
+				E458B07B17B754C100D0DFBD /* switch_bg_off@2x.png */,
+				E458B07C17B754C100D0DFBD /* switch_bg_on.png */,
+				E458B07D17B754C100D0DFBD /* switch_bg_on@2x.png */,
+				E458B07E17B754C100D0DFBD /* switch_handle.png */,
+				E458B07F17B754C100D0DFBD /* switch_handle@2x.png */,
+			);
+			name = "公用";
 			sourceTree = "<group>";
 		};
 		033729B217B67D7600D2EC9F = {
@@ -1404,6 +1433,16 @@
 			name = Notification;
 			sourceTree = "<group>";
 		};
+		03D6226617C9F12300CC1EDD /* RDActivityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				03D6226717C9F12F00CC1EDD /* RDActivityViewController.h */,
+				03D6226817C9F12F00CC1EDD /* RDActivityViewController.m */,
+				03D6226917C9F12F00CC1EDD /* RDActivityViewControllerDelegate.h */,
+			);
+			name = RDActivityViewController;
+			sourceTree = "<group>";
+		};
 		03E37DB317C1FA3A008029D5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -1683,22 +1722,9 @@
 		E458B07717B754C100D0DFBD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				03A2856A17C8E1DB00F587E5 /* WTSwitchBg.png */,
-				03A2856B17C8E1DB00F587E5 /* WTSwitchBg@2x.png */,
+				03288F8717C9F47000396391 /* 公用 */,
 				E4DE121217BE17D000651486 /* keys */,
-				03400AA417C2979B000937B7 /* bg_unit.png */,
-				0320CCCB17BD5E6E005B2110 /* green_point.png */,
 				034164E217B7DAD8005CFD98 /* 参考图 */,
-				034267F317B8EDB7000248C2 /* nav_bg.png */,
-				034267F417B8EDB8000248C2 /* nav_bg@2x.png */,
-				E458B07817B754C100D0DFBD /* back_btn.png */,
-				E458B07917B754C100D0DFBD /* back_btn@2x.png */,
-				E458B07A17B754C100D0DFBD /* switch_bg_off.png */,
-				E458B07B17B754C100D0DFBD /* switch_bg_off@2x.png */,
-				E458B07C17B754C100D0DFBD /* switch_bg_on.png */,
-				E458B07D17B754C100D0DFBD /* switch_bg_on@2x.png */,
-				E458B07E17B754C100D0DFBD /* switch_handle.png */,
-				E458B07F17B754C100D0DFBD /* switch_handle@2x.png */,
 				034164EA17B7DF18005CFD98 /* 首页 */,
 				E458B08017B754C100D0DFBD /* tab */,
 				E458B09717B754C100D0DFBD /* 个人 */,
@@ -2347,6 +2373,7 @@
 				03D6225B17C9E84D00CC1EDD /* WTInnerNotificationTableViewController.xib in Resources */,
 				03D6226017C9EA0F00CC1EDD /* WEModifyPasswordViewController.xib in Resources */,
 				03D6226417C9EA8500CC1EDD /* 修改密码.png in Resources */,
+				03288F8917C9F4D300396391 /* WTPropergate.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2533,6 +2560,7 @@
 				03D6225617C9C9C700CC1EDD /* WTNotificationInvitationCell.m in Sources */,
 				03D6225A17C9E84D00CC1EDD /* WTInnerNotificationTableViewController.m in Sources */,
 				03D6225F17C9EA0F00CC1EDD /* WEModifyPasswordViewController.m in Sources */,
+				03D6226A17C9F12F00CC1EDD /* RDActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

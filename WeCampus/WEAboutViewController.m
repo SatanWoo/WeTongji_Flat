@@ -10,12 +10,13 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import "UIApplication+WTAddition.h"
 #import "WEUserProtocolViewController.h"
+#import "RDActivityViewController.h"
 
 #define WE_TONGJI_EMAIL             @"wetongji2012@gmail.com"
 #define WE_TONGJI_SINA_WEIBO_URL    @"http://www.weibo.com/wetongji"
 #define WE_TONGJI_APP_STORE_URL     @"http://itunes.apple.com/cn/app/id526260090?mt=8"
 
-@interface WEAboutViewController () <MFMailComposeViewControllerDelegate>
+@interface WEAboutViewController () <MFMailComposeViewControllerDelegate, RDActivityViewControllerDelegate>
 
 @end
 
@@ -60,7 +61,9 @@
 
 - (IBAction)didClickShare:(id)sender
 {
-    
+    RDActivityViewController *vc = [[RDActivityViewController alloc] initWithDelegate:self];
+    vc.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
 - (IBAction)didClickSuggest:(id)sender
@@ -106,6 +109,18 @@
         [alert show];
     }
 	[self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - RDActivityViewControllerDelegate
+- (NSArray *)activityViewController:(NSArray *)activityViewController itemsForActivityType:(NSString *)activityType {
+    NSString *defaultText = [NSString stringWithFormat:@"微同济 3.0 震撼来袭——好友系统，强力搜索，通知推送，课程旁听等精彩功能等你体验!下载地址:%@", WE_TONGJI_APP_STORE_URL];
+    UIImage *defaultImage = [UIImage imageNamed:@"WTPropergate.jpg"];
+    if ([activityType isEqualToString:UIActivityTypePostToWeibo]) {
+        NSString *weiboText = [NSString stringWithFormat:@"%@ @WeTongji", defaultText];
+        return @[weiboText, defaultImage];
+    } else {
+        return @[defaultText, defaultImage];
+    }
 }
 
 @end
