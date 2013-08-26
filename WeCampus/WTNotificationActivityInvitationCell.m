@@ -78,9 +78,10 @@
 - (void)configureTypeIconImageView {
     ActivityInvitationNotification *activityInvitation = (ActivityInvitationNotification *)self.notification;
     if (activityInvitation.accepted.boolValue) {
-        self.notificationTypeIconImageView.image = [UIImage imageNamed:@"WTNotificationAcceptIcon"];
+        [self.notificationTypeIconImageView setHidden:NO];
+        self.notificationTypeIconImageView.image = [UIImage imageNamed:@"message_accept"];
     } else {
-        self.notificationTypeIconImageView.image = [UIImage imageNamed:@"WTNotificationQuestionIcon"];
+        [self.notificationTypeIconImageView setHidden:YES];
     }
 }
 
@@ -107,7 +108,6 @@
     ActivityInvitationNotification *activityInvitation = (ActivityInvitationNotification *)self.notification;
     
     WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
-        NSLog(@"Reject activity invitation success:%@", responseObject);
         [Notification deleteNotificationWithID:activityInvitation.identifier];
     } failureBlock:^(NSError *error) {
     }];

@@ -84,13 +84,13 @@
     self.acceptedIconImageView.hidden = NO;
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     if ([language isEqualToString:@"zh-Hans"]) {
-        self.acceptedIconImageView.image = [UIImage imageNamed:@"WTInvitationAcceptedIconCN"];
+        self.acceptedIconImageView.image = [UIImage imageNamed:@"message_accepted"];
     } else {
-        self.acceptedIconImageView.image = [UIImage imageNamed:@"WTInvitationAcceptedIconEN"];
+        self.acceptedIconImageView.image = [UIImage imageNamed:@"message_accepted"];
     }
     
     if (animated) {
-        self.acceptedIconImageView.transform = CGAffineTransformMakeScale(1.5f, 1.5f);
+        self.acceptedIconImageView.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
         [UIView animateWithDuration:0.15f animations:^{
             self.acceptedIconImageView.transform = CGAffineTransformIdentity;
         }];

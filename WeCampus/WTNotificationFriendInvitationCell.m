@@ -59,9 +59,10 @@
 - (void)configureTypeIconImageView {
     CourseInvitationNotification *courseInvitation = (CourseInvitationNotification *)self.notification;
     if (courseInvitation.accepted.boolValue) {
-        self.notificationTypeIconImageView.image = [UIImage imageNamed:@"WTNotificationAcceptIcon"];
+        [self.notificationTypeIconImageView setHidden:NO];
+        self.notificationTypeIconImageView.image = [UIImage imageNamed:@"message_accept"];
     } else {
-        self.notificationTypeIconImageView.image = [UIImage imageNamed:@"WTNotificationAddIcon"];
+        [self.notificationTypeIconImageView setHidden:YES];
     }
 }
 
@@ -71,7 +72,6 @@
     FriendInvitationNotification *friendInvitation = (FriendInvitationNotification *)self.notification;
 
     WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
-        NSLog(@"Accept friend invitation:%@", responseObject);
         friendInvitation.accepted = @(YES);
         [self hideButtonsAnimated:YES];
         [self showAcceptedIconAnimated:YES];
@@ -88,7 +88,6 @@
     FriendInvitationNotification *friendInvitation = (FriendInvitationNotification *)self.notification;
     
     WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
-        NSLog(@"Reject friend invitation success:%@", responseObject);
         [Notification deleteNotificationWithID:friendInvitation.identifier];
     } failureBlock:^(NSError *error) {
     }];
