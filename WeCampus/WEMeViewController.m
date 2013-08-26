@@ -165,7 +165,6 @@
 #pragma mark ScrollView Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat yOffset  = scrollView.contentOffset.y;
-    //if(yOffset < 0)
     {
         [self.headerView resetOriginY:-yOffset * 0.7];
     }
