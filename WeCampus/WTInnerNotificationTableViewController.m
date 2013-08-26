@@ -16,6 +16,7 @@
 #import "Object+Addition.h"
 
 @interface WTInnerNotificationTableViewController ()
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, assign) NSInteger nextPage;
 @end
 
@@ -32,17 +33,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.alwaysBounceVertical = YES;
     
-//    [NSNotificationCenter registerCurrentUserDidChangeNotificationWithSelector:@selector(handleCurrentUserDidChangeNotification:) target:self];
+    self.tableView.alwaysBounceVertical = YES;
+    [self configureRrefreshControl];
     
     self.nextPage = 1;
-    [self loadMoreDataWithSuccessBlock:nil failureBlock:nil];
+    [self.refreshControl beginRefreshing];
+    [self loadMoreDataWithSuccessBlock:^{
+        [self.refreshControl endRefreshing];
+    } failureBlock:^{
+        [self.refreshControl endRefreshing];
+    }];
 }
 
+- (void)configureRrefreshControl
+{
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
+    [self.refreshControl resetOriginY:0];
+    [self.tableView addSubview:self.refreshControl];
+}
 
 #pragma mark - Handle Notifications
-
 - (void)handleCurrentUserDidChangeNotification:(NSNotification *)notification {
     if ([WTCoreDataManager sharedManager].currentUser) {
         self.fetchedResultsController = nil;
@@ -150,6 +162,28 @@
 - (void)cellHeightDidChange {
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
+}
+
+
+#pragma mark - Refresh Control
+- (void)loadData
+{
+    [self loadMoreDataWithSuccessBlock:^{
+        [self performSelector:@selector(endRefreshing) withObject:nil afterDelay:2.0f];
+        [self.tableView reloadData];
+    } failureBlock:^{
+        [self.refreshControl endRefreshing];
+    }];
+}
+
+- (void)refreshData
+{
+    [self loadData];
+}
+
+- (void)endRefreshing
+{
+    [self.refreshControl endRefreshing];
 }
 
 @end
