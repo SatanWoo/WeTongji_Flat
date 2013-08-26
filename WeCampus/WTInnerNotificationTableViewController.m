@@ -20,6 +20,7 @@
 @interface WTInnerNotificationTableViewController ()
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, assign) NSInteger nextPage;
+@property (nonatomic, assign) NSInteger unreadNumber;
 @end
 
 @implementation WTInnerNotificationTableViewController
@@ -65,6 +66,12 @@
 }
 
 #pragma mark - Logic methods
+
+- (void)loadUnreadNotifications:(NSInteger)number
+{
+    self.unreadNumber = number;
+    [self.tableView reloadData];
+}
 
 - (void)loadMoreDataWithSuccessBlock:(void (^)(void))success
                         failureBlock:(void (^)(void))failure {
@@ -133,6 +140,10 @@
     WTNotificationCell *notificationCell = (WTNotificationCell *)cell;
     notificationCell.delegate = self;
     [notificationCell configureUIWithNotificaitonObject:notification];
+    
+    if (indexPath.row >= self.unreadNumber) {
+        [notificationCell.unreadImageView setHidden:YES];
+    }
 }
 
 - (void)configureFetchRequest:(NSFetchRequest *)request {

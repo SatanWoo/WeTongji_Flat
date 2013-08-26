@@ -12,8 +12,8 @@
 @protocol WTInnerNotificationTableViewControllerDelegate;
 
 @interface WTInnerNotificationTableViewController : WTCoreDataTableViewController <WTNotificationCellDelegate>
-
 @property (nonatomic, weak) id<WTInnerNotificationTableViewControllerDelegate> delegate;
+- (void)loadUnreadNotifications:(NSInteger)number;
 
 @end
 

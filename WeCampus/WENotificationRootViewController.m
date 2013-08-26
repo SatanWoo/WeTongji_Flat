@@ -10,9 +10,14 @@
 #import "WESettingViewController.h"
 #import "WTInnerNotificationTableViewController.h"
 
+#import "WTRequest.h"
+#import "WTClient.h"
+#import "Notification+Addition.h"
+
 @interface WENotificationRootViewController () <WTInnerNotificationTableViewControllerDelegate>
 
 @property (nonatomic, strong) WTInnerNotificationTableViewController *tableViewController;
+@property (nonatomic, strong) NSTimer *loadUnreadNotificationsTimer;
 @property (nonatomic, assign) BOOL isVisible;
 @end
 
@@ -29,6 +34,7 @@
 {
     [super viewDidLoad];
     [self.view addSubview:self.tableViewController.view];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -43,6 +49,42 @@
 - (void)viewWillDisappear:(BOOL)animated {
     self.isVisible = NO;
 }
+
+#pragma mark - Load data methods
+
+- (void)setUpLoadUnreadNotificationsTimer {
+    // 设定 15 秒刷新频率
+    self.loadUnreadNotificationsTimer = [NSTimer scheduledTimerWithTimeInterval:15
+                                                                         target:self
+                                                                       selector:@selector(loadUnreadNotificationsTimerFired:)
+                                                                       userInfo:nil
+                                                                        repeats:YES];
+    
+    // 立即刷新一次
+    [self loadUnreadNotifications];
+}
+
+- (void)loadUnreadNotificationsTimerFired:(NSTimer *)timer {
+    [self loadUnreadNotifications];
+}
+
+- (void)loadUnreadNotifications {
+    if (![WTCoreDataManager sharedManager].currentUser)
+        return;
+    WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
+        NSSet *notificationsSet = [Notification insertNotifications:responseObject];
+        [[WTCoreDataManager sharedManager].currentUser addOwnedNotifications:notificationsSet];
+        
+        if (notificationsSet.count != 0) {
+            if (!self.isVisible)
+                [self.tableViewController loadUnreadNotifications:notificationsSet.count];
+        }
+    } failureBlock:^(NSError *error) {
+    }];
+    [request getUnreadNotifications];
+    [[WTClient sharedClient] enqueueRequest:request];
+}
+
 
 #pragma mark - Properties
 

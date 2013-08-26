@@ -82,6 +82,8 @@
 		035148A017B6A1F9006E67B2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0351489F17B6A1F9006E67B2 /* MainWindow.xib */; };
 		035D249617CB395A006263B6 /* message_accepted.png in Resources */ = {isa = PBXBuildFile; fileRef = 035D249417CB395A006263B6 /* message_accepted.png */; };
 		035D249717CB395A006263B6 /* message_accepted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 035D249517CB395A006263B6 /* message_accepted@2x.png */; };
+		035D249A17CB4790006263B6 /* unread_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 035D249817CB4790006263B6 /* unread_dot.png */; };
+		035D249B17CB4790006263B6 /* unread_dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 035D249917CB4790006263B6 /* unread_dot@2x.png */; };
 		0368DAA717B80064000F83A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0368DAA517B80064000F83A1 /* Localizable.strings */; };
 		03883AC317BA11C900ED081D /* WEActivitySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */; };
 		03883AC417BA11C900ED081D /* WEActivitySettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */; };
@@ -557,6 +559,8 @@
 		0351489F17B6A1F9006E67B2 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		035D249417CB395A006263B6 /* message_accepted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_accepted.png; sourceTree = "<group>"; };
 		035D249517CB395A006263B6 /* message_accepted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_accepted@2x.png"; sourceTree = "<group>"; };
+		035D249817CB4790006263B6 /* unread_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unread_dot.png; sourceTree = "<group>"; };
+		035D249917CB4790006263B6 /* unread_dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unread_dot@2x.png"; sourceTree = "<group>"; };
 		0368DAA617B80064000F83A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0368DAA817B80067000F83A1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		03883AC017BA11C900ED081D /* WEActivitySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivitySettingViewController.h; sourceTree = "<group>"; };
@@ -1913,6 +1917,8 @@
 		E458B10417B754C100D0DFBD /* 消息 */ = {
 			isa = PBXGroup;
 			children = (
+				035D249817CB4790006263B6 /* unread_dot.png */,
+				035D249917CB4790006263B6 /* unread_dot@2x.png */,
 				035D249417CB395A006263B6 /* message_accepted.png */,
 				035D249517CB395A006263B6 /* message_accepted@2x.png */,
 				E458B10517B754C100D0DFBD /* message_accept.png */,
@@ -2387,6 +2393,8 @@
 				039A21C817CA4C71009E3187 /* info_top_divider@2x.png in Resources */,
 				035D249617CB395A006263B6 /* message_accepted.png in Resources */,
 				035D249717CB395A006263B6 /* message_accepted@2x.png in Resources */,
+				035D249A17CB4790006263B6 /* unread_dot.png in Resources */,
+				035D249B17CB4790006263B6 /* unread_dot@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
