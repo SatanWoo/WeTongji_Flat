@@ -36,7 +36,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.tableViewController.view resetHeight:self.view.frame.size.height - 41.0f];
+    [self.tableViewController.view resetHeight:self.view.frame.size.height];
     self.isVisible = YES;
 }
 

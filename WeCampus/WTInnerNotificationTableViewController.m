@@ -34,7 +34,7 @@
     [super viewDidLoad];
     self.tableView.alwaysBounceVertical = YES;
     
-    [NSNotificationCenter registerCurrentUserDidChangeNotificationWithSelector:@selector(handleCurrentUserDidChangeNotification:) target:self];
+//    [NSNotificationCenter registerCurrentUserDidChangeNotificationWithSelector:@selector(handleCurrentUserDidChangeNotification:) target:self];
     
     self.nextPage = 1;
     [self loadMoreDataWithSuccessBlock:nil failureBlock:nil];
@@ -61,7 +61,9 @@
         self.nextPage = nextPage.integerValue;
         
         if (self.nextPage == 0) {
+            
         } else {
+            
         }
         
         NSSet *notificationsSet = [Notification insertNotifications:responseObject];
@@ -121,11 +123,14 @@
 
 - (void)configureFetchRequest:(NSFetchRequest *)request {
     [request setEntity:[NSEntityDescription entityForName:@"Notification" inManagedObjectContext:[WTCoreDataManager sharedManager].managedObjectContext]];
-    
     NSSortDescriptor *sortBySendTime = [[NSSortDescriptor alloc] initWithKey:@"sendTime" ascending:NO];
     [request setSortDescriptors:@[sortBySendTime]];
-
-    [request setPredicate:[NSPredicate predicateWithFormat:@"SELF in %@", [WTCoreDataManager sharedManager].currentUser.ownedNotifications]];
+    
+    NSLog(@"wtcoredatamanager is %@",[WTCoreDataManager sharedManager].currentUser);
+    
+    if ([WTCoreDataManager sharedManager].currentUser) {
+        [request setPredicate:[NSPredicate predicateWithFormat:@"SELF in %@", [WTCoreDataManager sharedManager].currentUser.ownedNotifications]];
+    }
 }
 
 - (NSString *)customCellClassNameAtIndexPath:(NSIndexPath *)indexPath {
@@ -137,8 +142,8 @@
     [super insertCellAtIndexPath:indexPath];
 }
 
-- (void)fetchedResultsControllerDidPerformFetch {
-}
+//- (void)fetchedResultsControllerDidPerformFetch {
+//}
 
 #pragma mark - WTNotificationCellDelegate
 
