@@ -205,6 +205,9 @@
 		E426122117CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E426121F17CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib */; };
 		E426122417CB82AD00C943D9 /* more_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E426122217CB82A200C943D9 /* more_btn.png */; };
 		E426122517CB82AD00C943D9 /* more_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E426122317CB82A700C943D9 /* more_btn@2x.png */; };
+		E426122917CB8E5800C943D9 /* WEMeEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E426122717CB8E5600C943D9 /* WEMeEditViewController.m */; };
+		E426122A17CB8E5800C943D9 /* WEMeEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E426122817CB8E5700C943D9 /* WEMeEditViewController.xib */; };
+		E426122D17CB933700C943D9 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E426122C17CB933500C943D9 /* TPKeyboardAvoidingScrollView.m */; };
 		E44E547317B90F80000426E1 /* WTNowBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E546D17B90F80000426E1 /* WTNowBaseCell.m */; };
 		E44E547917B9102B000426E1 /* WENowNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E547817B9102B000426E1 /* WENowNavigationController.m */; };
 		E44F755717C9BFB300C6DD10 /* WEColloectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44F755517C9BFB200C6DD10 /* WEColloectionViewController.m */; };
@@ -774,6 +777,11 @@
 		E426121F17CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEMeMoreActionSheetViewController.xib; sourceTree = "<group>"; };
 		E426122217CB82A200C943D9 /* more_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_btn.png; sourceTree = "<group>"; };
 		E426122317CB82A700C943D9 /* more_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_btn@2x.png"; sourceTree = "<group>"; };
+		E426122617CB8E5500C943D9 /* WEMeEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEMeEditViewController.h; sourceTree = "<group>"; };
+		E426122717CB8E5600C943D9 /* WEMeEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEMeEditViewController.m; sourceTree = "<group>"; };
+		E426122817CB8E5700C943D9 /* WEMeEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEMeEditViewController.xib; sourceTree = "<group>"; };
+		E426122B17CB933300C943D9 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		E426122C17CB933500C943D9 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		E44E546C17B90F80000426E1 /* WTNowBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTNowBaseCell.h; sourceTree = "<group>"; };
 		E44E546D17B90F80000426E1 /* WTNowBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTNowBaseCell.m; sourceTree = "<group>"; };
 		E44E547717B9102B000426E1 /* WENowNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENowNavigationController.h; sourceTree = "<group>"; };
@@ -2032,12 +2040,17 @@
 		E4906C3E17C3A44800BBFB62 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				E426122B17CB933300C943D9 /* TPKeyboardAvoidingScrollView.h */,
+				E426122C17CB933500C943D9 /* TPKeyboardAvoidingScrollView.m */,
 				E4906C3F17C3A4EC00BBFB62 /* WEMeViewController.h */,
 				E4906C4017C3A4EC00BBFB62 /* WEMeViewController.m */,
 				E4906C4217C3A50200BBFB62 /* WEMeViewController.xib */,
 				E464CFB917C888BF0094B11A /* WEMeDetailViewController.h */,
 				E464CFBA17C888BF0094B11A /* WEMeDetailViewController.m */,
 				E464CFBB17C888BF0094B11A /* WEMeDetailViewController.xib */,
+				E426122617CB8E5500C943D9 /* WEMeEditViewController.h */,
+				E426122717CB8E5600C943D9 /* WEMeEditViewController.m */,
+				E426122817CB8E5700C943D9 /* WEMeEditViewController.xib */,
 				E4982CBE17C8DE490016E694 /* WEMeNavigationController.h */,
 				E4982CBF17C8DE490016E694 /* WEMeNavigationController.m */,
 				E477AEBA17CA293200F14B3E /* WEMeFriendListViewController.h */,
@@ -2412,6 +2425,7 @@
 				E426122117CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib in Resources */,
 				E426122417CB82AD00C943D9 /* more_btn.png in Resources */,
 				E426122517CB82AD00C943D9 /* more_btn@2x.png in Resources */,
+				E426122A17CB8E5800C943D9 /* WEMeEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2600,6 +2614,8 @@
 				03D6226A17C9F12F00CC1EDD /* RDActivityViewController.m in Sources */,
 				E477AEBD17CA293200F14B3E /* WEMeFriendListViewController.m in Sources */,
 				E426122017CB7F4000C943D9 /* WEMeMoreActionSheetViewController.m in Sources */,
+				E426122917CB8E5800C943D9 /* WEMeEditViewController.m in Sources */,
+				E426122D17CB933700C943D9 /* TPKeyboardAvoidingScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

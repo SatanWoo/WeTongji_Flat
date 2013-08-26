@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *courseCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *actionSheetButton;
+@property (weak, nonatomic) IBOutlet UIButton *editProfileButton;
+
 
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollVIew;
 
@@ -51,6 +53,6 @@
 - (IBAction)addFriendTapped:(id)sender;
 - (IBAction)nameTapped:(id)sender;
 - (IBAction)seeMoreTapped:(id)sender;
-
+- (IBAction)editProfileTapped:(id)sender;
 - (IBAction)actionSheetTapped:(id)sender;
 @end

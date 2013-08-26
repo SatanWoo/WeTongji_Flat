@@ -48,7 +48,7 @@
 								<string key="NSFrame">{{115, 38}, {90, 90}}</string>
 								<reference key="NSSuperview" ref="579434622"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="719987824"/>
+								<reference key="NSNextKeyView" ref="506429537"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -221,7 +221,7 @@
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
-							<object class="IBUIButton" id="922321070">
+							<object class="IBUIButton" id="178026920">
 								<reference key="NSNextResponder" ref="579434622"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{229, 4}, {44, 32}}</string>
@@ -246,11 +246,34 @@
 								<reference key="IBUIFontDescription" ref="744638525"/>
 								<reference key="IBUIFont" ref="584741729"/>
 							</object>
+							<object class="IBUIButton" id="506429537">
+								<reference key="NSNextResponder" ref="579434622"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{229, 40}, {73, 44}}</string>
+								<reference key="NSSuperview" ref="579434622"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="719987824"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<int key="IBUIButtonType">1</int>
+								<string key="IBUINormalTitle">Button</string>
+								<reference key="IBUIHighlightedTitleColor" ref="714659379"/>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								</object>
+								<reference key="IBUINormalTitleShadowColor" ref="181524274"/>
+								<reference key="IBUIFontDescription" ref="744638525"/>
+								<reference key="IBUIFont" ref="584741729"/>
+							</object>
 						</array>
 						<string key="NSFrameSize">{320, 250}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="922321070"/>
+						<reference key="NSNextKeyView" ref="178026920"/>
 						<reference key="IBUIBackgroundColor" ref="402879081"/>
 						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 						<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics" id="685651386">
@@ -857,9 +880,17 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">actionSheetButton</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="922321070"/>
+						<reference key="destination" ref="178026920"/>
 					</object>
 					<int key="connectionID">79</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">editProfileButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="506429537"/>
+					</object>
+					<int key="connectionID">84</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -944,11 +975,20 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">actionSheetTapped:</string>
-						<reference key="source" ref="922321070"/>
+						<reference key="source" ref="178026920"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">80</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">editProfileTapped:</string>
+						<reference key="source" ref="506429537"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">83</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -991,7 +1031,8 @@
 							<reference ref="719987824"/>
 							<reference ref="311098703"/>
 							<reference ref="165993099"/>
-							<reference ref="922321070"/>
+							<reference ref="178026920"/>
+							<reference ref="506429537"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -1152,9 +1193,15 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">78</int>
-						<reference key="object" ref="922321070"/>
+						<reference key="object" ref="178026920"/>
 						<reference key="parent" ref="579434622"/>
 						<string key="objectName">Action Sheet</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">81</int>
+						<reference key="object" ref="506429537"/>
+						<reference key="parent" ref="579434622"/>
+						<string key="objectName">Edit Profile</string>
 					</object>
 				</array>
 			</object>
@@ -1203,12 +1250,13 @@
 				<string key="73.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<real value="1" key="73.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="78.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">80</int>
+			<int key="maxID">84</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1276,6 +1324,7 @@
 						<string key="actionSheetTapped:">id</string>
 						<string key="addFriendTapped:">id</string>
 						<string key="courseTapped:">id</string>
+						<string key="editProfileTapped:">id</string>
 						<string key="friendTapped:">id</string>
 						<string key="likeTheUserTapped:">id</string>
 						<string key="likedTapped:">id</string>
@@ -1294,6 +1343,10 @@
 						</object>
 						<object class="IBActionInfo" key="courseTapped:">
 							<string key="name">courseTapped:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="editProfileTapped:">
+							<string key="name">editProfileTapped:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="friendTapped:">
@@ -1329,6 +1382,7 @@
 						<string key="courseButton">UIButton</string>
 						<string key="courseCountLabel">UILabel</string>
 						<string key="descriptionLabel">UILabel</string>
+						<string key="editProfileButton">UIButton</string>
 						<string key="favoritedButton">UIButton</string>
 						<string key="firstEvent">WEActivityCell</string>
 						<string key="friendButton">UIButton</string>
@@ -1370,6 +1424,10 @@
 						<object class="IBToOneOutletInfo" key="descriptionLabel">
 							<string key="name">descriptionLabel</string>
 							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="editProfileButton">
+							<string key="name">editProfileButton</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="favoritedButton">
 							<string key="name">favoritedButton</string>

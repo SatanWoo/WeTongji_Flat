@@ -17,6 +17,7 @@
 #import "WEMeFriendListViewController.h"
 #import "NSString+WTAddition.h"
 #import "WEMeMoreActionSheetViewController.h"
+#import "WEMeEditViewController.h"
 
 @interface WEMeViewController ()<WEFriendListViewControllerDelegate,WEMeMoreActionSheetViewControllerDelegate>
 {
@@ -97,6 +98,13 @@
 
 
 #pragma mark - IBActions
+
+- (IBAction)editProfileTapped:(id)sender
+{
+    WEMeEditViewController *vc = [[WEMeEditViewController alloc] init];
+    
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 - (IBAction)actionSheetTapped:(id)sender
 {
