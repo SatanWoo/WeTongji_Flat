@@ -14,6 +14,7 @@
 #import <RHAddressBook/RHAddressBook.h>
 #import <RHPerson.h>
 #import <AddressBook/AddressBook.h>
+#import "WEMeEditViewController.h"
 
 @interface WEMeDetailViewController ()
 {
@@ -140,10 +141,21 @@
     self.headImageView.layer.cornerRadius = self.headImageView.bounds.size.width / 2;
     [self.headImageView loadImageWithImageURLString:user.avatar];
     
+    self.editProfileButton.hidden = YES;
     if(user == [WTCoreDataManager sharedManager].currentUser)
     {
         self.saveAsContactView.hidden = YES;
+        self.editProfileButton.hidden = NO;
     }
 }
+
+- (IBAction)editProfileTapped:(id)sender
+{
+    WEMeEditViewController *vc = [[WEMeEditViewController alloc] init];
+    vc.view;
+    [vc configureWithUser:_user];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
 
 @end

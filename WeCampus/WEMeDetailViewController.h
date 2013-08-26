@@ -27,8 +27,11 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 
+@property (weak, nonatomic) IBOutlet UIButton *editProfileButton;
+
 - (void)configureWithUser:(User*)user;
 
 - (IBAction)saveAsContact:(id)sender;
 
+- (IBAction)editProfileTapped:(id)sender;
 @end

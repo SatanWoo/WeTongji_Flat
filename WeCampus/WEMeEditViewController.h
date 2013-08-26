@@ -22,4 +22,6 @@
 - (IBAction)cancelPressed:(id)sender;
 - (IBAction)savePressed:(id)sender;
 
+- (IBAction)changeAvaterTapped:(id)sender;
+
 @end
