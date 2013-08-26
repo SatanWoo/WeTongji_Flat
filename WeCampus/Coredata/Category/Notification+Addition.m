@@ -16,6 +16,7 @@
 #import "Activity+Addition.h"
 #import "Course+Addition.h"
 #import "Object+Addition.h"
+#import "WTNotificationInvitationCell.h"
 
 @implementation Notification (Addition)
 
@@ -200,7 +201,7 @@
 - (CGFloat)cellHeight {
     if ([self isKindOfClass:[InvitationNotification class]]) {
         InvitationNotification *invitation = (InvitationNotification *)self;
-        return 0; //[WTNotificationInvitationCell cellHeightWithNotificationObject:invitation];
+        return [WTNotificationInvitationCell cellHeightWithNotificationObject:invitation];
     } else {
         return 0;
     }

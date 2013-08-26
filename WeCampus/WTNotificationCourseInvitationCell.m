@@ -22,7 +22,6 @@
     
     NSMutableAttributedString* messageContentString = nil;
     NSString *courseTitle = invitation.course.courseName;
-    BOOL accepted = invitation.accepted.boolValue;
     
     NSMutableAttributedString *courseTitleString = [NSMutableAttributedString attributedStringWithString:[NSString stringWithFormat:@" %@", courseTitle]];
     [courseTitleString setTextBold:YES range:NSMakeRange(0, courseTitleString.length)];
@@ -31,12 +30,12 @@
         NSString *senderName = invitation.sender.name;
         NSMutableAttributedString* senderNameString = [NSMutableAttributedString attributedStringWithString:[NSString stringWithFormat:@"%@ ", senderName]];
         [senderNameString setTextBold:YES range:NSMakeRange(0, senderNameString.length)];
-        [senderNameString setTextColor:accepted ? WTNotificationCellDarkGrayColor : [UIColor whiteColor]];
+        [senderNameString setTextColor:[UIColor blackColor]];
         
-        [courseTitleString setTextColor:accepted ? WTNotificationCellDarkGrayColor : [UIColor whiteColor]];
+        [courseTitleString setTextColor:[UIColor blackColor]];
         
         messageContentString = [NSMutableAttributedString attributedStringWithString:NSLocalizedString(@"invites you to audit.", nil)];
-        [messageContentString setTextColor:accepted ? WTNotificationCellDarkGrayColor : WTNotificationCellLightGrayColor];
+        [messageContentString setTextColor:WTNotificationCellLightGrayColor];
         
         [messageContentString insertAttributedString:senderNameString atIndex:0];
         [messageContentString insertAttributedString:courseTitleString atIndex:messageContentString.length - 1];
@@ -44,27 +43,15 @@
         NSString *receiverName = invitation.receiver.name;
         NSMutableAttributedString *receiverNameString = [NSMutableAttributedString attributedStringWithString:[NSString stringWithFormat:@"%@ ", receiverName]];
         [receiverNameString setTextBold:YES range:NSMakeRange(0, receiverNameString.length)];
-        [receiverNameString setTextColor:[UIColor whiteColor]];
+        [receiverNameString setTextColor:[UIColor blackColor]];
         
-        [courseTitleString setTextColor:[UIColor whiteColor]];
+        [courseTitleString setTextColor:[UIColor blackColor]];
         
-        NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
-        if ([language isEqualToString:@"zh-Hans"]) {
-            messageContentString = [NSMutableAttributedString attributedStringWithString:@"接受了您旁听 的邀请。"];
-            [messageContentString setTextColor:WTNotificationCellLightGrayColor];
-            [messageContentString insertAttributedString:receiverNameString atIndex:0];
-            [messageContentString insertAttributedString:courseTitleString atIndex:messageContentString.length - 5];
-        } else if ([language isEqualToString:@"de"]) {
-            messageContentString = [NSMutableAttributedString attributedStringWithString:@"Ihrer Kurs Einladung zu akzeptiert."];
-            [messageContentString setTextColor:WTNotificationCellLightGrayColor];
-            [messageContentString insertAttributedString:receiverNameString atIndex:0];
-            [messageContentString insertAttributedString:courseTitleString atIndex:messageContentString.length - 12];
-        } else {
-            messageContentString = [NSMutableAttributedString attributedStringWithString:@"accepted your auditing invitation to."];
-            [messageContentString setTextColor:WTNotificationCellLightGrayColor];
-            [messageContentString insertAttributedString:receiverNameString atIndex:0];
-            [messageContentString insertAttributedString:courseTitleString atIndex:messageContentString.length - 1];
-        }
+        
+        messageContentString = [NSMutableAttributedString attributedStringWithString:@"接受了您旁听 的邀请。"];
+        [messageContentString setTextColor:WTNotificationCellLightGrayColor];
+        [messageContentString insertAttributedString:receiverNameString atIndex:0];
+        [messageContentString insertAttributedString:courseTitleString atIndex:messageContentString.length - 5];
     }
     
     [messageContentString setFont:[UIFont systemFontOfSize:14.0f]];
@@ -78,9 +65,10 @@
 - (void)configureTypeIconImageView {
     CourseInvitationNotification *courseInvitation = (CourseInvitationNotification *)self.notification;
     if (courseInvitation.accepted.boolValue) {
-        self.notificationTypeIconImageView.image = [UIImage imageNamed:@"WTNotificationAcceptIcon"];
+        [self.notificationTypeIconImageView setHidden:NO];
+        self.notificationTypeIconImageView.image = [UIImage imageNamed:@"message_accept"];
     } else {
-        self.notificationTypeIconImageView.image = [UIImage imageNamed:@"WTNotificationQuestionIcon"];
+        [self.notificationTypeIconImageView setHidden:YES];
     }
 }
 
@@ -90,7 +78,6 @@
     CourseInvitationNotification *courseInvitation = (CourseInvitationNotification *)self.notification;
     
     WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
-        NSLog(@"Accept course invitation:%@", responseObject);
         courseInvitation.accepted = @(YES);
         [self hideButtonsAnimated:YES];
         [self showAcceptedIconAnimated:YES];

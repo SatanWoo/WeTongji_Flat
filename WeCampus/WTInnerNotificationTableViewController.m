@@ -15,8 +15,12 @@
 #import "Notification+Addition.h"
 #import "Object+Addition.h"
 
+#import "WEActivityDetailViewController.h"
+
 @interface WTInnerNotificationTableViewController ()
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, assign) NSInteger nextPage;
+@property (nonatomic, assign) NSInteger unreadNumber;
 @end
 
 @implementation WTInnerNotificationTableViewController
@@ -32,17 +36,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.alwaysBounceVertical = YES;
     
-    [NSNotificationCenter registerCurrentUserDidChangeNotificationWithSelector:@selector(handleCurrentUserDidChangeNotification:) target:self];
+    self.tableView.alwaysBounceVertical = YES;
+    [self configureRrefreshControl];
     
     self.nextPage = 1;
-    [self loadMoreDataWithSuccessBlock:nil failureBlock:nil];
+    [self.refreshControl beginRefreshing];
+    [self loadMoreDataWithSuccessBlock:^{
+        [self.refreshControl endRefreshing];
+    } failureBlock:^{
+        [self.refreshControl endRefreshing];
+    }];
 }
 
+- (void)configureRrefreshControl
+{
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
+    [self.refreshControl resetOriginY:0];
+    [self.tableView addSubview:self.refreshControl];
+}
 
 #pragma mark - Handle Notifications
-
 - (void)handleCurrentUserDidChangeNotification:(NSNotification *)notification {
     if ([WTCoreDataManager sharedManager].currentUser) {
         self.fetchedResultsController = nil;
@@ -51,6 +66,12 @@
 }
 
 #pragma mark - Logic methods
+
+- (void)loadUnreadNotifications:(NSInteger)number
+{
+    self.unreadNumber = number;
+    [self.tableView reloadData];
+}
 
 - (void)loadMoreDataWithSuccessBlock:(void (^)(void))success
                         failureBlock:(void (^)(void))failure {
@@ -61,7 +82,9 @@
         self.nextPage = nextPage.integerValue;
         
         if (self.nextPage == 0) {
+            
         } else {
+            
         }
         
         NSSet *notificationsSet = [Notification insertNotifications:responseObject];
@@ -90,10 +113,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSNotification *notification = [self.fetchedResultsController objectAtIndexPath:indexPath];
-//    if ([notification isKindOfClass:[ActivityInvitationNotification class]]) {
-//        ActivityInvitationNotification *activityInvitation = (ActivityInvitationNotification *)notification;
-//        WTActivityDetailViewController *vc = [WTActivityDetailViewController createDetailViewControllerWithActivity:activityInvitation.activity backBarButtonText:NSLocalizedString(@"Notification", nil)];
-//        [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];
+    if ([notification isKindOfClass:[ActivityInvitationNotification class]]) {
+        ActivityInvitationNotification *activityInvitation = (ActivityInvitationNotification *)notification;
+        WEActivityDetailViewController *vc = [WEActivityDetailViewController createDetailViewControllerWithModel:activityInvitation.activity];
+        [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];
+    }
 //    } else if ([notification isKindOfClass:[CourseInvitationNotification class]]) {
 //        CourseInvitationNotification *courseInvitation = (CourseInvitationNotification *)notification;
 //        WTCourseDetailViewController *vc = [WTCourseDetailViewController createDetailViewControllerWithCourse:courseInvitation.course backBarButtonText:NSLocalizedString(@"Notification", nil)];
@@ -111,21 +135,29 @@
 }
 
 #pragma mark - CoreDataTableViewController methods
-
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Notification *notification = [self.fetchedResultsController objectAtIndexPath:indexPath];
     WTNotificationCell *notificationCell = (WTNotificationCell *)cell;
     notificationCell.delegate = self;
     [notificationCell configureUIWithNotificaitonObject:notification];
+    
+    if (indexPath.row >= self.unreadNumber) {
+        [notificationCell.unreadImageView setHidden:YES];
+    } else {
+        [notificationCell.unreadImageView setHidden:NO];
+    }
 }
 
 - (void)configureFetchRequest:(NSFetchRequest *)request {
     [request setEntity:[NSEntityDescription entityForName:@"Notification" inManagedObjectContext:[WTCoreDataManager sharedManager].managedObjectContext]];
-    
     NSSortDescriptor *sortBySendTime = [[NSSortDescriptor alloc] initWithKey:@"sendTime" ascending:NO];
     [request setSortDescriptors:@[sortBySendTime]];
-
-    [request setPredicate:[NSPredicate predicateWithFormat:@"SELF in %@", [WTCoreDataManager sharedManager].currentUser.ownedNotifications]];
+    
+    NSLog(@"wtcoredatamanager is %@",[WTCoreDataManager sharedManager].currentUser);
+    
+    if ([WTCoreDataManager sharedManager].currentUser) {
+        [request setPredicate:[NSPredicate predicateWithFormat:@"SELF in %@", [WTCoreDataManager sharedManager].currentUser.ownedNotifications]];
+    }
 }
 
 - (NSString *)customCellClassNameAtIndexPath:(NSIndexPath *)indexPath {
@@ -137,14 +169,36 @@
     [super insertCellAtIndexPath:indexPath];
 }
 
-- (void)fetchedResultsControllerDidPerformFetch {
-}
+//- (void)fetchedResultsControllerDidPerformFetch {
+//}
 
 #pragma mark - WTNotificationCellDelegate
 
 - (void)cellHeightDidChange {
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
+}
+
+
+#pragma mark - Refresh Control
+- (void)loadData
+{
+    [self loadMoreDataWithSuccessBlock:^{
+        [self performSelector:@selector(endRefreshing) withObject:nil afterDelay:2.0f];
+        [self.tableView reloadData];
+    } failureBlock:^{
+        [self.refreshControl endRefreshing];
+    }];
+}
+
+- (void)refreshData
+{
+    [self loadData];
+}
+
+- (void)endRefreshing
+{
+    [self.refreshControl endRefreshing];
 }
 
 @end

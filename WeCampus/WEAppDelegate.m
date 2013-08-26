@@ -7,13 +7,33 @@
 //
 
 #import "WEAppDelegate.h"
+#import "WTClient.h"
+#import "WTRequest.h"
+#import "WTCoreDataManager.h"
+#import "User+Addition.h"
 
 @implementation WEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self.window makeKeyAndVisible];
+    [self logIn];
+
     return YES;
+}
+
+- (void)logIn
+{
+    WTClient *client = [WTClient sharedClient];
+    WTRequest *request = [WTRequest requestWithSuccessBlock: ^(id responseData)
+                          {
+                              User *user = [User insertUser:[responseData objectForKey:@"User"]];
+                              NSLog(@"user is %@", user);
+                              [WTCoreDataManager sharedManager].currentUser = user;
+                          } failureBlock:^(NSError * error) {
+                          }];
+    [request loginWithStudentNumber:@"092988" password:@"tongjiwuziqi"];
+    [client enqueueRequest:request];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

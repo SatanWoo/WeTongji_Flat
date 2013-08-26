@@ -45,7 +45,7 @@
 
 - (void)configureAvatarImageView {
     self.avatarContainerView.layer.masksToBounds = YES;
-    self.avatarContainerView.layer.cornerRadius = 6.0f;
+    self.avatarContainerView.layer.cornerRadius = 25.0f;
 }
 
 #pragma mark - Methods to overwrite
