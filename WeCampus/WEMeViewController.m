@@ -15,8 +15,10 @@
 #import "WEMeDetailViewController.h"
 #import "WEFriendListViewController.h"
 #import "WEMeFriendListViewController.h"
+#import "NSString+WTAddition.h"
+#import "WEMeMoreActionSheetViewController.h"
 
-@interface WEMeViewController ()<WEFriendListViewControllerDelegate>
+@interface WEMeViewController ()<WEFriendListViewControllerDelegate,WEMeMoreActionSheetViewControllerDelegate>
 {
     User *_user;
 }
@@ -80,15 +82,31 @@
         self.addFriendButton.hidden = YES;
         self.likeButton.hidden = YES;
         self.genderImageView.hidden = YES;
+        self.actionSheetButton.hidden = YES;
     }
     else if([[WTCoreDataManager sharedManager].currentUser.friends member:user])//friend visit
     {
         self.addFriendButton.hidden = YES;
+        self.actionSheetButton.hidden = NO;
+    }
+    else
+    {
+        self.actionSheetButton.hidden = YES;
     }
 }
 
 
 #pragma mark - IBActions
+
+- (IBAction)actionSheetTapped:(id)sender
+{
+    WEMeMoreActionSheetViewController *vc = [[WEMeMoreActionSheetViewController alloc] init];
+    [self addChildViewController:vc];
+    vc.delegate = self;
+    [vc.view setFrame:self.view.bounds];
+    [self.view addSubview:vc.view];
+}
+
 - (IBAction)popBack:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -138,7 +156,12 @@
 
 - (IBAction)addFriendTapped:(id)sender
 {
-    
+    BOOL isFriend = [[WTCoreDataManager sharedManager].currentUser.friends containsObject:_user];
+    if (!isFriend)
+        [self changeFriendRelationship:NO];
+    else {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", nil) message:[NSString deleteFriendStringForFriendName:_user.name] delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil)otherButtonTitles:NSLocalizedString(@"Yes", nil), nil] show];
+    }
 }
 
 - (IBAction)nameTapped:(id)sender
@@ -151,6 +174,23 @@
 - (IBAction)seeMoreTapped:(id)sender
 {
     
+}
+
+#pragma mark - Logic methods
+
+- (void)changeFriendRelationship:(BOOL)isFriend {
+    WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
+        [[[UIAlertView alloc] initWithTitle:@"注意" message:isFriend ? @"已删除好友" : @"已发送好友添加请求。" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil] show];
+        [[WTCoreDataManager sharedManager].currentUser removeFriendsObject:_user];
+        self.addFriendButton.hidden = NO;
+    } failureBlock:^(NSError *error) {
+        
+    }];
+    if (isFriend)
+        [request removeFriend:_user.identifier];
+    else
+        [request inviteFriends:@[_user.identifier]];
+    [[WTClient sharedClient] enqueueRequest:request];
 }
 
 #pragma mark WEFriendListViewControllerDelegate
@@ -168,6 +208,19 @@
     {
         [self.headerView resetOriginY:-yOffset * 0.7];
     }
+}
+
+#pragma mark WEMeMoreActionSheetViewControllerDelegate
+- (void)didClickFinshSetting
+{
+    
+}
+
+- (void)didClickDeleteFriend
+{
+    [self changeFriendRelationship:YES];
+    self.actionSheetButton.hidden = YES;
+    self.addFriendButton.hidden = NO;
 }
 
 @end

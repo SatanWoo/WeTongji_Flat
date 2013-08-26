@@ -44,10 +44,11 @@
 - (void)initRootViewController
 {
     rootViewController = [[WEMeViewController alloc] init];
-    if(![WTCoreDataManager sharedManager].currentUser)
-    {
-        [self logIn];
-    }
+    [self logIn];
+//    if(![WTCoreDataManager sharedManager].currentUser)
+//    {
+//        [self logIn];
+//    }
     [self pushViewController:rootViewController animated:NO];
 }
 

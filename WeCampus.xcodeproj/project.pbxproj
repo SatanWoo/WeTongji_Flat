@@ -201,6 +201,10 @@
 		E40A64F717B734A400082B4F /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64E917B734A400082B4F /* UIView+Animation.m */; };
 		E40A64F817B734A400082B4F /* UIView+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A64EB17B734A400082B4F /* UIView+Resize.m */; };
 		E40B74C717BE6203000066E4 /* WTNowBaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40B74C617BE6202000066E4 /* WTNowBaseCell.xib */; };
+		E426122017CB7F4000C943D9 /* WEMeMoreActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E426121E17CB7F3F00C943D9 /* WEMeMoreActionSheetViewController.m */; };
+		E426122117CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E426121F17CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib */; };
+		E426122417CB82AD00C943D9 /* more_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E426122217CB82A200C943D9 /* more_btn.png */; };
+		E426122517CB82AD00C943D9 /* more_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E426122317CB82A700C943D9 /* more_btn@2x.png */; };
 		E44E547317B90F80000426E1 /* WTNowBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E546D17B90F80000426E1 /* WTNowBaseCell.m */; };
 		E44E547917B9102B000426E1 /* WENowNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44E547817B9102B000426E1 /* WENowNavigationController.m */; };
 		E44F755717C9BFB300C6DD10 /* WEColloectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44F755517C9BFB200C6DD10 /* WEColloectionViewController.m */; };
@@ -765,6 +769,11 @@
 		E40A64EA17B734A400082B4F /* UIView+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Resize.h"; sourceTree = "<group>"; };
 		E40A64EB17B734A400082B4F /* UIView+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Resize.m"; sourceTree = "<group>"; };
 		E40B74C617BE6202000066E4 /* WTNowBaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTNowBaseCell.xib; sourceTree = "<group>"; };
+		E426121D17CB7F3F00C943D9 /* WEMeMoreActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEMeMoreActionSheetViewController.h; sourceTree = "<group>"; };
+		E426121E17CB7F3F00C943D9 /* WEMeMoreActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEMeMoreActionSheetViewController.m; sourceTree = "<group>"; };
+		E426121F17CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEMeMoreActionSheetViewController.xib; sourceTree = "<group>"; };
+		E426122217CB82A200C943D9 /* more_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_btn.png; sourceTree = "<group>"; };
+		E426122317CB82A700C943D9 /* more_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_btn@2x.png"; sourceTree = "<group>"; };
 		E44E546C17B90F80000426E1 /* WTNowBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTNowBaseCell.h; sourceTree = "<group>"; };
 		E44E546D17B90F80000426E1 /* WTNowBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTNowBaseCell.m; sourceTree = "<group>"; };
 		E44E547717B9102B000426E1 /* WENowNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENowNavigationController.h; sourceTree = "<group>"; };
@@ -1776,6 +1785,8 @@
 		E458B09717B754C100D0DFBD /* 个人 */ = {
 			isa = PBXGroup;
 			children = (
+				E426122217CB82A200C943D9 /* more_btn.png */,
+				E426122317CB82A700C943D9 /* more_btn@2x.png */,
 				039A21C517CA4C71009E3187 /* info_top_divider.png */,
 				039A21C617CA4C71009E3187 /* info_top_divider@2x.png */,
 				E458B09817B754C100D0DFBD /* divider_vertical.png */,
@@ -2032,6 +2043,9 @@
 				E477AEBA17CA293200F14B3E /* WEMeFriendListViewController.h */,
 				E477AEBB17CA293200F14B3E /* WEMeFriendListViewController.m */,
 				E477AEBC17CA293200F14B3E /* WEMeFriendListViewController.xib */,
+				E426121D17CB7F3F00C943D9 /* WEMeMoreActionSheetViewController.h */,
+				E426121E17CB7F3F00C943D9 /* WEMeMoreActionSheetViewController.m */,
+				E426121F17CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -2395,6 +2409,9 @@
 				035D249717CB395A006263B6 /* message_accepted@2x.png in Resources */,
 				035D249A17CB4790006263B6 /* unread_dot.png in Resources */,
 				035D249B17CB4790006263B6 /* unread_dot@2x.png in Resources */,
+				E426122117CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib in Resources */,
+				E426122417CB82AD00C943D9 /* more_btn.png in Resources */,
+				E426122517CB82AD00C943D9 /* more_btn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2582,6 +2599,7 @@
 				03D6225F17C9EA0F00CC1EDD /* WEModifyPasswordViewController.m in Sources */,
 				03D6226A17C9F12F00CC1EDD /* RDActivityViewController.m in Sources */,
 				E477AEBD17CA293200F14B3E /* WEMeFriendListViewController.m in Sources */,
+				E426122017CB7F4000C943D9 /* WEMeMoreActionSheetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
