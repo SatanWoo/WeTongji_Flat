@@ -13,7 +13,7 @@
 
 #define WTCellBackgroundColor2 [UIColor colorWithRed:232.0f / 255 green:232.0f / 255 blue:232.0f / 255 alpha:1.0f]
 
-#define WTNotificationCellLightGrayColor [UIColor colorWithRed:177.0f / 255 green:177.0f / 255 blue:177.0f / 255 alpha:1.0f]
+#define WTNotificationCellLightGrayColor [UIColor colorWithRed:135.0f / 255 green:135.0f / 255 blue:135.0f / 255 alpha:1.0f]
 
 #define WTNotificationCellDarkGrayColor [UIColor colorWithRed:106.0f / 255 green:106.0f / 255 blue:106.0f / 255 alpha:1.0f]
 

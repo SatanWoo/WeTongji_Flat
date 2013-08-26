@@ -68,8 +68,8 @@
 													<bytes key="NSRGB">MC40MTU2ODYyNzQ1IDAuNDE1Njg2Mjc0NSAwLjQxNTY4NjI3NDUAA</bytes>
 												</object>
 												<object class="NSColor" key="IBUINormalTitleColor">
-													<int key="NSColorSpace">1</int>
-													<bytes key="NSRGB">MC43OTIxNTY4NjI3IDAuNzkyMTU2ODYyNyAwLjc5MjE1Njg2MjcAA</bytes>
+													<int key="NSColorSpace">3</int>
+													<bytes key="NSWhite">MQA</bytes>
 												</object>
 												<object class="NSColor" key="IBUIHighlightedTitleShadowColor">
 													<int key="NSColorSpace">3</int>
@@ -83,15 +83,15 @@
 													<string key="NSClassName">NSImage</string>
 													<string key="NSResourceName">message_accept_btn.png</string>
 												</object>
-												<object class="IBUIFontDescription" key="IBUIFontDescription" id="210347966">
+												<object class="IBUIFontDescription" key="IBUIFontDescription" id="547406613">
 													<string key="name">STHeitiSC-Medium</string>
 													<string key="family">Heiti SC</string>
 													<int key="traits">2</int>
-													<double key="pointSize">14</double>
+													<double key="pointSize">18</double>
 												</object>
-												<object class="NSFont" key="IBUIFont" id="14709317">
+												<object class="NSFont" key="IBUIFont" id="203106310">
 													<string key="NSName">STHeitiSC-Medium</string>
-													<double key="NSSize">14</double>
+													<double key="NSSize">18</double>
 													<int key="NSfFlags">16</int>
 												</object>
 											</object>
@@ -128,8 +128,8 @@
 													<string key="NSClassName">NSImage</string>
 													<string key="NSResourceName">message_ignore_btn.png</string>
 												</object>
-												<reference key="IBUIFontDescription" ref="210347966"/>
-												<reference key="IBUIFont" ref="14709317"/>
+												<reference key="IBUIFontDescription" ref="547406613"/>
+												<reference key="IBUIFont" ref="203106310"/>
 											</object>
 										</array>
 										<string key="NSFrame">{{0, 70}, {320, 50}}</string>
@@ -203,7 +203,7 @@
 												<string key="NSFrame">{{74, 45}, {226, 12}}</string>
 												<reference key="NSSuperview" ref="927894533"/>
 												<reference key="NSWindow"/>
-												<reference key="NSNextKeyView" ref="139439341"/>
+												<reference key="NSNextKeyView" ref="1059588266"/>
 												<string key="NSReuseIdentifierKey">_NS:9</string>
 												<bool key="IBUIOpaque">NO</bool>
 												<bool key="IBUIClipsSubviews">YES</bool>
@@ -213,13 +213,14 @@
 												<string key="IBUIText">10:03 Yesterday</string>
 												<object class="NSColor" key="IBUITextColor">
 													<int key="NSColorSpace">1</int>
-													<bytes key="NSRGB">MC40MTU2ODYyNzQ1IDAuNDE1Njg2Mjc0NSAwLjQxNTY4NjI3NDUAA</bytes>
+													<bytes key="NSRGB">MC41Mjk2MDA3OTkxIDAuNTI5NjY1NzY4MSAwLjUyOTU1NjI3NDQAA</bytes>
 												</object>
 												<nil key="IBUIHighlightedColor"/>
 												<object class="NSColor" key="IBUIShadowColor" id="356940742">
 													<int key="NSColorSpace">3</int>
 													<bytes key="NSWhite">MAA</bytes>
 												</object>
+												<string key="IBUIShadowOffset">{0, 0}</string>
 												<int key="IBUIBaselineAdjustment">0</int>
 												<object class="IBUIFontDescription" key="IBUIFontDescription">
 													<int key="type">1</int>
@@ -238,7 +239,7 @@
 												<string key="NSFrame">{{74, 17}, {226, 18}}</string>
 												<reference key="NSSuperview" ref="927894533"/>
 												<reference key="NSWindow"/>
-												<reference key="NSNextKeyView" ref="1059588266"/>
+												<reference key="NSNextKeyView" ref="241773650"/>
 												<string key="NSReuseIdentifierKey">_NS:9</string>
 												<bool key="IBUIOpaque">NO</bool>
 												<bool key="IBUIClipsSubviews">YES</bool>
@@ -252,6 +253,7 @@
 												</object>
 												<nil key="IBUIHighlightedColor"/>
 												<reference key="IBUIShadowColor" ref="356940742"/>
+												<string key="IBUIShadowOffset">{0, 0}</string>
 												<int key="IBUIBaselineAdjustment">0</int>
 												<int key="IBUINumberOfLines">0</int>
 												<int key="IBUILineBreakMode">2</int>
@@ -270,10 +272,10 @@
 											<object class="IBUIImageView" id="1059588266">
 												<reference key="NSNextResponder" ref="927894533"/>
 												<int key="NSvFlags">292</int>
-												<string key="NSFrame">{{206, 24}, {73, 32}}</string>
+												<string key="NSFrame">{{226, 31}, {73, 32}}</string>
 												<reference key="NSSuperview" ref="927894533"/>
 												<reference key="NSWindow"/>
-												<reference key="NSNextKeyView" ref="241773650"/>
+												<reference key="NSNextKeyView" ref="139439341"/>
 												<string key="NSReuseIdentifierKey">_NS:9</string>
 												<bool key="IBUIUserInteractionEnabled">NO</bool>
 												<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -297,7 +299,6 @@
 										<string key="NSFrame">{{0, 119}, {320, 1}}</string>
 										<reference key="NSSuperview" ref="970036171"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

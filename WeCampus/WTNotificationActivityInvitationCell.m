@@ -22,7 +22,6 @@
     
     NSMutableAttributedString* messageContentString = nil;
     NSString *activityTitle = invitation.activity.what;
-    BOOL accepted = invitation.accepted.boolValue;
     
     NSMutableAttributedString* activityTitleString = [NSMutableAttributedString attributedStringWithString:[NSString stringWithFormat:@" %@", activityTitle]];
     [activityTitleString setTextBold:YES range:NSMakeRange(0, activityTitleString.length)];
@@ -31,12 +30,12 @@
         NSString *senderName = invitation.sender.name;
         NSMutableAttributedString* senderNameString = [NSMutableAttributedString attributedStringWithString:[NSString stringWithFormat:@"%@ ", senderName]];
         [senderNameString setTextBold:YES range:NSMakeRange(0, senderNameString.length)];
-        [senderNameString setTextColor:accepted ? WTNotificationCellDarkGrayColor : [UIColor whiteColor]];
+        [senderNameString setTextColor:[UIColor blackColor]];
         
-        [activityTitleString setTextColor:accepted ? WTNotificationCellDarkGrayColor : [UIColor whiteColor]];
+        [activityTitleString setTextColor:[UIColor blackColor]];
         
         messageContentString = [NSMutableAttributedString attributedStringWithString:NSLocalizedString(@"invites you to participate in.", nil)];
-        [messageContentString setTextColor:accepted ? WTNotificationCellDarkGrayColor : WTNotificationCellLightGrayColor];
+        [messageContentString setTextColor:WTNotificationCellLightGrayColor];
         
         [messageContentString insertAttributedString:senderNameString atIndex:0];
         [messageContentString insertAttributedString:activityTitleString atIndex:messageContentString.length - 1];
@@ -44,27 +43,15 @@
         NSString *receiverName = invitation.receiver.name;
         NSMutableAttributedString *receiverNameString = [NSMutableAttributedString attributedStringWithString:[NSString stringWithFormat:@"%@ ", receiverName]];
         [receiverNameString setTextBold:YES range:NSMakeRange(0, receiverNameString.length)];
-        [receiverNameString setTextColor:[UIColor whiteColor]];
+        [receiverNameString setTextColor:[UIColor blackColor]];
         
-        [activityTitleString setTextColor:[UIColor whiteColor]];
+        [activityTitleString setTextColor:[UIColor blackColor]];
         
-        NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
-        if ([language isEqualToString:@"zh-Hans"]) {
-            messageContentString = [NSMutableAttributedString attributedStringWithString:@"接受了您参加 的邀请。"];
-            [messageContentString setTextColor:WTNotificationCellLightGrayColor];
-            [messageContentString insertAttributedString:receiverNameString atIndex:0];
-            [messageContentString insertAttributedString:activityTitleString atIndex:messageContentString.length - 5];
-        } else if ([language isEqualToString:@"de"]) {
-            messageContentString = [NSMutableAttributedString attributedStringWithString:@"Ihrer Aktivität Einladung zu akzeptiert."];
-            [messageContentString setTextColor:WTNotificationCellLightGrayColor];
-            [messageContentString insertAttributedString:receiverNameString atIndex:0];
-            [messageContentString insertAttributedString:activityTitleString atIndex:messageContentString.length - 12];
-        }  else {
-            messageContentString = [NSMutableAttributedString attributedStringWithString:@"accepted your activity invitation to."];
-            [messageContentString setTextColor:WTNotificationCellLightGrayColor];
-            [messageContentString insertAttributedString:receiverNameString atIndex:0];
-            [messageContentString insertAttributedString:activityTitleString atIndex:messageContentString.length - 1];
-        }
+
+        messageContentString = [NSMutableAttributedString attributedStringWithString:@"接受了您参加 的邀请。"];
+        [messageContentString setTextColor:WTNotificationCellLightGrayColor];
+        [messageContentString insertAttributedString:receiverNameString atIndex:0];
+        [messageContentString insertAttributedString:activityTitleString atIndex:messageContentString.length - 5];
     }
     
     [messageContentString setFont:[UIFont systemFontOfSize:14.0f]];
