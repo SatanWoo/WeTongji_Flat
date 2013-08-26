@@ -78,12 +78,14 @@
     
     [self.headImageView loadImageWithImageURLString:user.avatar];
 	
+    self.editProfileButton.hidden = YES;
     if([WTCoreDataManager sharedManager].currentUser == user)//self visit
     {
         self.addFriendButton.hidden = YES;
         self.likeButton.hidden = YES;
         self.genderImageView.hidden = YES;
         self.actionSheetButton.hidden = YES;
+        self.editProfileButton.hidden = NO;
     }
     else if([[WTCoreDataManager sharedManager].currentUser.friends member:user])//friend visit
     {
@@ -102,7 +104,8 @@
 - (IBAction)editProfileTapped:(id)sender
 {
     WEMeEditViewController *vc = [[WEMeEditViewController alloc] init];
-    
+    vc.view;
+    [vc configureWithUser:_user];
     [self presentViewController:vc animated:YES completion:nil];
 }
 
