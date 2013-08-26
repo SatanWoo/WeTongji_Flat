@@ -33,8 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setUpLoadUnreadNotificationsTimer];
     [self.view addSubview:self.tableViewController.view];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

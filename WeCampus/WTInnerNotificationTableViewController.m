@@ -143,6 +143,8 @@
     
     if (indexPath.row >= self.unreadNumber) {
         [notificationCell.unreadImageView setHidden:YES];
+    } else {
+        [notificationCell.unreadImageView setHidden:NO];
     }
 }
 
