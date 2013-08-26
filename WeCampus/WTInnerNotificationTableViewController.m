@@ -15,6 +15,8 @@
 #import "Notification+Addition.h"
 #import "Object+Addition.h"
 
+#import "WEActivityDetailViewController.h"
+
 @interface WTInnerNotificationTableViewController ()
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, assign) NSInteger nextPage;
@@ -104,10 +106,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSNotification *notification = [self.fetchedResultsController objectAtIndexPath:indexPath];
-//    if ([notification isKindOfClass:[ActivityInvitationNotification class]]) {
-//        ActivityInvitationNotification *activityInvitation = (ActivityInvitationNotification *)notification;
-//        WTActivityDetailViewController *vc = [WTActivityDetailViewController createDetailViewControllerWithActivity:activityInvitation.activity backBarButtonText:NSLocalizedString(@"Notification", nil)];
-//        [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];
+    if ([notification isKindOfClass:[ActivityInvitationNotification class]]) {
+        ActivityInvitationNotification *activityInvitation = (ActivityInvitationNotification *)notification;
+        WEActivityDetailViewController *vc = [WEActivityDetailViewController createDetailViewControllerWithModel:activityInvitation.activity];
+        [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];
+    }
 //    } else if ([notification isKindOfClass:[CourseInvitationNotification class]]) {
 //        CourseInvitationNotification *courseInvitation = (CourseInvitationNotification *)notification;
 //        WTCourseDetailViewController *vc = [WTCourseDetailViewController createDetailViewControllerWithCourse:courseInvitation.course backBarButtonText:NSLocalizedString(@"Notification", nil)];
@@ -125,7 +128,6 @@
 }
 
 #pragma mark - CoreDataTableViewController methods
-
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Notification *notification = [self.fetchedResultsController objectAtIndexPath:indexPath];
     WTNotificationCell *notificationCell = (WTNotificationCell *)cell;
