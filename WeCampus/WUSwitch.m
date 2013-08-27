@@ -1,15 +1,15 @@
 //
-//  MBSwitch.h
-//  MBSwitchDemo
+//  WUSwitch.h
+//  WUSwitchDemo
 //
 //  Created by Ziqi Wu on 27/08/13.
 //  Copyright (c) 2013 Tongji University. All rights reserved.
 //
 
-#import "MBSwitch.h"
+#import "WUSwitch.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface MBSwitch () <UIGestureRecognizerDelegate> {
+@interface WUSwitch () <UIGestureRecognizerDelegate> {
     CAShapeLayer *_thumbLayer;
     CAShapeLayer *_fillLayer;
     CAShapeLayer *_backLayer;
@@ -22,7 +22,7 @@
 - (CGRect) thumbFrameForState:(BOOL)isOn;
 @end
 
-@implementation MBSwitch
+@implementation WUSwitch
 
 - (id)initWithFrame:(CGRect)frame
 {
