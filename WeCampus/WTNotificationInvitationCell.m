@@ -95,6 +95,8 @@
             self.acceptedIconImageView.transform = CGAffineTransformIdentity;
         }];
     }
+    
+    [self.acceptedIconImageView resetCenterY:self.timeLabel.center.y];
 }
 
 - (void)hideAcceptedIcon {
