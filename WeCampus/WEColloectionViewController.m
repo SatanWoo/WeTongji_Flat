@@ -58,7 +58,7 @@
 - (void)setData:(NSArray*)arr
 {
     friendsArray = arr;
-    //[self sort];
+    [self sort];
     [self.collectionView reloadData];
 }
 
