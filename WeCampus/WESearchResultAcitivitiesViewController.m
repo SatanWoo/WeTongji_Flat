@@ -35,6 +35,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"活动";
+}
+
+- (void)configureNavigationBar
+{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,10 +66,23 @@
     return [self.datas count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kWEActivityCellHeight;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifer = @"Cell";
+    WEActivityCell *cell = (WEActivityCell *)[tableView dequeueReusableCellWithIdentifier:identifer];
+    Activity *act = (Activity *)[self.datas objectAtIndex:indexPath.row];
+    if (cell == nil) {
+        cell = [WEActivityCell createWEActivityCellWithActs:act];
+    } else {
+        [cell configureCellWithActivity:act];
+    }
     
+    return cell;
 }
 
 @end
