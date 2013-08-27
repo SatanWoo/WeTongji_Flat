@@ -33,6 +33,8 @@
 		033729D117B67D7600D2EC9F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D017B67D7600D2EC9F /* Default.png */; };
 		033729D317B67D7600D2EC9F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D217B67D7600D2EC9F /* Default@2x.png */; };
 		033729D517B67D7600D2EC9F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033729D417B67D7600D2EC9F /* Default-568h@2x.png */; };
+		033D52D917CD03900042C1E1 /* WEInviteFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033D52D717CD03900042C1E1 /* WEInviteFriendsViewController.m */; };
+		033D52DA17CD03900042C1E1 /* WEInviteFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033D52D817CD03900042C1E1 /* WEInviteFriendsViewController.xib */; };
 		033E1FC417B69EAA00009FDE /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FB917B69EAA00009FDE /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		033E1FC517B69EAA00009FDE /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FBB17B69EAA00009FDE /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		033E1FC617B69EAA00009FDE /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 033E1FBD17B69EAA00009FDE /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -489,6 +491,9 @@
 		033729D017B67D7600D2EC9F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		033729D217B67D7600D2EC9F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		033729D417B67D7600D2EC9F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		033D52D617CD03900042C1E1 /* WEInviteFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEInviteFriendsViewController.h; sourceTree = "<group>"; };
+		033D52D717CD03900042C1E1 /* WEInviteFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEInviteFriendsViewController.m; sourceTree = "<group>"; };
+		033D52D817CD03900042C1E1 /* WEInviteFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEInviteFriendsViewController.xib; sourceTree = "<group>"; };
 		033E1FB717B69EAA00009FDE /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		033E1FB817B69EAA00009FDE /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		033E1FB917B69EAA00009FDE /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -1216,6 +1221,16 @@
 			name = WeCampus;
 			sourceTree = "<group>";
 		};
+		033D52D517CD03700042C1E1 /* Invitation */ = {
+			isa = PBXGroup;
+			children = (
+				033D52D617CD03900042C1E1 /* WEInviteFriendsViewController.h */,
+				033D52D717CD03900042C1E1 /* WEInviteFriendsViewController.m */,
+				033D52D817CD03900042C1E1 /* WEInviteFriendsViewController.xib */,
+			);
+			name = Invitation;
+			sourceTree = "<group>";
+		};
 		033E1FB517B69E5C00009FDE /* WeCampusSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -1406,6 +1421,7 @@
 		0351489E17B6A1A1006E67B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				033D52D517CD03700042C1E1 /* Invitation */,
 				034267E917B8D935000248C2 /* Activity */,
 				E4910C0717C2646B00DD9DCC /* Course */,
 				E4511F3417BFA059005494C1 /* Friend */,
@@ -2466,6 +2482,7 @@
 				E426123217CBA22600C943D9 /* WEMeEditPhotoSourceSelectViewController.xib in Resources */,
 				034B1F7817CC5A4B00603D11 /* WESearchResultGroupObjectViewController.xib in Resources */,
 				034E5ED817CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib in Resources */,
+				033D52DA17CD03900042C1E1 /* WEInviteFriendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2660,6 +2677,7 @@
 				034B1F7717CC5A4B00603D11 /* WESearchResultGroupObjectViewController.m in Sources */,
 				034E5ED717CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m in Sources */,
 				034E5EDE17CCDD3700EA3B50 /* WUSwitch.m in Sources */,
+				033D52D917CD03900042C1E1 /* WEInviteFriendsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
