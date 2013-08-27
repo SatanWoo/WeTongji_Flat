@@ -80,6 +80,7 @@
 {
     if ([obj isKindOfClass:[User class]]) {
         WEMeViewController* temp = [[WEMeViewController alloc] init];
+        NSLog(@"%@",temp.view);
         [temp configureWithUser:(User *)obj];
         
         [self.navigationController pushViewController:temp animated:YES];
