@@ -66,6 +66,7 @@
 		034B1F7817CC5A4B00603D11 /* WESearchResultGroupObjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034B1F7617CC5A4B00603D11 /* WESearchResultGroupObjectViewController.xib */; };
 		034E5ED717CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034E5ED517CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m */; };
 		034E5ED817CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034E5ED617CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib */; };
+		034E5EDB17CCDAD300EA3B50 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 034E5EDA17CCDAD300EA3B50 /* MBSwitch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0351487B17B69F1D006E67B2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486917B69F1D006E67B2 /* AFHTTPClient.m */; };
 		0351487C17B69F1D006E67B2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486B17B69F1D006E67B2 /* AFHTTPRequestOperation.m */; };
 		0351487D17B69F1D006E67B2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486D17B69F1D006E67B2 /* AFImageRequestOperation.m */; };
@@ -539,6 +540,8 @@
 		034E5ED417CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultAcitivitiesViewController.h; sourceTree = "<group>"; };
 		034E5ED517CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESearchResultAcitivitiesViewController.m; sourceTree = "<group>"; };
 		034E5ED617CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESearchResultAcitivitiesViewController.xib; sourceTree = "<group>"; };
+		034E5ED917CCDAD300EA3B50 /* MBSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSwitch.h; sourceTree = "<group>"; };
+		034E5EDA17CCDAD300EA3B50 /* MBSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSwitch.m; sourceTree = "<group>"; };
 		0351486817B69F1D006E67B2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0351486917B69F1D006E67B2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		0351486A17B69F1D006E67B2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -1633,6 +1636,8 @@
 		03EB4EA317BC98FE0082132D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				034E5ED917CCDAD300EA3B50 /* MBSwitch.h */,
+				034E5EDA17CCDAD300EA3B50 /* MBSwitch.m */,
 				03A2857017C8E93D00F587E5 /* WTSwitch.h */,
 				03A2857117C8E93D00F587E5 /* WTSwitch.m */,
 				03A2856E17C8E89200F587E5 /* WTSwitch.xib */,
@@ -2654,6 +2659,7 @@
 				E426123117CBA22600C943D9 /* WEMeEditPhotoSourceSelectViewController.m in Sources */,
 				034B1F7717CC5A4B00603D11 /* WESearchResultGroupObjectViewController.m in Sources */,
 				034E5ED717CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m in Sources */,
+				034E5EDB17CCDAD300EA3B50 /* MBSwitch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

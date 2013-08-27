@@ -8,9 +8,11 @@
 
 #import "WEActivitySettingViewController.h"
 #import "WTSwitch.h"
+#import "MBSwitch.h"
 
 @interface WEActivitySettingViewController () <WTSwitchDelegate>
 @property (nonatomic, strong) WTSwitch *swtich;
+@property (nonatomic, strong) MBSwitch *mbSwitch;
 @end
 
 @implementation WEActivitySettingViewController
@@ -40,7 +42,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [UIView animateWithDuration:1.0f animations:^{
+    [UIView animateWithDuration:0.5f animations:^{
         [self.containerView resetOriginY:self.view.frame.size.height - self.containerView.frame.size.height];
     }];
 }
@@ -63,12 +65,12 @@
 
 - (void)configureSwitch
 {
-    self.swtich = [WTSwitch createSwitchWithDelegate:self];
-    [self.swtich resetOriginX:switchX];
-    [self.swtich resetOriginY:switchY];
-    [self.containerView addSubview:self.swtich];
+    self.mbSwitch = [[MBSwitch alloc] init];
+    [self.mbSwitch resetOriginX:switchX];
+    [self.mbSwitch resetOriginY:switchY];
+    [self.containerView addSubview:self.mbSwitch];
     
-    self.swtich.on = [[NSUserDefaults standardUserDefaults] boolForKey:hidePast];
+    self.mbSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:hidePast];
 }
 
 #define showCategory @"ActivityShowTypes"
@@ -135,9 +137,9 @@
 #pragma mark - WTSwitchDelegate
 - (void)switchDidChange:(WTSwitch *)sender
 {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:hidePast] != self.swtich.isOn) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:hidePast] != self.mbSwitch.isOn) {
         
-        [[NSUserDefaults standardUserDefaults] setBool:self.swtich.isOn forKey:hidePast];
+        [[NSUserDefaults standardUserDefaults] setBool:self.mbSwitch.isOn forKey:hidePast];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
