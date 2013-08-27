@@ -39,10 +39,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [self.tableViewController viewDidAppear:animated];
-    [((WEAppDelegate *)[UIApplication sharedApplication].delegate) showTabbar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [((WEAppDelegate *)[UIApplication sharedApplication].delegate) showTabbar];
     [self.tableViewController.view resetHeight:self.view.frame.size.height];
     self.isVisible = YES;
 }

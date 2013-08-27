@@ -41,9 +41,14 @@
     [super viewDidLoad];
     [self configureScrollView];
     [self clearSearchResultObjects];
-    [self loadSearchResultWithBlock:^(int k) {
-        if (k == 0) [self setScrollViewVisible:YES];
+    [self loadSearchResultWithBlock:^(int result) {
+        if (result == 0) [self setScrollViewVisible:YES];
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)configureScrollView
@@ -88,24 +93,35 @@
         NSDictionary *resultDict = (NSDictionary *)responseObject;
         NSArray *activityInfoArray = resultDict[@"Activities"];
         count += [activityInfoArray count];
+        
+        NSMutableArray *acts = [[NSMutableArray alloc] init];
+        
         for (NSDictionary *infoDict in activityInfoArray) {
             Activity *activity = [Activity insertActivity:infoDict];
             [activity setObjectHeldByHolder:[self class]];
+            [acts addObject:activity];
         }
+        self.actsArray = [NSArray arrayWithArray:acts];
         
         NSArray *orgInfoArray = resultDict[@"Accounts"];
+        NSMutableArray *orgs = [[NSMutableArray alloc] init];
         count += [orgInfoArray count];
         for (NSDictionary *infoDict in orgInfoArray) {
             Organization *org = [Organization insertOrganization:infoDict];
             [org setObjectHeldByHolder:[self class]];
+            [orgs addObject:org];
         }
+        self.orgsArray = [NSArray arrayWithArray:orgs];
         
         NSArray *userArray = resultDict[@"Users"];
+        NSMutableArray *users = [[NSMutableArray alloc] init];
         count += [userArray count];
         for (NSDictionary *infoDict in userArray) {
             User *user = [User insertUser:infoDict];
             [user setObjectHeldByHolder:[self class]];
+            [users addObject:user];
         }
+        self.usersArray = [NSArray arrayWithArray:users];
         
         if (completion) {
             completion(count);

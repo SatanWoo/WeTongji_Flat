@@ -121,14 +121,8 @@
         [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];
     } else if ([notification isKindOfClass:[FriendInvitationNotification class]]) {
         FriendInvitationNotification *friendInvitation = (FriendInvitationNotification *)notification;
-        
         // 如果是确认好友邀请的通知，则展示receiver
         User *user = friendInvitation.sender;
-        
-        NSLog(@" FriendInvitationNotification is %@", user.name);
-        if (user == [WTCoreDataManager sharedManager].currentUser) {
-            user = friendInvitation.receiver;
-        }
         WEMeViewController *vc = [[WEMeViewController alloc] init];
         [vc configureWithUser:user];
         [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];

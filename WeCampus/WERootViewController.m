@@ -29,7 +29,6 @@
 {
     [super viewDidLoad];
     self.navigationController.delegate = self;
-    //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_unit"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

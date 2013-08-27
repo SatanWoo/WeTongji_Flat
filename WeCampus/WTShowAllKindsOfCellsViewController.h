@@ -10,6 +10,10 @@
 
 @interface WTShowAllKindsOfCellsViewController : WTCoreDataTableViewController
 
+@property (nonatomic, strong) NSArray *usersArray;
+@property (nonatomic, strong) NSArray *orgsArray;
+@property (nonatomic, strong) NSArray *actsArray;
+
 - (UIViewController *)detailViewControllerForIndexPath:(NSIndexPath *)indexPath;
 
 @end

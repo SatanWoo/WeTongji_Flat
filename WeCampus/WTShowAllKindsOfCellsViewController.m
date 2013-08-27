@@ -20,10 +20,7 @@
 #import "WESeeMoreObjectCell.h"
 
 #import "WEActivityDetailViewController.h"
-
-#define kActivitySection 2
-#define kOrgSection 1
-#define kUserSection 0
+#import "WESearchResultGroupObjectViewController.h"
 
 @interface WTShowAllKindsOfCellsViewController ()
 @end
@@ -57,8 +54,6 @@ static int actSection = 100;
         return nil;
         
     NSString *name = [self customCellClassNameAtIndexPath:indexPath];
-    NSLog(@"cell name is %@", name);
-    
     NSString *cellIdentifier = name ? name : @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -105,10 +100,8 @@ static int actSection = 100;
 
 - (void)configureWithUsers:(WESearchResultAvatarCell *)cell
 {
-    if ([self.fetchedResultsController.sections count] > userSection) {
-        NSInteger userNumber = [self.fetchedResultsController.sections[userSection] numberOfObjects];
-        for (int i = 0; i < userNumber; i++) {
-            User *user = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:kUserSection]];
+    if ([self.usersArray count]) {
+        for (User *user in self.usersArray) {
             [cell configureWithObject:user];
         }
     }
@@ -116,16 +109,12 @@ static int actSection = 100;
 
 - (void)configureWithOrgs:(WESearchResultAvatarCell *)cell
 {
-    if ([self.fetchedResultsController.sections count] > orgSection) {
-        NSInteger Number = [self.fetchedResultsController.sections[orgSection] numberOfObjects];
-        for (int i = 0; i < Number; i++) {
-            Organization *org = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:orgSection]];
+    if ([self.orgsArray count]) {
+        for (Organization *org in self.orgsArray) {
             [cell configureWithObject:org];
         }
     }
 }
-
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -175,9 +164,7 @@ static int actSection = 100;
 
 - (UIViewController *)detailViewControllerForIndexPath:(NSIndexPath *)indexPath {
     UIViewController *vc = nil;
-    if (indexPath.section == orgSection) {
-        
-    } else if (indexPath.section == actSection) {
+    if (indexPath.section == actSection) {
         if (indexPath.row >= 3) {
             
         } else {
@@ -187,29 +174,10 @@ static int actSection = 100;
             }
         }
     } else if (indexPath.section == userSection) {
-        
+        vc = [WESearchResultGroupObjectViewController createGroupObjectViewControllerWithData:self.usersArray andTitle:@"用户"];
+    } else if (indexPath.section == orgSection) {
+        vc = [WESearchResultGroupObjectViewController createGroupObjectViewControllerWithData:self.orgsArray andTitle:@"组织账户"];
     }
-    
-    
-    
-//    if ([object isKindOfClass:[News class]]) {
-//        vc = [WTNewsDetailViewController createDetailViewControllerWithNews:(News *)object backBarButtonText:backBarButtonText];
-//    } else if ([object isKindOfClass:[Activity class]]) {
-//        vc = [WTActivityDetailViewController createDetailViewControllerWithActivity:(Activity *)object backBarButtonText:backBarButtonText];
-//    } else if ([object isKindOfClass:[Organization class]]) {
-//        vc = [WTOrganizationDetailViewController createDetailViewControllerWithOrganization:(Organization *)object backBarButtonText:backBarButtonText];
-//    } else if ([object isKindOfClass:[User class]]) {
-//        // 如果是当前用户, 则进行Tab跳转
-//        if ([WTCoreDataManager sharedManager].currentUser == object) {
-//            [[UIApplication sharedApplication].rootTabBarController clickTabWithName:WTRootTabBarViewControllerMe];
-//            return nil;
-//        }
-//        vc = [WTUserDetailViewController createDetailViewControllerWithUser:(User *)object backBarButtonText:backBarButtonText];
-//    } else if ([object isKindOfClass:[Star class]]) {
-//        vc = [WTStarDetailViewController createDetailViewControllerWithStar:(Star *)object backBarButtonText:backBarButtonText];
-//    } else {
-//        return nil;
-//    }
     return vc;
 }
 

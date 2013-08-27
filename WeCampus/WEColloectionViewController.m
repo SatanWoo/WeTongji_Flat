@@ -44,7 +44,6 @@
     [super viewDidLoad];
     [self.collectionView registerClass:c forCellWithReuseIdentifier:@"WEFriendHeadCell"];
     [self.collectionView registerClass:[WEFriendListHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"WEFriendListHeaderView"];
-    
     self.collectionView.allowsMultipleSelection = YES;
     // Do any additional setup after loading the view from its nib.
 }
@@ -59,12 +58,12 @@
 - (void)setData:(NSArray*)arr
 {
     friendsArray = arr;
-    [self sort];
+    //[self sort];
     [self.collectionView reloadData];
 }
 
 
-- (NSArray*)selected
+- (NSArray *)selected
 {
     NSMutableArray *arr = [@[] mutableCopy];
     NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];

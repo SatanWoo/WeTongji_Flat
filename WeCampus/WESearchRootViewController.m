@@ -39,6 +39,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    if (self.resultViewController) {
+        [self.resultViewController.view resetHeight:self.view.frame.size.height - 41.0f];
+    }
 }
 
 - (void)didReceiveMemoryWarning

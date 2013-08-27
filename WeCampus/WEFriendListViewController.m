@@ -42,14 +42,11 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    //[self logIn];
-    
     if(!self.friendOfPerson)
     {
         self.friendOfPerson = [WTCoreDataManager sharedManager].currentUser;
     }
     [self loadMoreDataWithSuccessBlock:nil failureBlock:nil];
-    
     
     collectionVC = [[WEColloectionViewController alloc] init];
     [collectionVC setCellClass:[WEFriendHeadCell class]];
@@ -71,34 +68,10 @@
 
 #pragma mark - Data load methods
 
-- (void)logIn
-{
-    WTClient *client = [WTClient sharedClient];
-    WTRequest *request = [WTRequest requestWithSuccessBlock: ^(id responseData)
-    {
-        User *user = [User insertUser:[responseData objectForKey:@"User"]];
-        [WTCoreDataManager sharedManager].currentUser = user;
-        if(!self.friendOfPerson)
-        {
-            self.friendOfPerson = user;
-        }
-        [self loadMoreDataWithSuccessBlock:nil failureBlock:nil];
-        
-    } failureBlock:^(NSError * error) {
-        NSLog(@"fail");
-    }];
-    [request loginWithStudentNumber:@"000000" password:@"123456"];
-    [client enqueueRequest:request];
-}
-
-
 - (void)loadMoreDataWithSuccessBlock:(void (^)(void))success
                         failureBlock:(void (^)(void))failure {
     WTRequest * request = [WTRequest requestWithSuccessBlock:^(id responseData) {
         NSLog(@"Get friend list: %@", responseData);
-        
-        if (success)
-            success();
         
         NSDictionary *resultDict = (NSDictionary *)responseData;
         NSMutableArray *arr= [@[] mutableCopy];
@@ -109,6 +82,9 @@
             [users addObject:[User insertUser:dict]];
         }
         [collectionVC setData:users];
+        
+        if (success)
+            success();
         
     } failureBlock:^(NSError * error) {
         NSLog(@"Get friend list:%@", error.localizedDescription);
