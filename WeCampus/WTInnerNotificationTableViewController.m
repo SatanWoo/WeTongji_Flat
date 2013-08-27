@@ -16,6 +16,7 @@
 #import "Object+Addition.h"
 
 #import "WEActivityDetailViewController.h"
+#import "WEMeViewController.h"
 
 @interface WTInnerNotificationTableViewController ()
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
@@ -114,25 +115,30 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSNotification *notification = [self.fetchedResultsController objectAtIndexPath:indexPath];
     if ([notification isKindOfClass:[ActivityInvitationNotification class]]) {
+        NSLog(@"ActivityInvitationNotification");
         ActivityInvitationNotification *activityInvitation = (ActivityInvitationNotification *)notification;
         WEActivityDetailViewController *vc = [WEActivityDetailViewController createDetailViewControllerWithModel:activityInvitation.activity];
         [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];
+    } else if ([notification isKindOfClass:[FriendInvitationNotification class]]) {
+        FriendInvitationNotification *friendInvitation = (FriendInvitationNotification *)notification;
+        
+        // 如果是确认好友邀请的通知，则展示receiver
+        User *user = friendInvitation.sender;
+        
+        NSLog(@" FriendInvitationNotification is %@", user.name);
+        if (user == [WTCoreDataManager sharedManager].currentUser) {
+            user = friendInvitation.receiver;
+        }
+        WEMeViewController *vc = [[WEMeViewController alloc] init];
+        [vc configureWithUser:user];
+        [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];
     }
+
 //    } else if ([notification isKindOfClass:[CourseInvitationNotification class]]) {
 //        CourseInvitationNotification *courseInvitation = (CourseInvitationNotification *)notification;
 //        WTCourseDetailViewController *vc = [WTCourseDetailViewController createDetailViewControllerWithCourse:courseInvitation.course backBarButtonText:NSLocalizedString(@"Notification", nil)];
 //        [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];
-//    } else if ([notification isKindOfClass:[FriendInvitationNotification class]]) {
-//        FriendInvitationNotification *friendInvitation = (FriendInvitationNotification *)notification;
-//        // 如果是确认好友邀请的通知，则展示receiver
-//        User *user = friendInvitation.sender;
-//        if (user == [WTCoreDataManager sharedManager].currentUser) {
-//            user = friendInvitation.receiver;
-//        }
-//        WTUserDetailViewController *vc = [WTUserDetailViewController createDetailViewControllerWithUser:user backBarButtonText:NSLocalizedString(@"Notification", nil)];
-//        [self.delegate innerNotificaionTableViewController:self wantToPushViewController:vc];
-//    }
-}
+    }
 
 #pragma mark - CoreDataTableViewController methods
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
@@ -178,7 +184,6 @@
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
 }
-
 
 #pragma mark - Refresh Control
 - (void)loadData

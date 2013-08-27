@@ -39,6 +39,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [self.tableViewController viewDidAppear:animated];
+    [((WEAppDelegate *)[UIApplication sharedApplication].delegate) showTabbar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
