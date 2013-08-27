@@ -64,6 +64,8 @@
 		034267FD17B9277D000248C2 /* WEActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034267FC17B9277D000248C2 /* WEActivityCell.xib */; };
 		034B1F7717CC5A4B00603D11 /* WESearchResultGroupObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034B1F7517CC5A4B00603D11 /* WESearchResultGroupObjectViewController.m */; };
 		034B1F7817CC5A4B00603D11 /* WESearchResultGroupObjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034B1F7617CC5A4B00603D11 /* WESearchResultGroupObjectViewController.xib */; };
+		034E5ED717CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034E5ED517CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m */; };
+		034E5ED817CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034E5ED617CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib */; };
 		0351487B17B69F1D006E67B2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486917B69F1D006E67B2 /* AFHTTPClient.m */; };
 		0351487C17B69F1D006E67B2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486B17B69F1D006E67B2 /* AFHTTPRequestOperation.m */; };
 		0351487D17B69F1D006E67B2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351486D17B69F1D006E67B2 /* AFImageRequestOperation.m */; };
@@ -534,6 +536,9 @@
 		034B1F7417CC5A4B00603D11 /* WESearchResultGroupObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultGroupObjectViewController.h; sourceTree = "<group>"; };
 		034B1F7517CC5A4B00603D11 /* WESearchResultGroupObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESearchResultGroupObjectViewController.m; sourceTree = "<group>"; };
 		034B1F7617CC5A4B00603D11 /* WESearchResultGroupObjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESearchResultGroupObjectViewController.xib; sourceTree = "<group>"; };
+		034E5ED417CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WESearchResultAcitivitiesViewController.h; sourceTree = "<group>"; };
+		034E5ED517CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WESearchResultAcitivitiesViewController.m; sourceTree = "<group>"; };
+		034E5ED617CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WESearchResultAcitivitiesViewController.xib; sourceTree = "<group>"; };
 		0351486817B69F1D006E67B2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0351486917B69F1D006E67B2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		0351486A17B69F1D006E67B2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -1345,6 +1350,9 @@
 				034B1F7417CC5A4B00603D11 /* WESearchResultGroupObjectViewController.h */,
 				034B1F7517CC5A4B00603D11 /* WESearchResultGroupObjectViewController.m */,
 				034B1F7617CC5A4B00603D11 /* WESearchResultGroupObjectViewController.xib */,
+				034E5ED417CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.h */,
+				034E5ED517CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m */,
+				034E5ED617CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib */,
 			);
 			name = SearchResult;
 			sourceTree = "<group>";
@@ -2452,6 +2460,7 @@
 				E426122A17CB8E5800C943D9 /* WEMeEditViewController.xib in Resources */,
 				E426123217CBA22600C943D9 /* WEMeEditPhotoSourceSelectViewController.xib in Resources */,
 				034B1F7817CC5A4B00603D11 /* WESearchResultGroupObjectViewController.xib in Resources */,
+				034E5ED817CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2644,6 +2653,7 @@
 				E426122D17CB933700C943D9 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				E426123117CBA22600C943D9 /* WEMeEditPhotoSourceSelectViewController.m in Sources */,
 				034B1F7717CC5A4B00603D11 /* WESearchResultGroupObjectViewController.m in Sources */,
+				034E5ED717CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

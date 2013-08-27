@@ -22,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *locationIconImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *likeIconImageView;
 
-+ (WEActivityCell *)createWEActivityCell;
++ (WEActivityCell *)createWEActivityCellWithActs:(Activity *)act;
 -(void)configureCellWithActivity:(Activity *)activity;
 
 @end

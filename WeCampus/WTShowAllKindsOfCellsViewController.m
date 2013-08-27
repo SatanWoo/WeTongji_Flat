@@ -21,6 +21,7 @@
 
 #import "WEActivityDetailViewController.h"
 #import "WESearchResultGroupObjectViewController.h"
+#import "WESearchResultAcitivitiesViewController.h"
 
 @interface WTShowAllKindsOfCellsViewController ()
 @end
@@ -166,7 +167,7 @@ static int actSection = 100;
     UIViewController *vc = nil;
     if (indexPath.section == actSection) {
         if (indexPath.row >= 3) {
-            
+            vc = [WESearchResultAcitivitiesViewController createResultActsViewControllerWithData:self.actsArray];
         } else {
             Object *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
             if ([object isKindOfClass:[Activity class]]) {

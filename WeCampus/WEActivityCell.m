@@ -13,10 +13,11 @@
 
 @implementation WEActivityCell
 
-+ (WEActivityCell *)createWEActivityCell
++ (WEActivityCell *)createWEActivityCellWithActs:(Activity *)act
 {
     NSArray *array = [[NSBundle mainBundle] loadNibNamed:kWEActivityCellNibName owner:nil options:nil];
     WEActivityCell *cell = [array lastObject];
+    [cell configureCellWithActivity:act];
     return cell;
 }
 
