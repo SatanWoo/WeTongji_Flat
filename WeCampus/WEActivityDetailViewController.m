@@ -66,11 +66,12 @@
     [super viewDidLoad];
     self.tableView.scrollsToTop = YES;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_point"]];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
 }
 

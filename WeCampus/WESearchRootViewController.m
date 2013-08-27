@@ -36,10 +36,13 @@
     [self configureDefaultView];
 }
 
+#define offset (480 - self.resultContainerView.frame.size.height)
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     if (self.resultViewController) {
-        [self.resultViewController.view resetHeight:self.view.frame.size.height];
+        [((WEAppDelegate *)[UIApplication sharedApplication].delegate) hideTabbar];
+        [self.resultViewController.view resetHeightByOffset:offset];
     }
 }
 
