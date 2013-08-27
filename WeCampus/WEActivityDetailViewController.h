@@ -13,7 +13,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *buttonContainerView;
 
++ (NSString *)cutTextForWeibo:(NSString *)text;
 + (WEActivityDetailViewController *)createDetailViewControllerWithModel:(Activity *)act;
 - (IBAction)popBack:(id)sender;
+- (IBAction)share:(id)sender;
 
 @end

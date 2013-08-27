@@ -39,6 +39,11 @@
     return self;
 }
 
+- (UIImage *)currentImage
+{
+    return self.imageRollView.currentItemView.imageView.image;
+}
+
 - (void)resetLayout:(CGFloat)percent
 {
     if (percent < 0) return;

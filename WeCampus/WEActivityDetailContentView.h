@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet OHAttributedLabel *contentLabel;
 @property (weak, nonatomic) id<WEActivityDetailContentViewDelegate> delegate;
 
+- (UIImage *)currentImage;
 + (WEActivityDetailContentView *)createDetailContentViewWithInfo:(Activity *)act;
 - (void)resetLayout:(CGFloat)percent;
 - (void)resetNormalLayout;

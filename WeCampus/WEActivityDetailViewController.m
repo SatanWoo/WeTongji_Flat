@@ -10,8 +10,9 @@
 #import "WEActivityDetailHeaderView.h"
 #import "WEActivityDetailContentView.h"
 #import "WEDetailTransparentHeaderView.h"
+#import "RDActivityViewController.h"
 
-@interface WEActivityDetailViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface WEActivityDetailViewController () <UITableViewDataSource, UITableViewDelegate, RDActivityViewControllerDelegate>
 @property (strong, nonatomic) Activity *act;
 @property (strong, nonatomic) WEActivityDetailContentView *contentViewCell;
 @property (strong, nonatomic) WEActivityDetailHeaderView *detailHeaderView;
@@ -182,5 +183,69 @@ static bool shouldRecalculateTransparecy = false;
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)share:(id)sender
+{
+    RDActivityViewController *vc = [[RDActivityViewController alloc] initWithDelegate:self];
+    vc.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
+}
+
+#pragma mark - RDActivityViewControllerDelegate
+
+- (NSArray *)activityViewController:(NSArray *)activityViewController itemsForActivityType:(NSString *)activityType {
+    NSString *textToShare = [self textToShare];
+    NSArray *imagesToShare = [self imageArrayToShare];
+    NSMutableArray *result = [NSMutableArray array];
+    if ([activityType isEqualToString:UIActivityTypePostToWeibo]) {
+        [result addObject:[WEActivityDetailViewController cutTextForWeibo:textToShare]];
+        if (imagesToShare.count > 0)
+            [result addObject:imagesToShare[0]];
+    } else {
+        [result addObject:textToShare];
+        [imagesToShare enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            [result addObject:obj];
+        }];
+    }
+    return result;
+}
+
+- (NSArray *)imageArrayToShare {
+    UIImage *image = [self.contentViewCell currentImage];
+    if (image)
+        return @[image];
+    return nil;
+}
+
+- (NSString *)textToShare {
+    return [NSString stringWithFormat:@"%@\n\n%@\n\n%@\n\n%@", self.act.what, self.act.where, self.act.yearMonthDayBeginToEndTimeString, self.act.content];
+}
+
+#define WEIBO_TEXT_MAX_LENGTH   140
+
++ (NSString *)cutTextForWeibo:(NSString *)text {
+    int i, n = [text length], l = 0, a = 0, b = 0;
+    unichar c;
+    for(i = 0; i < n; i++) {
+        c = [text characterAtIndex:i];
+        if (isblank(c))
+            b++;
+        else if (isascii(c))
+            a++;
+        else
+            l++;
+        
+        int textLength = ceilf((float)(l * 2 + a + b) / 2.0f);
+        if (textLength > WEIBO_TEXT_MAX_LENGTH)
+            break;
+    }
+    
+    if (i == n) {
+        return text;
+    } else {
+        return [NSString stringWithFormat:@"%@...", [text substringToIndex:i - 3]];
+    }
+}
+
 
 @end
