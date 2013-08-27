@@ -9,6 +9,7 @@
 #import "WESearchResultGroupObjectViewController.h"
 #import "WEColloectionViewController.h"
 #import "WEFriendHeadCell.h"
+#import "WEMeViewController.h"
 
 @interface WESearchResultGroupObjectViewController () <WEColloectionViewControllerDelegate>
 @property (strong, nonatomic) WEColloectionViewController *collectionViewController;
@@ -77,7 +78,12 @@
 #pragma mark - WEColloectionViewControllerDelegate
 - (void)WEColloectionViewController:(WEColloectionViewController*)vc didSelect:(id)obj
 {
-    
+    if ([obj isKindOfClass:[User class]]) {
+        WEMeViewController* temp = [[WEMeViewController alloc] init];
+        [temp configureWithUser:(User *)obj];
+        
+        [self.navigationController pushViewController:temp animated:YES];
+    }
 }
 
 @end
