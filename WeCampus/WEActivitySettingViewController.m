@@ -7,11 +7,13 @@
 //
 
 #import "WEActivitySettingViewController.h"
-#import "WTSwitch.h"
 #import "WUSwitch.h"
 
-@interface WEActivitySettingViewController () <WTSwitchDelegate>
-@property (nonatomic, strong) WTSwitch *swtich;
+
+
+#define KWESwtichOpenBgColor [UIColor colorWithRed:21.0f / 255 green:125.0f / 255 blue:251.0f / 255 alpha:1.0f]
+
+@interface WEActivitySettingViewController ()
 @property (nonatomic, strong) WUSwitch *wuSwitch;
 @end
 
@@ -65,14 +67,11 @@
 
 - (void)configureSwitch
 {
-    self.wuSwitch = [[WUSwitch alloc] init];
-    [self.wuSwitch resetOriginX:switchX];
-    [self.wuSwitch resetOriginY:switchY];
-    [self.wuSwitch resetWidth:78];
-    [self.wuSwitch resetHeight:28];
+    self.wuSwitch = [[WUSwitch alloc] initWithFrame:CGRectMake(switchX, switchY, 68, 30)];
+    [self.wuSwitch setOnTintColor:KWESwtichOpenBgColor];
     [self.containerView addSubview:self.wuSwitch];
-    
     self.wuSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:hidePast];
+    [self.wuSwitch addTarget:self action:@selector(switchDidChange:) forControlEvents:UIControlEventValueChanged];
 }
 
 #define showCategory @"ActivityShowTypes"
@@ -137,7 +136,7 @@
 }
 
 #pragma mark - WTSwitchDelegate
-- (void)switchDidChange:(WTSwitch *)sender
+- (void)switchDidChange:(WUSwitch *)sender
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:hidePast] != self.wuSwitch.isOn) {
         
