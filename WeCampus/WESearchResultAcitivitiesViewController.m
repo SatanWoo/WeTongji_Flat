@@ -8,6 +8,7 @@
 
 #import "WESearchResultAcitivitiesViewController.h"
 #import "WEActivityCell.h"
+#import "WEActivityDetailViewController.h"
 
 @interface WESearchResultAcitivitiesViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSArray *datas;
@@ -83,6 +84,15 @@
     }
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Activity *act = (Activity *)[self.datas objectAtIndex:indexPath.row];
+    
+    WEActivityDetailViewController *vc = [WEActivityDetailViewController createDetailViewControllerWithModel:act];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

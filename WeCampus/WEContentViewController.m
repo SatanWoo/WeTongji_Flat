@@ -29,6 +29,7 @@
     [super viewDidLoad];
      self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc ] initBarButtonWithTarget:self action:@selector(didClickBackButton) normalImage:@"back_btn"];
     [self configureNavigationBar];
+    [self configureGesture];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -54,10 +55,22 @@
     
 }
 
+- (void)configureGesture
+{
+    UISwipeGestureRecognizer  *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeToPop:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeGesture];
+}
+
 #pragma mark - Private 
 - (void)didClickBackButton
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)swipeToPop:(UISwipeGestureRecognizer *)swipe
+{
+    [self didClickBackButton];
 }
 
 
