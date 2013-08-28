@@ -44,7 +44,7 @@
 #define offset (460 - self.view.frame.size.height)
 - (void)viewWillAppear:(BOOL)animated {
     [((WEAppDelegate *)[UIApplication sharedApplication].delegate) showTabbar];
-    [self.tableViewController.view resetHeightByOffset:-offset];
+    [self.tableViewController.view resetHeight:self.view.frame.size.height];
     self.isVisible = YES;
 }
 

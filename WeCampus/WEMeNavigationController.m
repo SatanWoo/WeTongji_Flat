@@ -44,7 +44,7 @@
 - (void)initRootViewController
 {
     rootViewController = [[WEMeViewController alloc] init];
-    [self logIn];
+    //[self logIn];
 //    if(![WTCoreDataManager sharedManager].currentUser)
 //    {
 //        [self logIn];
@@ -52,19 +52,4 @@
     [self pushViewController:rootViewController animated:NO];
 }
 
-- (void)logIn
-{
-    WTClient *client = [WTClient sharedClient];
-    WTRequest *request = [WTRequest requestWithSuccessBlock: ^(id responseData)
-                          {
-                              User *user = [User insertUser:[responseData objectForKey:@"User"]];
-                              [WTCoreDataManager sharedManager].currentUser = user;
-                              [rootViewController configureWithUser:user];
-                              
-                          } failureBlock:^(NSError * error) {
-                              NSLog(@"fail");
-                          }];
-    [request loginWithStudentNumber:@"000000" password:@"123456"];
-    [client enqueueRequest:request];
-}
 @end
