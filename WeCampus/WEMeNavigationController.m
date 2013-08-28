@@ -44,12 +44,14 @@
 - (void)initRootViewController
 {
     rootViewController = [[WEMeViewController alloc] init];
-    //[self logIn];
-//    if(![WTCoreDataManager sharedManager].currentUser)
-//    {
-//        [self logIn];
-//    }
+    
+    if(![WTCoreDataManager sharedManager].currentUser)
+    {
+        [[[UIApplication sharedApplication] delegate] performSelector:@selector(logIn)];
+    }
+    
     [self pushViewController:rootViewController animated:NO];
 }
+
 
 @end

@@ -20,6 +20,8 @@
 - (void)hideTabbar;
 - (void)showTabbar;
 
+- (void)logIn;
+
 @end
 
 

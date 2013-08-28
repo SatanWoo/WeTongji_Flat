@@ -55,6 +55,14 @@
     {
         self.backButto.hidden = YES;
     }
+    
+    if(!iPhone5)
+    {
+        self.secondEvent.hidden = YES;
+    }
+    
+    if(!_user)
+       [self configureWithUser:[WTCoreDataManager sharedManager].currentUser];
     // Do any additional setup after loading the view.
 }
 
