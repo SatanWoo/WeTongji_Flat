@@ -56,7 +56,7 @@
 {
     [super viewDidAppear:animated];
     [UIView animateWithDuration:0.5f animations:^{
-        [self.containerView resetOriginY:self.view.frame.size.height - self.containerView.frame.size.height];
+        [self.containerView resetOriginY:self.view.frame.size.height - self.containerView.frame.size.height - self.controlArea.frame.size.height];
         [self.controlArea resetOriginY:self.view.frame.size.height - self.controlArea.frame.size.height];
     }];
 }

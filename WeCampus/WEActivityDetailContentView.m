@@ -10,13 +10,15 @@
 #import "WTActivityImageRollView.h"
 #import "WEActivityDetailControlAreaView.h"
 #import "WTDetailImageViewController.h"
+#import "WEInviteFriendsViewController.h"
 #import <OHAttributedLabel.h>
 
-@interface WEActivityDetailContentView() <WTDetailImageViewControllerDelegate, WEActivityDetailControlAreaViewDelegate>
+@interface WEActivityDetailContentView() <WTDetailImageViewControllerDelegate, WEActivityDetailControlAreaViewDelegate, WEInviteFriendsViewControllerDelegate>
 @property (strong, nonatomic) WTActivityImageRollView *imageRollView;
 @property (strong, nonatomic) WEActivityDetailControlAreaView *controlAreaView;
 @property (strong, nonatomic) WEActivityDetailControlAreaView *bottomAreaView;
 @property (strong, nonatomic) Activity *act;
+@property (strong, nonatomic) WEInviteFriendsViewController *inviteController;
 @end
 
 @implementation WEActivityDetailContentView
@@ -112,6 +114,7 @@
 - (void)configureControlArea:(Activity *)act
 {
     self.controlAreaView = [WEActivityDetailControlAreaView createActivityDetailViewWithInfo:act];
+    self.controlAreaView.delegate = self;
     [self.controlAreaView resetOriginY:0];
     [self addSubview:self.controlAreaView];
 }
@@ -120,6 +123,7 @@
 - (void)configureBottomControlArea:(Activity *)act
 {
     self.bottomAreaView = [WEActivityDetailControlAreaView createActivityDetailViewWithInfo:act];
+    self.bottomAreaView.delegate = self;
     [self.bottomAreaView resetOriginY:self.contentLabel.frame.origin.y + self.contentLabel.frame.size.height + kBigSpan];
     [self addSubview:self.bottomAreaView];
 }
@@ -128,8 +132,8 @@
 - (void)didTagImageRollView:(UITapGestureRecognizer *)gesture {
     WTActivityImageRollItemView *currentImageRollItemView = [self.imageRollView currentItemView];
     UIImageView *currentImageView = currentImageRollItemView.imageView;
-    CGRect imageViewFrame = [self.superview convertRect:currentImageView.frame fromView:currentImageRollItemView.superview];
-    imageViewFrame.origin.y += 128.0f;
+    CGRect imageViewFrame = [self.containerViewController.view convertRect:currentImageView.frame fromView:currentImageView.superview];
+    imageViewFrame.origin.y += 64.0f;
     
     [WTDetailImageViewController showDetailImageViewWithImageURLString:self.act.image
                                                          fromImageView:currentImageView
@@ -146,6 +150,31 @@
 
 #pragma mark - WEActivityDetailControlAreaViewDelegate
 - (void)inviteOthers
+{
+    if (self.inviteController) return;
+    
+    self.inviteController = [WEInviteFriendsViewController
+                                         createInviteFriendsViewControllerWithDelegate:self];
+    [self.containerViewController.view addSubview:self.inviteController.view];
+}
+
+- (void)joinEvent
+{
+    
+}
+
+- (void)like
+{
+    
+}
+
+#pragma mark - WEInviteFriendsViewControllerDelegate
+- (void)cancelInviteFriends
+{
+    
+}
+
+- (void)finishInviteFriends:(NSArray *)friends
 {
     
 }

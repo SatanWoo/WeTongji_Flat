@@ -33,6 +33,7 @@
 {
     if (!_contentViewCell) {
         _contentViewCell = [WEActivityDetailContentView createDetailContentViewWithInfo:self.act];
+        _contentViewCell.containerViewController = self;
     }
     return _contentViewCell;
 }

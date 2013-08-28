@@ -19,6 +19,7 @@
 @interface WEActivityDetailContentView : UITableViewCell
 @property (weak, nonatomic) IBOutlet OHAttributedLabel *contentLabel;
 @property (weak, nonatomic) id<WEActivityDetailContentViewDelegate> delegate;
+@property (weak, nonatomic) UIViewController *containerViewController;
 
 - (UIImage *)currentImage;
 + (WEActivityDetailContentView *)createDetailContentViewWithInfo:(Activity *)act;
