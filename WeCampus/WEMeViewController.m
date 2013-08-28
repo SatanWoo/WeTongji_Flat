@@ -18,6 +18,10 @@
 #import "NSString+WTAddition.h"
 #import "WEMeMoreActionSheetViewController.h"
 #import "WEMeEditViewController.h"
+#import "WEMeLikedListViewController.h"
+#import "Organization+Addition.h"
+#import "Activity+Addition.h"
+#import "Object+Addition.h"
 
 @interface WEMeViewController ()<WEFriendListViewControllerDelegate,WEMeMoreActionSheetViewControllerDelegate>
 {
@@ -70,6 +74,7 @@
 
 - (void)configureWithUser:(User*)user
 {
+    NSLog(@"%@",self.view);
     _user = user;
     if([[WTCoreDataManager sharedManager].currentUser.likedObjects member:user])
     {
@@ -140,7 +145,35 @@
 
 - (IBAction)likedTapped:(id)sender
 {
+    NSArray *all = [_user.likedObjects allObjects];
+    for (Object *obj in all) {
+        [obj setObjectHeldByHolder:[WEMeLikedListViewController class]];
+    }
+    NSArray *users = [all filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+        if ([evaluatedObject isKindOfClass:[User class]]) {
+            return  YES;
+        }
+        return NO;
+    }]];
+    NSArray *act = [all filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+        if ([evaluatedObject isKindOfClass:[Activity class]]) {
+            return  YES;
+        }
+        return NO;
+    }]];
+    NSArray *org = [all filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+        if ([evaluatedObject isKindOfClass:[Organization class]]) {
+            return  YES;
+        }
+        return NO;
+    }]];
     
+    WEMeLikedListViewController *result = [[WEMeLikedListViewController alloc] init];
+    result.orgsArray = org;
+    result.usersArray = users;
+    result.actsArray = act;
+
+    [self.navigationController pushViewController:result animated:YES];
 }
 
 - (IBAction)likeTheUserTapped:(id)sender

@@ -26,4 +26,6 @@
 + (WTSearchResultTableViewController *)createViewControllerWithSearchKeyword:(NSString *)keyword
                                                               searchCategory:(NSInteger)category;
 
+- (void)clearSearchResultObjects;
+
 @end

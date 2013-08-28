@@ -417,6 +417,7 @@
 		E470584817BE6949007ABECC /* 活动详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584417BE6949007ABECC /* 活动详情1.png */; };
 		E470584917BE6949007ABECC /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584517BE6949007ABECC /* 首页.png */; };
 		E470584B17BE6ACC007ABECC /* cal.png in Resources */ = {isa = PBXBuildFile; fileRef = E470584A17BE6ACC007ABECC /* cal.png */; };
+		E4747A2E17CE406E00DE96E4 /* WEMeLikedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4747A2D17CE406E00DE96E4 /* WEMeLikedListViewController.m */; };
 		E477AEBD17CA293200F14B3E /* WEMeFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E477AEBB17CA293200F14B3E /* WEMeFriendListViewController.m */; };
 		E477AEBE17CA293200F14B3E /* WEMeFriendListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E477AEBC17CA293200F14B3E /* WEMeFriendListViewController.xib */; };
 		E4906C4117C3A4EC00BBFB62 /* WEMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4906C4017C3A4EC00BBFB62 /* WEMeViewController.m */; };
@@ -1018,6 +1019,8 @@
 		E470584417BE6949007ABECC /* 活动详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动详情1.png"; sourceTree = "<group>"; };
 		E470584517BE6949007ABECC /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
 		E470584A17BE6ACC007ABECC /* cal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cal.png; sourceTree = "<group>"; };
+		E4747A2C17CE406D00DE96E4 /* WEMeLikedListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEMeLikedListViewController.h; sourceTree = "<group>"; };
+		E4747A2D17CE406E00DE96E4 /* WEMeLikedListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEMeLikedListViewController.m; sourceTree = "<group>"; };
 		E477AEBA17CA293200F14B3E /* WEMeFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEMeFriendListViewController.h; sourceTree = "<group>"; };
 		E477AEBB17CA293200F14B3E /* WEMeFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEMeFriendListViewController.m; sourceTree = "<group>"; };
 		E477AEBC17CA293200F14B3E /* WEMeFriendListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEMeFriendListViewController.xib; sourceTree = "<group>"; };
@@ -2112,6 +2115,8 @@
 				E426121D17CB7F3F00C943D9 /* WEMeMoreActionSheetViewController.h */,
 				E426121E17CB7F3F00C943D9 /* WEMeMoreActionSheetViewController.m */,
 				E426121F17CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib */,
+				E4747A2C17CE406D00DE96E4 /* WEMeLikedListViewController.h */,
+				E4747A2D17CE406E00DE96E4 /* WEMeLikedListViewController.m */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -2678,6 +2683,7 @@
 				034E5ED717CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.m in Sources */,
 				034E5EDE17CCDD3700EA3B50 /* WUSwitch.m in Sources */,
 				033D52D917CD03900042C1E1 /* WEInviteFriendsViewController.m in Sources */,
+				E4747A2E17CE406E00DE96E4 /* WEMeLikedListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
