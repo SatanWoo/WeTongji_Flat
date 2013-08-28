@@ -41,8 +41,8 @@
     [super viewDidLoad];
     [self configureCollectionView];
     
-    [self.maskView resetHeight:900];
-    [self.maskView resetOriginYByOffset:-200];
+    [self.maskView resetHeight:460];
+    [self.maskView resetOriginY:0];
     [self.containerView resetOriginY:self.view.frame.size.height];
     [self.controlArea resetOriginY:self.view.frame.size.height + self.controlArea.frame.size.height];
     

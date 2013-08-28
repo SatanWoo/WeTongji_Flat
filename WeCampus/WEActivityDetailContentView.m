@@ -13,6 +13,10 @@
 #import "WEInviteFriendsViewController.h"
 #import <OHAttributedLabel.h>
 
+#import "WTRequest.h"
+#import "WTClient.h"
+#import "User+Addition.h"
+
 @interface WEActivityDetailContentView() <WTDetailImageViewControllerDelegate, WEActivityDetailControlAreaViewDelegate, WEInviteFriendsViewControllerDelegate>
 @property (strong, nonatomic) WTActivityImageRollView *imageRollView;
 @property (strong, nonatomic) WEActivityDetailControlAreaView *controlAreaView;
@@ -169,14 +173,35 @@
 }
 
 #pragma mark - WEInviteFriendsViewControllerDelegate
+
+- (void)dismissInviteController
+{
+    [UIView animateWithDuration:0.5f animations:^{
+        [self.inviteController.view resetOriginYByOffset:self.containerViewController.view.frame.size.height];
+    } completion:^(BOOL finished) {
+        [self.inviteController.view removeFromSuperview];
+        self.inviteController = nil;
+    }];
+}
+
 - (void)cancelInviteFriends
 {
-    
+    [self dismissInviteController];
 }
 
 - (void)finishInviteFriends:(NSArray *)friends
 {
-    
+    [self dismissInviteController];
+    WTRequest *request = [WTRequest requestWithSuccessBlock:^(id responseObject) {
+        [[[UIAlertView alloc] initWithTitle:@"注意" message:@"邀请好友成功" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil] show];
+    } failureBlock:^(NSError *error) {
+    }];
+    NSMutableArray *userIDArray = [NSMutableArray array];
+    for (User *user in friends) {
+        [userIDArray addObject:user.identifier];
+    }
+    [request activityInvite:self.act.identifier inviteUserIDArray:userIDArray];
+    [[WTClient sharedClient] enqueueRequest:request];
 }
 
 @end
