@@ -21,6 +21,7 @@
         [button setImage:normalImage forState:UIControlStateNormal];
         [button setImage:normalImage forState:UIControlStateHighlighted];
         [button setImage:normalImage forState:UIControlStateSelected];
+        [button setShowsTouchWhenHighlighted:YES];
         [button resetSize:normalImage.size];
         
         UIView *containerView = [[UIView alloc] initWithFrame:button.frame];
