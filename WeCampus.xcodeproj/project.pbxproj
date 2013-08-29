@@ -92,6 +92,8 @@
 		035D249A17CB4790006263B6 /* unread_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 035D249817CB4790006263B6 /* unread_dot.png */; };
 		035D249B17CB4790006263B6 /* unread_dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 035D249917CB4790006263B6 /* unread_dot@2x.png */; };
 		0368DAA717B80064000F83A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0368DAA517B80064000F83A1 /* Localizable.strings */; };
+		03880C2C17CF190D005981F4 /* WEOrgListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03880C2B17CF190D005981F4 /* WEOrgListCell.m */; };
+		03880C2E17CF1924005981F4 /* WEOrgListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03880C2D17CF1924005981F4 /* WEOrgListCell.xib */; };
 		03883AC317BA11C900ED081D /* WEActivitySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */; };
 		03883AC417BA11C900ED081D /* WEActivitySettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */; };
 		039A21C717CA4C71009E3187 /* info_top_divider.png in Resources */ = {isa = PBXBuildFile; fileRef = 039A21C517CA4C71009E3187 /* info_top_divider.png */; };
@@ -591,6 +593,9 @@
 		035D249917CB4790006263B6 /* unread_dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unread_dot@2x.png"; sourceTree = "<group>"; };
 		0368DAA617B80064000F83A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0368DAA817B80067000F83A1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		03880C2A17CF190D005981F4 /* WEOrgListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEOrgListCell.h; sourceTree = "<group>"; };
+		03880C2B17CF190D005981F4 /* WEOrgListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEOrgListCell.m; sourceTree = "<group>"; };
+		03880C2D17CF1924005981F4 /* WEOrgListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEOrgListCell.xib; sourceTree = "<group>"; };
 		03883AC017BA11C900ED081D /* WEActivitySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEActivitySettingViewController.h; sourceTree = "<group>"; };
 		03883AC117BA11C900ED081D /* WEActivitySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEActivitySettingViewController.m; sourceTree = "<group>"; };
 		03883AC217BA11C900ED081D /* WEActivitySettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEActivitySettingViewController.xib; sourceTree = "<group>"; };
@@ -1439,6 +1444,16 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		03880C2917CF18E0005981F4 /* Orgnaization */ = {
+			isa = PBXGroup;
+			children = (
+				03880C2A17CF190D005981F4 /* WEOrgListCell.h */,
+				03880C2B17CF190D005981F4 /* WEOrgListCell.m */,
+				03880C2D17CF1924005981F4 /* WEOrgListCell.xib */,
+			);
+			name = Orgnaization;
+			sourceTree = "<group>";
+		};
 		03BA1D0F17BF6A010040712F /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -2062,6 +2077,7 @@
 		E458B21217B90ED700D0DFBD /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				03880C2917CF18E0005981F4 /* Orgnaization */,
 				03D6223C17C9C9B100CC1EDD /* Notification */,
 				03E37DB317C1FA3A008029D5 /* Search */,
 				E4511F3517BFA20B005494C1 /* Friends */,
@@ -2488,6 +2504,7 @@
 				034B1F7817CC5A4B00603D11 /* WESearchResultGroupObjectViewController.xib in Resources */,
 				034E5ED817CC9B0B00EA3B50 /* WESearchResultAcitivitiesViewController.xib in Resources */,
 				033D52DA17CD03900042C1E1 /* WEInviteFriendsViewController.xib in Resources */,
+				03880C2E17CF1924005981F4 /* WEOrgListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2684,6 +2701,7 @@
 				034E5EDE17CCDD3700EA3B50 /* WUSwitch.m in Sources */,
 				033D52D917CD03900042C1E1 /* WEInviteFriendsViewController.m in Sources */,
 				E4747A2E17CE406E00DE96E4 /* WEMeLikedListViewController.m in Sources */,
+				03880C2C17CF190D005981F4 /* WEOrgListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
