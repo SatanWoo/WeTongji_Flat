@@ -454,6 +454,7 @@
 		E4B02E0F17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4B02E0D17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib */; };
 		E4B2948817B9C9A800ED68C6 /* WENowPortraitWeekListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44E548217B92AF9000426E1 /* WENowPortraitWeekListViewController.xib */; };
 		E4B4237717C8EC3300746A83 /* WEMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4982CBF17C8DE490016E694 /* WEMeNavigationController.m */; };
+		E4C738EA17CF9D7F004FB25D /* WEMeLikedListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C738E917CF9D7F004FB25D /* WEMeLikedListViewController.xib */; };
 		E4DE121417BE17D900651486 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = E4DE121317BE17D900651486 /* public_key.der */; };
 /* End PBXBuildFile section */
 
@@ -1072,6 +1073,7 @@
 		E4B02E0B17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WENowPortraitDayEventListViewController.h; sourceTree = "<group>"; };
 		E4B02E0C17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WENowPortraitDayEventListViewController.m; sourceTree = "<group>"; };
 		E4B02E0D17BA7F0000DDC703 /* WENowPortraitDayEventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WENowPortraitDayEventListViewController.xib; sourceTree = "<group>"; };
+		E4C738E917CF9D7F004FB25D /* WEMeLikedListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEMeLikedListViewController.xib; sourceTree = "<group>"; };
 		E4DE121317BE17D900651486 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2141,6 +2143,7 @@
 				E426121F17CB7F4000C943D9 /* WEMeMoreActionSheetViewController.xib */,
 				E4747A2C17CE406D00DE96E4 /* WEMeLikedListViewController.h */,
 				E4747A2D17CE406E00DE96E4 /* WEMeLikedListViewController.m */,
+				E4C738E917CF9D7F004FB25D /* WEMeLikedListViewController.xib */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -2514,6 +2517,7 @@
 				033D52DA17CD03900042C1E1 /* WEInviteFriendsViewController.xib in Resources */,
 				03880C2E17CF1924005981F4 /* WEOrgListCell.xib in Resources */,
 				03880C3317CF1BB2005981F4 /* WESearchResultOrgsViewController.xib in Resources */,
+				E4C738EA17CF9D7F004FB25D /* WEMeLikedListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

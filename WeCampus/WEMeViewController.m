@@ -154,9 +154,9 @@
 - (IBAction)likedTapped:(id)sender
 {
     NSArray *all = [_user.likedObjects allObjects];
-    for (Object *obj in all) {
-        [obj setObjectHeldByHolder:[WEMeLikedListViewController class]];
-    }
+//    for (Object *obj in all) {
+//        [obj setObjectHeldByHolder:[WEMeLikedListViewController class]];
+//    }
     NSArray *users = [all filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
         if ([evaluatedObject isKindOfClass:[User class]]) {
             return  YES;
