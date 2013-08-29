@@ -22,6 +22,7 @@
 #import "WEActivityDetailViewController.h"
 #import "WESearchResultGroupObjectViewController.h"
 #import "WESearchResultAcitivitiesViewController.h"
+#import "WESearchResultOrgsViewController.h"
 
 @interface WTShowAllKindsOfCellsViewController ()
 @end
@@ -177,7 +178,7 @@ static int actSection = 100;
     } else if (indexPath.section == userSection) {
         vc = [WESearchResultGroupObjectViewController createGroupObjectViewControllerWithData:self.usersArray andTitle:@"用户"];
     } else if (indexPath.section == orgSection) {
-        vc = [WESearchResultGroupObjectViewController createGroupObjectViewControllerWithData:self.orgsArray andTitle:@"组织账户"];
+        vc = [WESearchResultOrgsViewController createResultOrgsViewControllerWithData:self.orgsArray];
     }
     return vc;
 }
