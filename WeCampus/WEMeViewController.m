@@ -80,8 +80,8 @@
     {
         [self.likeButton setSelected:YES];
     }
-    [self.likeButton setTitle:[NSString stringWithFormat:@"%@",user.likeCount] forState:UIControlStateNormal];
-    
+    self.beLikedCountLabel.text = [NSString stringWithFormat:@"%@",user.likeCount];
+
     [self.nameButton setTitle:user.name forState:UIControlStateNormal];
     self.genderImageView.image = [UIImage imageNamed:[user.gender isEqualToString:@"男"] ? @"person_male_icn.png" : @"person_female_icn.png"];
     self.descriptionLabel.text = user.motto;
@@ -92,10 +92,18 @@
     [self.headImageView loadImageWithImageURLString:user.avatar];
 	
     
+    
+    self.addFriendButton.hidden = NO;
+    self.likeButton.hidden = NO;
+    self.beLikedCountLabel.hidden = NO;
+    self.genderImageView.hidden = NO;
+    self.actionSheetButton.hidden = NO;
+
     if([WTCoreDataManager sharedManager].currentUser == user)//self visit
     {
         self.addFriendButton.hidden = YES;
         self.likeButton.hidden = YES;
+        self.beLikedCountLabel.hidden = YES;
         self.genderImageView.hidden = YES;
         self.actionSheetButton.hidden = YES;
     }
@@ -185,7 +193,7 @@
         int count = [_user.likeCount intValue];
         count--;
         _user.likeCount = @(count);
-        [self.likeButton setTitle:[NSString stringWithFormat:@"%@",_user.likeCount] forState:UIControlStateNormal];
+        self.beLikedCountLabel.text = [NSString stringWithFormat:@"%@",_user.likeCount];
     }
     else
     {
@@ -194,7 +202,7 @@
         int count = [_user.likeCount intValue];
         count++;
         _user.likeCount = @(count);
-        [self.likeButton setTitle:[NSString stringWithFormat:@"%@",_user.likeCount] forState:UIControlStateNormal];
+        self.beLikedCountLabel.text = [NSString stringWithFormat:@"%@",_user.likeCount];
     }
 }
 
