@@ -15,5 +15,6 @@
 + (WEBannerContainerView *)createBannerContainerView;
 - (void)configureBannerWithObjectsArray:(NSArray *)objectsArray;
 - (void)reloadItemImages;
+- (void)autoScroll;
 
 @end

@@ -36,6 +36,8 @@
 @property (nonatomic, assign) BOOL isLoadingHomeItems;
 @property (nonatomic, assign) BOOL isVisible;
 @property (nonatomic, strong) NSDictionary *homeResponseDict;
+
+@property (nonatomic, strong) NSTimer *autoScrollTimer;
 @end
 
 @implementation WEHomeRootViewController
@@ -56,6 +58,7 @@
     [self configureBannerView];
     [self configureRrefreshControl];
     [self configureScrollView];
+    [self setUpAutoScrollTimer];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -277,6 +280,21 @@
 {
     [self loadHomeSelectedItems];
     [self performSelector:@selector(refillViews) withObject:nil afterDelay:2.0f];
+}
+
+#pragma mark - Auto Scroll Timer
+- (void)setUpAutoScrollTimer {
+    // 设定 8 秒刷新频率
+    self.autoScrollTimer = [NSTimer scheduledTimerWithTimeInterval:8
+                                                            target:self
+                                                          selector:@selector(autoScroll:)
+                                                          userInfo:nil
+                                                           repeats:YES];
+    
+}
+
+- (void)autoScroll:(NSTimer *)timer {
+    [self.bannerContainerView autoScroll];
 }
 
 @end

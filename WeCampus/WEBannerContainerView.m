@@ -64,6 +64,21 @@
     return [self itemViewAtIndex:self.pageControl.currentPage];
 }
 
+- (void)autoScroll
+{
+    NSInteger count = self.pageControl.numberOfPages;
+    NSInteger currentIndex = self.pageControl.currentPage;
+    if (currentIndex < count - 1) {
+        currentIndex ++;
+        [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width * currentIndex, 0) animated:YES];
+    } else {
+        currentIndex = 0;
+        [self.scrollView setContentOffset:CGPointZero animated:NO];
+    }
+    
+    self.pageControl.currentPage = currentIndex;
+}
+
 #pragma mark - Properties
 
 - (NSMutableArray *)bannerItemViewArray {
