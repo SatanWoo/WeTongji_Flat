@@ -42,7 +42,7 @@
     [super viewWillAppear:animated];
     if (self.resultViewController) {
         [((WEAppDelegate *)[UIApplication sharedApplication].delegate) hideTabbar];
-        [self.resultViewController.view resetHeightByOffset:offset];
+        [self.resultViewController.view resetHeight:self.resultContainerView.frame.size.height];
     }
 }
 
