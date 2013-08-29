@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *courseCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *actionSheetButton;
+@property (weak, nonatomic) IBOutlet UILabel *beLikedCountLabel;
 
 
 
