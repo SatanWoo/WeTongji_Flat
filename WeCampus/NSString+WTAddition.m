@@ -25,25 +25,25 @@
     NSString *result = nil;
     switch (week) {
         case 1:
-            result = NSLocalizedString(@"Sun", nil);
+            result = @"周日";
             break;
         case 2:
-            result = NSLocalizedString(@"Mon", nil);;
+            result = @"周一";
             break;
         case 3:
-            result = NSLocalizedString(@"Tue", nil);
+            result = @"周二";
             break;
         case 4:
-            result = NSLocalizedString(@"Wed", nil);
+            result = @"周三";
             break;
         case 5:
-            result = NSLocalizedString(@"Thu", nil);
+            result = @"周四";
             break;
         case 6:
-            result = NSLocalizedString(@"Fri", nil);
+            result = @"周五";
             break;
         case 7:
-            result = NSLocalizedString(@"Sat", nil);
+            result = @"周六";
             break;
             
         default:

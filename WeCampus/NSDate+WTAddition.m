@@ -36,7 +36,7 @@
 
 - (NSString *)convertToYearMonthDayString {
     if ([self isDateInToday]) {
-        return NSLocalizedString(@"Today", nil);
+        return @"今天";
     }
     
     NSDateFormatter *form = [[NSDateFormatter alloc] init];
@@ -54,7 +54,7 @@
 
 - (NSString *)convertToYearMonthDayWeekString {
     if ([self isDateInToday]) {
-        return NSLocalizedString(@"Today", nil);
+        return @"今天";
     }
     NSString *result = [self convertToYearMonthDayString];
     result = [NSString stringWithFormat:@"%@ %@", result, [self convertToWeekString]];
