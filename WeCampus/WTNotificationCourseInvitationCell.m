@@ -34,7 +34,7 @@
         
         [courseTitleString setTextColor:[UIColor blackColor]];
         
-        messageContentString = [NSMutableAttributedString attributedStringWithString:NSLocalizedString(@"invites you to audit.", nil)];
+        messageContentString = [NSMutableAttributedString attributedStringWithString:@"邀请您旁听 "];
         [messageContentString setTextColor:WTNotificationCellLightGrayColor];
         
         [messageContentString insertAttributedString:senderNameString atIndex:0];

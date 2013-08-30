@@ -32,7 +32,7 @@
         [senderNameString setTextBold:YES range:NSMakeRange(0, senderNameString.length)];
         [senderNameString setTextColor:[UIColor blackColor]];
         
-        messageContentString = [NSMutableAttributedString attributedStringWithString:NSLocalizedString(@"wants to be your friend.", nil)];
+        messageContentString = [NSMutableAttributedString attributedStringWithString:@"想要加您为好友"];
         [messageContentString setTextColor:WTNotificationCellLightGrayColor];
         
         [messageContentString insertAttributedString:senderNameString atIndex:0];
@@ -42,7 +42,7 @@
         [receiverNameString setTextBold:YES range:NSMakeRange(0, receiverNameString.length)];
         [receiverNameString setTextColor:[UIColor blackColor]];
                 
-        messageContentString = [NSMutableAttributedString attributedStringWithString:NSLocalizedString(@"accepted your friend invitation.", nil)];
+        messageContentString = [NSMutableAttributedString attributedStringWithString:@"接受了您好友的邀请"];
         [messageContentString setTextColor:WTNotificationCellLightGrayColor];
         [messageContentString insertAttributedString:receiverNameString atIndex:0];
     }

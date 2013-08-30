@@ -101,7 +101,7 @@
     if (activityShowTypesSet.count == 1) {
         self.title = [Activity convertCategoryStringFromCategory:activityShowTypesSet.anyObject];
     } else {
-        self.title = NSLocalizedString(@"Activities", nil);
+        self.title = @"活动";
     }
 }
 

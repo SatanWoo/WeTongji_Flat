@@ -69,10 +69,10 @@
 - (IBAction)didClickSuggest:(id)sender
 {
     if (![MFMailComposeViewController canSendMail]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Failure", nil)
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"失败"
                                                         message:@"You have not bound a email account to your device"
                                                        delegate:nil
-                                              cancelButtonTitle:NSLocalizedString(@"I see", nil)
+                                              cancelButtonTitle:@"知道了"
                                               otherButtonTitles:nil];
         [alert show];
         return;

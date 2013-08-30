@@ -34,7 +34,7 @@
         
         [activityTitleString setTextColor:[UIColor blackColor]];
         
-        messageContentString = [NSMutableAttributedString attributedStringWithString:NSLocalizedString(@"invites you to participate in.", nil)];
+        messageContentString = [NSMutableAttributedString attributedStringWithString:@"邀请您参加 "];
         [messageContentString setTextColor:WTNotificationCellLightGrayColor];
         
         [messageContentString insertAttributedString:senderNameString atIndex:0];

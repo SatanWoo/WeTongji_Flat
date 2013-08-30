@@ -123,8 +123,8 @@
         [self showButtons];
         [self hideAcceptedIcon];
         
-        [self.ignoreButton setTitle:NSLocalizedString(@"Ignore", nil) forState:UIControlStateNormal];
-        [self.acceptButton setTitle:NSLocalizedString(@"Accept", nil) forState:UIControlStateNormal];
+        [self.ignoreButton setTitle:@"忽略" forState:UIControlStateNormal];
+        [self.acceptButton setTitle:@"接受" forState:UIControlStateNormal];
     }
     
     [self configureNotificationContentLabel];
