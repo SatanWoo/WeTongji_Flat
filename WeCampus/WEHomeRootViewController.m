@@ -59,6 +59,8 @@
     [self configureRrefreshControl];
     [self configureScrollView];
     [self setUpAutoScrollTimer];
+    
+    [self loadHomeSelectedItems];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -172,10 +174,11 @@
         [[NSUserDefaults standardUserDefaults] setLastHomeUpdateTime:currentTime];
         
         self.isLoadingHomeItems = NO;
+        [self.refreshControl endRefreshing];
     } failureBlock:^(NSError *error) {
         self.shouldLoadHomeItems = YES;
         self.isLoadingHomeItems = NO;
-        
+        [self.refreshControl endRefreshing];
     }];
     [request getHomeRecommendation];
     [[WTClient sharedClient] enqueueRequest:request];

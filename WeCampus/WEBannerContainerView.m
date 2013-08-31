@@ -39,7 +39,7 @@
     self.bannerItemCount = self.bannerItemCount + 1;
     NSInteger index = self.bannerItemCount - 1;
     WEBannerItemView *itemView = self.bannerItemViewArray[index];
-    [itemView configureViewWithModelObject:self.bannerObjectArray[index]];
+    [itemView configureViewWithModelObject:object];
     
     return itemView;
 }
@@ -131,20 +131,40 @@
 }
 
 - (void)configureBannerWithObjectsArray:(NSArray *)objectsArray {
+    
+    if (![objectsArray count]) return;
+    
     [self.bannerObjectArray removeAllObjects];
     [self.bannerObjectArray addObjectsFromArray:objectsArray];
     
     self.bannerItemCount = 0;
     NSInteger i = 0;
+    
+     // Ziqi Tricky Pay attention
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureRecognizer:)];
+    
+    
+    Object *lastObject = [objectsArray lastObject];
+    WEBannerItemView *firstItemView = [self addItemViewWithModelObject:lastObject];
+    firstItemView.tag = i;
+    [firstItemView addGestureRecognizer:tapGestureRecognizer];
+    i++;
+    
     for (Object *object in objectsArray) {
         WEBannerItemView *itemView = [self addItemViewWithModelObject:object];
         itemView.tag = i;
-        
-        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureRecognizer:)];
         [itemView addGestureRecognizer:tapGestureRecognizer];
-        
         i++;
     }
+    
+    Object *firstObject = [objectsArray objectAtIndex:0];
+    WEBannerItemView *lastItemView = [self addItemViewWithModelObject:firstObject];
+    lastItemView.tag = i;
+    [lastItemView addGestureRecognizer:tapGestureRecognizer];
+    
+    self.pageControl.numberOfPages -= 2;
+    self.pageControl.currentPage = 0;
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, 0) animated:NO];
 }
 
 #pragma mark - UIScrollViewDelegate
