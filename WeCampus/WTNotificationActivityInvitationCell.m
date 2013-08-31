@@ -26,6 +26,7 @@
     NSMutableAttributedString* activityTitleString = [NSMutableAttributedString attributedStringWithString:[NSString stringWithFormat:@" %@", activityTitle]];
     [activityTitleString setTextBold:YES range:NSMakeRange(0, activityTitleString.length)];
     
+    NSLog(@"act is %@", activityTitleString);
     if (invitation.sender != [WTCoreDataManager sharedManager].currentUser) {
         NSString *senderName = invitation.sender.name;
         NSMutableAttributedString* senderNameString = [NSMutableAttributedString attributedStringWithString:[NSString stringWithFormat:@"%@ ", senderName]];
@@ -48,13 +49,14 @@
         [activityTitleString setTextColor:[UIColor blackColor]];
         
 
-        messageContentString = [NSMutableAttributedString attributedStringWithString:@"接受了您参加 的邀请。"];
+        messageContentString = [NSMutableAttributedString attributedStringWithString:@"接受了您参加的邀请。"];
         [messageContentString setTextColor:WTNotificationCellLightGrayColor];
         [messageContentString insertAttributedString:receiverNameString atIndex:0];
-        [messageContentString insertAttributedString:activityTitleString atIndex:messageContentString.length - 5];
+        [messageContentString insertAttributedString:activityTitleString atIndex:messageContentString.length - 4];
     }
     
     [messageContentString setFont:[UIFont systemFontOfSize:14.0f]];
+    NSLog(@"message is %@", messageContentString);
     [messageContentString modifyParagraphStylesWithBlock:^(OHParagraphStyle *paragraphStyle) {
         paragraphStyle.lineSpacing = CONTENT_LABEL_LINE_SPACING;
     }];
