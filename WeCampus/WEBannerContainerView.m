@@ -67,8 +67,11 @@
 - (void)autoScroll
 {
     CGFloat currentOffsetX = self.scrollView.contentOffset.x;
-    [self.scrollView setContentOffset:CGPointMake(currentOffsetX + self.scrollView.frame.size.width, 0) animated:YES];
-    [self updateBannerPateControl];
+    [UIView animateWithDuration:1.0f animations:^{
+        self.scrollView.contentOffset = CGPointMake(currentOffsetX + self.scrollView.frame.size.width, 0);
+    } completion:^(BOOL finished) {
+        [self updateBannerPateControl];
+    }];
 }
 
 #pragma mark - Properties
@@ -119,7 +122,7 @@
 
 - (void)updateBannerPateControl {
     int currentPage = self.scrollView.contentOffset.x / self.scrollView.frame.size.width;
-    
+
     if (currentPage == 0) { // Means the first item
                             // Counterclosewise scroll from leftmost
         [self.scrollView setContentOffset:CGPointMake((self.bannerItemCount - 2) * self.scrollView.frame.size.width, 0) animated:NO];
