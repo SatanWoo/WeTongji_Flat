@@ -58,7 +58,7 @@
     [self configureBannerView];
     [self configureRrefreshControl];
     [self configureScrollView];
-    [self setUpAutoScrollTimer];
+    //[self setUpAutoScrollTimer];
     
     [self loadHomeSelectedItems];
 }

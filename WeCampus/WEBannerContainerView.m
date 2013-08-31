@@ -127,6 +127,19 @@
 
 - (void)updateBannerPateControl {
     int currentPage = self.scrollView.contentOffset.x / self.scrollView.frame.size.width;
+    NSLog(@"currentPage is %d", currentPage);
+    
+    if (currentPage == 0) { // Means the first item
+                            // Counterclosewise scroll from leftmost
+        [self.scrollView setContentOffset:CGPointMake((self.bannerItemCount - 2) * self.scrollView.frame.size.width, 0) animated:NO];
+        currentPage = self.pageControl.numberOfPages - 1;
+    } else if (currentPage == self.pageControl.numberOfPages + 1){
+        [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, 0) animated:NO];
+        currentPage = 0;
+    } else {
+        currentPage --;
+    }
+    
     self.pageControl.currentPage = currentPage;
 }
 
