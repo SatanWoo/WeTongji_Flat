@@ -66,17 +66,9 @@
 
 - (void)autoScroll
 {
-    NSInteger count = self.pageControl.numberOfPages;
-    NSInteger currentIndex = self.pageControl.currentPage;
-    if (currentIndex < count - 1) {
-        currentIndex ++;
-        [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width * currentIndex, 0) animated:YES];
-    } else {
-        currentIndex = 0;
-        [self.scrollView setContentOffset:CGPointZero animated:NO];
-    }
-    
-    self.pageControl.currentPage = currentIndex;
+    CGFloat currentOffsetX = self.scrollView.contentOffset.x;
+    [self.scrollView setContentOffset:CGPointMake(currentOffsetX + self.scrollView.frame.size.width, 0) animated:YES];
+    [self updateBannerPateControl];
 }
 
 #pragma mark - Properties
@@ -127,7 +119,6 @@
 
 - (void)updateBannerPateControl {
     int currentPage = self.scrollView.contentOffset.x / self.scrollView.frame.size.width;
-    NSLog(@"currentPage is %d", currentPage);
     
     if (currentPage == 0) { // Means the first item
                             // Counterclosewise scroll from leftmost

@@ -58,7 +58,6 @@
     [self configureBannerView];
     [self configureRrefreshControl];
     [self configureScrollView];
-    //[self setUpAutoScrollTimer];
     
     [self loadHomeSelectedItems];
 }
@@ -175,6 +174,8 @@
         
         self.isLoadingHomeItems = NO;
         [self.refreshControl endRefreshing];
+        
+        [self setUpAutoScrollTimer];
     } failureBlock:^(NSError *error) {
         self.shouldLoadHomeItems = YES;
         self.isLoadingHomeItems = NO;
@@ -287,6 +288,8 @@
 
 #pragma mark - Auto Scroll Timer
 - (void)setUpAutoScrollTimer {
+    
+    if (self.autoScrollTimer) return;
     // 设定 8 秒刷新频率
     self.autoScrollTimer = [NSTimer scheduledTimerWithTimeInterval:8
                                                             target:self
